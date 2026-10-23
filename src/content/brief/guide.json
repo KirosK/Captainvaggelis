@@ -1,0 +1,36 @@
+{
+  "_note": "§ Area guide for SEO and for helping guests. Only well-established facts about Skala and Kefalonia. Verify anything you are not sure about with web search; if still unsure, leave it out. No prices except where given. Natural, specific, useful. Each body is 2–4 sentences unless noted.",
+  "hero": { "eyebrow": "§ 'Guide'", "title": "§ 4–8 words: Skala and south-east Kefalonia, the way locals know it", "subtitle": "§ 1–2 sentences" },
+  "intro": { "title": "§ 'Why Skala'", "body": "§ 2 paragraphs (max 120 words): long beach on the south-east coast, calm sea, sunrise side; village rebuilt after the 1953 earthquake; relaxed main street; Roman villa with mosaics; good base for Poros, Katelios, the east coast and day cruises to Ithaca and Zakynthos." },
+  "beaches": {
+    "title": "§ 'Beaches near Skala'",
+    "items": {
+      "skala": { "name": "§ 'Skala beach'", "body": "§" },
+      "spithi": { "name": "§ 'Spithi'", "body": "§ (verify)" },
+      "loutraki": { "name": "§ 'Loutraki'", "body": "§ (verify)" },
+      "mounta": { "name": "§ 'Mounta'", "body": "§ (verify; sea turtles nest in the area — verify)" },
+      "kaminia": { "name": "§ 'Kaminia'", "body": "§ (verify)" },
+      "miniMyrtos": { "name": "§ 'Mini Myrtos (Koutsoupia)'", "body": "§ reachable by boat; our cruises stop there" }
+    }
+  },
+  "todo": {
+    "title": "§ 'Things to do'",
+    "items": {
+      "romanVilla": { "name": "§ 'Roman villa of Skala'", "body": "§ (verify: 3rd century AD mosaics, in the village)" },
+      "cruise": { "name": "§ 'A day at sea'", "body": "§ link idea to our cruises" },
+      "poros": { "name": "§ 'Poros & Drakaina cave'", "body": "§ (verify: Neolithic cave, ~11–12 km)" },
+      "markopoulo": { "name": "§ 'Panagia Fidousa, Markopoulo'", "body": "§ (verify: the snake church, 15 August)" },
+      "atros": { "name": "§ 'Atros monastery'", "body": "§ (verify)" },
+      "tzanata": { "name": "§ 'Mycenaean tomb of Tzanata'", "body": "§ (verify)" },
+      "melissani": { "name": "§ 'Melissani cave lake'", "body": "§ (verify; reachable on our Fiscardo cruise stop at Sami)" },
+      "argostoli": { "name": "§ 'Argostoli'", "body": "§ (verify; island capital, ~1 hour)" }
+    }
+  },
+  "gettingHere": {
+    "title": "§ 'Getting here'",
+    "air": { "title": "§ 'By air'", "body": "§ Kefalonia airport (EFL) ~33 km, about 45 minutes by car or taxi; we can arrange a taxi." },
+    "ferry": { "title": "§ 'By ferry'", "body": "§ Poros port (verify ferries to Kyllini, Peloponnese) ~ a short drive from Skala; also Sami (ferries to Patras/Ithaca — verify)." },
+    "around": { "title": "§ 'Getting around'", "body": "§ walkable village; a car or scooter helps for beaches further away; KTEL buses (verify)." }
+  },
+  "when": { "title": "§ 'When to come'", "body": "§ 2–3 sentences: season May–October; June and September are warm and calmer; July–August busiest; cruises run in season." }
+}

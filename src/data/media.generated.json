@@ -1,0 +1,1286 @@
+{
+ "aegealis": {
+  "hero": {
+   "src": "/media/aegealis/aegealis-aegalis-6.jpg",
+   "width": 1024,
+   "height": 683,
+   "altEn": "Palm garden with thatched parasols at Aegealis Studios, looking across the road to Skala beach, with the neighbouring hotel pools on either side",
+   "focus": "50% 45%"
+  },
+  "gallery": [
+   {
+    "src": "/media/aegealis/aegealis-aegalis-6.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Palm garden with thatched parasols at Aegealis Studios, looking across the road to Skala beach, with the neighbouring hotel pools on either side",
+    "focus": "50% 45%",
+    "section": "views"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-28.jpg",
+    "width": 1024,
+    "height": 644,
+    "altEn": "Stone path across the lawn between tall palms to the Aegealis building, its balconies draped in pink bougainvillea",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-1.jpg",
+    "width": 572,
+    "height": 768,
+    "altEn": "Entrance steps flanked by brass ship's propellers and globe lamps, leading through the palm garden to Aegealis Studios",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-66.jpg",
+    "width": 540,
+    "height": 768,
+    "altEn": "White captain statue with a ship's wheel and anchor at the Aegealis entrance in Skala, under tall palms",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-51.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Flagstone path past the shaded patios of the ground-floor studios, with a palm and the sea at the far end",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-2.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Wooden table on a ground-floor terrace overlooking the palm garden, the beach road and boats on the turquoise sea",
+    "section": "garden"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-37.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Covered ground-floor terrace looking over the lawn, palms and straw parasols to the sea at Skala",
+    "section": "garden"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-8.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Shaded patio under a vine-covered pergola in the back garden, looking out to the green hills above Skala",
+    "section": "garden"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-14.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Private patio with a table for four under a vine pergola, right outside a ground-floor studio door",
+    "section": "garden"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-33.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Covered upper-floor balcony with a table for four, looking over the palms to Skala beach and the Ionian Sea",
+    "section": "balcony"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-70.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Balcony table overlooking the neighbouring hotel's pool and sunbeds, with the sea beyond",
+    "section": "views"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-16.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "French doors open from the upper-floor apartment's living room onto its pergola-covered balcony, with a table for four facing the sea",
+    "section": "balcony"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-18.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Living room of the upper-floor apartment with a green sofa bed, opening onto a covered balcony facing the sea",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-21.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Double bedroom in the upper-floor apartment, its door open to the sea-view balcony and palms",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-34.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Double bedroom with a sliding door open to a pergola-shaded balcony and a palm-framed sea view",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-73.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Double bedroom with a green wardrobe and a window looking over red roofs and a palm to the sea",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-49.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Upper-floor studio with a double bed, a kitchenette alcove and a window view of a palm and the sea",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-50.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Studio with a double bed, green dressing table and an open door to a furnished balcony over the garden trees",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-67.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Ground-floor apartment living room with a sofa bed and dining table, its front door open straight onto the garden and beach",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-69.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Apartment living area with a round dining table, kitchenette and sofa bed, and the bedroom beyond",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-60.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Ground-floor apartment bedroom with a view through the living room to the terrace and the sea",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-40.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Ground-floor studio with a coral feature wall, a double bed and a sofa bed, the terrace door open to the sea",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-9.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Open-plan studio with a sofa bed in front, a double bed in a curtained alcove and a kitchenette at the back",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-31.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Bright studio with a double bed, bedside lamps and a fitted kitchenette with kettle and hob",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-56.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Ground-floor studio with a double bed, a starfish print and a compact kitchenette beside a garden window",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-32.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Compact kitchenette with a two-ring hob and fold-down table, next to a door opening onto a sunny private patio",
+    "section": "kitchen"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-29.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Tiled en-suite shower room with a corner shower cabin and washbasin",
+    "section": "bathroom"
+   },
+   {
+    "src": "/media/aegealis/aegealis-aegalis-74.jpg",
+    "width": 1024,
+    "height": 660,
+    "altEn": "Aerial view of Skala's long sandy beach. Aegealis is the orange-roofed building at the right edge, next to a neighbouring hotel's pool, with the beach across the road",
+    "section": "surroundings"
+   }
+  ],
+  "units": {
+   "ag-garden-studio": [
+    {
+     "src": "/media/aegealis/aegealis-aegalis-56.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Ground-floor studio with a double bed, a starfish print and a compact kitchenette beside a garden window"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-31.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Bright studio with a double bed, bedside lamps and a fitted kitchenette with kettle and hob"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-50.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio with a double bed, green dressing table and an open door to a furnished balcony over the garden trees"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-32.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Compact kitchenette with a two-ring hob and fold-down table, next to a door opening onto a sunny private patio"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-14.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Private patio with a table for four under a vine pergola, right outside a ground-floor studio door"
+    }
+   ],
+   "ag-sea-studio": [
+    {
+     "src": "/media/aegealis/aegealis-aegalis-34.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Double bedroom with a sliding door open to a pergola-shaded balcony and a palm-framed sea view"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-33.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Covered upper-floor balcony with a table for four, looking over the palms to Skala beach and the Ionian Sea"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-49.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Upper-floor studio with a double bed, a kitchenette alcove and a window view of a palm and the sea"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-73.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Double bedroom with a green wardrobe and a window looking over red roofs and a palm to the sea"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-70.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Balcony table overlooking the neighbouring hotel's pool and sunbeds, with the sea beyond"
+    }
+   ],
+   "ag-triple-studio": [
+    {
+     "src": "/media/aegealis/aegealis-aegalis-27.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio with double bed, green wardrobe and armchair under framed Kefalonia prints"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-9.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Open-plan studio with a sofa bed in front, a double bed in a curtained alcove and a kitchenette at the back"
+    }
+   ],
+   "ag-family-studio": [
+    {
+     "src": "/media/aegealis/aegealis-aegalis-40.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Ground-floor studio with a coral feature wall, a double bed and a sofa bed, the terrace door open to the sea"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-38.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio sitting area with sofa bed and terrace door at Aegealis Studios"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-2.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Wooden table on a ground-floor terrace overlooking the palm garden, the beach road and boats on the turquoise sea"
+    }
+   ],
+   "ag-apartment": [
+    {
+     "src": "/media/aegealis/aegealis-aegalis-16.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "French doors open from the upper-floor apartment's living room onto its pergola-covered balcony, with a table for four facing the sea"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-18.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Living room of the upper-floor apartment with a green sofa bed, opening onto a covered balcony facing the sea"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-21.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Double bedroom in the upper-floor apartment, its door open to the sea-view balcony and palms"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-67.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Ground-floor apartment living room with a sofa bed and dining table, its front door open straight onto the garden and beach"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-69.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Apartment living area with a round dining table, kitchenette and sofa bed, and the bedroom beyond"
+    },
+    {
+     "src": "/media/aegealis/aegealis-aegalis-60.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Ground-floor apartment bedroom with a view through the living room to the terrace and the sea"
+    }
+   ]
+  },
+  "extras": {
+   "card": {
+    "src": "/media/aegealis/aegealis-aegalis-37.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Covered ground-floor terrace looking over the lawn, palms and straw parasols to the sea at Skala"
+   },
+   "statue": {
+    "src": "/media/aegealis/aegealis-aegalis-66.jpg",
+    "width": 540,
+    "height": 768,
+    "altEn": "White captain statue with a ship's wheel and anchor at the Aegealis entrance in Skala, under tall palms"
+   }
+  }
+ },
+ "theodora": {
+  "hero": {
+   "src": "/media/theodora/theodora-theodora-63.jpg",
+   "width": 1024,
+   "height": 767,
+   "altEn": "Aerial view over Theodora Studios and Skala's red-tiled rooftops and pine trees to the turquoise Ionian Sea, about 500 m away",
+   "focus": "50% 12%"
+  },
+  "gallery": [
+   {
+    "src": "/media/theodora/theodora-theodora-63.jpg",
+    "width": 1024,
+    "height": 767,
+    "altEn": "Aerial view over Theodora Studios and Skala's red-tiled rooftops and pine trees to the turquoise Ionian Sea, about 500 m away",
+    "focus": "50% 12%",
+    "section": "surroundings"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-3.jpg",
+    "width": 579,
+    "height": 768,
+    "altEn": "Red bougainvillea cascading over the white balconies of Theodora Studios' peach facade, above a stone garden wall",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-2.jpg",
+    "width": 1024,
+    "height": 767,
+    "altEn": "Theodora Studios in Skala: the peach three-storey building with white balconies and its single-storey front wing behind a stone wall",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-62.jpg",
+    "width": 1024,
+    "height": 767,
+    "altEn": "Aerial view of Theodora Studios from the street, with its lawn garden behind and the neighbouring hotel's pool beyond",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-1.jpg",
+    "width": 1024,
+    "height": 768,
+    "altEn": "Red bougainvillea climbing the peach balconies of Theodora Studios in late-afternoon sun",
+    "section": "exterior"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-10.jpg",
+    "width": 1024,
+    "height": 713,
+    "altEn": "Blue sun loungers on the lawn beside Theodora Studios, under banana plants, with the neighbouring hotel's pool in the background",
+    "section": "garden"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-61.jpg",
+    "width": 1024,
+    "height": 767,
+    "altEn": "Aerial view of Theodora Studios and its lawn garden, with the neighbouring hotel's pool (open to guests in the hotel's season) in the foreground",
+    "section": "garden"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-59.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Top-floor balcony table for two with a distant view over Skala's tiled rooftops and pine trees to the sea",
+    "section": "views"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-23.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Top-floor balcony framed by red bougainvillea, with a marble table for two and views over Skala to the green hills",
+    "section": "balcony"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-38.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Balcony with a marble table and chairs above banana plants and the garden's orange tree",
+    "section": "balcony"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-72.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Two chairs and a bistro table on a ground-floor patio beside pink geraniums",
+    "section": "balcony"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-60.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Top-floor studio: double bed facing open French doors and a balcony with a glimpse of the sea",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-35.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Top-floor studio under a beamed pine ceiling, with a double bed, kitchenette and open balcony doors",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-34.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Top-floor studio with a beamed wooden ceiling, a double bed with a checked quilt and a white kitchenette",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-26.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Beamed living and dining room of the top-floor apartment, with an extra single bed and a balcony framed by bougainvillea",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-11.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Top-floor apartment kitchenette and dining table, with a doorway to a bedroom and glass doors to the balcony",
+    "section": "kitchen"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-22.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Double bedroom under a beamed wooden ceiling, with a coral feature wall, green painted furniture and a window to the hills",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-17.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Twin bedroom with two single beds under a beamed wooden ceiling in the top-floor apartment",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-15.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Apartment kitchenette and dining table, with a separate bedroom beyond and a balcony door to the right",
+    "section": "kitchen"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-6.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Double bedroom with a coral accent wall, green wooden furniture and a window over trees and hills",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-55.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Twin bedroom with two single beds, a coral accent wall and open doors to a sunny balcony",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-41.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Studio with a double bed, two-seat sofa bed and glass doors to a balcony over tiled rooftops and hills",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-39.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Studio kitchenette with a high bar table and stools beside open doors to a furnished balcony",
+    "section": "kitchen"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-68.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Studio with a double bed, compact kitchenette, built-in wardrobe and writing desk",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-43.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Ground-floor double room with its door open onto a private stone-paved patio",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-48.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Studio with a double bed, dark-wood kitchenette and an en-suite shower room with grey wood-effect tiles",
+    "section": "rooms"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-16.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Bathroom with a corner shower cabin, vanity washbasin and mirror cabinet",
+    "section": "bathroom"
+   },
+   {
+    "src": "/media/theodora/theodora-theodora-66.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Aerial view of Skala and its long sandy beach, marking Theodora up in the village and Aegealis on the beach road",
+    "section": "surroundings"
+   }
+  ],
+  "units": {
+   "th-double": [
+    {
+     "src": "/media/theodora/theodora-theodora-6.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Double bedroom with a coral accent wall, green wooden furniture and a window over trees and hills"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-55.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Twin bedroom with two single beds, a coral accent wall and open doors to a sunny balcony"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-43.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Ground-floor double room with its door open onto a private stone-paved patio"
+    }
+   ],
+   "th-studio": [
+    {
+     "src": "/media/theodora/theodora-theodora-35.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Top-floor studio under a beamed pine ceiling, with a double bed, kitchenette and open balcony doors"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-60.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Top-floor studio: double bed facing open French doors and a balcony with a glimpse of the sea"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-34.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Top-floor studio with a beamed wooden ceiling, a double bed with a checked quilt and a white kitchenette"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-12.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio at Theodora with kitchenette, double bed and balcony"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-68.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio with a double bed, compact kitchenette, built-in wardrobe and writing desk"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-48.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio with a double bed, dark-wood kitchenette and an en-suite shower room with grey wood-effect tiles"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-59.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Top-floor balcony table for two with a distant view over Skala's tiled rooftops and pine trees to the sea"
+    }
+   ],
+   "th-triple": [
+    {
+     "src": "/media/theodora/theodora-theodora-41.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio with a double bed, two-seat sofa bed and glass doors to a balcony over tiled rooftops and hills"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-39.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Studio kitchenette with a high bar table and stools beside open doors to a furnished balcony"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-38.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Balcony with a marble table and chairs above banana plants and the garden's orange tree"
+    }
+   ],
+   "th-two-bedroom": [
+    {
+     "src": "/media/theodora/theodora-theodora-26.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Beamed living and dining room of the top-floor apartment, with an extra single bed and a balcony framed by bougainvillea"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-11.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Top-floor apartment kitchenette and dining table, with a doorway to a bedroom and glass doors to the balcony"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-22.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Double bedroom under a beamed wooden ceiling, with a coral feature wall, green painted furniture and a window to the hills"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-17.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Twin bedroom with two single beds under a beamed wooden ceiling in the top-floor apartment"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-23.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Top-floor balcony framed by red bougainvillea, with a marble table for two and views over Skala to the green hills"
+    },
+    {
+     "src": "/media/theodora/theodora-theodora-15.jpg",
+     "width": 1024,
+     "height": 683,
+     "altEn": "Apartment kitchenette and dining table, with a separate bedroom beyond and a balcony door to the right"
+    }
+   ]
+  },
+  "extras": {
+   "card": {
+    "src": "/media/theodora/theodora-theodora-1.jpg",
+    "width": 1024,
+    "height": 768,
+    "altEn": "Red bougainvillea climbing the peach balconies of Theodora Studios in late-afternoon sun"
+   },
+   "aerialBoth": {
+    "src": "/media/theodora/theodora-theodora-66.jpg",
+    "width": 1024,
+    "height": 683,
+    "altEn": "Aerial view of Skala and its long sandy beach, marking Theodora up in the village and Aegealis on the beach road"
+   }
+  }
+ },
+ "cruises": {
+  "groups": {
+   "boat-niriis": {
+    "cover": {
+     "src": "/media/cruises/cruises-niriis-niriis-038.jpg",
+     "width": 1300,
+     "height": 867,
+     "altEn": "NIRIIS with its bow on a white pebble beach below pine-covered hills as guests step ashore"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-038.jpg",
+      "width": 1300,
+      "height": 867,
+      "altEn": "NIRIIS with its bow on a white pebble beach below pine-covered hills as guests step ashore"
+     },
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-019.jpg",
+      "width": 1400,
+      "height": 1033,
+      "altEn": "Aerial view of the cruise yacht NIRIIS anchored in clear turquoise water off a sandy beach in south-east Kefalonia"
+     },
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-022.jpg",
+      "width": 1400,
+      "height": 1050,
+      "altEn": "NIRIIS under way on a blue sea, with guests on the shaded upper deck and the water slide at the stern"
+     },
+     {
+      "src": "/media/cruises/cruises-about-about-013.jpg",
+      "width": 869,
+      "height": 556,
+      "altEn": "NIRIIS cruising through deep blue water with a long white wake, seen from a pine-topped cliff"
+     },
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-004.jpg",
+      "width": 1200,
+      "height": 900,
+      "altEn": "NIRIIS at anchor in a turquoise bay, seen from the shore through pine branches"
+     },
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-023.jpg",
+      "width": 1400,
+      "height": 933,
+      "altEn": "NIRIIS at anchor off the coast, a guest diving from the stern platform beside the water slide while others swim in the clear blue sea"
+     },
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-010.jpg",
+      "width": 1200,
+      "height": 900,
+      "altEn": "Guests sunbathing on the bow of NIRIIS beneath the Greek flag on a calm blue sea"
+     },
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-028.jpg",
+      "width": 1400,
+      "height": 933,
+      "altEn": "The air-conditioned saloon of NIRIIS, with a curved leather banquette, cushions and warm lighting"
+     },
+     {
+      "src": "/media/cruises/cruises-about-about-001.jpg",
+      "width": 1600,
+      "height": 1181,
+      "altEn": "NIRIIS anchored off a beach of thatched umbrellas in golden light, the low sun shining across the sea"
+     }
+    ]
+   },
+   "fiscardo": {
+    "cover": {
+     "src": "/media/cruises/cruises-home-home-005.jpg",
+     "width": 1400,
+     "height": 1033,
+     "altEn": "Turquoise water and pastel Venetian-style houses around Fiscardo harbour, Kefalonia"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-home-home-005.jpg",
+      "width": 1400,
+      "height": 1033,
+      "altEn": "Turquoise water and pastel Venetian-style houses around Fiscardo harbour, Kefalonia"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-099.jpg",
+      "width": 1400,
+      "height": 994,
+      "altEn": "Passengers relaxing on the bow as the cruise boat arrives in Sami harbour"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-100.jpg",
+      "width": 1400,
+      "height": 933,
+      "altEn": "Sunlight pouring through the open roof of Melissani cave onto its turquoise underground lake, near Sami"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-044.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Antisamos bay, a long pale beach below forested green hills on Kefalonia's east coast"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-093.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Pine-topped limestone cliff above emerald, crystal-clear water on the Kefalonia coast"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-045.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Aerial view of a narrow rocky islet with a tiny red-roofed chapel, surrounded by deep blue sea"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-065.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Aerial view of a white pebble cove framed by pine forest on the north Kefalonia coast"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-101.jpg",
+      "width": 1400,
+      "height": 976,
+      "altEn": "Guests swimming in a deep blue cove in front of a whitewashed, red-roofed house and old stone cottages"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-017.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Pink and cream Venetian-style houses and waterfront tavernas on Fiscardo harbour"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-029.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A quiet sunlit lane in Fiscardo lined with pink and white bougainvillea"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-064.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "The boat's wake and Greek flag as the cruise leaves the colourful waterfront of Fiscardo"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-090.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Empty white pebble beach backed by dense forest, with transparent turquoise water over the pebbles"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-094.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Swimmers in turquoise water at a long white pebble beach below forested hills, seen from the boat"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-048.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A dolphin surfacing with a burst of spray beside the boat in deep blue water"
+     }
+    ]
+   },
+   "ithacaVathiKioni": {
+    "cover": {
+     "src": "/media/cruises/cruises-ithaca1-ithaca1-092.jpg",
+     "width": 1400,
+     "height": 1033,
+     "altEn": "Turquoise swimming cove in Kioni bay, Ithaca, with sailboats anchored off the village"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-092.jpg",
+      "width": 1400,
+      "height": 1033,
+      "altEn": "Turquoise swimming cove in Kioni bay, Ithaca, with sailboats anchored off the village"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-011.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Arriving at Kioni from the sea, with waterfront tavernas, villas and moored yachts below green hills"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-057.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Elevated view over the turquoise bay and colourful houses of Kioni, Ithaca"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-024.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Sailboats moored in Kioni's calm bay below yellow waterfront houses and a wooded hillside"
+     },
+     {
+      "src": "/media/cruises/cruises-home-home-006.jpg",
+      "width": 1548,
+      "height": 1142,
+      "altEn": "Traditional wooden fishing boats in clear turquoise water at a small harbour on Ithaca"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-059.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A red-and-white rowing boat floating on transparent water in Kioni bay"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-026.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A seaside taverna table on the Kioni waterfront, looking over fishing boats and colourful houses"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-068.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "The three old stone windmills on the rocky headland at the entrance to Kioni harbour"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-087.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A long-haired wild goat on the limestone cliffs of the Ithaca coast, spotted from the boat"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-043.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Calm water below the white cliffs of Gidaki beach on Ithaca, a cove reached only by sea"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-072.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Vivid turquoise water and a thatched beach bar on the white pebbles of Gidaki beach, Ithaca"
+     }
+    ]
+   },
+   "ithacaVathi": {
+    "cover": {
+     "src": "/media/cruises/cruises-ithaca1-ithaca1-046.jpg",
+     "width": 1200,
+     "height": 800,
+     "altEn": "A sailing yacht anchored before Vathi's pastel neoclassical houses in warm late-afternoon light"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-046.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A sailing yacht anchored before Vathi's pastel neoclassical houses in warm late-afternoon light"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-005.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Aerial view of Vathi's horseshoe harbour and red-roofed town, with the small Lazaretto islet in the bay"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-028.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Pine-shaded breakwater and harbour light at the entrance to Vathi bay, Ithaca"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-034.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Sailboats anchored in the deep blue bay of Vathi below a hillside of pastel houses"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-030.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Pastel waterfront houses and moored sailboats in Vathi harbour under a clear blue sky"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-065.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Small white-sailed dinghies crossing Vathi harbour in front of pastel neoclassical houses"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-091.jpg",
+      "width": 1400,
+      "height": 875,
+      "altEn": "Bronze statue of Odysseus on the Vathi waterfront, with the harbour behind"
+     },
+     {
+      "src": "/media/cruises/cruises-home-home-007.jpg",
+      "width": 1400,
+      "height": 1033,
+      "altEn": "Turquoise bay with a white pebble beach and anchored boats, seen through green foliage on Ithaca"
+     },
+     {
+      "src": "/media/cruises/cruises-ithaca1-ithaca1-016.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A sailing yacht anchored in turquoise water off a white pebble beach below white cliffs on Ithaca"
+     }
+    ]
+   },
+   "zakynthos": {
+    "cover": {
+     "src": "/media/cruises/cruises-zakynthos-zakynthos-053.jpg",
+     "width": 1600,
+     "height": 1067,
+     "altEn": "Sunlit limestone arches of the Blue Caves rising from clear turquoise water, Zakynthos"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-053.jpg",
+      "width": 1600,
+      "height": 1067,
+      "altEn": "Sunlit limestone arches of the Blue Caves rising from clear turquoise water, Zakynthos"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-003.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A sailing yacht anchored beneath the cliffs and lighthouse of Cape Skinari, Zakynthos"
+     },
+     {
+      "src": "/media/cruises/cruises-home-home-008.jpg",
+      "width": 1400,
+      "height": 1033,
+      "altEn": "Aerial view of Navagio (Shipwreck) beach, its rusted wreck ringed by white cliffs and turquoise sea"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-051.jpg",
+      "width": 1300,
+      "height": 975,
+      "altEn": "Guests on the bow taking photos as the boat approaches Navagio bay and its shipwreck"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-017.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Navagio Shipwreck bay seen from the boat, framed by towering white cliffs above deep blue water"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-029.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Blue Caves coastline with turquoise shallows and the Cape Skinari lighthouse on the hill above"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-011.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A small boat passing under a towering white limestone arch at the Blue Caves"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-032.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "A small boat emerging from a white sea cave onto clear turquoise water at the Blue Caves"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-042.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Glowing turquoise water inside a pale limestone sea cave at the Blue Caves"
+     },
+     {
+      "src": "/media/cruises/cruises-zakynthos-zakynthos-047.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Sandy beach with umbrellas and sun loungers beside the small harbour at Alykes, Zakynthos"
+     }
+    ]
+   },
+   "bbq": {
+    "cover": {
+     "src": "/media/cruises/cruises-fiscardo-fiscardo-098.jpg",
+     "width": 1500,
+     "height": 1125,
+     "altEn": "NIRIIS anchored in turquoise water off a long white pebble beach below forested hills, a snorkeller in the shallows"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-098.jpg",
+      "width": 1500,
+      "height": 1125,
+      "altEn": "NIRIIS anchored in turquoise water off a long white pebble beach below forested hills, a snorkeller in the shallows"
+     },
+     {
+      "src": "/media/cruises/cruises-bbq-bbq-026.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Secluded white pebble beach and clear turquoise water below forested hills in warm evening light"
+     },
+     {
+      "src": "/media/cruises/cruises-bbq-bbq-043.jpg",
+      "width": 1400,
+      "height": 864,
+      "altEn": "High view of a white pebble beach and turquoise bay with a cruise boat anchored offshore"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-012.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "NIRIIS moored at the end of a white pebble beach, with crystal-clear water and green hills"
+     },
+     {
+      "src": "/media/cruises/cruises-bbq-bbq-031.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Evening beach barbecue, with the grill going and guests gathering while the boat waits offshore"
+     },
+     {
+      "src": "/media/cruises/cruises-bbq-bbq-034.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Guests queueing at the beach barbecue buffet as smoke rises against wooded hills"
+     },
+     {
+      "src": "/media/cruises/cruises-bbq-bbq-044.jpg",
+      "width": 1400,
+      "height": 788,
+      "altEn": "Guests playing tug-of-war on the beach at dusk, with the boat anchored behind them"
+     },
+     {
+      "src": "/media/cruises/cruises-bbq-bbq-040.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Orange sunset over a calm sea from a pebble beach, a wooded headland in silhouette"
+     },
+     {
+      "src": "/media/cruises/cruises-bbq-bbq-039.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Guests around a crackling beach bonfire at nightfall, the boat lit up on the water behind"
+     }
+    ]
+   },
+   "kalypso": {
+    "cover": {
+     "src": "/media/cruises/cruises-kalypso-kalypso-003.jpg",
+     "width": 1400,
+     "height": 1867,
+     "altEn": "Underwater viewing hall of the Kalypso Star, with wooden benches facing large turquoise windows below the waterline"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-kalypso-kalypso-003.jpg",
+      "width": 1400,
+      "height": 1867,
+      "altEn": "Underwater viewing hall of the Kalypso Star, with wooden benches facing large turquoise windows below the waterline"
+     },
+     {
+      "src": "/media/cruises/cruises-kalypso-kalypso-001.jpg",
+      "width": 1400,
+      "height": 1033,
+      "altEn": "The Kalypso Star semi-submarine moored at a stone pier in turquoise water below green mountains"
+     },
+     {
+      "src": "/media/cruises/cruises-kalypso-kalypso-002.jpg",
+      "width": 1400,
+      "height": 1867,
+      "altEn": "Open upper deck of the Kalypso Star with wooden benches, a central table and a blue canopy"
+     }
+    ]
+   },
+   "private": {
+    "cover": {
+     "src": "/media/cruises/cruises-private-private-001.jpg",
+     "width": 1400,
+     "height": 1033,
+     "altEn": "Two glasses of white wine raised in a toast against a golden sunset over the sea"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-private-private-001.jpg",
+      "width": 1400,
+      "height": 1033,
+      "altEn": "Two glasses of white wine raised in a toast against a golden sunset over the sea"
+     },
+     {
+      "src": "/media/cruises/cruises-niriis-niriis-008.jpg",
+      "width": 1200,
+      "height": 900,
+      "altEn": "A group of friends raising their glasses on the curved banquette of the NIRIIS saloon"
+     }
+    ]
+   },
+   "wedding": {
+    "cover": {
+     "src": "/media/cruises/cruises-wedding-wedding-007.jpg",
+     "width": 1200,
+     "height": 680,
+     "altEn": "Newlyweds striking a playful arms-wide pose on the roof of the boat against a deep blue sky"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-wedding-wedding-007.jpg",
+      "width": 1200,
+      "height": 680,
+      "altEn": "Newlyweds striking a playful arms-wide pose on the roof of the boat against a deep blue sky"
+     },
+     {
+      "src": "/media/cruises/cruises-wedding-wedding-003.jpg",
+      "width": 1200,
+      "height": 680,
+      "altEn": "Bride and groom on the bow of the boat, crossing the sunlit Ionian Sea toward green mountains"
+     },
+     {
+      "src": "/media/cruises/cruises-wedding-wedding-011.jpg",
+      "width": 1400,
+      "height": 933,
+      "altEn": "Bride and groom on a pebble beach beside a white cruise boat in clear turquoise water"
+     },
+     {
+      "src": "/media/cruises/cruises-wedding-wedding-015.jpg",
+      "width": 1400,
+      "height": 788,
+      "altEn": "The captain showers rose petals from the bow as the newlyweds step ashore in a rocky cove"
+     },
+     {
+      "src": "/media/cruises/cruises-wedding-wedding-004.jpg",
+      "width": 1200,
+      "height": 680,
+      "altEn": "Wedding guests waving from the terrace of a small whitewashed seaside chapel, seen from the boat"
+     }
+    ]
+   },
+   "history": {
+    "cover": {
+     "src": "/media/cruises/cruises-about-about-011.jpg",
+     "width": 1024,
+     "height": 731,
+     "altEn": "The boat NAUTILUS passing a harbour breakwater on a calm blue sea"
+    },
+    "photos": [
+     {
+      "src": "/media/cruises/cruises-about-about-011.jpg",
+      "width": 1024,
+      "height": 731,
+      "altEn": "The boat NAUTILUS passing a harbour breakwater on a calm blue sea"
+     },
+     {
+      "src": "/media/cruises/cruises-about-about-004.jpg",
+      "width": 248,
+      "height": 373,
+      "altEn": "Captain Vangelis as a young officer in white uniform, in the 1970s"
+     },
+     {
+      "src": "/media/cruises/cruises-about-about-002.jpg",
+      "width": 391,
+      "height": 294,
+      "altEn": "The young Captain Vangelis taking a sextant sighting on a ship's deck in the 1970s"
+     },
+     {
+      "src": "/media/cruises/cruises-about-about-012.jpg",
+      "width": 1000,
+      "height": 563,
+      "altEn": "MYTHOS, the Captain's earlier boat, cruising on deep blue sea with guests on the upper deck"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-077.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Film crew at a wooden jetty in a calm Kefalonia bay during the 2000 shoot of Captain Corelli's Mandolin"
+     },
+     {
+      "src": "/media/cruises/cruises-fiscardo-fiscardo-072.jpg",
+      "width": 1200,
+      "height": 800,
+      "altEn": "Wooden jetty, small sailing boat and lobster pots on a pebble beach at the Captain Corelli's Mandolin film set"
+     }
+    ]
+   }
+  },
+  "hero": {
+   "src": "/media/cruises/cruises-fiscardo-fiscardo-098.jpg",
+   "width": 1500,
+   "height": 1125,
+   "altEn": "NIRIIS anchored in turquoise water off a long white pebble beach below forested hills, a snorkeller in the shallows"
+  }
+ }
+}

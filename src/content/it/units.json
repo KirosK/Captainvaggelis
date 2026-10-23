@@ -1,0 +1,93 @@
+{
+  "ag-garden-studio": {
+    "name": "Monolocali lato giardino",
+    "short": "Compatti e dal prezzo contenuto, con la spiaggia di Skala davanti.",
+    "description": "Monolocali compatti e pratici, sul lato del giardino o sul retro della struttura; alcuni sono al piano terra, con vista parziale sul mare. Ognuno ha angolo cottura, aria condizionata e bagno con doccia. Sono piccoli e costano di conseguenza, ma per la spiaggia basta comunque attraversare la strada.",
+    "bestFor": "Coppie attente al budget, sempre in spiaggia",
+    "variants": {
+      "ag-standard-studio": "Monolocale standard",
+      "ag-garden-view-studio": "Monolocale con vista giardino",
+      "ag-ground-partial-sea": "Monolocale (2 adulti) – piano terra, vista parziale sul mare"
+    }
+  },
+  "ag-sea-studio": {
+    "name": "Monolocali vista mare",
+    "short": "Vista mare laterale, parziale o dal primo piano, davanti alla spiaggia di Skala.",
+    "description": "Scegliete tra la vista laterale sul mare e un balcone con vista parziale. Il monolocale Superior si affaccia sul mare dal primo piano. Ognuno è un unico ambiente con angolo cottura e aria condizionata, più il bagno con doccia.",
+    "bestFor": "Coppie che vogliono vedere il mare",
+    "variants": {
+      "ag-side-sea-studio": "Monolocale con vista laterale sul mare",
+      "ag-balcony-partial-sea": "Monolocale con balcone e vista parziale sul mare",
+      "ag-superior-sea-studio": "Monolocale Superior con vista mare"
+    }
+  },
+  "ag-triple-studio": {
+    "name": "Monolocale triplo",
+    "short": "Un unico ambiente per tre adulti, a 20 m dalla spiaggia di Skala.",
+    "description": "Un monolocale per tre adulti: un solo ambiente con angolo cottura e aria condizionata, più il bagno con doccia. È adatto a chi condivide volentieri gli spazi. Come ogni alloggio dell'Aegealis, viene pulito tutti i giorni.",
+    "bestFor": "Tre amici o una coppia con un adolescente",
+    "variants": {
+      "ag-triple": "Monolocale (3 adulti)"
+    }
+  },
+  "ag-family-studio": {
+    "name": "Monolocale familiare con terrazza",
+    "short": "Due adulti, due bambini, vista mare e una terrazza per la colazione.",
+    "description": "Ospita due adulti e due bambini, con vista mare e una terrazza per fare colazione all'aperto. Secondo una famiglia che ci ha soggiornato, c'è molto più spazio che negli altri hotel sul lungomare. Dentro, angolo cottura, aria condizionata e bagno con doccia; fuori, la spiaggia a 20 m.",
+    "bestFor": "Famiglie con due bambini piccoli",
+    "variants": {
+      "ag-family": "Monolocale familiare con terrazza e vista mare (2 adulti + 2 bambini)"
+    }
+  },
+  "ag-apartment": {
+    "name": "Bilocali vista mare",
+    "short": "Camera da letto separata, fino a quattro ospiti, piano terra o superiore.",
+    "description": "Una camera da letto separata e un ambiente principale con angolo cottura, per un massimo di quattro ospiti. Potete scegliere il piano terra oppure il piano superiore, che ha un ampio balcone affacciato sul mare. Sono gli alloggi più grandi dell'Aegealis; l'aria condizionata è nell'ambiente principale.",
+    "bestFor": "Famiglie o amici, con una porta in mezzo",
+    "variants": {
+      "ag-apt-ground": "Appartamento con una camera da letto e vista mare – piano terra",
+      "ag-apt-upper": "Appartamento con una camera da letto e vista mare – piano superiore"
+    }
+  },
+  "th-double": {
+    "name": "Camere doppie",
+    "short": "Semplici, pulitissime e convenienti, in cima alla via principale.",
+    "description": "Camere doppie semplici, con angolo cottura, aria condizionata, bagno con doccia e balcone o terrazza. Pulizia e cambio degli asciugamani ogni giorno, anche nel fine settimana. A un minuto c'è il supermercato, e gli ospiti apprezzano il rapporto qualità-prezzo.",
+    "bestFor": "Coppie e chi viaggia da solo",
+    "variants": {
+      "th-standard-double": "Camera doppia standard",
+      "th-double": "Camera doppia",
+      "th-double-terrace": "Camera doppia con terrazza"
+    }
+  },
+  "th-studio": {
+    "name": "Monolocali in paese",
+    "short": "Angolo cottura per pasti semplici; alcuni all'ultimo piano hanno vista mare.",
+    "description": "Monolocali al piano terra o all'ultimo piano, tutti con aria condizionata e bagno con doccia. Alcuni all'ultimo piano hanno il soffitto con travi in legno, altri si affacciano sul mare: se la vista per voi è importante, ditecelo quando prenotate. L'angolo cottura ha fornelli, frigorifero, bollitore e macchina del caffè.",
+    "bestFor": "Coppie a cui piace cucinare un po'",
+    "variants": {
+      "th-studio": "Monolocale",
+      "th-studio-apartment": "Appartamento monolocale",
+      "th-studio-ground": "Monolocale (2 adulti) – piano terra",
+      "th-studio-top": "Monolocale (2 adulti) – ultimo piano"
+    }
+  },
+  "th-triple": {
+    "name": "Camera tripla con terrazza",
+    "short": "Spazio per tre, con una terrazza che prende il sole nel tardo pomeriggio.",
+    "description": "Una camera per tre con la sua terrazza, soleggiata nel tardo pomeriggio. È spaziosa, dicono gli ospiti, e si presta bene a genitori con un bambino piccolo. Ha anche angolo cottura, aria condizionata e doccia. Tenete presente che al Theodora non ci sono culle né letti aggiuntivi.",
+    "bestFor": "Genitori con un bambino oppure tre amici",
+    "variants": {
+      "th-triple-terrace": "Camera tripla con terrazza"
+    }
+  },
+  "th-two-bedroom": {
+    "name": "Appartamenti con due camere",
+    "short": "Due camere da letto, fino a cinque ospiti, a 100 m dal centro.",
+    "description": "Due camere da letto e una zona giorno con angolo cottura, per un massimo di cinque ospiti. Il quinto letto si trova nella zona giorno ed è lungo circa 180 cm: va bene per un bambino o per un adulto non troppo alto. Ideale per quattro adulti, oppure quattro adulti e un bambino.",
+    "bestFor": "Famiglie e gruppi di quattro o cinque",
+    "variants": {
+      "th-2br": "Appartamento con due camere da letto"
+    }
+  }
+}

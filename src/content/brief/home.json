@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "eyebrow": "§ small caps line above title, e.g. 'Skala, Kefalonia · since 1987'",
+    "title": "§ 4–8 words, the emotional promise. Idea: wake up across the road from the sea, and sail from the same beach. Must not be generic ('Welcome to paradise' is forbidden). Put a line break marker '\\n' where the title should break on desktop.",
+    "subtitle": "§ 1–2 sentences (max 34 words). Two family-run places to stay in Skala + the Captain's daily cruises to Ithaca, Fiscardo and Zakynthos, all booked directly with the family.",
+    "primary": "§ 'Find your room'", "secondary": "§ 'See the cruises'", "scroll": "§ 'Scroll'"
+  },
+  "bookingBar": { "title": "§ 'Check availability'", "property": "§ 'Where'", "both": "§ 'Both properties'", "dates": "§ 'Dates'", "addDates": "§ 'Add dates'", "guests": "§ 'Guests'", "search": "§ 'Search'", "hint": "§ 'Direct price, no booking fees'" },
+  "intro": {
+    "kicker": "§ section label '01 — Who we are' style (no numbers; numbers added by design)",
+    "title": "§ 6–12 words. The family in Skala: rooms by the sea, a captain on the water.",
+    "body": "§ 2 short paragraphs separated by \\n\\n (max 90 words total). Captain Vangelis was born in Spathi, 5 km from Skala; sea since 18; daily cruises from Skala since 1987; with Frosso they welcome guests at Aegealis on the beach and Theodora in the village. Warm, specific, no clichés.",
+    "stats": [
+      { "value": "1987", "label": "§ 'first cruise from Skala'" },
+      { "value": "9.1", "label": "§ 'Booking.com score, both properties'" },
+      { "value": "274", "label": "§ 'verified guest reviews'" },
+      { "value": "20 m", "label": "§ 'from Aegealis to the sea'" }
+    ]
+  },
+  "properties": {
+    "kicker": "§ 'Where to stay'", "title": "§ 6–10 words: two different ways to stay in Skala", "intro": "§ 1–2 sentences: choose the beach or the village; same family, same care.",
+    "aegealis": { "tag": "§ 'On the beach'", "title": "Aegealis Studios", "pitch": "§ 1–2 sentences: across the road from Skala beach, garden with palms, use of the pools of the two hotels next door, the cruise boat leaves from in front.", "bullets": ["§ 3–6 words", "§", "§"], "best": "§ 'Best for: beach days, couples, sea views'" },
+    "theodora": { "tag": "§ 'In the village'", "title": "Theodora Studios & Apartments", "pitch": "§ 1–2 sentences: at the top of the main street, 100 m from the centre, quiet garden with an orange tree, access to the next-door hotel's pool, a 5–10 minute walk down to the beach.", "bullets": ["§", "§", "§"], "best": "§ 'Best for: families, groups, walking to tavernas'" }
+  },
+  "finder": {
+    "kicker": "§ 'Room finder'", "title": "§ 5–9 words: answer three questions, we'll suggest the right room", "intro": "§ 1 sentence",
+    "q1": { "label": "§ 'Who is travelling?'", "options": { "couple": "§", "family": "§ 'Family with children'", "friends": "§ 'Group of friends'", "solo": "§ 'Just me'" } },
+    "q2": { "label": "§ 'What matters most?'", "options": { "beach": "§ 'Beach right outside'", "view": "§ 'A sea view'", "quiet": "§ 'Peace and quiet'", "space": "§ 'Space to spread out'", "value": "§ 'Best value'" } },
+    "q3": { "label": "§ 'How many guests?'", "hint": "§ 'Children aged 4+ count as guests at Theodora, 6+ at Aegealis'" },
+    "resultTitle": "§ 'Our suggestion for you'", "alsoGood": "§ 'Also a good fit'", "why": "§ 'Why this room'", "noMatch": "§ 'For {count} guests we suggest two rooms or the two-bedroom apartment. Message us and we'll arrange it.'", "reset": "§ 'Start again'",
+    "reasons": {
+      "beachfront": "§ 'The beach is across the road'", "seaView": "§ 'Sea view from your room'", "quiet": "§ 'Quiet street, garden behind the house'", "space": "§ 'Separate bedroom'", "twoBedrooms": "§ 'Two bedrooms, room for five'",
+      "value": "§ 'Our best price for two'", "kids": "§ 'Room for the children'", "terrace": "§ 'Private terrace'", "village": "§ 'Tavernas and shops a minute away'", "cruise": "§ 'The cruise boat leaves from in front'", "pool": "§ 'Pool access next door'", "budgetGroup": "§ 'Good value for a group'"
+    }
+  },
+  "cruises": {
+    "kicker": "§ 'At sea with the Captain'", "title": "§ 6–10 words: day cruises to Ithaca, Fiscardo and Zakynthos from the beach outside your room",
+    "body": "§ 2 sentences: NIRIIS, built 2017 for these cruises, stabilisers, water slide; two swims every trip.",
+    "departs": "§ 'Departs 09:00 from Skala beach, in front of Aegealis'", "discount": "§ 'Staying with us? 20% off every cruise.'", "week": "§ 'This week at sea'", "cta": "§ 'See all cruises'",
+    "dayShort": "§ 'Every {day}' keep {day}"
+  },
+  "story": {
+    "kicker": "§ 'Our story'", "title": "§ 4–8 words. A love for the sea that never died.",
+    "body": "§ 3 short paragraphs separated by \\n\\n (max 140 words). Paraphrase (not copy) the Captain's story from facts: Spathi 1952; saw the sea at 4 and fell in love; sailed the world; Master's licence 1984; met his wife and chose to stay close to family and the sea; 1987 first cruises from Skala with TARA; six boats later, NIRIIS; '3 loves: my family, the sea, and all of you'. Then: the rooms came from the same hospitality.",
+    "quote": "§ a short line in the Captain's voice, paraphrased from his text about 3 loves (max 18 words)", "signature": "§ 'Captain Vangelis Spathis'",
+    "timeline": [
+      { "year": "1974", "text": "§ 'Joins the navy'" }, { "year": "1984", "text": "§ 'Master's licence'" }, { "year": "1987", "text": "§ 'First cruises from Skala with TARA'" },
+      { "year": "2000", "text": "§ 'NAUTILUS'" }, { "year": "2012", "text": "§ 'MYTHOS'" }, { "year": "2017", "text": "§ 'NIRIIS, built for these waters'" }
+    ]
+  },
+  "reviews": { "kicker": "§ 'Guests in their own words'", "title": "§ 5–9 words", "intro": "§ 1 sentence: real, unedited reviews from verified Booking.com stays", "cta": "§ 'Read more reviews on Booking.com'" },
+  "map": { "kicker": "§ 'Around you'", "title": "§ 5–9 words: everything within a short walk", "intro": "§ 1–2 sentences", "from": "§ 'Distances from'", "filters": { "all": "§", "beach": "§ 'Beaches'", "food": "§ 'Eat & drink'", "shop": "§ 'Shops'", "sight": "§ 'Sights'", "transport": "§ 'Getting here'" }, "open": "§ 'Open in Google Maps'", "legendWalk": "§ 'walk'", "legendDrive": "§ 'drive'" },
+  "faq": { "kicker": "§ 'Good to know'", "title": "§ 'Questions guests ask us'", "cta": "§ 'All questions'" },
+  "contact": { "kicker": "§ 'Talk to us'", "title": "§ 5–9 words: a real person answers, usually within a few hours", "body": "§ 1–2 sentences: WhatsApp/phone/e-mail; English, Greek, some Spanish; ask anything before you book.", "kiosk": "§ 'Or find us at the kiosk on Skala beach, every morning in season.'" }
+}

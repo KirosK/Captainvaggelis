@@ -1,0 +1,105 @@
+{
+  "title": "In breve",
+  "rooms": "camere e appartamenti",
+  "roomsBy": {
+    "aegealis": "monolocali e bilocali",
+    "theodora": "camere, monolocali e appartamenti"
+  },
+  "size": "Superficie",
+  "sizeValue": "{min}–{max} m²",
+  "sizeOne": "{n} m²",
+  "guests": "Alloggio più grande",
+  "guestsValue": "fino a {count} ospiti",
+  "guestsStat": "ospiti nell'alloggio più grande",
+  "location": "Posizione",
+  "aegealisLocation": "Di fronte alla spiaggia di Skala",
+  "theodoraLocation": "Nella parte alta del paese, a 100 m dal centro",
+  "breakdown": "Cosa trovate",
+  "typeCount": "{count} alloggi di questo tipo",
+  "typeCountOne": "1 alloggio di questo tipo",
+  "seeRoom": "Dettagli",
+  "allRooms": "Tutti gli alloggi in breve ({count})",
+  "table": {
+    "type": "Tipologia",
+    "count": "Quanti",
+    "size": "Superficie",
+    "guests": "Ospiti",
+    "layout": "Ambienti",
+    "view": "Vista"
+  },
+  "layout": {
+    "room": "Camera",
+    "studio": "Monolocale",
+    "oneBedroom": "1 camera da letto + soggiorno",
+    "twoBedrooms": "2 camere da letto + soggiorno"
+  },
+  "views": {
+    "sea": "Vista mare",
+    "seaMixed": "Vista mare (frontale, laterale o parziale)",
+    "garden": "Vista giardino",
+    "gardenMixed": "Vista giardino o vista mare parziale",
+    "village": "Vista sul paese e sulle colline",
+    "villageMixed": "Vista sul paese; alcuni con vista mare"
+  },
+  "identity": {
+    "aegealis": "Sul mare",
+    "theodora": "In paese"
+  },
+  "map": {
+    "tabs": {
+      "sea": "Mare",
+      "food": "Mangiare e bere",
+      "daily": "Ogni giorno",
+      "transport": "Spostarsi",
+      "explore": "Escursioni"
+    },
+    "categories": "Categorie di luoghi",
+    "from": "Distanze da",
+    "fromNamed": {
+      "aegealis": "Distanze dall'Aegealis",
+      "theodora": "Distanze dal Theodora"
+    },
+    "walk": "{count} min a piedi",
+    "walkOne": "1 min a piedi",
+    "walkShort": "{count} min",
+    "walkShortOne": "1 min",
+    "drive": "{count} min in auto",
+    "driveOne": "1 min in auto",
+    "byFoot": "A piedi",
+    "byCar": "In auto",
+    "directions": "Indicazioni",
+    "hint": "Toccate un luogo per vedere il percorso a piedi.",
+    "now": "Skala adesso",
+    "place": "Skala, Cefalonia 280 86",
+    "localTime": "Ora locale",
+    "temperature": "Temperatura",
+    "sunset": "Tramonto",
+    "sea": "Mare",
+    "seaNote": "circa {temp} °C a {month}: media del mese, non la misura di oggi",
+    "copyAddress": "Copiate l'indirizzo",
+    "copyValue": {
+      "aegealis": "Aegealis Studios, Skala 280 86, Cefalonia, Grecia",
+      "theodora": "Theodora Studios & Apartments, Skala 280 86, Cefalonia, Grecia"
+    },
+    "copied": "Copiato",
+    "mapsLink": "Indicazioni su Google Maps",
+    "switchTo": "Distanze da {name}",
+    "here": "Il vostro alloggio",
+    "twoFingers": "Usate due dita per spostare la mappa",
+    "zoomIn": "Ingrandisci",
+    "zoomOut": "Riduci"
+  },
+  "seo": {
+    "home": "Monolocali e appartamenti a Skala, Cefalonia",
+    "aegealis": "Aegealis Studios · monolocali sul mare a Skala, Cefalonia",
+    "theodora": "Theodora Studios & Apartments · nel paese di Skala, Cefalonia",
+    "cruises": "Crociere e gite in barca da Skala, Cefalonia",
+    "whereToStay": "Dove dormire a Skala",
+    "whereToStayIntro": "Due strutture a gestione familiare, una sul mare e una in paese, entrambe con un voto di 9,1 su Booking.com."
+  },
+  "kickers": {
+    "beforeYouArrive": "Prima di arrivare",
+    "aboutSkala": "Skala in breve",
+    "practical": "Aerei, traghetti, autobus"
+  }
+}

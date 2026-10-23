@@ -1,0 +1,380 @@
+{
+  "hub": {
+    "hero": {
+      "eyebrow": "Captain Vangelis Special Cruises · since 1987",
+      "title": "The Ionian,\nfrom the deck of NIRIIS",
+      "subtitle": "Day cruises from Skala to Ithaca, Fiscardo and Zakynthos, with swim stops on every trip. Run by Captain Vangelis and his family."
+    },
+    "timetable": {
+      "title": "Weekly timetable",
+      "intro": "Every scheduled cruise leaves Skala beach at 09:00. On request, the Fiscardo and Ithaca cruises can also pick you up at Poros at 09:20, at the ferry quay; the boat stops there for only a few minutes. The Zakynthos cruise leaves from Skala only.",
+      "depart": "Departs",
+      "return": "Back",
+      "noCruise": "No scheduled cruise. Ask us about a private trip.",
+      "season": "Based on the 2026 timetable · 2027 dates to be confirmed"
+    },
+    "choose": {
+      "title": "Choose your day at sea",
+      "intro": "Four routes sail on set days each week, and the BBQ, private and wedding cruises run on request."
+    },
+    "compare": {
+      "title": "Which cruise is right for you?",
+      "kids": "Great with children",
+      "culture": "Villages & history",
+      "swim": "Two swim stops",
+      "adventure": "Open-sea adventure",
+      "short": "Gentler day",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "boat": {
+      "kicker": "The boat",
+      "title": "NIRIIS, built for these waters",
+      "body": "NIRIIS is the Captain's sixth boat, built in 2017 after thirty years of daily cruises from Skala. Her Volvo Penta IPS engines run very quietly, so what you hear is the sea. Stabilisers cut rolling by up to 70%.\n\nThe main saloon is air-conditioned, with large windows. In the saloon and on the upper deck, half-moon seats wrap around tables, so each family or group sits together. There are four toilets, two bars, a diving platform and a water slide. The life rafts release automatically, as on ocean-going ships.",
+      "specs": {
+        "length": "Length",
+        "capacity": "Passengers",
+        "speed": "Cruising speed",
+        "built": "Built",
+        "engines": "Engines",
+        "stabilisers": "Stabilisers"
+      },
+      "specValues": {
+        "length": "27.8 m",
+        "capacity": "200",
+        "speed": "16 knots",
+        "built": "2017",
+        "engines": "2 × 900 hp Volvo Penta IPS",
+        "stabilisers": "Up to 70% less rolling"
+      },
+      "features": [
+        "Water slide & diving platform",
+        "Air-conditioned saloon",
+        "Two bars on board",
+        "Four toilets",
+        "Tables for families and groups",
+        "Quiet IPS engines"
+      ]
+    },
+    "kalypso": {
+      "title": "Kalypso Star",
+      "body": "Kalypso Star is a semi-submarine trimaran built in France, with 49 seats in the central hall facing large underwater windows for watching marine life. The upper deck seats another 49 for drinks at sunset. Trips run on request."
+    },
+    "notes": {
+      "title": "Before you sail",
+      "items": [
+        "Be at the boat at least 30 minutes before departure.",
+        "The children's fare applies to ages 4 to 11. Ask us about infants.",
+        "Your second cruise is 15% off.",
+        "Staying at Aegealis or Theodora? 20% off every scheduled cruise.",
+        "The Captain may adjust the schedule for safety and comfort.",
+        "No refunds after the boat has left."
+      ]
+    },
+    "bring": {
+      "title": "What to bring",
+      "items": [
+        "Swimwear and a towel",
+        "Sun cream and a hat",
+        "Cash or a card for lunch ashore",
+        "A light layer for the way back"
+      ]
+    },
+    "reviewsTitle": "What our guests say about the cruises",
+    "private": {
+      "title": "Private cruises, parties & weddings",
+      "body": "Birthdays, anniversaries, weddings or a day out with friends: we arrange cruises on request. Tell us your date and your idea, and we'll plan it with you.",
+      "cta": "Ask for a private cruise"
+    }
+  },
+  "booking": {
+    "title": "Book your seats",
+    "date": "Choose a date",
+    "onlyDays": "This cruise sails on {days}",
+    "seats": "Passengers",
+    "adults": "Adults",
+    "adultsHint": "12+ years",
+    "children": "Children",
+    "childrenHint": "4–11 years",
+    "infants": "Infants",
+    "infantsHint": "Under 4 · ask us about fares",
+    "pickup": "Boarding point",
+    "guest": "I'm staying at Aegealis or Theodora",
+    "guestHint": "20% off. We'll check the name on your booking.",
+    "second": "This is my second cruise with you",
+    "secondHint": "15% off",
+    "seatsLeft": "{count} seats left",
+    "seatsLeftOne": "1 seat left",
+    "fewLeft": "Only {count} left",
+    "fewLeftOne": "Only 1 left",
+    "soldOut": "Fully booked",
+    "cancelled": "Cancelled due to weather",
+    "cancelledNote": "The Captain has cancelled this departure for safety. Please choose another day.",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "total": "Total",
+    "next": "Continue",
+    "yourDetails": "Your details",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Mobile (WhatsApp)",
+    "hotel": "Where are you staying? (optional)",
+    "notes": "Anything we should know?",
+    "pay": "Pay {amount} securely",
+    "payLater": "Reserve now, pay at the kiosk",
+    "confirmTitle": "You're on board",
+    "ticket": "E-ticket",
+    "reference": "Booking reference",
+    "addToCalendar": "Add to calendar",
+    "terms": "By booking, you accept our booking terms.",
+    "requestOnly": "This cruise runs on request. Tell us your date and group size, and we'll confirm."
+  },
+  "list": {
+    "fiscardo": {
+      "name": "Fiscardo & Sami",
+      "tagline": "Kefalonia's coast, film locations and lunch in Fiscardo",
+      "summary": "Sail up the Kefalonia coast past Makria Petra and Antisamos, with time in Sami for coffee or a bus trip to Melissani Lake. Then stop for lunch in Fiscardo and swim at Mini Myrtos, where the boat lands right on the beach.",
+      "days": "Tuesday & Saturday",
+      "highlights": [
+        "Makria Petra, the Blue Lagoon",
+        "Antisamos and the Captain Corelli coast",
+        "Coffee in Sami, or Melissani by bus",
+        "Lunch and a stroll in Fiscardo",
+        "A swim at Mini Myrtos"
+      ],
+      "stops": {
+        "skala": "Departure from Skala beach",
+        "poros": "Pick-up on request at 09:20, at the ferry quay (not by the cafés). The boat stops for only a few minutes, so please be on time.",
+        "makriaPetra": "Makria Petra, known as the Blue Lagoon, is the first sight along the coast.",
+        "antisamos": "Antisamos is the beach from the film Captain Corelli's Mandolin.",
+        "sami": "You have an hour and a half for coffee and shopping in Sami, where most of Captain Corelli's Mandolin was filmed. Buses wait for anyone who wants to visit Melissani Lake (the bus and entrance are not included; entrance is €15 for adults and €10 for ages 6–18, students and over-65s).",
+        "gorgotas": "In Gorgotas bay, you pass the jetty from the film.",
+        "fiscardo": "Fiscardo was the only village the 1953 earthquake did not destroy, and yachts moor in its harbour. You have almost two hours for lunch and a stroll.",
+        "miniMyrtos": "At Mini Myrtos (Koutsoupia), the boat lands right on the beach for your swim.",
+        "return": "If you boarded at Poros, you're back there at 17:30."
+      },
+      "goodFor": "First-timers, families and anyone who loves villages and film locations",
+      "notIncluded": [
+        "Lunch",
+        "Melissani bus and entrance"
+      ],
+      "included": [
+        "A swim at Mini Myrtos (the boat lands on the beach)",
+        "Water slide & diving platform",
+        "Air-conditioned saloon",
+        "Tables for families and groups"
+      ]
+    },
+    "ithacaVathiKioni": {
+      "name": "Ithaca: Vathi & Kioni",
+      "tagline": "Vathi, Kioni and a swim at Gidaki",
+      "summary": "A full day on Ithaca, with an hour and a half each in Vathi, the island's capital, and Kioni, a preserved 16th-century village. You swim twice: at Gidaki, a turquoise beach reached only by sea, and at Mini Myrtos or Makria Petra.",
+      "days": "Wednesday & Sunday",
+      "highlights": [
+        "Gidaki beach, reached only by sea",
+        "Vathi and the statue of Odysseus",
+        "Kioni and its windmills",
+        "The cliffs of Ai Gianni",
+        "A swim at Mini Myrtos or Makria Petra"
+      ],
+      "stops": {
+        "skala": "Departure from Skala beach",
+        "poros": "Pick-up on request at 09:20, at the ferry quay (not by the cafés). The boat stops for only a few minutes, so please be on time.",
+        "gidaki": "Gidaki is a turquoise beach on Ithaca with no road down to it. Swim, dive from the platform or try the water slide.",
+        "vathi": "You have an hour and a half in Vathi, Ithaca's capital. Look out for the Lazaretto islet with the Church of the Saviour, the statue of Odysseus, the archaeological and folklore museums, and the Venetian-style buildings rebuilt after the 1953 earthquake.",
+        "kioni": "Kioni is a preserved 16th-century village with three old windmills. Its tavernas serve fresh fish, which makes it the place for lunch.",
+        "aiGianni": "At Cape Ai Gianni, look for caves and wild goats on cliffs about 70 m high.",
+        "miniMyrtos": "Your second swim, at Mini Myrtos or Makria Petra.",
+        "return": "If you boarded at Poros, you're back there at 17:30."
+      },
+      "goodFor": "Anyone after villages, history and two swims in one day",
+      "notIncluded": [
+        "Lunch"
+      ],
+      "quote": "Keep Ithaka always in your mind.",
+      "quoteBy": "C. P. Cavafy, Ithaka",
+      "included": [
+        "Two swim stops: Gidaki, then Mini Myrtos or Makria Petra",
+        "Water slide & diving platform",
+        "Air-conditioned saloon",
+        "Tables for families and groups"
+      ]
+    },
+    "ithacaVathi": {
+      "name": "Ithaca: Vathi",
+      "tagline": "Two hours in Vathi, two swims and an earlier return",
+      "summary": "Our shorter day on Ithaca: two hours in Vathi, with swims at Gidaki and at Mini Myrtos or Makria Petra. The fare is lower, and you're back in Skala by 16:45.",
+      "days": "Monday & Friday",
+      "highlights": [
+        "Gidaki beach, reached only by sea",
+        "Two hours in Vathi",
+        "A swim at Mini Myrtos or Makria Petra",
+        "Back by 16:45"
+      ],
+      "stops": {
+        "skala": "Departure from Skala beach",
+        "poros": "Pick-up on request at 09:20, at the ferry quay (not by the cafés). The boat stops for only a few minutes, so please be on time.",
+        "gidaki": "A swim at Gidaki, the turquoise Ithaca beach you can only reach by sea.",
+        "vathi": "Two hours in Vathi, Ithaca's capital, to see the Lazaretto islet, the statue of Odysseus and the Venetian-style buildings rebuilt after the 1953 earthquake.",
+        "miniMyrtos": "Your second swim, at Mini Myrtos or Makria Petra.",
+        "return": "If you boarded at Poros, you're back there at 16:30."
+      },
+      "goodFor": "Families with young children and anyone who wants a gentler day",
+      "notIncluded": [
+        "Lunch"
+      ],
+      "included": [
+        "Two swim stops: Gidaki, then Mini Myrtos or Makria Petra",
+        "Water slide & diving platform",
+        "Air-conditioned saloon",
+        "Tables for families and groups"
+      ]
+    },
+    "zakynthos": {
+      "name": "Zakynthos: Shipwreck & Blue Caves",
+      "tagline": "Shipwreck bay before the big boats, then the Blue Caves",
+      "summary": "Cross to Zakynthos and reach Shipwreck (Navagio) bay around 10:00, before the big boats arrive. After the Blue Caves, a swim at Platys Gialos and two hours in Alykes for lunch, you're back in Skala at about 15:00.",
+      "days": "Thursday",
+      "highlights": [
+        "Shipwreck (Navagio) bay from the water",
+        "The Blue Caves",
+        "A swim at Platys Gialos",
+        "Two hours in Alykes"
+      ],
+      "stops": {
+        "skala": "Departure from Skala beach at 09:00",
+        "skinari": "About 40 minutes after leaving Skala, we reach Cape Skinari on Zakynthos.",
+        "shipwreck": "We reach Shipwreck (Navagio) bay around 10:00, before the big boats arrive. We stay about 40–50 m off the beach for the view and photos. Landing and swimming on Shipwreck beach are no longer permitted.",
+        "blueCaves": "Along the coast, you pass the ruined walls of St Andrew's monastery, then the Blue Caves. We stop nearby at Platys Gialos for a swim of about 30 minutes.",
+        "alykes": "Two hours in Alykes, 12:00 to 14:00, for lunch and a swim from the sandy beach.",
+        "return": "Times are approximate and depend on the sea on the day."
+      },
+      "goodFor": "Confident sea travellers and keen photographers",
+      "notIncluded": [
+        "Lunch"
+      ],
+      "warning": {
+        "title": "A word from the Captain",
+        "body": "The west coast of Zakynthos faces the open sea, and even on a fine day there can be a swell. The Captain does not recommend this cruise for small children, older guests, pregnant women, people with limited mobility or anyone prone to seasickness; he suggests one of the other cruises instead. NIRIIS has stabilisers, but safety always comes first."
+      },
+      "included": [
+        "Shipwreck bay seen from the water",
+        "A swim at Platys Gialos, near the Blue Caves",
+        "Stabilisers for a steadier crossing",
+        "Air-conditioned saloon"
+      ]
+    },
+    "bbq": {
+      "name": "Mini Myrtos BBQ cruise",
+      "tagline": "Swims, a beach barbecue with wine, and dancing on board",
+      "summary": "Sail along the south-east coast to swim at Makria Petra, then on to Koutsoupia beach for another swim, a barbecue with plenty of food and wine, and beach games. Music and dancing on board round off the trip. Day or evening, times flexible.",
+      "days": "On request",
+      "highlights": [
+        "Makria Petra swim and slide",
+        "Koutsoupia beach",
+        "BBQ with food and wine included",
+        "Beach games, music and dancing on board"
+      ],
+      "stops": {
+        "skala": "Departure from Skala beach",
+        "poros": "Past Kako Lagadi and Poros harbour",
+        "makriaPetra": "A swim at Makria Petra, with the water slide and the diving platform.",
+        "koutsoupia": "At Koutsoupia, also known as Mini Myrtos, you swim, play beach games and sit down to a barbecue. Food and wine are included, and there is plenty of both.",
+        "return": "Music and dancing on board all the way back to Skala."
+      },
+      "goodFor": "Groups, celebrations and a send-off at the end of your holiday",
+      "notIncluded": [],
+      "included": [
+        "Swims at Makria Petra and Koutsoupia",
+        "BBQ with plenty of food and wine",
+        "Beach games",
+        "Music and dancing on board"
+      ]
+    },
+    "private": {
+      "name": "Private cruises & parties",
+      "tagline": "A cruise for your group, on the day you choose",
+      "summary": "Book a cruise of your own for a birthday, an anniversary or a group of friends. Share what you have in mind, and we'll work out the route and timing together.",
+      "days": "On request",
+      "highlights": [
+        "Your route",
+        "Your timing",
+        "Birthdays, anniversaries, groups"
+      ],
+      "goodFor": "Birthdays, family celebrations and groups of friends",
+      "notIncluded": [],
+      "includedTitle": "Planned with you",
+      "included": [
+        "Route and timing, decided together",
+        "Help choosing the menu and the drinks",
+        "A crew that looks after your guests",
+        "Air-conditioned saloon and two bars"
+      ]
+    },
+    "wedding": {
+      "name": "Wedding cruises",
+      "tagline": "Your wedding day on the water",
+      "summary": "Celebrate your Kefalonian wedding at sea, with family and friends on board. Tell us your plans, and we'll take care of the details.",
+      "days": "On request",
+      "highlights": [
+        "Sail from Skala on your chosen date",
+        "Family and friends on board",
+        "We take care of the details"
+      ],
+      "goodFor": "Couples marrying in Kefalonia",
+      "notIncluded": [],
+      "quote": "Just returned from Kefalonia where we got married on this boat!!! … The crew and the Captain are just fantastic. Nothing is too much trouble…",
+      "quoteBy": "Tripadvisor review, 2012 (on our previous boat)",
+      "includedTitle": "Planned with you",
+      "included": [
+        "A cruise planned for you and your guests",
+        "Help choosing the menu and the drinks",
+        "A crew that takes care of the details",
+        "Air-conditioned saloon and two bars"
+      ]
+    }
+  },
+  "detail": {
+    "itinerary": "The day, stop by stop",
+    "times": "Times & prices",
+    "highlights": "Highlights",
+    "goodFor": "Good for",
+    "notIncluded": "Not included",
+    "included": "Included",
+    "includedItems": [
+      "Swim stops on every cruise",
+      "Water slide & diving platform",
+      "Air-conditioned saloon",
+      "Tables for families and groups"
+    ],
+    "price": "Price",
+    "adult": "Adult",
+    "child": "Child (4–11)",
+    "map": "Route",
+    "other": "Other cruises",
+    "swimStop": "Swim stop",
+    "ashore": "Time ashore",
+    "eyebrow": "Day cruise from Skala",
+    "seoHeading": "{name} · day cruise from Skala, Kefalonia",
+    "days": "Sails on",
+    "onRequest": "On request",
+    "paused": "Not sailing at the moment",
+    "porosNote": "Poros pick-up at 09:20 is on request, at the ferry quay. The stop lasts only a few minutes.",
+    "mapHint": "Use two fingers to move the map",
+    "mapLabel": "Route map",
+    "stay": {
+      "kicker": "Where to stay in Skala",
+      "title": "Stay in Skala, sail for 20% less",
+      "titleCharter": "Stay in Skala, where the boat sails from",
+      "body": "Guests of Aegealis Studios and Theodora Studios & Apartments get 20% off every scheduled cruise, and the boat leaves from the beach in front of Aegealis."
+    }
+  },
+  "reviewQuotes": {
+    "th-helen": "We also enjoyed our cruise to Ithaca with Captain Vangelis Cruises, which the apartments give you 20% off …",
+    "ag-amy": "He offers you 20% off his boat trips (definitely do the Ithaca one) …",
+    "th-kamila": "… we went also to the cruise to Ithaka which was amazing, she booked it for us.",
+    "th-keith": "Captain Vangelis' fabulous boat trips were organised for us (with a very healthy discount!) and airport taxi transfers arranged … It was all so easy and we left very happy and relaxed.",
+    "ag-iulia": "… also you get 20% off for any cruise with Captain Vangelis, a cruise we 10000% loved.",
+    "th-kelly": "… the owners and maid were so lovely, truly recommend this place and their boat trip offers well worth a fun filled day out."
+  }
+}

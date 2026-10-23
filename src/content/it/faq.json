@@ -1,0 +1,135 @@
+{
+  "title": "Domande sul soggiorno a Skala, Cefalonia",
+  "intro": "Non trovate la risposta che cercate? Scriveteci e ve la diamo noi.",
+  "groups": {
+    "booking": {
+      "title": "Prenotazione e pagamento",
+      "items": {
+        "pay": {
+          "q": "Come posso pagare?",
+          "a": "Con carta, quando prenotate online: un acconto del 30% subito e il resto all'arrivo, oppure l'intero importo in un'unica soluzione. Se preferite pagare in un altro modo, per esempio in contanti all'arrivo, basta scriverci."
+        },
+        "cancel": {
+          "q": "Quali sono le condizioni di cancellazione?",
+          "a": "Cancellazione gratuita fino a 14 giorni prima dell'arrivo. Dopo, parlatene con noi: siamo un'attività di famiglia e, quando possiamo, vi veniamo incontro."
+        },
+        "confirm": {
+          "q": "Quando viene confermata la prenotazione?",
+          "a": "Subito. L'e-mail di conferma arriva appena prenotate, e qualche giorno prima del vostro arrivo vi scriveremo su WhatsApp."
+        }
+      }
+    },
+    "stay": {
+      "title": "Il vostro soggiorno",
+      "items": {
+        "checkin": {
+          "q": "A che ora sono il check-in e il check-out?",
+          "a": "Il check-in è dalle 14:00 a mezzanotte e il check-out dalle 08:00 alle 10:00. Vi chiediamo di comunicarci in anticipo l'orario di arrivo; se il volo di ritorno parte in tarda giornata, chiedeteci e vedremo cosa si può fare."
+        },
+        "late": {
+          "q": "Atterriamo a tarda notte. È un problema?",
+          "a": "Il check-in è possibile fino a mezzanotte. Se atterrate più tardi, comunicateci prima l'orario del volo e faremo il possibile per accogliervi. Possiamo anche prenotarvi un taxi dall'aeroporto."
+        },
+        "cleaning": {
+          "q": "Le camere vengono pulite ogni giorno?",
+          "a": "Sì, sia all'Aegealis sia al Theodora, e anche gli asciugamani si cambiano tutti i giorni. Molti ospiti dell'Aegealis ricordano per nome Maria, che si occupa delle pulizie."
+        },
+        "kitchen": {
+          "q": "Possiamo cucinare?",
+          "a": "Sì. Ogni alloggio ha un angolo cottura con frigorifero, bollitore, macchina del caffè, pentole e stoviglie. Vicinissimo all'Aegealis c'è un supermercato AB, e dal Theodora il supermercato più vicino è a circa un minuto a piedi."
+        },
+        "wifi": {
+          "q": "C'è il Wi-Fi?",
+          "a": "All'Aegealis il Wi-Fi gratuito copre tutta la struttura: va bene per messaggi e mappe, meno per lo streaming. Al Theodora c'è internet via cavo gratuito solo nelle aree comuni, e nelle camere non c'è il Wi-Fi: se dovete lavorare online, ditecelo prima di prenotare."
+        },
+        "pool": {
+          "q": "C'è una piscina?",
+          "a": "Non abbiamo una piscina nostra, ma potete nuotare in quelle accanto. Gli ospiti dell'Aegealis possono usare le piscine dei due hotel che lo affiancano, e al Theodora un cancello nel giardino porta alla piscina dell'hotel accanto (quando l'hotel è aperto)."
+        },
+        "breakfast": {
+          "q": "La colazione è inclusa?",
+          "a": "No. I nostri alloggi sono in formula solo pernottamento, ognuno con il suo angolo cottura. All'Aegealis l'hotel accanto serve una colazione a buffet, da pagare direttamente lì, e i bar e i caffè di Skala sono a pochi minuti a piedi da entrambe le strutture."
+        },
+        "parking": {
+          "q": "C'è un parcheggio?",
+          "a": "All'Aegealis sì: parcheggio pubblico gratuito intorno alla struttura, senza bisogno di prenotare. Il Theodora non ha un parcheggio privato, ma di solito si trova posto in strada nelle vicinanze."
+        },
+        "ac": {
+          "q": "C'è l'aria condizionata?",
+          "a": "Sì, in ogni camera, monolocale e appartamento. Nel bilocale al piano superiore dell'Aegealis, l'aria condizionata è nell'ambiente principale."
+        },
+        "pets": {
+          "q": "Possiamo portare un animale?",
+          "a": "Purtroppo gli animali non sono ammessi né all'Aegealis né al Theodora."
+        }
+      }
+    },
+    "families": {
+      "title": "Famiglie",
+      "items": {
+        "kids": {
+          "q": "I bambini sono i benvenuti?",
+          "a": "Sì, a qualsiasi età e in entrambe le strutture. Per la tariffa, i bambini pagano come adulti dai 6 anni all'Aegealis e dai 4 anni al Theodora."
+        },
+        "cot": {
+          "q": "Possiamo avere una culla o un letto aggiuntivo?",
+          "a": "All'Aegealis sì, su richiesta e in base alla disponibilità, da pagare in loco. La culla (0–2 anni) costa 5 € a notte; il letto aggiuntivo è gratuito per i bambini fino a 4 anni, costa 5 € a notte dai 5 ai 12 anni e 10 € a notte dai 13 anni in su. Il Theodora non dispone di culle né di letti aggiuntivi."
+        },
+        "five": {
+          "q": "Siamo in cinque: quale alloggio ci consigliate?",
+          "a": "Ognuno degli appartamenti con due camere del Theodora ospita fino a cinque persone. Il quinto letto, lungo circa 180 cm, è nella zona giorno con angolo cottura, quindi è adatto a un bambino o a un adulto non troppo alto. In alternativa, prenotate due alloggi e scriveteci: ci pensiamo noi."
+        }
+      }
+    },
+    "getting": {
+      "title": "Come arrivare",
+      "items": {
+        "airport": {
+          "q": "Quanto dista l'aeroporto?",
+          "a": "L'aeroporto di Cefalonia (EFL), vicino ad Argostoli, è a 33–35 km da entrambe le strutture. Possiamo organizzare un taxi che vi aspetti all'arrivo del volo: spuntate la casella quando prenotate, oppure scriveteci."
+        },
+        "car": {
+          "q": "Serve l'auto?",
+          "a": "Non per muoversi a Skala. Da entrambe le strutture si raggiungono a piedi la spiaggia, i negozi e le taverne, e la barca delle crociere parte dalla spiaggia di Skala. L'auto è utile se volete esplorare il resto dell'isola."
+        },
+        "find": {
+          "q": "Come vi troviamo?",
+          "a": "Usate la mappa di questo sito, perché su alcune app di navigazione la nostra posizione risulta un po' spostata. L'Aegealis è di fronte alla spiaggia di Skala, dall'altra parte della strada, proprio dietro il chiosco delle crociere del Capitano Vangelis. Il Theodora è in cima alla via principale di Skala, a circa 100 m dal centro."
+        }
+      }
+    },
+    "cruises": {
+      "title": "Crociere",
+      "items": {
+        "discount": {
+          "q": "Gli ospiti hanno uno sconto sulle crociere?",
+          "a": "Sì. Soggiornando all'Aegealis o al Theodora avete il 20% di sconto su ogni crociera in calendario, e tutti i passeggeri hanno il 15% di sconto sulla seconda crociera. Al chiosco basta dire il vostro nome; se prenotate online, spuntate la casella riservata agli ospiti."
+        },
+        "where": {
+          "q": "Da dove parte la barca?",
+          "a": "Le crociere in calendario partono dalla spiaggia di Skala, proprio davanti all'Aegealis, alle 09:00. Su richiesta, le crociere per Fiscardo e per Itaca possono passare a prendervi anche a Poros, al molo dei traghetti, alle 09:20: la sosta dura solo pochi minuti. Ovunque vi imbarchiate, vi chiediamo di essere lì almeno 30 minuti prima della partenza."
+        },
+        "book": {
+          "q": "Come si prenota una crociera?",
+          "a": "Dalla pagina della crociera su questo sito, via WhatsApp, telefono o e-mail, oppure di persona al chiosco davanti all'Aegealis durante la stagione."
+        },
+        "weather": {
+          "q": "E se c'è brutto tempo?",
+          "a": "Decide il Capitano, il giorno stesso, e la sicurezza ha sempre la precedenza. Può cambiare itinerario o orari perché la crociera sia sicura e piacevole. Se annulla una partenza, potete scegliere tra il rimborso completo e un altro giorno."
+        },
+        "kids": {
+          "q": "Le crociere sono adatte ai bambini?",
+          "a": "Sì, soprattutto quelle per Itaca e Fiscardo. Le crociere per Itaca fanno due soste per il bagno, quella per Fiscardo una, a Mini Myrtos, e a bordo ci sono uno scivolo d'acqua e una piattaforma per i tuffi. La tariffa bambini vale dai 4 agli 11 anni; per i bambini sotto i 4 anni, chiedeteci. Sconsigliamo invece ai più piccoli la crociera per Zante, che lungo la costa occidentale dell'isola affronta il mare aperto."
+        },
+        "seasick": {
+          "q": "Soffro il mal di mare. Quale crociera scelgo?",
+          "a": "Scegliete la crociera per Fiscardo o quella per Itaca, che seguono le coste di Cefalonia e di Itaca. La NIRIIS ha stabilizzatori che riducono il rollio fino al 70%. Evitate la crociera per Zante: la costa occidentale dell'isola è esposta al mare aperto, e il Capitano stesso la sconsiglia a chi soffre il mal di mare."
+        },
+        "lunch": {
+          "q": "Il pranzo è incluso?",
+          "a": "Nelle crociere in calendario no: durante le soste pranzate a terra dove preferite, per esempio a Fiscardo, Kioni o Alykes, e a bordo ci sono due bar. Nella crociera barbecue a Mini Myrtos, invece, cibo e vino in abbondanza sono compresi."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "title": "At a glance",
+  "rooms": "rooms and apartments",
+  "roomsBy": {
+    "aegealis": "studios and apartments",
+    "theodora": "rooms, studios and apartments"
+  },
+  "size": "Size",
+  "sizeValue": "{min}–{max} m²",
+  "sizeOne": "{n} m²",
+  "guests": "Largest room",
+  "guestsValue": "up to {count} guests",
+  "guestsStat": "guests in the largest unit",
+  "location": "Location",
+  "aegealisLocation": "Opposite Skala beach",
+  "theodoraLocation": "Top of the village, 100 m from the centre",
+  "breakdown": "What's here",
+  "typeCount": "{count} of this type",
+  "typeCountOne": "The only one of its type",
+  "seeRoom": "Details",
+  "allRooms": "All {count} {kind} at a glance",
+  "table": {
+    "type": "Room type",
+    "count": "How many",
+    "size": "Size",
+    "guests": "Guests",
+    "layout": "Layout",
+    "view": "View"
+  },
+  "layout": {
+    "room": "Room",
+    "studio": "Open-plan studio",
+    "oneBedroom": "1 bedroom + living area",
+    "twoBedrooms": "2 bedrooms + living area"
+  },
+  "views": {
+    "sea": "Sea view",
+    "seaMixed": "Sea view (direct, side or partial)",
+    "garden": "Garden view",
+    "gardenMixed": "Garden view or partial sea view",
+    "village": "Village and hills",
+    "villageMixed": "Village view; some with sea view"
+  },
+  "identity": {
+    "aegealis": "On the beach",
+    "theodora": "In the village"
+  },
+  "map": {
+    "tabs": {
+      "sea": "Sea",
+      "food": "Eat & drink",
+      "daily": "Everyday",
+      "transport": "Getting around",
+      "explore": "Day trips"
+    },
+    "categories": "Place categories",
+    "from": "Distances from",
+    "fromNamed": {
+      "aegealis": "Distances from Aegealis",
+      "theodora": "Distances from Theodora"
+    },
+    "walk": "{count} min walk",
+    "walkOne": "1 min walk",
+    "walkShort": "{count} min",
+    "walkShortOne": "1 min",
+    "drive": "{count} min drive",
+    "driveOne": "1 min drive",
+    "byFoot": "On foot",
+    "byCar": "By car",
+    "directions": "Directions",
+    "hint": "Tap a place to see the walking route.",
+    "now": "Skala now",
+    "place": "Skala, Kefalonia 280 86",
+    "localTime": "Local time",
+    "temperature": "Temperature",
+    "sunset": "Sunset",
+    "sea": "Sea",
+    "seaNote": "about {temp} °C in {month}, a monthly average, not today's reading",
+    "copyAddress": "Copy address",
+    "copyValue": {
+      "aegealis": "Aegealis Studios, Skala 280 86, Kefalonia, Greece",
+      "theodora": "Theodora Studios & Apartments, Skala 280 86, Kefalonia, Greece"
+    },
+    "copied": "Copied",
+    "mapsLink": "Directions in Google Maps",
+    "switchTo": "Show distances from {name}",
+    "here": "You are staying here",
+    "twoFingers": "Use two fingers to move the map",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "seo": {
+    "home": "Studios and apartments in Skala, Kefalonia",
+    "aegealis": "Aegealis Studios · beachfront studios in Skala, Kefalonia",
+    "theodora": "Theodora Studios & Apartments · in Skala village, Kefalonia",
+    "cruises": "Boat trips and day cruises from Skala, Kefalonia",
+    "whereToStay": "Where to stay in Skala",
+    "whereToStayIntro": "Two family-run places, one on the beach and one in the village, both rated 9.1 on Booking.com."
+  },
+  "kickers": {
+    "beforeYouArrive": "Before you arrive",
+    "aboutSkala": "About Skala",
+    "practical": "Planes, ferries, buses"
+  }
+}

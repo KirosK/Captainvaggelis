@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "eyebrow": "Guide",
+    "title": "Our corner of Kefalonia, from Skala outwards",
+    "subtitle": "Beaches, ancient sites and day trips we recommend to our guests, from a family that has sailed this coast since 1987."
+  },
+  "intro": {
+    "title": "Why Skala",
+    "body": "Skala sits on the south-east coast of Kefalonia, on a long beach of sand and pebbles. The old village stood on the hill behind until the 1953 earthquake levelled it, and Skala was rebuilt below, by the sea. The main street is a relaxed run of tavernas, bars and shops, and on the edge of the village the mosaic floors of a 3rd-century Roman villa have survived.\n\nIt is also a good base. Poros and its ferry port are about 12 km up the coast, and the seaside village of Katelios is about ten minutes' drive west. In season the Captain's boat leaves Skala at 09:00 for Ithaca, Fiscardo or Zakynthos, past coves that no road reaches."
+  },
+  "beaches": {
+    "title": "Beaches near Skala",
+    "items": {
+      "skala": {
+        "name": "Skala beach",
+        "body": "A long beach of sand and pebbles that runs from the village up the coast towards Poros. From Aegealis it is 20 m across the road, from Theodora about 500 m down the main street."
+      },
+      "spithi": {
+        "name": "Spithi",
+        "body": "Spithi is close to the village, about 1.7 km from Theodora and 2.3 km from Aegealis as the crow flies. When you fancy a change from the main beach, walk there on a cool morning or drive over in a few minutes."
+      },
+      "loutraki": {
+        "name": "Loutraki",
+        "body": "Loutraki is about 2 km from Theodora and 2.6 km from Aegealis, a few minutes away by car. Ask us for directions before you set off."
+      },
+      "mounta": {
+        "name": "Mounta",
+        "body": "About 2.7 km from Theodora and 3.4 km from Aegealis as the crow flies, 5–6 minutes by car. It is Kefalonia's main nesting beach for loggerhead sea turtles (Caretta caretta): in the nesting season keep clear of the marked areas and leave the beach dark at night."
+      },
+      "kaminia": {
+        "name": "Kaminia",
+        "body": "Kaminia, about 3.1 km from Theodora as the crow flies (7 minutes by car), is the western part of the same bay as Mounta. Turtles nest here too, so the same rules apply."
+      },
+      "miniMyrtos": {
+        "name": "Mini Myrtos (Koutsoupia)",
+        "body": "A cove on the east coast between Poros and Antisamos. Our Fiscardo cruise pulls right up to the beach for a swim, the Ithaca cruises stop here or at Makria Petra, and the Mini Myrtos BBQ cruise (on request) stays for a barbecue and beach games."
+      }
+    }
+  },
+  "todo": {
+    "title": "Things to do",
+    "items": {
+      "romanVilla": {
+        "name": "Roman villa of Skala",
+        "body": "On the edge of the village are the remains of a Roman villa from the 3rd century AD. Its mosaic floors survive under a shelter: one shows a sacrifice with a bull, a ram and a boar, another shows Envy attacked by wild animals. A few kilometres north, on the coast road towards Poros, are the remains of an Archaic temple of Apollo."
+      },
+      "cruise": {
+        "name": "A day at sea",
+        "body": "The easiest day out starts right in front of Aegealis. At 09:00 NIRIIS sails for Ithaca, Fiscardo or Zakynthos, with swim stops and time ashore for lunch on every scheduled cruise. Staying with us? You get 20% off our scheduled cruises."
+      },
+      "poros": {
+        "name": "Poros & Drakaina cave",
+        "body": "Poros, about 12 km up the coast, is a small port town with the ferry to Kyllini. Behind the town the road inland runs through the Poros gorge, where the Drakaina cave is. People used it from the Late Neolithic into the Early Bronze Age, and much later it became a shrine to Pan and the Nymphs. Ask us how to get there before you set off."
+      },
+      "markopoulo": {
+        "name": "Panagia Fidousa, Markopoulo",
+        "body": "Panagia Fidousa at Markopoulo is about 10 km from Skala, some 13 minutes by car. Ask us the way before you set off."
+      },
+      "atros": {
+        "name": "Atros monastery",
+        "body": "The Monastery of Panagia Atros is about 17–18 km from Skala, some 40 minutes by car. Ask us about the road before you set off, and cover shoulders and knees if you go inside."
+      },
+      "tzanata": {
+        "name": "Mycenaean tomb of Tzanata",
+        "body": "Just outside the village of Tzanata, about 13–14 km from Skala, is a Mycenaean beehive (tholos) tomb, found in 1991. It is 6.8 m across and more than 3,000 years old. Some like to call it the tomb of Odysseus; archaeologists are more careful."
+      },
+      "melissani": {
+        "name": "Melissani cave lake",
+        "body": "Melissani lake lies in a cave near Sami, on the east coast. On our Fiscardo cruise, buses wait at Sami for anyone who wants to visit; the bus and the entrance are paid separately (€15 for adults, €10 for ages 6–18, students and over-65s)."
+      },
+      "argostoli": {
+        "name": "Argostoli",
+        "body": "Argostoli, the island capital, is about 40 km away, under an hour by car."
+      }
+    }
+  },
+  "gettingHere": {
+    "title": "Getting here",
+    "air": {
+      "title": "By air",
+      "body": "Kefalonia Airport (EFL) is near Argostoli, 33–35 km from both properties and about 40–45 minutes by car or taxi. Send us your flight time and we can arrange a taxi to meet you."
+    },
+    "ferry": {
+      "title": "By ferry",
+      "body": "The nearest port is Poros, about 12 km north, with a year-round car ferry to Kyllini on the Peloponnese; the crossing takes around an hour and a half. Timetables change through the year, so check with the ferry company before you travel."
+    },
+    "around": {
+      "title": "Getting around",
+      "body": "Skala itself is easy on foot: the beach, tavernas, shops and supermarkets are a short walk from both properties. For beaches further out, Melissani or Argostoli, a hire car or scooter helps. There is a KTEL bus stop in the centre of Skala; ask us for the current timetable."
+    }
+  },
+  "when": {
+    "title": "When to come",
+    "body": "The holiday season runs roughly from May to October, and the Captain's cruises sail through the season, weather permitting."
+  }
+}

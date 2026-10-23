@@ -1,0 +1,57 @@
+{
+  "hub": {
+    "hero": { "eyebrow": "§ 'Captain Vangelis Special Cruises · since 1987'", "title": "§ 4–8 words: the Ionian from the deck of NIRIIS. Use '\\n'.", "subtitle": "§ 1–2 sentences, max 32 words: daily cruises from Skala and Poros to Ithaca, Fiscardo and Zakynthos, two swims every trip, a family crew." },
+    "timetable": { "title": "§ 'Weekly timetable'", "intro": "§ 1 sentence: departures 09:00 Skala, 09:20 Poros (Kefalonia & Ithaca routes)", "depart": "§ 'Departs'", "return": "§ 'Back'", "noCruise": "§ 'No scheduled cruise — ask about private trips'", "season": "§ 'Season: May to October. Dates for 2027 open soon.'" },
+    "choose": { "title": "§ 'Choose your day at sea'", "intro": "§ 1 sentence" },
+    "compare": { "title": "§ 'Which cruise is right for you?'", "kids": "§ 'Great with children'", "culture": "§ 'Villages & history'", "swim": "§ 'Most swimming'", "adventure": "§ 'Open-sea adventure'", "short": "§ 'Shorter day'" },
+    "boat": { "kicker": "§ 'The boat'", "title": "§ 'NIRIIS, built for these waters'", "body": "§ 2 short paragraphs (max 100 words): designed by the Captain from 30+ years of guest feedback; very quiet Volvo Penta IPS engines; stabilisers that reduce rolling by up to 70%; air-conditioned saloon with big windows; half-moon seating with tables so families sit together; four toilets, two bars; diving platform and water slide; ocean-going safety equipment.", "specs": { "length": "§ 'Length'", "capacity": "§ 'Passengers'", "speed": "§ 'Cruising speed'", "built": "§ 'Built'", "engines": "§ 'Engines'", "stabilisers": "§ 'Stabilisers'" }, "specValues": { "length": "27.8 m", "capacity": "200", "speed": "§ '16 knots'", "built": "2017", "engines": "2 × 900 hp Volvo Penta IPS", "stabilisers": "§ 'Up to 70% less rolling'" }, "features": ["§ 'Water slide & diving platform'", "§ 'Air-conditioned saloon'", "§ 'Two bars on board'", "§ 'Four toilets'", "§ 'Tables for every group'", "§ 'Quiet IPS engines'"] },
+    "kalypso": { "title": "§ 'Kalypso Star'", "body": "§ 2 sentences: semi-submarine trimaran built in France; watch marine life through underwater windows (49 seats below), sunset deck above; on request." },
+    "notes": { "title": "§ 'Before you sail'", "items": ["§ 'Be at the boat 30 minutes before departure.'", "§ 'Children's fare applies from 4 to 11 years.'", "§ 'Your second cruise is 15% off.'", "§ 'Staying at Aegealis or Theodora? 20% off every cruise.'", "§ 'The Captain may adjust the route for safety and comfort.'", "§ 'No refunds after the boat has left.'"] },
+    "bring": { "title": "§ 'What to bring'", "items": ["§ swimwear & towel", "§ sun cream & hat", "§ cash or card for lunch ashore", "§ a light layer for the way back"] },
+    "reviewsTitle": "§ 'What our guests say about the cruises'",
+    "private": { "title": "§ 'Private cruises, parties & weddings'", "body": "§ 2 sentences", "cta": "§ 'Ask for a private cruise'" }
+  },
+  "booking": {
+    "title": "§ 'Book your seats'", "date": "§ 'Choose a date'", "onlyDays": "§ 'This cruise sails on {days}' keep {days}", "seats": "§ 'Passengers'", "adults": "§ 'Adults'", "adultsHint": "§ '12+ years'", "children": "§ 'Children'", "childrenHint": "§ '4–11 years'", "infants": "§ 'Infants'", "infantsHint": "§ 'Under 4, on a lap — free'",
+    "pickup": "§ 'Boarding point'", "skala": "§ 'Skala beach, 09:00'", "poros": "§ 'Poros port, 09:20'", "guest": "§ 'I'm staying at Aegealis or Theodora'", "guestHint": "§ '20% off — we'll check your booking name'", "second": "§ 'This is my second cruise with you'", "secondHint": "§ '15% off'",
+    "seatsLeft": "§ '{count} seats left'", "fewLeft": "§ 'Only {count} seats left'", "soldOut": "§ 'Fully booked'", "cancelled": "§ 'Cancelled — weather'", "cancelledNote": "§ 'The Captain cancelled this departure for safety. Choose another day; you are never charged for cancelled trips.'",
+    "subtotal": "§", "discount": "§ 'Discount'", "total": "§", "next": "§ 'Continue'", "yourDetails": "§ 'Your details'", "name": "§ 'Full name'", "email": "§ 'E-mail'", "phone": "§ 'Mobile (WhatsApp)'", "hotel": "§ 'Where are you staying? (optional)'", "notes": "§ 'Anything we should know?'",
+    "pay": "§ 'Pay {amount} securely'", "payLater": "§ 'Reserve now, pay at the kiosk'", "confirmTitle": "§ 'You're on board!'", "confirmBody": "§ 2 sentences: e-ticket sent to e-mail; show it at the kiosk in front of Aegealis 30 minutes before departure.", "ticket": "§ 'E-ticket'", "reference": "§ 'Booking reference'", "addToCalendar": "§ 'Add to calendar'",
+    "terms": "§ 'By booking you accept the booking terms.'", "requestOnly": "§ 'This cruise runs on request. Tell us your date and group size and we'll confirm.'"
+  },
+  "list": {
+    "fiscardo": {
+      "name": "§ 'Fiscardo & Sami'", "tagline": "§ max 10 words", "summary": "§ 2 sentences, max 45 words", "days": "§ 'Tuesday & Saturday'",
+      "highlights": ["§ Makria Petra blue lagoon", "§ Antisamos & the Captain Corelli coast", "§ coffee in Sami, Melissani option", "§ lunch & stroll in Fiscardo", "§ swim at Mini Myrtos"],
+      "stops": { "skala": "§ 'Departure from Skala beach'", "poros": "§ 'Pick-up at Poros port'", "makriaPetra": "§ 1 sentence", "antisamos": "§ 1 sentence", "sami": "§ 1–2 sentences incl. optional Melissani by bus (not included; entrance €15 adults, €10 reduced)", "gorgotas": "§ 1 sentence (film jetty)", "fiscardo": "§ 1–2 sentences (spared by the 1953 earthquake)", "miniMyrtos": "§ 1 sentence: the boat lands on the beach", "return": "§ 'Back in Poros 17:30, Skala 17:45'" },
+      "goodFor": "§ 'First-timers, families, lovers of villages and film locations'", "notIncluded": ["§ lunch", "§ Melissani bus & entrance"]
+    },
+    "ithacaVathiKioni": {
+      "name": "§ 'Ithaca: Vathi & Kioni'", "tagline": "§", "summary": "§", "days": "§ 'Wednesday & Sunday'",
+      "highlights": ["§ Gidaki beach, only by sea", "§ Vathi, Odysseus' harbour", "§ Kioni and its windmills", "§ Ai Gianni cliffs", "§ swim at Mini Myrtos or Makria Petra"],
+      "stops": { "skala": "§", "poros": "§", "gidaki": "§ 1–2 sentences (water slide)", "vathi": "§ 1–2 sentences (Lazaretto, museums, Venetian-style houses rebuilt after 1953)", "kioni": "§ 1–2 sentences (preserved 16th-century village, windmills, fish tavernas)", "aiGianni": "§ 1 sentence (cliffs ~70 m, caves, wild goats)", "miniMyrtos": "§ 1 sentence", "return": "§ 'Back in Poros 17:30, Skala 17:45'" },
+      "goodFor": "§ 'Our most loved day — history, villages and two swims'", "notIncluded": ["§ lunch"], "quote": "§ Cavafy line: 'Keep Ithaka always in your mind.' — in EL use the original Greek 'Πάντα στον νου σου να ’χεις την Ιθάκη.' — in IT 'Abbi sempre in mente Itaca.'", "quoteBy": "§ 'C. P. Cavafy, Ithaka'"
+    },
+    "ithacaVathi": {
+      "name": "§ 'Ithaca: Vathi'", "tagline": "§", "summary": "§ the shorter Ithaca day, Vathi only, lower price", "days": "§ 'Monday & Friday'",
+      "highlights": ["§ Gidaki beach", "§ two hours in Vathi", "§ swim at Mini Myrtos or Makria Petra", "§ back by 16:45"],
+      "stops": { "skala": "§", "poros": "§", "gidaki": "§", "vathi": "§", "miniMyrtos": "§", "return": "§ 'Back in Poros 16:30, Skala 16:45'" },
+      "goodFor": "§ 'Families with young children, a gentler day'", "notIncluded": ["§ lunch"]
+    },
+    "zakynthos": {
+      "name": "§ 'Zakynthos: Shipwreck & Blue Caves'", "tagline": "§", "summary": "§", "days": "§ 'Thursday'",
+      "highlights": ["§ Shipwreck (Navagio) bay from the water", "§ Blue Caves", "§ swim at Platys Gialos", "§ two hours in Alykes"],
+      "stops": { "skala": "§ 'Departure 09:00 from Skala beach'", "skinari": "§ 1 sentence (cape and lighthouse, closest point to Kefalonia)", "shipwreck": "§ 2 sentences: we arrive ~10:00, before the big boats; we stay in the bay 40–50 m off the beach for photos; landing depends on the swell — the Captain decides on the day", "blueCaves": "§ 1–2 sentences", "alykes": "§ 1 sentence (sandy beach, lunch, 12:00–14:00)", "return": "§ 'Back in Skala around 15:00'" },
+      "goodFor": "§ 'Confident sea-goers and photographers'", "notIncluded": ["§ lunch"], "warning": { "title": "§ 'A word from the Captain'", "body": "§ 2–3 sentences paraphrasing his honest advice: open sea, possible swell even on good days; not recommended for anyone prone to seasickness, small children, pregnant women, or guests with limited mobility; NIRIIS has stabilisers but safety comes first." }
+    },
+    "bbq": {
+      "name": "§ 'Mini Myrtos BBQ cruise'", "tagline": "§", "summary": "§", "days": "§ 'On request'",
+      "highlights": ["§ Makria Petra swim & slide", "§ Koutsoupia beach", "§ BBQ with wine", "§ beach games, music & dancing on board"],
+      "stops": { "skala": "§", "poros": "§ 'Past Kako Lagadi and Poros harbour'", "makriaPetra": "§", "koutsoupia": "§ 2 sentences", "return": "§ 'Back to Skala with music on board'" },
+      "goodFor": "§ 'Groups, celebrations, the last night of a holiday'", "notIncluded": []
+    },
+    "private": { "name": "§ 'Private cruises & parties'", "tagline": "§", "summary": "§ 2 sentences", "days": "§ 'On request'", "highlights": ["§ your route", "§ your time", "§ birthdays, anniversaries, groups"], "goodFor": "§", "notIncluded": [] },
+    "wedding": { "name": "§ 'Wedding cruises'", "tagline": "§", "summary": "§ 2 sentences: a Kefalonian wedding at sea; we take care of the details", "days": "§ 'On request'", "highlights": ["§", "§", "§"], "goodFor": "§", "notIncluded": [], "quote": "§ translate the 2012 Tripadvisor quote (couple married on the boat) — keep it short: 'Just returned from Kefalonia where we got married on this boat! … The crew and the Captain are just fantastic. Nothing is too much trouble.'", "quoteBy": "§ 'Tripadvisor review, June 2012'" }
+  },
+  "detail": { "itinerary": "§ 'The day, stop by stop'", "times": "§ 'Times & prices'", "highlights": "§ 'Highlights'", "goodFor": "§ 'Good for'", "notIncluded": "§ 'Not included'", "included": "§ 'Included'", "includedItems": ["§ 'Two swimming stops'", "§ 'Water slide & diving platform'", "§ 'Air-conditioned saloon'", "§ 'Commentary from the crew'"], "price": "§ 'Price'", "adult": "§ 'Adult'", "child": "§ 'Child (4–11)'", "map": "§ 'Route'", "other": "§ 'Other cruises'", "swimStop": "§ 'Swim stop'", "ashore": "§ 'Time ashore'" }
+}

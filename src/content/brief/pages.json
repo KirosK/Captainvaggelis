@@ -1,0 +1,34 @@
+{
+  "contact": {
+    "hero": { "eyebrow": "§ 'Contact'", "title": "§ 4–7 words", "subtitle": "§ 1 sentence" },
+    "channels": { "whatsapp": "§ 'WhatsApp'", "whatsappHint": "§ 'Fastest — usually within a few hours'", "phone": "§ 'Phone'", "phoneHint": "§ 'Captain Vangelis'", "phone2Hint": "§ 'Second line'", "email": "§ 'E-mail'", "emailHint": "§ 'For longer questions'", "kiosk": "§ 'Cruise kiosk'", "kioskHint": "§ 'On Skala beach in front of Aegealis, mornings in season'" },
+    "form": { "title": "§ 'Send us a message'", "name": "§", "email": "§", "phone": "§ 'Phone (optional)'", "topic": "§ 'About'", "topics": { "stay": "§ 'A stay'", "cruise": "§ 'A cruise'", "private": "§ 'Private cruise or event'", "other": "§ 'Something else'" }, "dates": "§ 'Dates (if you know them)'", "message": "§", "send": "§ 'Send message'", "sent": "§ 'Thank you! We'll reply soon (demo — nothing was sent).'", "privacy": "§ 'We only use your details to reply to you.'" },
+    "languages": "§ 'We speak Greek, English and Spanish — and we're happy to try Italian.'"
+  },
+  "legal": {
+    "privacyTitle": "§ 'Privacy policy'",
+    "privacyBody": "§ 4–6 short paragraphs separated by \\n\\n: who we are (Captain Vangelis family business, Skala), what we collect (booking/contact details), why (to handle your booking and reply), who we share with (payment provider, nobody else), how long, your GDPR rights and how to contact us. Plain language. Mark at the end: 'Demo text — to be reviewed before going live.'",
+    "termsTitle": "§ 'Booking terms'",
+    "termsBody": "§ 4–6 short paragraphs: accommodation bookings (deposit, balance on arrival, demo cancellation terms); cruises (be 30 minutes early, children's fare 4–11, no refunds after departure, Captain may change the route for safety, cancelled departures not charged); house rules link; liability in plain words. Mark: 'Demo text — to be reviewed before going live.'"
+  },
+  "seo": {
+    "_note": "§ title max 60 characters, description 140–160 characters. Natural, include the place names people search ('Skala Kefalonia', 'apartments', 'studios', 'boat trips', 'cruise to Ithaca' etc.) without stuffing. Each must be unique.",
+    "home": { "title": "§", "description": "§" },
+    "aegealis": { "title": "§", "description": "§" },
+    "theodora": { "title": "§", "description": "§" },
+    "cruises": { "title": "§", "description": "§" },
+    "fiscardo": { "title": "§", "description": "§" },
+    "ithacaVathiKioni": { "title": "§", "description": "§" },
+    "ithacaVathi": { "title": "§", "description": "§" },
+    "zakynthos": { "title": "§", "description": "§" },
+    "bbq": { "title": "§", "description": "§" },
+    "private": { "title": "§", "description": "§" },
+    "wedding": { "title": "§", "description": "§" },
+    "guide": { "title": "§", "description": "§" },
+    "faq": { "title": "§", "description": "§" },
+    "contact": { "title": "§", "description": "§" },
+    "book": { "title": "§", "description": "§" },
+    "privacy": { "title": "§", "description": "§" },
+    "terms": { "title": "§", "description": "§" }
+  }
+}

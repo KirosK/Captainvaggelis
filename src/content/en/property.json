@@ -1,0 +1,188 @@
+{
+  "ui": {
+    "overview": "Overview",
+    "rooms": "Rooms",
+    "amenities": "Amenities",
+    "location": "Location",
+    "reviews": "Reviews",
+    "policies": "House rules",
+    "faq": "Questions",
+    "gallery": "Photos",
+    "chooseRoom": "Choose your room",
+    "chooseRoomIntro": "Every room type, described honestly, so you know exactly what you're booking.",
+    "variants": "Available as",
+    "sleeps": "Sleeps",
+    "beds": "Beds",
+    "view": "View",
+    "goodToKnow": "Good to know",
+    "inEveryRoom": "In every room",
+    "onSite": "At the property",
+    "whyGuests": "Why guests come back",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "children": "Children",
+    "extraBeds": "Extra beds & cots",
+    "pets": "Pets",
+    "smoking": "Smoking",
+    "parties": "Parties",
+    "quietHours": "Quiet hours",
+    "payment": "Payment",
+    "nearby": "What's nearby",
+    "bookingCardTitle": "Book direct with the family",
+    "bookingCardNote": "Ask us anything before you book. There's no obligation.",
+    "otherProperty": "Prefer {name}?",
+    "compare": "Compare both",
+    "photoCount": "{count} photos",
+    "categoryScores": "Guest scores by category",
+    "honest": "Honest notes"
+  },
+  "aegealis": {
+    "hero": {
+      "eyebrow": "Skala beach · Kefalonia",
+      "title": "Welcome\nto Aegealis",
+      "subtitle": "Studios and apartments in a palm garden, just across the road from Skala beach."
+    },
+    "chips": [
+      "20 m to the beach",
+      "9.9 location score",
+      "Free public parking",
+      "Pools next door",
+      "Daily cleaning"
+    ],
+    "overview": {
+      "title": "A palm garden on the Skala seafront",
+      "body": "Aegealis stands on the seafront road, directly opposite Skala beach. Around it is a garden with lawn, palms and shaded seating. The studios and one-bedroom apartments have sea, side-sea or garden views, and each one has a kitchenette and air conditioning.\n\nYou can use the pools of the hotels on either side, and the hotel next door serves a buffet breakfast (paid separately). The village centre is an 8–10 minute stroll along the sea. The Captain's cruise kiosk is right in front, and you board his boat just outside."
+    },
+    "why": [
+      {
+        "title": "Location rated 9.9",
+        "body": "Guests rate the location 9.9 out of 10: the beach is 20 m away and Skala's tavernas are a short walk along the sea."
+      },
+      {
+        "title": "Cleaned daily by Maria",
+        "body": "Rooms are cleaned and towels changed every day, and guests mention Maria by name in review after review."
+      },
+      {
+        "title": "Two pools next door",
+        "body": "The hotels on either side let you use their pools, so each day you can choose between the sea and a pool, both a few steps away."
+      },
+      {
+        "title": "20% off scheduled cruises",
+        "body": "Every scheduled Captain Vangelis cruise is 20% off for Aegealis guests, and you can book at the kiosk on your way to the beach."
+      }
+    ],
+    "aroundTitle": "Around Aegealis",
+    "aroundIntro": "From Aegealis the beach is 20 m away and the village centre about 500 m, an 8–10 minute walk.",
+    "goodToKnow": [
+      "Our studios are compact and practical. For more space, choose a one-bedroom apartment or the family studio.",
+      "Wi-Fi is fine for messages and maps, but not for heavy streaming.",
+      "The exact map pin is below. Some map apps place us a little off."
+    ],
+    "policies": {
+      "checkIn": "14:00 – 00:00. Please let us know your arrival time.",
+      "checkOut": "08:00 – 10:00",
+      "children": "Children of all ages are welcome. From 6 years, children count as adults for pricing.",
+      "extraBeds": "Extra beds are free for ages 0–4, €5 per night for ages 5–12 and €10 per night from 13. Cots (ages 0–2) are €5 per night. All on request, subject to availability and paid locally.",
+      "pets": "Pets are not allowed.",
+      "smoking": "Non-smoking throughout.",
+      "parties": "No parties or events, including stag and hen parties.",
+      "quietHours": "23:00 – 07:00",
+      "payment": "Card online when you book direct or cash on arrival."
+    }
+  },
+  "theodora": {
+    "hero": {
+      "eyebrow": "Skala village · Kefalonia",
+      "title": "Welcome\nto Theodora",
+      "subtitle": "Rooms, studios and apartments with a quiet garden, 100 m from the centre of Skala."
+    },
+    "chips": [
+      "100 m to the centre",
+      "9.5 for cleanliness",
+      "Garden & sunbeds",
+      "Hotel pool next door (seasonal)",
+      "Apartment for up to 5"
+    ],
+    "overview": {
+      "title": "The peach house above Skala's main street",
+      "body": "Theodora is the peach house with red bougainvillea at the top of Skala's main street. The centre is 100 m away, yet the area is quiet. Behind the house is a shady garden with an orange tree, sunbeds and a view of vines, and a gate through to the neighbouring hotel's pool (subject to the hotel's season).\n\nChoose from double rooms, studios, a triple room with terrace, and two two-bedroom apartments that each sleep up to five. Each has a kitchenette and air conditioning, and rooms are decorated with paintings made by the family. Village shops and tavernas are close by, and the beach is an easy walk downhill. Frosso and Vangelis usually welcome you themselves, with cold water already in the fridge."
+    },
+    "why": [
+      {
+        "title": "Frosso and Vangelis",
+        "body": "The family is there for you throughout your stay, with taxis, restaurant tips and boat trips."
+      },
+      {
+        "title": "Spotless, rated 9.5",
+        "body": "Rooms are cleaned every day with fresh towels, even at weekends, and guests rate cleanliness 9.5."
+      },
+      {
+        "title": "Quiet, yet close",
+        "body": "You're a minute from the supermarket, next door to a taverna and about 500 m from the beach."
+      },
+      {
+        "title": "Garden, pool, cruises",
+        "body": "Sit in the shady garden or go through the gate to the neighbouring hotel's pool (subject to the hotel's season), and save 20% on the Captain's scheduled cruises."
+      }
+    ],
+    "aroundTitle": "Around Theodora",
+    "aroundIntro": "From Theodora the centre of Skala is about 100 m away, the supermarket a minute's walk and the beach about 500 m, a 5–10 minute walk.",
+    "goodToKnow": [
+      "The walk back from the beach is gently uphill, about 10 minutes.",
+      "There is no private car park. Street parking is usually available nearby.",
+      "Free wired internet in the common areas only; there is no Wi-Fi in the rooms. If you need to work online, tell us before you book."
+    ],
+    "policies": {
+      "checkIn": "14:00 – 00:00. Please let us know your arrival time.",
+      "checkOut": "08:00 – 10:00",
+      "children": "Children of all ages are welcome. From 4 years, children count as adults for pricing.",
+      "extraBeds": "No cots or extra beds are available.",
+      "pets": "Pets are not allowed.",
+      "smoking": "Non-smoking throughout.",
+      "parties": "Please respect the quiet of the neighbourhood.",
+      "quietHours": "It's a quiet street, so please keep noise down late in the evening.",
+      "payment": "Card online when you book direct or cash on arrival."
+    }
+  },
+  "compare": {
+    "title": "Aegealis or Theodora?",
+    "intro": "One family looks after both, with the same daily care: Aegealis by the beach, Theodora up in the village.",
+    "rows": {
+      "beach": {
+        "label": "To the beach",
+        "aegealis": "Across the road (20 m)",
+        "theodora": "5–10 min walk (≈500 m)"
+      },
+      "centre": {
+        "label": "To the village centre",
+        "aegealis": "8–10 min walk along the sea",
+        "theodora": "1–2 min walk (≈100 m)"
+      },
+      "pool": {
+        "label": "Pool",
+        "aegealis": "Two hotel pools next door",
+        "theodora": "Hotel pool next door, via the garden (subject to the hotel's season)"
+      },
+      "parking": {
+        "label": "Parking",
+        "aegealis": "Free public parking nearby",
+        "theodora": "Street parking nearby"
+      },
+      "maxGuests": {
+        "label": "Largest unit",
+        "aegealis": "Up to 4 guests",
+        "theodora": "Up to 5 guests"
+      },
+      "vibe": {
+        "label": "Feel",
+        "aegealis": "Seafront, palms, sound of the waves",
+        "theodora": "Quiet garden, village life on your doorstep"
+      },
+      "kids": {
+        "label": "Children count as adults from",
+        "aegealis": "6 years",
+        "theodora": "4 years"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+ "aegealis": {
+  "mp4": "/media/video/aegealis.mp4",
+  "webm": "/media/video/aegealis.webm",
+  "mp4Small": "/media/video/aegealis-sm.mp4",
+  "poster": "/media/video/aegealis-poster.jpg",
+  "duration": 27.2
+ },
+ "theodora": {
+  "mp4": "/media/video/theodora.mp4",
+  "webm": "/media/video/theodora.webm",
+  "mp4Small": "/media/video/theodora-sm.mp4",
+  "poster": "/media/video/theodora-poster.jpg",
+  "duration": 30.9
+ },
+ "home": {
+  "mp4": "/media/video/home.mp4",
+  "webm": "/media/video/home.webm",
+  "mp4Small": "/media/video/home-sm.mp4",
+  "poster": "/media/video/home-poster.jpg",
+  "duration": 31.8
+ },
+ "cruises": {
+  "mp4": "/media/video/cruises.mp4",
+  "webm": "/media/video/cruises.webm",
+  "mp4Small": "/media/video/cruises-sm.mp4",
+  "poster": "/media/video/cruises-poster.jpg",
+  "duration": 35.2
+ }
+}

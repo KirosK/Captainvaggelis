@@ -1,0 +1,39 @@
+{
+  "_note": "§ Room groups shown on the site. Each group maps to one or more Booking.com unit names (the 'variants'). Write: name (2–5 words), short (max 14 words, for cards), description (2–3 sentences, max 60 words, facts only, honest about size), bestFor (max 8 words). Variant names are translations of Booking.com unit names, keep them close to the original meaning. Never invent bed sizes, m², or features not in facts.md.",
+  "ag-garden-studio": {
+    "name": "§ 'Garden Studios'", "short": "§", "description": "§ compact, practical studios on the garden/back side, some ground floor with a partial sea glimpse; kitchenette, A/C, shower room; our best price on the beach", "bestFor": "§ 'Couples on a budget who live on the beach'",
+    "variants": { "ag-standard-studio": "§ 'Standard Studio'", "ag-garden-view-studio": "§ 'Studio with Garden View'", "ag-ground-partial-sea": "§ 'Studio (2 adults) – Ground Floor, Partial Sea View'" }
+  },
+  "ag-sea-studio": {
+    "name": "§ 'Sea-View Studios'", "short": "§", "description": "§ studios facing the sea, with balcony or side sea view; the Superior has a direct sea view from the first floor", "bestFor": "§ 'Couples who want to see the sea'",
+    "variants": { "ag-side-sea-studio": "§ 'Studio with Side Sea View'", "ag-balcony-partial-sea": "§ 'Studio with Balcony and Partial Sea View'", "ag-superior-sea-studio": "§ 'Superior Studio with Sea View'" }
+  },
+  "ag-triple-studio": {
+    "name": "§ 'Triple Studio'", "short": "§", "description": "§ studio for three adults; kitchenette, A/C", "bestFor": "§ 'Three friends or a couple with a teenager'",
+    "variants": { "ag-triple": "§ 'Studio (3 adults)'" }
+  },
+  "ag-family-studio": {
+    "name": "§ 'Family Studio with Terrace'", "short": "§", "description": "§ for 2 adults + 2 children, sea view, a terrace for breakfast outdoors; more space than seafront hotel rooms (guest quote theme)", "bestFor": "§ 'Families with young children'",
+    "variants": { "ag-family": "§ 'Family Studio with Terrace and Sea View (2 adults + 2 children)'" }
+  },
+  "ag-apartment": {
+    "name": "§ 'One-Bedroom Apartments, Sea View'", "short": "§", "description": "§ separate bedroom plus living area with sofa bed and kitchenette; ground floor or upper floor; the upper-floor apartment has a large balcony facing the sea; up to 4 guests", "bestFor": "§ 'Families or friends who want a door between them'",
+    "variants": { "ag-apt-ground": "§ 'One-Bedroom Apartment with Sea View – Ground Floor'", "ag-apt-upper": "§ 'One-Bedroom Apartment with Sea View – Upper Floor'" }
+  },
+  "th-double": {
+    "name": "§ 'Double Rooms'", "short": "§", "description": "§ simple, spotless double rooms with a kitchen corner, A/C and balcony; good value", "bestFor": "§ 'Couples and solo travellers'",
+    "variants": { "th-standard-double": "§ 'Standard Double Room'", "th-double": "§ 'Double Room'" }
+  },
+  "th-studio": {
+    "name": "§ 'Studios'", "short": "§", "description": "§ studios with kitchenette, on the ground floor or top floor; some top-floor studios look out to the sea and have wooden-beamed ceilings", "bestFor": "§ 'Couples who like to cook a little'",
+    "variants": { "th-studio": "§ 'Studio'", "th-studio-apartment": "§ 'Studio Apartment'", "th-studio-ground": "§ 'Studio (2 adults) – Ground Floor'", "th-studio-top": "§ 'Studio (2 adults) – Top Floor'" }
+  },
+  "th-triple": {
+    "name": "§ 'Triple Room with Terrace'", "short": "§", "description": "§ room for three with a terrace that catches the late-afternoon sun; kitchenette; popular with parents travelling with a child", "bestFor": "§ 'A parent or couple with one child, three friends'",
+    "variants": { "th-triple-terrace": "§ 'Triple Room with Terrace'" }
+  },
+  "th-two-bedroom": {
+    "name": "§ 'Two-Bedroom Apartment'", "short": "§", "description": "§ two bedrooms, kitchen and living area, up to five guests (the fifth bed is in the living/kitchen area and suits a child or a shorter adult, about 180 cm); best for 4 adults or a family of five", "bestFor": "§ 'Families and groups of four or five'",
+    "variants": { "th-2br": "§ 'Two-Bedroom Apartment'" }
+  }
+}

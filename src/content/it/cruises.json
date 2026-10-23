@@ -1,0 +1,380 @@
+{
+  "hub": {
+    "hero": {
+      "eyebrow": "Captain Vangelis Special Cruises · dal 1987",
+      "title": "Lo Ionio,\ndal ponte della NIRIIS",
+      "subtitle": "Crociere in giornata da Skala per Itaca, Fiscardo e Zante, con soste bagno in ogni uscita. Le organizzano il Capitano Vangelis e la sua famiglia."
+    },
+    "timetable": {
+      "title": "Orari settimanali",
+      "intro": "Tutte le crociere in calendario partono dalla spiaggia di Skala alle 09:00. Per Fiscardo e Itaca, su richiesta, possiamo prendervi anche a Poros alle 09:20, al molo dei traghetti: la barca si ferma lì solo pochi minuti. La crociera per Zante parte solo da Skala.",
+      "depart": "Partenza",
+      "return": "Rientro",
+      "noCruise": "Nessuna crociera in calendario. Potete chiederci un'uscita privata.",
+      "season": "In base agli orari del 2026 · date del 2027 da confermare"
+    },
+    "choose": {
+      "title": "Scegliete la vostra giornata in mare",
+      "intro": "Quattro itinerari hanno giorni fissi di partenza, mentre la crociera barbecue, le crociere private e i matrimoni in mare si organizzano su richiesta."
+    },
+    "compare": {
+      "title": "Quale crociera fa per voi?",
+      "kids": "Ideale con i bambini",
+      "culture": "Borghi e storia",
+      "swim": "Due soste per il bagno",
+      "adventure": "Avventura in mare aperto",
+      "short": "Giornata più tranquilla",
+      "yes": "Sì",
+      "no": "No"
+    },
+    "boat": {
+      "kicker": "La barca",
+      "title": "NIRIIS, costruita per queste acque",
+      "body": "La NIRIIS è la sesta barca del Capitano, costruita nel 2017 dopo trent'anni di crociere in giornata da Skala. I motori Volvo Penta IPS sono molto silenziosi: a bordo si sente il mare, non i motori. Gli stabilizzatori riducono il rollio fino al 70%.\n\nIl salone è climatizzato e ha grandi vetrate. In salone e sul ponte superiore i divanetti a mezzaluna circondano i tavoli, così ogni famiglia o compagnia può stare insieme. Ci sono quattro bagni, due bar, una piattaforma per i tuffi e uno scivolo d'acqua. Le zattere di salvataggio si sganciano automaticamente, come sulle navi oceaniche.",
+      "specs": {
+        "length": "Lunghezza",
+        "capacity": "Passeggeri",
+        "speed": "Velocità di crociera",
+        "built": "Anno di costruzione",
+        "engines": "Motori",
+        "stabilisers": "Stabilizzatori"
+      },
+      "specValues": {
+        "length": "27,8 m",
+        "capacity": "200",
+        "speed": "16 nodi",
+        "built": "2017",
+        "engines": "2 × 900 CV Volvo Penta IPS",
+        "stabilisers": "Rollio ridotto fino al 70%"
+      },
+      "features": [
+        "Scivolo d'acqua e piattaforma per i tuffi",
+        "Salone climatizzato",
+        "Due bar a bordo",
+        "Quattro bagni",
+        "Tavoli per famiglie e gruppi",
+        "Motori IPS silenziosi"
+      ]
+    },
+    "kalypso": {
+      "title": "Kalypso Star",
+      "body": "La Kalypso Star è un trimarano semisommergibile costruito in Francia: nella sala centrale ci sono 49 posti a sedere davanti a grandi vetrate subacquee, per osservare la vita marina. Sul ponte principale altri 49 posti accolgono chi vuole un drink al tramonto; le uscite sono su richiesta."
+    },
+    "notes": {
+      "title": "Prima di salpare",
+      "items": [
+        "Presentatevi all'imbarco almeno 30 minuti prima della partenza.",
+        "La tariffa bambini vale dai 4 agli 11 anni. Per i più piccoli, chiedeteci.",
+        "La seconda crociera ha il 15% di sconto.",
+        "Alloggiate all'Aegealis o al Theodora? 20% di sconto su ogni crociera in calendario.",
+        "Il Capitano può modificare l'itinerario per ragioni di sicurezza e di comfort.",
+        "Nessun rimborso dopo la partenza della barca."
+      ]
+    },
+    "bring": {
+      "title": "Cosa portare",
+      "items": [
+        "Costume e telo mare",
+        "Crema solare e cappello",
+        "Contanti o carta per il pranzo a terra",
+        "Una maglia leggera per il rientro"
+      ]
+    },
+    "reviewsTitle": "Cosa dicono i nostri ospiti delle crociere",
+    "private": {
+      "title": "Crociere private, feste e matrimoni",
+      "body": "Compleanni, anniversari, matrimoni, gruppi di amici: organizziamo crociere su richiesta. Diteci la data e che cosa avete in mente: la giornata la prepariamo insieme.",
+      "cta": "Richiedete una crociera privata"
+    }
+  },
+  "booking": {
+    "title": "Prenotate i vostri posti",
+    "date": "Scegliete la data",
+    "onlyDays": "Giorni di partenza di questa crociera: {days}",
+    "seats": "Passeggeri",
+    "adults": "Adulti",
+    "adultsHint": "Dai 12 anni",
+    "children": "Bambini",
+    "childrenHint": "Da 4 a 11 anni",
+    "infants": "Bambini piccoli",
+    "infantsHint": "Sotto i 4 anni · chiedeteci informazioni",
+    "pickup": "Punto d'imbarco",
+    "guest": "Sono ospite dell'Aegealis o del Theodora",
+    "guestHint": "20% di sconto. Verificheremo il nome sulla vostra prenotazione.",
+    "second": "È la mia seconda crociera con voi",
+    "secondHint": "15% di sconto",
+    "seatsLeft": "{count} posti liberi",
+    "seatsLeftOne": "1 posto libero",
+    "fewLeft": "Ultimi posti disponibili: {count}",
+    "fewLeftOne": "Ne resta solo 1",
+    "soldOut": "Tutto esaurito",
+    "cancelled": "Annullata per maltempo",
+    "cancelledNote": "Il Capitano ha annullato questa partenza per motivi di sicurezza. Scegliete un altro giorno.",
+    "subtotal": "Subtotale",
+    "discount": "Sconto",
+    "total": "Totale",
+    "next": "Avanti",
+    "yourDetails": "I vostri dati",
+    "name": "Nome e cognome",
+    "email": "E-mail",
+    "phone": "Cellulare (WhatsApp)",
+    "hotel": "Dove alloggiate? (facoltativo)",
+    "notes": "C'è qualcosa che dovremmo sapere?",
+    "pay": "Pagate {amount} in modo sicuro",
+    "payLater": "Prenotate ora, pagate al chiosco",
+    "confirmTitle": "Ci vediamo a bordo",
+    "ticket": "Biglietto elettronico",
+    "reference": "Codice di prenotazione",
+    "addToCalendar": "Aggiungete al calendario",
+    "terms": "Prenotando accettate le condizioni di prenotazione.",
+    "requestOnly": "Questa crociera si organizza su richiesta. Diteci la data e quante persone siete, e vi daremo conferma."
+  },
+  "list": {
+    "fiscardo": {
+      "name": "Fiscardo e Sami",
+      "tagline": "Costa di Cefalonia, luoghi del cinema e pranzo a Fiscardo",
+      "summary": "Si naviga lungo la costa di Cefalonia, davanti a Makria Petra e Antisamos, fino a Sami: un caffè in paese o il lago di Melissani in autobus. Poi pranzo a Fiscardo e bagno a Mini Myrtos, dove la barca approda direttamente sulla spiaggia.",
+      "days": "Martedì e sabato",
+      "highlights": [
+        "Makria Petra, la Laguna Blu",
+        "Antisamos, la spiaggia del «Mandolino del capitano Corelli»",
+        "Un caffè a Sami o il lago di Melissani in autobus",
+        "Pranzo e passeggiata a Fiscardo",
+        "Un bagno a Mini Myrtos"
+      ],
+      "stops": {
+        "skala": "Partenza dalla spiaggia di Skala",
+        "poros": "Imbarco su richiesta alle 09:20, al molo dei traghetti (non davanti ai bar). La barca si ferma solo pochi minuti: siate puntuali.",
+        "makriaPetra": "Makria Petra, sulla costa sud-orientale, è conosciuta come la Laguna Blu.",
+        "antisamos": "Antisamos è la spiaggia del film «Il mandolino del capitano Corelli».",
+        "sami": "A Sami, dove è stata girata la maggior parte delle scene del film, avete un'ora e mezza per un caffè e qualche acquisto. Gli autobus aspettano chi vuole visitare il lago di Melissani (trasferimento e ingresso non inclusi; biglietto 15 € per gli adulti, 10 € per ragazzi dai 6 ai 18 anni, studenti e over 65).",
+        "gorgotas": "Nella baia di Gorgotas passate davanti al pontile che si vede nel film.",
+        "fiscardo": "Fiscardo, con gli yacht ormeggiati nel porto, è l'unico paese risparmiato dal terremoto del 1953. Avete quasi due ore per pranzare e passeggiare.",
+        "miniMyrtos": "A Mini Myrtos (Koutsoupia) la barca accosta fino a riva e si scende in spiaggia per il bagno.",
+        "return": "Se vi siete imbarcati a Poros, rientrate lì alle 17:30."
+      },
+      "goodFor": "chi viene per la prima volta, famiglie, amanti dei borghi e dei luoghi del cinema",
+      "notIncluded": [
+        "Pranzo",
+        "Autobus e ingresso a Melissani"
+      ],
+      "included": [
+        "Un bagno a Mini Myrtos (la barca approda sulla spiaggia)",
+        "Scivolo d'acqua e piattaforma per i tuffi",
+        "Salone climatizzato",
+        "Tavoli per famiglie e gruppi"
+      ]
+    },
+    "ithacaVathiKioni": {
+      "name": "Itaca: Vathy e Kioni",
+      "tagline": "Vathy, Kioni e una spiaggia raggiungibile solo dal mare",
+      "summary": "Un'intera giornata a Itaca, con un'ora e mezza a Vathy, il capoluogo dell'isola, e altrettanto a Kioni, borgo cinquecentesco ben conservato. Due soste bagno: a Gidaki, dall'acqua turchese, e a Mini Myrtos o a Makria Petra.",
+      "days": "Mercoledì e domenica",
+      "highlights": [
+        "Gidaki, spiaggia raggiungibile solo dal mare",
+        "Vathy e la statua di Ulisse",
+        "Kioni e i suoi mulini a vento",
+        "Le scogliere di Ai Gianni",
+        "Un bagno a Mini Myrtos o Makria Petra"
+      ],
+      "stops": {
+        "skala": "Partenza dalla spiaggia di Skala",
+        "poros": "Imbarco su richiesta alle 09:20, al molo dei traghetti (non davanti ai bar). La barca si ferma solo pochi minuti: siate puntuali.",
+        "gidaki": "Gidaki è una spiaggia turchese di Itaca che si raggiunge solo dal mare. Fate il bagno, tuffatevi dalla piattaforma o provate lo scivolo di bordo.",
+        "vathi": "A Vathy, il capoluogo di Itaca, avete un'ora e mezza a terra. Da vedere: l'isolotto del Lazzaretto con la chiesa del Salvatore, la statua di Ulisse, il museo archeologico e quello del folklore, e le case in stile veneziano ricostruite dopo il terremoto del 1953.",
+        "kioni": "Kioni è un borgo cinquecentesco ben conservato, con tre vecchi mulini a vento. Le sue taverne servono pesce fresco: è il posto giusto per pranzare.",
+        "aiGianni": "A Capo Ai Gianni, tra scogliere alte circa 70 m, cercate con lo sguardo le grotte e le capre selvatiche.",
+        "miniMyrtos": "Secondo bagno della giornata, a Mini Myrtos o a Makria Petra.",
+        "return": "Se vi siete imbarcati a Poros, rientrate lì alle 17:30."
+      },
+      "goodFor": "chi cerca borghi, storia e due bagni in una sola giornata",
+      "notIncluded": [
+        "Pranzo"
+      ],
+      "quote": "Abbi sempre in mente Itaca.",
+      "quoteBy": "Costantino Kavafis, «Itaca»",
+      "included": [
+        "Due soste bagno: Gidaki, poi Mini Myrtos o Makria Petra",
+        "Scivolo d'acqua e piattaforma per i tuffi",
+        "Salone climatizzato",
+        "Tavoli per famiglie e gruppi"
+      ]
+    },
+    "ithacaVathi": {
+      "name": "Itaca: Vathy",
+      "tagline": "La giornata più breve a Itaca, con due ore a Vathy",
+      "summary": "Itaca in una giornata più breve: due ore a Vathy e due bagni, a Gidaki e a Mini Myrtos o a Makria Petra. Alle 16:45 siete già a Skala, e la tariffa è più bassa.",
+      "days": "Lunedì e venerdì",
+      "highlights": [
+        "La spiaggia di Gidaki",
+        "Due ore a Vathy",
+        "Bagno a Mini Myrtos o a Makria Petra",
+        "Rientro entro le 16:45"
+      ],
+      "stops": {
+        "skala": "Partenza dalla spiaggia di Skala",
+        "poros": "Imbarco su richiesta alle 09:20, al molo dei traghetti (non davanti ai bar). La barca si ferma solo pochi minuti: siate puntuali.",
+        "gidaki": "Primo bagno a Gidaki, la spiaggia turchese di Itaca dove si arriva solo dal mare.",
+        "vathi": "Due ore a Vathy, il capoluogo: l'isolotto del Lazzaretto, la statua di Ulisse e le case in stile veneziano ricostruite dopo il terremoto del 1953.",
+        "miniMyrtos": "Poi un altro bagno, a Mini Myrtos o a Makria Petra.",
+        "return": "Se vi siete imbarcati a Poros, rientrate lì alle 16:30."
+      },
+      "goodFor": "famiglie con bambini piccoli e chi preferisce una giornata più tranquilla",
+      "notIncluded": [
+        "Pranzo"
+      ],
+      "included": [
+        "Due soste bagno: Gidaki, poi Mini Myrtos o Makria Petra",
+        "Scivolo d'acqua e piattaforma per i tuffi",
+        "Salone climatizzato",
+        "Tavoli per famiglie e gruppi"
+      ]
+    },
+    "zakynthos": {
+      "name": "Zante: Navagio e Grotte Blu",
+      "tagline": "La baia del Navagio e le Grotte Blu, prima dei grandi battelli",
+      "summary": "Rotta su Zante: alle 10:00 circa siete nella baia del Navagio, poi alle Grotte Blu, con un bagno a Platys Gialos. Seguono due ore ad Alykes per pranzare e nuotare, e verso le 15:00 si rientra a Skala.",
+      "days": "Giovedì",
+      "highlights": [
+        "La baia del Navagio vista dal mare",
+        "Le Grotte Blu",
+        "Un bagno a Platys Gialos",
+        "Due ore ad Alykes"
+      ],
+      "stops": {
+        "skala": "Partenza alle 09:00 dalla spiaggia di Skala",
+        "skinari": "Circa 40 minuti dopo la partenza da Skala arriviamo a Capo Skinari, a Zante.",
+        "shipwreck": "Arriviamo alla baia del Navagio (spiaggia del Relitto) verso le 10:00, prima dei grandi battelli. Restiamo a circa 40–50 m dalla spiaggia per la vista e le foto: lo sbarco e il bagno al Relitto non sono più consentiti.",
+        "blueCaves": "Lungo la costa passiamo davanti ai resti delle mura del monastero di Sant'Andrea, poi alle Grotte Blu. Ci fermiamo poco lontano, a Platys Gialos, per un bagno di circa 30 minuti.",
+        "alykes": "Due ore ad Alykes, dalle 12:00 alle 14:00: una spiaggia di sabbia dove pranzare e fare il bagno.",
+        "return": "Gli orari sono indicativi e dipendono dal mare della giornata."
+      },
+      "goodFor": "chi ha confidenza con il mare e gli appassionati di fotografia",
+      "notIncluded": [
+        "Pranzo"
+      ],
+      "warning": {
+        "title": "Il consiglio del Capitano",
+        "body": "La costa occidentale di Zante è esposta al mare aperto, e anche con il bel tempo può esserci onda lunga. Il Capitano sconsiglia questa crociera a chi soffre il mal di mare, ai bambini piccoli, agli ospiti più anziani, alle persone con mobilità ridotta e alle donne in gravidanza, e propone in alternativa una delle altre crociere. La NIRIIS ha gli stabilizzatori, ma la sicurezza viene sempre prima di tutto."
+      },
+      "included": [
+        "La baia del Navagio vista dal mare",
+        "Un bagno a Platys Gialos, vicino alle Grotte Blu",
+        "Stabilizzatori per una traversata più tranquilla",
+        "Salone climatizzato"
+      ]
+    },
+    "bbq": {
+      "name": "Crociera barbecue a Mini Myrtos",
+      "tagline": "Bagni, barbecue e vino in spiaggia, balli a bordo",
+      "summary": "Si naviga lungo la costa sud-orientale fino a Makria Petra per un primo bagno, poi si prosegue verso la spiaggia di Koutsoupia: un altro bagno, un barbecue con cibo e vino in abbondanza, giochi in spiaggia. Al ritorno, musica e balli a bordo. Di giorno o di sera, con orari flessibili.",
+      "days": "Su richiesta",
+      "highlights": [
+        "Bagno e scivolo a Makria Petra",
+        "La spiaggia di Koutsoupia",
+        "Barbecue con cibo e vino inclusi",
+        "Giochi in spiaggia, musica e balli a bordo"
+      ],
+      "stops": {
+        "skala": "Partenza dalla spiaggia di Skala",
+        "poros": "Davanti a Kako Lagadi e al porto di Poros",
+        "makriaPetra": "Un bagno a Makria Petra, con lo scivolo e la piattaforma per i tuffi.",
+        "koutsoupia": "A Koutsoupia, chiamata anche Mini Myrtos, si fa il bagno e si gioca in spiaggia. Poi arriva il barbecue: il cibo è abbondante e il vino è incluso.",
+        "return": "Musica e balli a bordo fino al rientro a Skala."
+      },
+      "goodFor": "gruppi, feste e un gran finale di vacanza",
+      "notIncluded": [],
+      "included": [
+        "Bagni a Makria Petra e a Koutsoupia",
+        "Barbecue con cibo e vino in abbondanza",
+        "Giochi in spiaggia",
+        "Musica e balli a bordo"
+      ]
+    },
+    "private": {
+      "name": "Crociere private e feste",
+      "tagline": "Una crociera per il vostro gruppo, nel giorno che scegliete voi",
+      "summary": "Prenotate una crociera tutta vostra per un compleanno, un anniversario o una giornata tra amici. Scegliete voi la data e gli orari, e il programma lo decidiamo insieme.",
+      "days": "Su richiesta",
+      "highlights": [
+        "Il vostro itinerario",
+        "I vostri orari",
+        "Compleanni, anniversari, gruppi"
+      ],
+      "goodFor": "compleanni, feste di famiglia e gruppi di amici",
+      "notIncluded": [],
+      "includedTitle": "Lo organizziamo insieme",
+      "included": [
+        "Itinerario e orari decisi insieme",
+        "Vi aiutiamo a scegliere menu e bevande",
+        "Un equipaggio che si prende cura dei vostri ospiti",
+        "Salone climatizzato e due bar"
+      ]
+    },
+    "wedding": {
+      "name": "Matrimoni in mare",
+      "tagline": "Il vostro matrimonio a Cefalonia, in mare",
+      "summary": "Festeggiate in mare il vostro matrimonio a Cefalonia, con parenti e amici a bordo. Raccontateci come lo immaginate: di tutti i dettagli ci occupiamo noi.",
+      "days": "Su richiesta",
+      "highlights": [
+        "Un matrimonio in mare",
+        "Parenti e amici a bordo",
+        "Ai dettagli pensiamo noi"
+      ],
+      "goodFor": "coppie che si sposano a Cefalonia",
+      "notIncluded": [],
+      "quote": "Siamo appena tornati da Cefalonia, dove ci siamo sposati su questa barca!!! … L'equipaggio e il Capitano sono semplicemente fantastici. Niente è mai un problema per loro…",
+      "quoteBy": "Recensione su Tripadvisor del 2012, a bordo della nostra barca precedente (tradotta dall'inglese)",
+      "includedTitle": "Lo organizziamo insieme",
+      "included": [
+        "Una crociera pensata per voi e i vostri invitati",
+        "Vi aiutiamo a scegliere menu e bevande",
+        "Un equipaggio che pensa a ogni dettaglio",
+        "Salone climatizzato e due bar"
+      ]
+    }
+  },
+  "detail": {
+    "itinerary": "La giornata, tappa per tappa",
+    "times": "Orari e prezzi",
+    "highlights": "Da non perdere",
+    "goodFor": "Ideale per",
+    "notIncluded": "Non incluso",
+    "included": "Incluso",
+    "includedItems": [
+      "Soste bagno in ogni crociera",
+      "Scivolo d'acqua e piattaforma per i tuffi",
+      "Salone climatizzato",
+      "Tavoli per famiglie e gruppi"
+    ],
+    "price": "Prezzo",
+    "adult": "Adulto",
+    "child": "Bambino (4–11 anni)",
+    "map": "Rotta",
+    "other": "Altre crociere",
+    "swimStop": "Sosta bagno",
+    "ashore": "Tempo a terra",
+    "eyebrow": "Crociera in giornata da Skala",
+    "seoHeading": "{name} · crociera in giornata da Skala, Cefalonia",
+    "days": "Giorni",
+    "onRequest": "Su richiesta",
+    "paused": "Al momento non è in programma",
+    "porosNote": "L'imbarco a Poros alle 09:20 è su richiesta, al molo dei traghetti: la sosta dura solo pochi minuti.",
+    "mapHint": "Usate due dita per spostare la mappa",
+    "mapLabel": "Mappa della rotta",
+    "stay": {
+      "kicker": "Dove dormire a Skala",
+      "title": "Dormite a Skala, navigate con il 20% di sconto",
+      "titleCharter": "Dormite a Skala, da dove parte la barca",
+      "body": "Chi alloggia all'Aegealis Studios o al Theodora Studios & Apartments ha il 20% di sconto su ogni crociera in calendario, e la barca parte dalla spiaggia davanti all'Aegealis."
+    }
+  },
+  "reviewQuotes": {
+    "th-helen": "Ci è piaciuta molto anche la crociera a Itaca con il Capitano Vangelis, su cui gli appartamenti vi danno il 20% di sconto …",
+    "ag-amy": "Vi fa il 20% di sconto sulle sue gite in barca (quella per Itaca fatela assolutamente) …",
+    "th-kamila": "… abbiamo fatto anche la crociera a Itaca, che è stata bellissima; ce l'ha prenotata lei.",
+    "th-keith": "Ci hanno organizzato le favolose gite in barca del Capitano Vangelis (con uno sconto davvero generoso!) e i taxi per l'aeroporto … È stato tutto così facile e siamo ripartiti felicissimi e rilassati.",
+    "ag-iulia": "… in più avete il 20% di sconto su qualsiasi crociera con il Capitano Vangelis, una crociera che abbiamo amato al 10000%.",
+    "th-kelly": "… i proprietari e la signora delle pulizie erano carinissimi, consiglio davvero questo posto e le loro offerte per le gite in barca: ne vale proprio la pena, una giornata di puro divertimento."
+  }
+}

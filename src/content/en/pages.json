@@ -1,0 +1,117 @@
+{
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Talk to Frosso and Vangelis",
+      "subtitle": "Ask us about a room, a cruise or anything in Skala, and one of the family will get back to you."
+    },
+    "channels": {
+      "whatsapp": "WhatsApp",
+      "whatsappHint": "The quickest way to reach us",
+      "phone": "Phone",
+      "phoneHint": "Captain Vangelis",
+      "phone2Hint": "Second line",
+      "email": "Email",
+      "emailHint": "For longer questions",
+      "kiosk": "Cruise kiosk",
+      "kioskHint": "In front of Aegealis by Skala beach, in season",
+      "kioskAddress": "Skala, Kefalonia 280 86"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "topic": "About",
+      "topics": {
+        "stay": "A stay",
+        "cruise": "A cruise",
+        "private": "Private cruise or event",
+        "other": "Something else"
+      },
+      "dates": "Dates (if you know them)",
+      "message": "Message",
+      "send": "Send message",
+      "sent": "Thank you! Your message is ready.",
+      "sendVia": "Send it to us on WhatsApp or by email and we'll reply soon.",
+      "privacy": "We only use your details to reply to you."
+    },
+    "languages": "We speak English, Greek and some Spanish, and you are welcome to write to us in Italian."
+  },
+  "legal": {
+    "privacyTitle": "Privacy policy",
+    "privacyBody": "Who we are. This website belongs to the family business of Captain Vangelis Spathis in Skala, Kefalonia 28086, Greece: Aegealis Studios, Theodora Studios & Apartments and Captain Vangelis Special Cruises. In this policy, “we” and “us” mean this family business.\n\nWhat we collect. Only what you give us when you book or write to us: your name, email address, phone number, country, travel dates, number of guests, arrival time and any message or special request. If you pay online, your card details go straight to our payment provider. We never see or store them.\n\nWhy we use it. To handle your booking, answer your questions and prepare for your arrival, for example by confirming your arrival time on WhatsApp a few days before you come. We don't send news or offers unless you ask for them.\n\nWho else sees it, and for how long. Only our payment provider, so that it can process your payment, and the driver, if you ask us to arrange a taxi for you. We never sell your details or pass them to anyone else. We keep booking records for as long as the law requires for tax and accounting, and messages only for as long as we need them to help you.\n\nYour rights. Under the GDPR you can ask to see, correct or delete your data, or object to how we use it. Write to info@kefalonia-cruises.gr or call +30 697 269 3260, and we'll reply within one month. You can also complain to the Hellenic Data Protection Authority.",
+    "termsTitle": "Booking terms",
+    "termsBody": "Accommodation. When you book direct, you can pay a 30% deposit online or the full amount. If you pay the deposit, the balance is due on arrival. Cancellation is free up to 14 days before arrival. After that the deposit is non-refundable, though we're flexible when we can be.\n\nYour stay. Check-in is from 14:00 to 00:00 and check-out is between 08:00 and 10:00. Please let us know your arrival time in advance. Each property has its own house rules on things like children, extra beds and pets. You'll find them under “House rules” on the Aegealis and Theodora pages, and by booking you agree to follow them.\n\nCruises. Please be at the embarkation point at least 30 minutes before departure. The children's fare is for ages 4 to 11; ask us about infants. On the Fiscardo cruise, the bus to Melissani Lake and the entrance fee are not included. There are no refunds once the boat has left.\n\nWeather and safety. The Captain may change the route or the timetable to keep the day safe and pleasant. If he cancels a departure, you can choose a full refund or another day.\n\nLiability, in plain words. We take good care of our guests and passengers, but we can't be responsible for belongings that are lost or damaged unless it is our fault. Please keep valuables in the safe box in your room, and follow the crew's instructions on board."
+  },
+  "seo": {
+    "home": {
+      "title": "Studios & apartments in Skala, Kefalonia | Book direct",
+      "description": "Aegealis Studios opposite Skala beach and Theodora Studios & Apartments in the village: 21 family-run rooms, 9.1 on Booking.com. Book direct, no booking fees."
+    },
+    "aegealis": {
+      "title": "Aegealis Studios | Beachfront studios in Skala, Kefalonia",
+      "description": "Studios and one-bedroom apartments across the road from Skala beach in Kefalonia. Rated 9.1 on Booking.com, with daily cleaning and use of the pools next door."
+    },
+    "theodora": {
+      "title": "Theodora Studios & Apartments in Skala, Kefalonia",
+      "description": "Quiet studios and apartments sleeping up to 5 at the top of Skala's main street, about 100 m from the centre. Garden, daily cleaning, rated 9.1 on Booking.com."
+    },
+    "cruises": {
+      "title": "Kefalonia cruises & boat trips from Skala | Captain Vangelis",
+      "description": "Day cruises from Skala to Ithaca, Fiscardo and Zakynthos, with swim stops. Guests of Aegealis and Theodora get 20% off scheduled cruises."
+    },
+    "fiscardo": {
+      "title": "Fiscardo cruise from Skala: Sami, Antisamos, Mini Myrtos",
+      "description": "Tuesdays and Saturdays: Antisamos, coffee in Sami, lunch in Fiscardo and a swim at Mini Myrtos. 20% off for guests of Aegealis and Theodora."
+    },
+    "ithacaVathiKioni": {
+      "title": "Cruise to Ithaca from Kefalonia: Vathi and Kioni",
+      "description": "Wednesdays and Sundays from Skala: Vathi, lunch in Kioni and two swim stops, one at Gidaki. Guests of Aegealis and Theodora get 20% off."
+    },
+    "ithacaVathi": {
+      "title": "Ithaca cruise to Vathi from Skala, Kefalonia",
+      "description": "Mondays and Fridays: two hours in Vathi, two swims including Gidaki, back in Skala by 16:45. 20% off for guests of Aegealis and Theodora."
+    },
+    "zakynthos": {
+      "title": "Zakynthos cruise from Skala: Shipwreck and Blue Caves",
+      "description": "Thursdays from Skala: Shipwreck bay seen from the water, the Blue Caves and lunch at Alykes. Guests of Aegealis and Theodora get 20% off."
+    },
+    "bbq": {
+      "title": "Mini Myrtos BBQ cruise from Skala, Kefalonia",
+      "description": "Day or evening, times flexible: a swim at Makria Petra, a BBQ with food and wine on Koutsoupia beach, then music and dancing on board. On request."
+    },
+    "private": {
+      "title": "Private cruises and boat parties in Kefalonia",
+      "description": "A private cruise from Skala for a birthday, an anniversary or a group of friends, with Captain Vangelis and his crew. Tell us your idea and we'll plan it."
+    },
+    "wedding": {
+      "title": "Wedding cruises in Kefalonia | Captain Vangelis",
+      "description": "Celebrate your Kefalonian wedding at sea, sailing from Skala. Captain Vangelis and his crew take care of all the details. Just tell us your date."
+    },
+    "guide": {
+      "title": "Skala, Kefalonia guide: beaches & sights near our studios",
+      "description": "Beaches near Skala, the Drakaina cave, Panagia Fidousa in Markopoulo, how to get here from the airport and when to come. A local family's guide."
+    },
+    "faq": {
+      "title": "Staying in Skala, Kefalonia: rooms & cruises FAQ",
+      "description": "Check-in times, cleaning, pools, parking, cots and cruise discounts: straight answers from the family behind Aegealis, Theodora and the Captain's cruises."
+    },
+    "contact": {
+      "title": "Contact us: studios & cruises in Skala, Kefalonia",
+      "description": "Message us on WhatsApp, call or email about rooms at Aegealis and Theodora or cruises from Skala, or find us at the cruise kiosk in front of Aegealis."
+    },
+    "book": {
+      "title": "Book direct: studios & apartments in Skala, Kefalonia",
+      "description": "Book Aegealis Studios or Theodora Studios & Apartments in Skala directly with the family: no booking fees, 20% off scheduled cruises, secure card payment."
+    },
+    "privacy": {
+      "title": "Privacy policy | Captain Vangelis, Skala",
+      "description": "How the Captain Vangelis family business in Skala, Kefalonia, uses your booking and contact details, who we share them with and how to exercise your rights."
+    },
+    "terms": {
+      "title": "Booking terms for stays and cruises | Captain Vangelis",
+      "description": "Deposits and cancellation at Aegealis and Theodora, plus cruise rules: arrive 30 minutes early, children's fare 4–11, no refunds after departure."
+    }
+  }
+}

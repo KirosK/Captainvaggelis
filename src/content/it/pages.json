@@ -1,0 +1,117 @@
+{
+  "contact": {
+    "hero": {
+      "eyebrow": "Contatti",
+      "title": "Parlate con Frosso e Vangelis",
+      "subtitle": "Per un alloggio, una crociera o qualsiasi curiosità su Skala, vi risponde direttamente la famiglia."
+    },
+    "channels": {
+      "whatsapp": "WhatsApp",
+      "whatsappHint": "Il modo più rapido per contattarci",
+      "phone": "Telefono",
+      "phoneHint": "Capitano Vangelis",
+      "phone2Hint": "Secondo numero",
+      "email": "E-mail",
+      "emailHint": "Per le domande più lunghe",
+      "kiosk": "Chiosco delle crociere",
+      "kioskHint": "Sulla spiaggia di Skala, davanti all'Aegealis, in stagione",
+      "kioskAddress": "Skala, Cefalonia 280 86"
+    },
+    "form": {
+      "title": "Scriveteci un messaggio",
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefono (facoltativo)",
+      "topic": "Argomento",
+      "topics": {
+        "stay": "Un soggiorno",
+        "cruise": "Una crociera",
+        "private": "Crociera privata o evento",
+        "other": "Altro"
+      },
+      "dates": "Date (se le conoscete già)",
+      "message": "Messaggio",
+      "send": "Inviate il messaggio",
+      "sent": "Grazie! Il vostro messaggio è pronto.",
+      "sendVia": "Inviatecelo su WhatsApp o via e-mail e vi risponderemo presto.",
+      "privacy": "Usiamo i vostri dati solo per rispondervi."
+    },
+    "languages": "Parliamo greco, inglese e un po' di spagnolo, e potete scriverci anche in italiano."
+  },
+  "legal": {
+    "privacyTitle": "Informativa sulla privacy",
+    "privacyBody": "Chi siamo. Questo sito appartiene all'attività di famiglia del Capitano Vangelis Spathis (Aegealis Studios, Theodora Studios & Apartments e Captain Vangelis Special Cruises), con sede a Skala, 28086 Cefalonia, Grecia. In questa informativa, «noi» indica la nostra famiglia e queste tre attività.\n\nQuali dati raccogliamo. Solo quelli che ci fornite quando prenotate o ci scrivete: nome, e-mail, numero di telefono, paese, date, numero di ospiti ed eventuali messaggi o richieste particolari. Se pagate online, i dati della carta arrivano direttamente al nostro fornitore dei servizi di pagamento: noi non li vediamo e non li conserviamo mai.\n\nPerché li usiamo. Per gestire la vostra prenotazione, rispondere alle vostre domande e prepararci al vostro arrivo, per esempio con un messaggio WhatsApp qualche giorno prima. Non vi mandiamo novità né offerte, a meno che non siate voi a chiederle.\n\nChi li vede e per quanto tempo. Oltre a noi, solo il nostro fornitore dei servizi di pagamento, che ne ha bisogno per elaborare il pagamento. Non vendiamo mai i vostri dati e non li cediamo a nessun altro. Conserviamo i dati delle prenotazioni per il tempo previsto dalla legge a fini fiscali e contabili, e i messaggi solo finché ci servono per aiutarvi.\n\nI vostri diritti. In base al GDPR potete chiedere di accedere ai vostri dati, di correggerli o di cancellarli, oppure opporvi al modo in cui li usiamo. Scrivete a info@kefalonia-cruises.gr o chiamate il +30 697 269 3260: vi risponderemo entro un mese. Potete anche presentare reclamo all'autorità greca per la protezione dei dati personali.",
+    "termsTitle": "Condizioni di prenotazione",
+    "termsBody": "Alloggi. Se prenotate direttamente, potete pagare online un acconto del 30% oppure l'intero importo. Se versate l'acconto, il saldo si paga all'arrivo. La cancellazione è gratuita fino a 14 giorni prima dell'arrivo. Dopo questo termine l'acconto non è rimborsabile, ma quando possiamo cerchiamo di venirvi incontro.\n\nIl soggiorno. Il check-in è dalle 14:00 a mezzanotte, il check-out dalle 08:00 alle 10:00. Comunicateci in anticipo l'orario di arrivo. Ogni struttura ha le sue regole, per esempio su bambini, letti aggiuntivi e animali. Le trovate alla voce «Regole della casa» nelle pagine dell'Aegealis e del Theodora; prenotando, vi impegnate a rispettarle.\n\nCrociere. Presentatevi al punto d'imbarco almeno 30 minuti prima della partenza. La tariffa bambini vale dai 4 agli 11 anni; per i bambini sotto i 4 anni, chiedeteci. Nella crociera per Fiscardo, l'autobus per il lago di Melissani e il biglietto d'ingresso non sono compresi. Una volta partita la barca, non sono previsti rimborsi.\n\nMeteo e sicurezza. Il Capitano può cambiare l'itinerario o gli orari perché la giornata sia sicura e piacevole. Se annulla una partenza, potete scegliere tra il rimborso completo e un altro giorno.\n\nResponsabilità, in parole semplici. Ci prendiamo cura dei nostri ospiti e passeggeri, ma non possiamo rispondere di oggetti persi o danneggiati, a meno che la colpa non sia nostra. Tenete gli oggetti di valore nella cassetta di sicurezza della camera e, a bordo, seguite le indicazioni dell'equipaggio."
+  },
+  "seo": {
+    "home": {
+      "title": "Appartamenti e monolocali a Skala, Cefalonia",
+      "description": "Aegealis Studios di fronte alla spiaggia e Theodora Studios & Apartments in paese: 21 alloggi a gestione familiare, 9,1 su Booking.com. Prenotazione diretta."
+    },
+    "aegealis": {
+      "title": "Aegealis Studios: monolocali sul mare a Skala, Cefalonia",
+      "description": "Monolocali e bilocali a Cefalonia, di fronte alla spiaggia di Skala. Voto 9,1 su Booking.com, pulizia quotidiana e accesso alle piscine degli hotel accanto."
+    },
+    "theodora": {
+      "title": "Theodora Studios & Apartments: appartamenti a Skala, Cefalonia",
+      "description": "Monolocali e appartamenti tranquilli, fino a 5 ospiti, in cima alla via principale di Skala, a 100 m dal centro. Giardino, pulizia quotidiana, voto 9,1."
+    },
+    "cruises": {
+      "title": "Crociere e gite in barca a Cefalonia | Captain Vangelis, Skala",
+      "description": "Crociere da Skala per Itaca, Fiscardo e Zante, con soste per il bagno. Per chi alloggia all'Aegealis o al Theodora, 20% di sconto sulle crociere in calendario."
+    },
+    "fiscardo": {
+      "title": "Crociera a Fiscardo da Skala: Sami, Antisamos, Mini Myrtos",
+      "description": "Martedì e sabato: Antisamos, un caffè a Sami, pranzo a Fiscardo e bagno a Mini Myrtos. Per gli ospiti dell'Aegealis e del Theodora: 20% di sconto."
+    },
+    "ithacaVathiKioni": {
+      "title": "Crociera a Itaca da Cefalonia: Vathy e Kioni",
+      "description": "Mercoledì e domenica da Skala a Itaca: Vathy, pranzo a Kioni e due soste per il bagno. Per gli ospiti dell'Aegealis e del Theodora: 20% di sconto."
+    },
+    "ithacaVathi": {
+      "title": "Crociera a Itaca con sosta a Vathy, da Skala (Cefalonia)",
+      "description": "Lunedì e venerdì: due ore a Vathy, due bagni, uno a Gidaki, e rientro alle 16:45. Per gli ospiti dell'Aegealis e del Theodora: 20% di sconto."
+    },
+    "zakynthos": {
+      "title": "Crociera a Zante da Skala: Navagio e Grotte Blu",
+      "description": "Giovedì da Skala a Zante: il Navagio visto dal mare, le Grotte Blu e il pranzo ad Alykes. Per gli ospiti dell'Aegealis e del Theodora: 20% di sconto."
+    },
+    "bbq": {
+      "title": "Crociera barbecue a Mini Myrtos da Skala, Cefalonia",
+      "description": "Su richiesta, di giorno o di sera, con orari flessibili: bagno a Makria Petra, barbecue e vino sulla spiaggia di Koutsoupia, poi musica e balli a bordo."
+    },
+    "private": {
+      "title": "Crociere private e feste in barca a Cefalonia",
+      "description": "Una crociera privata da Skala per un compleanno, un anniversario o un gruppo di amici. Rotta e orari a vostra scelta, con il Capitano Vangelis e l'equipaggio."
+    },
+    "wedding": {
+      "title": "Matrimoni in barca a Cefalonia | Captain Vangelis",
+      "description": "Sposarsi a Cefalonia, in mare, con partenza da Skala: il Capitano Vangelis e l'equipaggio pensano a ogni dettaglio. Diteci la data del vostro matrimonio."
+    },
+    "guide": {
+      "title": "Skala, Cefalonia: spiagge e dintorni dei nostri alloggi",
+      "description": "Spiagge vicino a Skala, grotta di Drakaina, Panagia Fidousa a Markopoulo, come arrivare dall'aeroporto e quando venire: i consigli di una famiglia del posto."
+    },
+    "faq": {
+      "title": "Soggiorno a Skala, Cefalonia: domande frequenti",
+      "description": "Check-in, pulizia, piscine, parcheggio, culle e sconti sulle crociere: risposte chiare dalla famiglia dell'Aegealis, del Theodora e delle crociere del Capitano."
+    },
+    "contact": {
+      "title": "Contatti: alloggi e crociere a Skala, Cefalonia",
+      "description": "Contattate la famiglia via WhatsApp, telefono o e-mail per l'Aegealis, il Theodora o le crociere da Skala, oppure passate al chiosco davanti all'Aegealis."
+    },
+    "book": {
+      "title": "Prenotazione diretta: monolocali a Skala, Cefalonia",
+      "description": "Prenotate l'Aegealis o il Theodora direttamente con la famiglia: nessun costo di prenotazione, 20% di sconto sulle crociere in calendario e pagamento sicuro."
+    },
+    "privacy": {
+      "title": "Informativa sulla privacy | Captain Vangelis, Skala",
+      "description": "Come l'attività di famiglia del Capitano Vangelis a Skala, Cefalonia, usa i vostri dati di prenotazione e contatto, con chi li condivide e quali diritti avete."
+    },
+    "terms": {
+      "title": "Condizioni per soggiorni e crociere | Captain Vangelis",
+      "description": "Acconto e cancellazione all'Aegealis e al Theodora. Crociere: arrivo 30 minuti prima, tariffa bambini 4–11 anni, nessun rimborso dopo la partenza."
+    }
+  }
+}

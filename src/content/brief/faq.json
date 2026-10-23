@@ -1,0 +1,56 @@
+{
+  "_note": "§ Each answer: 1–3 sentences, specific, from facts.md only. Groups and question keys are fixed. 'q' = question as a guest would ask it; 'a' = answer.",
+  "title": "§ 'Questions & answers'", "intro": "§ 1 sentence: can't find it? message us.",
+  "groups": {
+    "booking": {
+      "title": "§ 'Booking & payment'",
+      "items": {
+        "whyDirect": { "q": "§ Why book direct instead of Booking.com?", "a": "§ same rooms, best price, no fees, 20% off cruises, talk to the family" },
+        "pay": { "q": "§ How do I pay?", "a": "§ card online (deposit or full), or as agreed with us" },
+        "cancel": { "q": "§ What is the cancellation policy?", "a": "§ demo: free up to 14 days before arrival; we are flexible when we can" },
+        "confirm": { "q": "§ When is my booking confirmed?", "a": "§ immediately by e-mail" }
+      }
+    },
+    "stay": {
+      "title": "§ 'Your stay'",
+      "items": {
+        "checkin": { "q": "§ What time is check-in and check-out?", "a": "§ check-in 14:00–00:00, check-out by 10:00; tell us your arrival time; we try to help with luggage storage" },
+        "late": { "q": "§ We land late at night. Is that OK?", "a": "§ yes, family meets you; guests mention being welcomed late" },
+        "cleaning": { "q": "§ Are rooms cleaned every day?", "a": "§ yes, daily cleaning and fresh towels" },
+        "kitchen": { "q": "§ Can we cook?", "a": "§ every room has a kitchenette: fridge, kettle, coffee maker, cookware, hob; supermarkets nearby" },
+        "wifi": { "q": "§ Is there Wi-Fi?", "a": "§ Aegealis: free Wi-Fi throughout (fine for messages, not heavy streaming); Theodora: free internet in the common areas" },
+        "pool": { "q": "§ Is there a pool?", "a": "§ no own pool; Aegealis guests can use the pools of the two hotels next door; Theodora guests the neighbouring hotel's pool through the garden gate (subject to the hotel's season)" },
+        "breakfast": { "q": "§ Is breakfast included?", "a": "§ no; self-catering; at Aegealis the hotel next door serves a buffet breakfast you can pay for there; cafés nearby" },
+        "parking": { "q": "§ Is there parking?", "a": "§ Aegealis free public parking outside; Theodora no private parking, street parking nearby" },
+        "ac": { "q": "§ Is there air conditioning?", "a": "§ yes in every room" }
+      }
+    },
+    "families": {
+      "title": "§ 'Families'",
+      "items": {
+        "kids": { "q": "§ Are children welcome?", "a": "§ yes, all ages; pricing ages per property" },
+        "cot": { "q": "§ Can we have a cot or an extra bed?", "a": "§ Aegealis yes on request (prices); Theodora no" },
+        "five": { "q": "§ We are five. Which room?", "a": "§ Theodora two-bedroom apartment (up to 5), or two rooms" }
+      }
+    },
+    "getting": {
+      "title": "§ 'Getting here'",
+      "items": {
+        "airport": { "q": "§ How far is the airport?", "a": "§ ~33 km, about 45 min; we can arrange a taxi" },
+        "car": { "q": "§ Do we need a car?", "a": "§ not in Skala; both are walkable to beach, shops and tavernas; car useful for exploring" },
+        "find": { "q": "§ How do we find you?", "a": "§ use the map on our site; Aegealis is on the seafront road opposite the cruise kiosk; Theodora at the top of the main street" }
+      }
+    },
+    "cruises": {
+      "title": "§ 'Cruises'",
+      "items": {
+        "discount": { "q": "§ Do guests get a discount on cruises?", "a": "§ 20% off every cruise; second cruise 15% off for everyone" },
+        "where": { "q": "§ Where does the boat leave from?", "a": "§ Skala beach in front of Aegealis at 09:00; Poros 09:20 on Kefalonia & Ithaca routes" },
+        "weather": { "q": "§ What if the weather is bad?", "a": "§ the Captain decides for safety; cancelled trips are moved or not charged" },
+        "kids": { "q": "§ Are cruises suitable for children?", "a": "§ Ithaca and Fiscardo yes (slide!), children's fare 4–11; Zakynthos not recommended for small children" },
+        "seasick": { "q": "§ I get seasick. Which cruise?", "a": "§ Ithaca or Fiscardo along sheltered coast; stabilisers; avoid Zakynthos" },
+        "lunch": { "q": "§ Is lunch included?", "a": "§ lunch ashore at your choice (Kioni, Fiscardo, Alykes); BBQ cruise includes food & wine; bars on board" }
+      }
+    }
+  }
+}

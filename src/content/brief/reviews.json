@@ -1,0 +1,165 @@
+{
+ "_note": "§ For each review produce translations into the two languages that are NOT the original (originalLang). Faithful, natural, keep the guest voice and informal tone, keep … cuts, do not polish away personality, do not add or remove meaning. Keys in output: { <id>: { \"title\"?: string, \"text\": string } } per target language file. For the language that equals originalLang, copy the original unchanged.",
+ "reviews": {
+  "ag-vicky": {
+   "originalLang": "en",
+   "title": "Amazing",
+   "text": "Have stayed here for the 4th time, amazing location. The lady who does the cleaning, such a sweet heart and made our room lovely everyday."
+  },
+  "ag-amy": {
+   "originalLang": "en",
+   "title": "Perfect babymoon :)",
+   "text": "We had room 6 with a large balcony directly facing the sea. We couldn't have asked for more from the apartment, cleaned daily & bed made, little kitchenette with fridge, perfect location for any restaurant you could want, the beach and sea literally across the road. … He offers you 20% off his boat trips (definitely do the Ithaca one). … The maid was a daily delight, don't hesitate to book."
+  },
+  "ag-swift": {
+   "originalLang": "en",
+   "title": "Right at the end of the season but the weather was perfect!",
+   "text": null
+  },
+  "ag-kathryn": {
+   "originalLang": "en",
+   "title": "Perfect, relaxed stay in a beautiful place",
+   "text": "The location of the property was perfect. The apartment was directly opposite the beach with 2 lovely hotels either side where you could use their pool facilities. The apartment was cleaned every day and beds were very comfortable. All the staff and owners were very accommodating and loved to chat, nothing was ever too much bother."
+  },
+  "ag-catrin": {
+   "originalLang": "en",
+   "title": "Great!",
+   "text": null
+  },
+  "ag-krzysztof": {
+   "originalLang": "en",
+   "title": null,
+   "text": "Very friendly, courteous service. The staff is exceptionally hospitable. The owner, Captain Vangelis, deserves special recognition. He is a golden man, incredibly caring and attentive to detail, ensuring his guests have a wonderful time."
+  },
+  "ag-iulia": {
+   "originalLang": "en",
+   "title": "Greatest accommodation in Skala",
+   "text": "We couldn't have asked for more. Very clean, right across the beach, access to two swimming pools at the hotels nearby, great location to get around the island. … Also you get 20% off for any cruise with Captain Vangelis, a cruise we 10000% loved."
+  },
+  "ag-bella": {
+   "originalLang": "en",
+   "title": "Frosso and Vangelis are absolutely perfect hosts!",
+   "text": null
+  },
+  "ag-inga": {
+   "originalLang": "en",
+   "title": null,
+   "text": null
+  },
+  "ag-claire": {
+   "originalLang": "en",
+   "title": "Location and excellent value for money",
+   "text": null
+  },
+  "ag-fabio": {
+   "originalLang": "en",
+   "title": "Great vacations vibe! Highly recommend!",
+   "text": null
+  },
+  "ag-roberto": {
+   "originalLang": "it",
+   "title": null,
+   "text": null
+  },
+  "ag-maria": {
+   "originalLang": "el",
+   "title": null,
+   "text": null
+  },
+  "ag-lesley": {
+   "originalLang": "en",
+   "title": "Relaxing break in beautiful location",
+   "text": null
+  },
+  "ag-kirsty": {
+   "originalLang": "en",
+   "title": null,
+   "text": null
+  },
+  "ag-clare": {
+   "originalLang": "en",
+   "title": "Wonderful, we will be back!",
+   "text": null
+  },
+  "ag-marsha": {
+   "originalLang": "en",
+   "title": "Lovely little apartment",
+   "text": null
+  },
+  "th-kelly": {
+   "originalLang": "en",
+   "title": "Fantastic stay, location, cleanliness and lovely people",
+   "text": "On arrival you have cold water already in your fridge which for s/c [self-catering] is unheard of. Location fantastic, was so clean they cleaned them every day and clean towels even on a weekend. Couldn't fault this accommodation, the owners and maid were so lovely, truly recommend this place and their boat trip offers, well worth a fun-filled day out. Will be going back for sure and taking our family."
+  },
+  "th-jason": {
+   "originalLang": "en",
+   "title": "Everything was perfect for my 4 year old daughter and myself",
+   "text": "I have been travelling to Kefalonia on and off for over 20 years, this was my first stay at the Theodora and I was with my 4 year old daughter. Having stayed in Skala many times at various places I was really impressed with our stay here, from the welcome on arrival. The studio was perfect, plenty of space, clean, a great kitchenette which was very well equipped, the location was great for us at the top of the Main Street!"
+  },
+  "th-anne": {
+   "originalLang": "en",
+   "title": "Perfect!",
+   "text": "Fabulous host, met us when we arrived even though it was very late. The apartment was immaculately clean and very comfortable. Cleaning lady came in every day, made bed and changed towels. … Beach 10 mins walk away and restaurants, shops, bars etc very close, only a few minutes walk away. Recommended!"
+  },
+  "th-susanna": {
+   "originalLang": "en",
+   "title": "Beautiful energy!",
+   "text": "The outside with a view of vines… I can honestly say that this place had the most beautiful energy, family run, by a wonderful family. I was travelling alone as a female and would have loved to have stayed longer. Will certainly be back!"
+  },
+  "th-keith": {
+   "originalLang": "en",
+   "title": "Perfect – all we wanted, and then some.",
+   "text": "A five minute stroll down to the beach via the colourful, easy-going high street full of shops, bars and restaurants. … Our hosts were superb, welcoming, fun, full of useful info and very accommodating. … Captain Vangelis' fabulous boat trips were organised for us (with a very healthy discount!) and airport taxi transfers arranged. It was all so easy and we left very happy and relaxed."
+  },
+  "th-george": {
+   "originalLang": "en",
+   "title": "The perfect stay for Skala",
+   "text": null
+  },
+  "th-evelyn": {
+   "originalLang": "en",
+   "title": null,
+   "text": null
+  },
+  "th-emily": {
+   "originalLang": "en",
+   "title": null,
+   "text": null
+  },
+  "th-helen": {
+   "originalLang": "en",
+   "title": "A very enjoyable stay at Theodora",
+   "text": "Hosts went above and beyond, ensuring that everything was good for you. … We also enjoyed our cruise to Ithaca with Captain Vangelis Cruises, which the apartments give you 20% off. Frosso also gave us a lift to the beach! I will definitely return."
+  },
+  "th-kamila": {
+   "originalLang": "en",
+   "title": "Amazing place, great owner",
+   "text": "Everything was great, the studio was clean, cleaned every day, the swimming pool was great, lovely garden you could relax in. It was close to shops, restaurants and also beach. … We went also on the cruise to Ithaka, which was amazing; she booked it for us."
+  },
+  "th-richard": {
+   "originalLang": "en",
+   "title": null,
+   "text": null
+  },
+  "th-spinksy": {
+   "originalLang": "en",
+   "title": null,
+   "text": null
+  },
+  "th-martyn": {
+   "originalLang": "en",
+   "title": "Restful and great last-minute break",
+   "text": null
+  },
+  "th-lisa": {
+   "originalLang": "en",
+   "title": "Lovely studios",
+   "text": null
+  },
+  "th-ana": {
+   "originalLang": "en",
+   "title": "It was a wonderful stay.",
+   "text": null
+  }
+ }
+}

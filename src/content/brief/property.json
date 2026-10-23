@@ -1,0 +1,50 @@
+{
+  "ui": {
+    "overview": "§ 'Overview'", "rooms": "§ 'Rooms'", "amenities": "§ 'Amenities'", "location": "§ 'Location'", "reviews": "§ 'Reviews'", "policies": "§ 'House rules'", "faq": "§ 'Questions'", "gallery": "§ 'Photos'",
+    "chooseRoom": "§ 'Choose your room'", "chooseRoomIntro": "§ 1 sentence: every room type explained honestly so you know exactly what you book.",
+    "variants": "§ 'Available as'", "sleeps": "§ 'Sleeps'", "beds": "§ 'Beds'", "view": "§ 'View'", "goodToKnow": "§ 'Good to know'", "inEveryRoom": "§ 'In every room'", "onSite": "§ 'Around the house'",
+    "whyGuests": "§ 'Why guests come back'", "checkIn": "§ 'Check-in'", "checkOut": "§ 'Check-out'", "children": "§ 'Children'", "extraBeds": "§ 'Extra beds & cots'", "pets": "§ 'Pets'", "smoking": "§ 'Smoking'", "parties": "§ 'Parties'", "quietHours": "§ 'Quiet hours'", "payment": "§ 'Payment'",
+    "nearby": "§ 'What's nearby'", "bookingCardTitle": "§ 'Book direct with the family'", "bookingCardNote": "§ 'Free to ask, no booking fees. 20% off cruises included.'", "otherProperty": "§ 'Prefer {name}?'", "compare": "§ 'Compare both'",
+    "photoCount": "§ '{count} photos'", "categoryScores": "§ 'Guest scores by category'", "honest": "§ 'Honest notes'"
+  },
+  "aegealis": {
+    "hero": { "eyebrow": "§ 'Skala beach · Kefalonia'", "title": "§ 4–8 words: across the road from the sea. Use '\\n' for a desktop line break.", "subtitle": "§ 1–2 sentences, max 32 words." },
+    "chips": ["§ '20 m to the beach'", "§ '9.9 location score'", "§ 'Free parking'", "§ 'Pools next door'", "§ 'Daily cleaning'"],
+    "overview": { "title": "§ 5–9 words", "body": "§ 2 paragraphs separated by \\n\\n (max 120 words). Facts only: opposite Skala beach; garden with palms and lawn; studios and one-bedroom apartments with kitchenette, A/C; sea, side-sea or garden views; guests can use the pools of the hotels on either side; buffet breakfast available next door (paid there); 8–10 minute stroll to the village centre along the sea; the Captain's cruise kiosk and boat are right in front." },
+    "why": [
+      { "title": "§ 2–4 words", "body": "§ 1 sentence based on a review theme: location (9.9)" },
+      { "title": "§", "body": "§ cleanliness & Maria, daily cleaning" },
+      { "title": "§", "body": "§ two pools next door" },
+      { "title": "§", "body": "§ 20% off cruises; boat leaves in front" }
+    ],
+    "aroundTitle": "§ 'Around Aegealis'",
+    "goodToKnow": ["§ honest: studios are compact and practical; for more space choose the one-bedroom apartment or the family studio", "§ honest: Wi-Fi is fine for messages and maps, not for heavy streaming", "§ the precise map pin is below — some map apps place us a little off"],
+    "policies": { "checkIn": "§ '14:00 – 00:00. Please let us know your arrival time.'", "checkOut": "§ '08:00 – 10:00'", "children": "§ 'Children of all ages are welcome. From 6 years, children count as adults for pricing.'", "extraBeds": "§ Summarise: extra bed free for ages 0–4; €5 per night ages 5–12; €10 per night 13+; cot €5 per night; on request, subject to availability, paid locally.", "pets": "§ 'Pets are not allowed.'", "smoking": "§ 'Non-smoking throughout.'", "parties": "§ 'No parties or events, including stag and hen parties.'", "quietHours": "§ '23:00 – 07:00'", "payment": "§ 'Card online when you book direct (demo) or cash on arrival.'" }
+  },
+  "theodora": {
+    "hero": { "eyebrow": "§ 'Skala village · Kefalonia'", "title": "§ 4–8 words: a quiet garden at the top of the village. Use '\\n'.", "subtitle": "§ 1–2 sentences, max 32 words." },
+    "chips": ["§ '100 m to the centre'", "§ '9.5 for cleanliness'", "§ 'Garden & sunbeds'", "§ 'Pool next door'", "§ 'Rooms for up to 5'"],
+    "overview": { "title": "§ 5–9 words", "body": "§ 2 paragraphs (max 120 words). Facts: top of Skala's main street, 100 m from the centre, quiet; peach house with bougainvillea; garden behind with an orange tree and a view of vines, sunbeds; gate to the neighbouring hotel's pool; double rooms, studios, a triple room with terrace and a two-bedroom apartment for up to five, all with kitchenette and A/C; supermarket a minute away; beach a 5–10 minute walk downhill through the high street; Frosso and Vangelis' family welcome; handmade paintings in rooms; cold water in the fridge on arrival." },
+    "why": [
+      { "title": "§", "body": "§ hosts Frosso & Vangelis, welcome even late at night" },
+      { "title": "§", "body": "§ spotless, daily cleaning, fresh towels even at weekends (9.5)" },
+      { "title": "§", "body": "§ quiet but everything close: supermarket 1 min, tavernas, beach 10 min" },
+      { "title": "§", "body": "§ the garden & pool next door, 20% off cruises" }
+    ],
+    "aroundTitle": "§ 'Around Theodora'",
+    "goodToKnow": ["§ honest: the walk back from the beach is gently uphill (about 10 minutes)", "§ honest: no private car park; street parking is usually available nearby", "§ honest: internet is available in the common areas; no cots or extra beds"],
+    "policies": { "checkIn": "§", "checkOut": "§", "children": "§ 'Children of all ages are welcome. From 4 years, children count as adults for pricing.'", "extraBeds": "§ 'No cots or extra beds are available.'", "pets": "§", "smoking": "§", "parties": "§ 'Please respect the quiet of the neighbourhood.'", "quietHours": "§ 'From 23:00'", "payment": "§" }
+  },
+  "compare": {
+    "title": "§ 'Aegealis or Theodora?'", "intro": "§ 1 sentence",
+    "rows": {
+      "beach": { "label": "§ 'To the beach'", "aegealis": "§ 'Across the road (20 m)'", "theodora": "§ '5–10 min walk (≈500 m)'" },
+      "centre": { "label": "§ 'To the village centre'", "aegealis": "§ '8–10 min walk along the sea'", "theodora": "§ '1–2 min (≈100 m)'" },
+      "pool": { "label": "§ 'Pool'", "aegealis": "§ 'Two hotel pools next door'", "theodora": "§ 'Hotel pool next door, through the garden'" },
+      "parking": { "label": "§ 'Parking'", "aegealis": "§ 'Free, outside'", "theodora": "§ 'Street parking nearby'" },
+      "maxGuests": { "label": "§ 'Largest room'", "aegealis": "§ 'Up to 4 guests'", "theodora": "§ 'Up to 5 guests'" },
+      "vibe": { "label": "§ 'Feel'", "aegealis": "§ 'Seafront, palms, sound of the waves'", "theodora": "§ 'Quiet garden, village life on your doorstep'" },
+      "kids": { "label": "§ 'Children count as adults from'", "aegealis": "§ '6 years'", "theodora": "§ '4 years'" }
+    }
+  }
+}

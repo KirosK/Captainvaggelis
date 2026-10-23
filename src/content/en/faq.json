@@ -1,0 +1,135 @@
+{
+  "title": "Questions about staying in Skala, Kefalonia",
+  "intro": "If your question isn't answered here, message us and one of the family will reply.",
+  "groups": {
+    "booking": {
+      "title": "Booking & payment",
+      "items": {
+        "pay": {
+          "q": "How do I pay?",
+          "a": "By card when you book online: a 30% deposit now and the rest on arrival, or the full amount in one go. If you'd prefer to pay another way, such as cash on arrival, just message us."
+        },
+        "cancel": {
+          "q": "What is the cancellation policy?",
+          "a": "Free cancellation up to 14 days before arrival. After that, talk to us. As a family business, we're flexible when we can be."
+        },
+        "confirm": {
+          "q": "When is my booking confirmed?",
+          "a": "Straight away. Your confirmation email arrives as soon as you book, and we'll message you on WhatsApp a few days before you arrive."
+        }
+      }
+    },
+    "stay": {
+      "title": "Your stay",
+      "items": {
+        "checkin": {
+          "q": "What time is check-in and check-out?",
+          "a": "Check-in is from 14:00 to 00:00, and check-out is between 08:00 and 10:00. Please tell us your arrival time in advance, and if your flight home is late in the day, ask us and we'll see what we can do."
+        },
+        "late": {
+          "q": "We land late at night. Is that OK?",
+          "a": "Check-in runs until midnight. If you land later, tell us your flight time in advance and we'll do our best to arrange it. We can also book you a taxi from the airport."
+        },
+        "cleaning": {
+          "q": "Are rooms cleaned every day?",
+          "a": "Yes. Rooms at both Aegealis and Theodora are cleaned every day, with fresh towels daily. Many Aegealis guests mention Maria, our housekeeper, by name."
+        },
+        "kitchen": {
+          "q": "Can we cook?",
+          "a": "Yes. Every room has a kitchenette with a fridge, kettle, coffee maker and cookware. An AB supermarket is very close to Aegealis, and Theodora's nearest supermarket is about a minute's walk away."
+        },
+        "wifi": {
+          "q": "Is there Wi-Fi?",
+          "a": "At Aegealis, free Wi-Fi covers the whole property, but it is basic: good for messages and maps, slow for streaming. At Theodora, there is free wired internet in the common areas only and no Wi-Fi in the rooms, so if you need to work online, please tell us before you book."
+        },
+        "pool": {
+          "q": "Is there a pool?",
+          "a": "There's no pool of our own, but you can swim next door. Aegealis guests can use the pools of the hotels on either side, and at Theodora a gate in the garden leads to the neighbouring hotel's pool (subject to the hotel's season)."
+        },
+        "breakfast": {
+          "q": "Is breakfast included?",
+          "a": "No, our rooms are self-catering, each with its own kitchenette. At Aegealis, the hotel next door serves a buffet breakfast, paid separately there. Skala's cafés are a short walk from both properties."
+        },
+        "parking": {
+          "q": "Is there parking?",
+          "a": "At Aegealis, yes: free public parking around the property, no reservation needed. Theodora has no private car park, but street parking is usually available nearby."
+        },
+        "ac": {
+          "q": "Is there air conditioning?",
+          "a": "Yes, every room, studio and apartment has air conditioning. In the upper-floor one-bedroom apartment at Aegealis, the air conditioning is in the main room."
+        },
+        "pets": {
+          "q": "Can we bring a pet?",
+          "a": "Sorry, pets are not allowed at Aegealis or Theodora."
+        }
+      }
+    },
+    "families": {
+      "title": "Families",
+      "items": {
+        "kids": {
+          "q": "Are children welcome?",
+          "a": "Yes, children of all ages are welcome at both properties. For pricing, they count as adults from the age of 6 at Aegealis and from 4 at Theodora."
+        },
+        "cot": {
+          "q": "Can we have a cot or an extra bed?",
+          "a": "At Aegealis, yes: on request and subject to availability, paid at the property. A cot (ages 0–2) is €5 per night; an extra bed is free for children up to 4, €5 per night for ages 5–12 and €10 per night from 13. Theodora has no cots or extra beds."
+        },
+        "five": {
+          "q": "There are five of us. Which room should we choose?",
+          "a": "Each of the two-bedroom apartments at Theodora sleeps up to five. The fifth bed is in the kitchen and living area and is about 180 cm long, so it suits a child or a shorter adult. Or take two rooms: message us and we'll arrange it."
+        }
+      }
+    },
+    "getting": {
+      "title": "Getting here",
+      "items": {
+        "airport": {
+          "q": "How far is the airport?",
+          "a": "Kefalonia Airport (EFL), near Argostoli, is 33–35 km from both properties. We can arrange a taxi to meet your flight: tick the box when you book, or message us."
+        },
+        "car": {
+          "q": "Do we need a car?",
+          "a": "Not for Skala itself. From either property you can walk to the beach, shops and tavernas, and the cruise boat leaves from Skala beach. A car is useful if you want to explore further afield."
+        },
+        "find": {
+          "q": "How do we find you?",
+          "a": "Use the map on this site, as some map apps place us a little off. Aegealis is across the road from Skala beach, directly behind the Captain Vangelis cruise kiosk. Theodora is at the top of Skala's main street, about 100 m from the centre."
+        }
+      }
+    },
+    "cruises": {
+      "title": "Cruises",
+      "items": {
+        "discount": {
+          "q": "Do guests get a discount on cruises?",
+          "a": "Yes. Staying at Aegealis or Theodora gives you 20% off every scheduled cruise, and every passenger gets 15% off a second cruise. Give your name at the kiosk, or tick the guest box when you book online."
+        },
+        "where": {
+          "q": "Where does the boat leave from?",
+          "a": "Scheduled cruises leave from Skala beach, right in front of Aegealis, at 09:00. On request, the Fiscardo and Ithaca cruises can also pick you up at Poros, at the ferry quay, at 09:20. That stop lasts only a few minutes. Wherever you board, please be there at least 30 minutes before departure."
+        },
+        "book": {
+          "q": "How do I book a cruise?",
+          "a": "On the cruise's page on this site, by WhatsApp, phone or email, or in person at the kiosk in front of Aegealis during the season."
+        },
+        "weather": {
+          "q": "What if the weather is bad?",
+          "a": "Safety comes first, and the Captain decides on the day. He may change the route or timing so the cruise is safe and pleasant. If he cancels a departure, you can choose a full refund or another day."
+        },
+        "kids": {
+          "q": "Are cruises suitable for children?",
+          "a": "Yes, especially the Ithaca and Fiscardo cruises. The Ithaca cruises stop twice for a swim and the Fiscardo cruise once, at Mini Myrtos, and on board there's a water slide and a diving platform. The children's fare applies from 4 to 11 years; ask us about infants. We don't recommend the Zakynthos cruise for small children, as the island's west coast faces the open sea."
+        },
+        "seasick": {
+          "q": "I get seasick. Which cruise?",
+          "a": "Choose the Fiscardo or Ithaca cruise, which follow the coasts of Kefalonia and Ithaca. NIRIIS has stabilisers that reduce rolling by up to 70%. Skip the Zakynthos cruise: the island's west coast faces the open sea, and the Captain himself advises against it if you are prone to seasickness."
+        },
+        "lunch": {
+          "q": "Is lunch included?",
+          "a": "Not on the scheduled cruises. You eat ashore wherever you like during the stops, for example in Fiscardo, Kioni or Alykes, and there are two bars on board. The Mini Myrtos BBQ cruise includes a barbecue with plenty of food and wine."
+        }
+      }
+    }
+  }
+}

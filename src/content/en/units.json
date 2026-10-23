@@ -1,0 +1,93 @@
+{
+  "ag-garden-studio": {
+    "name": "Garden studios",
+    "short": "Compact studios, priced to match, with Skala beach across the road.",
+    "description": "Compact, practical studios on the garden side or at the back of the property, some on the ground floor with a partial sea view. Each has a kitchenette, air conditioning and a shower room. They are small and priced to match, and the beach is still just across the road.",
+    "bestFor": "Budget-minded couples spending their days on the beach",
+    "variants": {
+      "ag-standard-studio": "Standard studio",
+      "ag-garden-view-studio": "Studio with garden view",
+      "ag-ground-partial-sea": "Studio (2 adults) – ground floor, partial sea view"
+    }
+  },
+  "ag-sea-studio": {
+    "name": "Sea-view studios",
+    "short": "Side, partial or first-floor sea views, opposite Skala beach.",
+    "description": "Choose a side sea view, or a balcony with a partial view of the sea. The Superior studio looks out over the sea from the first floor. Each is a single open-plan room with a kitchenette and air conditioning.",
+    "bestFor": "Couples who want to see the sea",
+    "variants": {
+      "ag-side-sea-studio": "Studio with side sea view",
+      "ag-balcony-partial-sea": "Studio with balcony and partial sea view",
+      "ag-superior-sea-studio": "Superior studio with sea view"
+    }
+  },
+  "ag-triple-studio": {
+    "name": "Triple studio",
+    "short": "One room for three adults, 20 m from Skala beach.",
+    "description": "A studio for three adults, all in one open-plan room with a kitchenette and air conditioning. It suits friends or family who are happy to share, and like every unit at Aegealis it is cleaned daily.",
+    "bestFor": "Three friends or a couple with a teenager",
+    "variants": {
+      "ag-triple": "Studio (3 adults)"
+    }
+  },
+  "ag-family-studio": {
+    "name": "Family studio with terrace",
+    "short": "Two adults, two children, a sea view and a terrace for breakfast.",
+    "description": "Sleeps two adults and two children, with a sea view and a terrace for breakfast outdoors. One family wrote that you have “much more space than the other hotels on the seafront”. Like every studio here, it has a kitchenette and air conditioning.",
+    "bestFor": "Families with two young children",
+    "variants": {
+      "ag-family": "Family studio with terrace and sea view (2 adults + 2 children)"
+    }
+  },
+  "ag-apartment": {
+    "name": "One-bedroom apartments with sea view",
+    "short": "A separate bedroom and space for four, on the ground or upper floor.",
+    "description": "A separate bedroom and a main room with a kitchenette, for up to four guests. Choose the ground floor, or the upper floor with a large balcony facing the sea. These are the largest units at Aegealis. In the upper-floor apartment, the air conditioning is in the main room.",
+    "bestFor": "Families or friends wanting a door between them",
+    "variants": {
+      "ag-apt-ground": "One-bedroom apartment with sea view – ground floor",
+      "ag-apt-upper": "One-bedroom apartment with sea view – upper floor"
+    }
+  },
+  "th-double": {
+    "name": "Double rooms",
+    "short": "Simple, spotless and good value, at the top of the main street.",
+    "description": "Simple rooms for two, each with a kitchenette, air conditioning, a shower room and a balcony or terrace. Daily cleaning is included, and guests rate Theodora's value for money 9.2.",
+    "bestFor": "Couples and solo travellers",
+    "variants": {
+      "th-standard-double": "Standard double room",
+      "th-double": "Double room",
+      "th-double-terrace": "Double room with terrace"
+    }
+  },
+  "th-studio": {
+    "name": "Village studios",
+    "short": "A kitchenette for simple meals; some top-floor studios have a sea view.",
+    "description": "Studios on the ground floor or the top floor, each with air conditioning, a shower room and a kitchenette with a hob, fridge, kettle and coffee maker. Some top-floor studios have wooden-beamed ceilings, and some look out to the sea. If a sea view matters to you, ask us when you book.",
+    "bestFor": "Couples who like to cook a little",
+    "variants": {
+      "th-studio": "Studio",
+      "th-studio-apartment": "Studio apartment",
+      "th-studio-ground": "Studio (2 adults) – ground floor",
+      "th-studio-top": "Studio (2 adults) – top floor"
+    }
+  },
+  "th-triple": {
+    "name": "Triple room with terrace",
+    "short": "Room for three, with a terrace that catches the late-afternoon sun.",
+    "description": "A room for three with a kitchenette and a terrace that gets the sun late in the afternoon. Guests describe it as spacious, and it works well for parents with a young child. Please note that Theodora has no cots or extra beds.",
+    "bestFor": "Parents with one child, or three friends",
+    "variants": {
+      "th-triple-terrace": "Triple room with terrace"
+    }
+  },
+  "th-two-bedroom": {
+    "name": "Two-bedroom apartments",
+    "short": "Two bedrooms and space for up to five, 100 m from the centre.",
+    "description": "Two bedrooms plus a kitchen and living area, for up to five guests. The fifth bed is in the living area and is about 180 cm long, so it suits a child or a shorter adult. It is best for four adults, or four adults and a child.",
+    "bestFor": "Families and groups of four or five",
+    "variants": {
+      "th-2br": "Two-bedroom apartment"
+    }
+  }
+}

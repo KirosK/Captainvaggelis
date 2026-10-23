@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "§ Fixed: 'Captain Vangelis'. Keep as is in all languages (EL: 'Καπετάν Βαγγέλης').",
+    "tagline": "§ 4–7 words. The family's promise: stays by the sea and cruises since 1987. Warm, not salesy.",
+    "since": "§ 'Since 1987'",
+    "place": "§ 'Skala · Kefalonia'",
+    "properties": "§ Short label listing the three: 'Aegealis · Theodora · Cruises'"
+  },
+  "nav": {
+    "home": "§", "stay": "§ menu group label for accommodation", "aegealis": "§ 'Aegealis Studios'", "theodora": "§ 'Theodora Studios & Apartments'",
+    "cruises": "§ 'Cruises'", "allCruises": "§ 'All cruises & timetable'", "guide": "§ 'Skala & Kefalonia guide' (short)", "faq": "§ 'Questions'", "contact": "§",
+    "book": "§ short CTA in header: 'Book direct'", "menu": "§", "close": "§", "language": "§ 'Language'",
+    "stayDesc": { "aegealis": "§ 6–9 words: opposite the beach, where the boat leaves", "theodora": "§ 6–9 words: quiet garden at the top of the village" }
+  },
+  "cta": {
+    "bookDirect": "§ 'Book direct'", "checkAvailability": "§", "bookCruise": "§ 'Book this cruise'", "bookACruise": "§ 'Book a cruise'", "viewDetails": "§", "viewRooms": "§ 'See the rooms'",
+    "viewAllPhotos": "§ 'View all {count} photos' — keep {count}", "whatsapp": "§ 'WhatsApp us'", "call": "§ 'Call'", "email": "§ 'Email'",
+    "getDirections": "§", "sendRequest": "§ 'Send request'", "continue": "§", "back": "§", "readMore": "§", "showLess": "§", "seeAll": "§",
+    "explore": "§", "chooseThis": "§ 'Choose this room'", "askUs": "§ 'Ask us'", "planYourStay": "§"
+  },
+  "trust": {
+    "rating": "§ '{score} on Booking.com' keep {score}", "reviews": "§ '{count} guest reviews' keep {count}", "since": "§ 'Family-run since 1987'",
+    "bestPrice": "§ 'Best price when you book direct'", "noCommission": "§ 'No booking fees'", "guestDiscount": "§ '20% off every cruise for our guests'",
+    "beach": "§ 'Opposite Skala beach'", "secure": "§ 'Secure online payment'", "reply": "§ 'We reply within a few hours'"
+  },
+  "units": {
+    "guests": "§ '{count} guests'", "guest": "§ '1 guest'", "upTo": "§ 'Up to {count} guests'", "adults": "§", "adult": "§ singular", "children": "§", "child": "§ singular",
+    "infants": "§", "nights": "§ '{count} nights'", "night": "§ '1 night'", "from": "§ 'from'", "perNight": "§ '/ night'", "total": "§", "bedroom": "§ '1 bedroom'",
+    "bedrooms": "§ '{count} bedrooms'", "studio": "§ 'Studio (open plan)'", "minutes": "§ '{count} min'", "walk": "§ '{count} min walk'", "drive": "§ '{count} min drive'",
+    "meters": "§ '{count} m'", "km": "§ '{count} km'", "perPerson": "§ 'per person'", "perAdult": "§ 'adult'", "perChild": "§ 'child'"
+  },
+  "features": {
+    "seaView": "§", "sideSeaView": "§", "partialSeaView": "§", "gardenView": "§", "groundFloor": "§", "upperFloor": "§", "topFloor": "§", "balcony": "§", "terrace": "§",
+    "largeBalcony": "§ 'Large sea-facing balcony'", "kitchenette": "§ 'Kitchenette'", "fullKitchen": "§ 'Fully equipped kitchenette'", "airCon": "§", "tv": "§ 'Flat-screen TV'",
+    "safe": "§ 'Safe box'", "shower": "§ 'Private shower room'", "hairdryer": "§", "dailyCleaning": "§ 'Daily cleaning'", "freshTowels": "§ 'Fresh towels every day'",
+    "wifi": "§ 'Free Wi-Fi'", "wiredInternet": "§ 'Free internet in common areas'", "freeParking": "§ 'Free public parking outside'", "streetParking": "§ 'Street parking nearby'",
+    "poolAccess": "§ 'Use of neighbouring hotels' pools'", "poolAccessOne": "§ 'Use of the neighbouring hotel's pool'", "garden": "§", "sunbeds": "§", "familyRooms": "§",
+    "nonSmoking": "§", "mosquitoNets": "§", "doubleGlazing": "§", "sofaBed": "§ 'Sofa bed'", "extraBed": "§ 'Extra bed on request'", "noExtraBeds": "§ 'No extra beds or cots'",
+    "beachfront": "§ 'Beach across the road'", "villageCentre": "§ '100 m from the village centre'", "coldWater": "§ 'Cold water waiting in the fridge'", "quiet": "§ 'Quiet location'",
+    "cruiseDeparture": "§ 'Cruise boat leaves right in front'", "breakfastNextDoor": "§ 'Buffet breakfast at the hotel next door (paid locally)'"
+  },
+  "audience": { "couple": "§ 'Couples'", "family": "§ 'Families'", "friends": "§ 'Friends'", "solo": "§ 'Solo travellers'", "budget": "§ 'Best value'", "view": "§ 'Sea-view lovers'", "space": "§ 'Extra space'", "noCar": "§ 'No car needed'" },
+  "a11y": { "skip": "§ 'Skip to content'", "openMenu": "§", "closeMenu": "§", "prev": "§ 'Previous'", "next": "§ 'Next'", "play": "§ 'Play video'", "pause": "§ 'Pause video'", "close": "§", "zoom": "§ 'Open photo'", "photo": "§ 'Photo {index} of {total}'", "external": "§ '(opens in a new tab)'" },
+  "demo": { "banner": "§ 'Demo preview — prices, availability and payments are not real.' short and calm", "prices": "§ 'Demo prices'", "noCharge": "§ 'Demo — no payment will be taken'" },
+  "footer": {
+    "about": "§ 2 sentences: a Skala family hosting guests by the sea and taking them sailing since 1987.", "explore": "§ 'Explore'", "contact": "§", "legal": "§",
+    "privacy": "§ 'Privacy policy'", "terms": "§ 'Booking terms'", "licence": "§ 'MHTE licence'", "rights": "§ '© {year} Captain Vangelis. All rights reserved.'",
+    "kiosk": "§ 'Find us at the cruise kiosk in front of Aegealis, on Skala beach.'", "newsletter": "§ not used — write 'Follow the season'"
+  },
+  "rating": { "exceptional": "§ Booking's word 'Exceptional'", "outOf": "§ 'out of 10'", "basedOn": "§ 'based on {count} verified reviews'", "source": "§ 'Source: Booking.com, October 2026'", "categories": { "staff": "§", "facilities": "§", "cleanliness": "§", "comfort": "§", "value": "§ 'Value for money'", "location": "§", "wifi": "§ 'Free Wi-Fi'" } },
+  "reviewsUi": { "translated": "§ 'Translated from {language}'", "original": "§ 'Show original'", "translation": "§ 'Show translation'", "stayed": "§ 'Stayed {month}'", "verified": "§ 'Verified stay · Booking.com'", "readFull": "§ 'Read full review'", "travellers": { "couple": "§", "family": "§", "group": "§ 'Group of friends'", "solo": "§ 'Solo traveller'" } },
+  "langNames": { "en": "English", "el": "Ελληνικά", "it": "Italiano" },
+  "errors": { "required": "§ 'Please fill in this field'", "email": "§ 'Please enter a valid e-mail'", "phone": "§ 'Please enter a phone number with country code'", "dates": "§ 'Please choose your dates'", "generic": "§ 'Something went wrong. Please try again or message us on WhatsApp.'" },
+  "notFound": { "title": "§ playful nautical 404 title, 3–6 words", "body": "§ one sentence", "cta": "§ 'Back to the homepage'" }
+}

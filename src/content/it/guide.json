@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "eyebrow": "Guida",
+    "title": "Il nostro angolo di Cefalonia, partendo da Skala",
+    "subtitle": "Le spiagge, i siti archeologici e le gite che consigliamo ai nostri ospiti. Ve li racconta una famiglia che naviga lungo questa costa dal 1987."
+  },
+  "intro": {
+    "title": "Perché Skala",
+    "body": "Skala si trova sulla costa sud-orientale di Cefalonia, affacciata su una lunga spiaggia di sabbia e ciottoli. Il vecchio paese sorgeva sulla collina retrostante. Il terremoto del 1953 lo rase al suolo e Skala rinacque più in basso, sul mare. La via principale scorre tranquilla tra taverne, bar e negozi, e ai margini del paese restano i mosaici di una villa romana del III secolo.\n\nÈ anche una buona base. Il porto di Poros è a circa 12 km lungo la costa, e il borgo di Katelios è a una decina di minuti d'auto verso ovest. In stagione la barca del Capitano parte dalla spiaggia di Skala alle 09:00 per Itaca, Fiscardo o Zante, costeggiando calette che nessuna strada raggiunge."
+  },
+  "beaches": {
+    "title": "Spiagge vicino a Skala",
+    "items": {
+      "skala": {
+        "name": "Spiaggia di Skala",
+        "body": "La spiaggia di Skala, lunga e di sabbia e ciottoli, parte dal paese e prosegue lungo la costa verso Poros. Dall'Aegealis basta attraversare la strada (20 m); dal Theodora sono circa 500 m scendendo per la via principale."
+      },
+      "spithi": {
+        "name": "Spithi",
+        "body": "Spithi è vicina al paese, a circa 1,7 km in linea d'aria dal Theodora e a 2,3 km dall'Aegealis. Potete arrivarci a piedi con il fresco del mattino o in auto in pochi minuti, per variare un po' rispetto alla spiaggia principale."
+      },
+      "loutraki": {
+        "name": "Loutraki",
+        "body": "Loutraki è a circa 2 km dal Theodora e a 2,6 km dall'Aegealis, a pochi minuti d'auto. Chiedeteci le indicazioni prima di partire."
+      },
+      "mounta": {
+        "name": "Mounta",
+        "body": "A circa 2,7 km in linea d'aria dal Theodora e a 3,4 km dall'Aegealis, 5–6 minuti in auto. È la principale spiaggia di Cefalonia per la nidificazione delle tartarughe marine Caretta caretta: nella stagione della deposizione tenetevi lontani dalle zone delimitate e di notte non accendete luci sulla spiaggia."
+      },
+      "kaminia": {
+        "name": "Kaminia",
+        "body": "Kaminia, a circa 3,1 km in linea d'aria dal Theodora (7 minuti in auto), è la parte occidentale della stessa baia di Mounta. Anche qui nidificano le tartarughe, quindi valgono le stesse regole."
+      },
+      "miniMyrtos": {
+        "name": "Mini Myrtos (Koutsoupia)",
+        "body": "Una caletta sulla costa orientale, tra Poros e Antisamos. È la sosta bagno della nostra crociera per Fiscardo, con la barca che arriva fino a riva; le crociere per Itaca si fermano qui o a Makria Petra, e la crociera barbecue (su richiesta) resta in spiaggia per la grigliata e i giochi."
+      }
+    }
+  },
+  "todo": {
+    "title": "Cosa fare",
+    "items": {
+      "romanVilla": {
+        "name": "Villa romana di Skala",
+        "body": "Ai margini del paese si trovano i resti di una villa romana del III secolo d.C. I pavimenti a mosaico si conservano sotto una copertura protettiva: uno raffigura un sacrificio con un toro, un montone e un cinghiale, un altro l'Invidia assalita dalle belve. Qualche chilometro più a nord, lungo la strada costiera verso Poros, restano le rovine di un tempio arcaico di Apollo."
+      },
+      "cruise": {
+        "name": "Una giornata in mare",
+        "body": "La gita più comoda parte dalla spiaggia di Skala, davanti all'Aegealis: la NIRIIS vi porta a Itaca, a Fiscardo o a Zante, con soste per il bagno e tempo per pranzare a terra in ogni crociera in calendario. Per chi alloggia da noi, lo sconto sulle crociere in calendario è del 20%."
+      },
+      "poros": {
+        "name": "Poros e la grotta di Drakaina",
+        "body": "Poros, una dozzina di chilometri più a nord, è una cittadina portuale con il traghetto per Kyllini. Alle spalle dell'abitato la strada verso l'interno attraversa la gola di Poros, dove si apre la grotta di Drakaina. Fu frequentata dal tardo Neolitico al Bronzo antico e in seguito divenne un santuario di Pan e delle Ninfe. Chiedeteci come arrivarci prima di partire."
+      },
+      "markopoulo": {
+        "name": "Panagia Fidousa, Markopoulo",
+        "body": "La Panagia Fidousa di Markopoulo è a circa 10 km da Skala, circa 13 minuti in auto. Chiedeteci la strada prima di partire."
+      },
+      "atros": {
+        "name": "Monastero di Atros",
+        "body": "Il monastero della Panagia Atros è a circa 17–18 km da Skala, una quarantina di minuti in auto. Chiedeteci com'è la strada prima di partire e, se entrate, coprite spalle e ginocchia."
+      },
+      "tzanata": {
+        "name": "Tomba micenea di Tzanata",
+        "body": "Appena fuori dal villaggio di Tzanata, a circa 13–14 km da Skala, si trova una tomba micenea a tholos scoperta nel 1991. Ha un diametro di 6,8 m e risale a più di 3.000 anni fa. C'è chi la chiama la tomba di Ulisse; gli archeologi sono più cauti."
+      },
+      "melissani": {
+        "name": "Lago di Melissani",
+        "body": "Il lago di Melissani si trova in una grotta vicino a Sami, sulla costa orientale. Durante la nostra crociera per Fiscardo, a Sami ci sono autobus che aspettano chi vuole visitarlo. Trasferimento e ingresso si pagano a parte: 15 € per gli adulti, 10 € dai 6 ai 18 anni, per gli studenti e per chi ha più di 65 anni."
+      },
+      "argostoli": {
+        "name": "Argostoli",
+        "body": "Il capoluogo dell'isola è a circa 40 km, a meno di un'ora d'auto."
+      }
+    }
+  },
+  "gettingHere": {
+    "title": "Come arrivare",
+    "air": {
+      "title": "In aereo",
+      "body": "L'aeroporto di Cefalonia (EFL) si trova vicino ad Argostoli, a 33–35 km da entrambe le strutture: circa 40–45 minuti in auto o in taxi. Se ci dite a che ora atterrate, il taxi ve lo prenotiamo noi."
+    },
+    "ferry": {
+      "title": "In traghetto",
+      "body": "Dal porto di Poros parte tutto l'anno un traghetto per auto e passeggeri diretto a Kyllini, nel Peloponneso; la traversata dura circa un'ora e mezza. Gli orari cambiano nel corso dell'anno, quindi verificateli con la compagnia di navigazione prima di partire."
+    },
+    "around": {
+      "title": "Come muoversi",
+      "body": "Skala si gira comodamente a piedi: spiaggia, taverne, negozi e supermercati sono a pochi minuti da entrambe le strutture. Per le spiagge più lontane, per Melissani o per Argostoli conviene noleggiare un'auto o uno scooter. In centro a Skala c'è una fermata degli autobus KTEL: chiedeteci gli orari aggiornati."
+    }
+  },
+  "when": {
+    "title": "Quando venire",
+    "body": "La stagione va più o meno da maggio a ottobre, e le crociere del Capitano si svolgono per tutta la stagione, meteo permettendo."
+  }
+}

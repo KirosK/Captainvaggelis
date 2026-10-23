@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "eyebrow": "Skala, Cefalonia · dal 1987",
+    "title": "Benvenuti\na Skala",
+    "subtitle": "Frosso e Vangelis vi aspettano all'Aegealis e al Theodora.",
+    "primary": "Trovate il vostro alloggio",
+    "secondary": "Scoprite le crociere",
+    "scroll": "Scorri"
+  },
+  "bookingBar": {
+    "title": "Verificate la disponibilità",
+    "property": "Dove",
+    "both": "Entrambe le strutture",
+    "dates": "Date",
+    "addDates": "Scegliete le date",
+    "guests": "Ospiti",
+    "search": "Cercate",
+    "hint": "Direttamente con la famiglia, senza costi di prenotazione"
+  },
+  "intro": {
+    "kicker": "Chi siamo",
+    "title": "Una famiglia di Skala: camere vicino al mare, un capitano al timone",
+    "body": "Il Capitano Vangelis Spathis è nato a Spathi, un paesino a 5 km da Skala, e va per mare da quando aveva 18 anni. Dal 1987 le sue crociere in giornata partono da Skala.\n\nCon la moglie Frosso si prende cura degli ospiti anche a terra: all'Aegealis Studios, di fronte alla spiaggia, e al Theodora Studios & Apartments, in cima al paese. Molti ospiti tornano, e c'è chi è già alla quarta volta.",
+    "stats": [
+      {
+        "value": "1987",
+        "label": "prima crociera da Skala"
+      },
+      {
+        "value": "9,1",
+        "label": "voto su Booking.com per entrambe le strutture"
+      },
+      {
+        "value": "274",
+        "label": "recensioni verificate degli ospiti"
+      },
+      {
+        "value": "20 m",
+        "label": "dall'Aegealis alla spiaggia"
+      }
+    ]
+  },
+  "properties": {
+    "kicker": "Dove alloggiare",
+    "title": "Sul mare o in paese: due volti di Skala",
+    "intro": "Scegliete la spiaggia o il paese. In entrambi i casi vi aspettano la stessa famiglia, la pulizia quotidiana e uno sconto del 20% sulle crociere in calendario del Capitano.",
+    "aegealis": {
+      "tag": "Sul mare",
+      "title": "Aegealis Studios",
+      "pitch": "Monolocali e bilocali sul lungomare, di fronte alla spiaggia di Skala, con un giardino tra prato e palme. Potete usare le piscine degli hotel ai due lati, e per le crociere si sale a bordo davanti all'ingresso.",
+      "bullets": [
+        "20 m dalla spiaggia",
+        "Posizione valutata 9,9 dagli ospiti",
+        "Parcheggio pubblico gratuito nei pressi"
+      ],
+      "best": "Ideale per: giornate in spiaggia, coppie, vista mare"
+    },
+    "theodora": {
+      "tag": "In paese",
+      "title": "Theodora Studios & Apartments",
+      "pitch": "Monolocali e appartamenti in cima alla via principale di Skala, a circa 100 m dal centro, con un giardino ombreggiato e un arancio sul retro. La spiaggia è a 5–10 minuti a piedi in discesa, e dal giardino un cancello porta alla piscina dell'hotel accanto (quando l'hotel è aperto).",
+      "bullets": [
+        "Supermercato a un minuto",
+        "Appartamento con due camere da letto, fino a 5 ospiti",
+        "Pulizia valutata 9,5 dagli ospiti"
+      ],
+      "best": "Ideale per: famiglie, gruppi, chi va in taverna a piedi"
+    }
+  },
+  "finder": {
+    "kicker": "Su misura per voi",
+    "title": "Rispondete a tre domande: vi suggeriamo l'alloggio giusto",
+    "intro": "Diteci chi viaggia e che cosa conta di più per voi: vi proporremo un alloggio all'Aegealis o al Theodora.",
+    "q1": {
+      "label": "Chi viaggia?",
+      "options": {
+        "couple": "Coppia",
+        "family": "Famiglia con bambini",
+        "friends": "Gruppo di amici",
+        "solo": "Solo io"
+      }
+    },
+    "q2": {
+      "label": "Che cosa conta di più?",
+      "options": {
+        "beach": "Spiaggia sotto casa",
+        "view": "Vista mare",
+        "quiet": "Pace e tranquillità",
+        "space": "Spazio per stare comodi",
+        "value": "Miglior rapporto qualità-prezzo"
+      }
+    },
+    "q3": {
+      "label": "Quanti siete?",
+      "hint": "Ai fini della tariffa, al Theodora i bambini contano come adulti dai 4 anni, all'Aegealis dai 6."
+    },
+    "resultTitle": "Il nostro consiglio per voi",
+    "alsoGood": "Altre buone opzioni",
+    "why": "Perché questo alloggio",
+    "noMatch": "Per {count} ospiti vi consigliamo due alloggi, per esempio l'appartamento con due camere del Theodora e un monolocale. Scriveteci e organizziamo tutto noi.",
+    "reset": "Ricomincia",
+    "reasons": {
+      "beachfront": "La spiaggia è appena oltre la strada",
+      "seaView": "Vista mare dalla camera",
+      "quiet": "Zona tranquilla, giardino dietro casa",
+      "space": "Camera da letto separata",
+      "twoBedrooms": "Due camere da letto, posto per cinque",
+      "value": "La soluzione più conveniente",
+      "kids": "Spazio per i bambini",
+      "terrace": "Una terrazza per la colazione all'aperto",
+      "village": "Taverne e negozi a un minuto",
+      "cruise": "La barca delle crociere parte qui davanti",
+      "pool": "Accesso alle piscine dei due hotel accanto",
+      "poolSeasonal": "Piscina dell'hotel accanto, quando è aperta",
+      "budgetGroup": "Conveniente per un gruppo"
+    }
+  },
+  "cruises": {
+    "kicker": "In mare con il Capitano",
+    "title": "Dalla spiaggia di Skala a Itaca, Fiscardo e Zante",
+    "body": "La NIRIIS è stata costruita nel 2017: ha stabilizzatori che riducono il rollio fino al 70%, uno scivolo d'acqua e una piattaforma per i tuffi. Ogni crociera in calendario prevede almeno una sosta per il bagno, e quelle per Itaca ne prevedono due.",
+    "departs": "Partenza alle 09:00 dalla spiaggia di Skala, davanti all'Aegealis",
+    "discount": "Siete nostri ospiti? Avete il 20% di sconto su ogni crociera in calendario.",
+    "week": "Una settimana tipo in mare",
+    "cta": "Tutte le crociere",
+    "dayShort": "Ogni {day}"
+  },
+  "story": {
+    "kicker": "La nostra storia",
+    "title": "Il suo primo amore è stato il mare",
+    "body": "Vangelis Spathis nasce a Spathi nel 1952. Ha quattro anni quando vede il mare per la prima volta, e ne resta stregato per sempre. A 18 anni finalmente si imbarca; nel 1974 entra in marina e nel 1984, dopo anni di rotte verso porti di tutto il mondo, ottiene la patente di capitano.\n\nUn anno dopo si innamora di Frosso e deve scegliere: la vita da capitano lontano da casa o una vita accanto alla famiglia. Trova una via di mezzo. Nel 1987 inizia le crociere in giornata da Skala con la TARA. Trent'anni e cinque barche dopo, nel 2017, arriva la NIRIIS.\n\nOgni anno circa quattro passeggeri su dieci hanno già navigato con lui. All'Aegealis e al Theodora l'accoglienza è la stessa: una famiglia che vi aspetta all'arrivo, vi organizza il taxi e vi consiglia dove mangiare.",
+    "quote": "Ora sento di avere tre amori: la mia famiglia, il mare e tutti voi.",
+    "signature": "Capitano Vangelis Spathis",
+    "timeline": [
+      {
+        "year": "1974",
+        "text": "Entra in marina"
+      },
+      {
+        "year": "1984",
+        "text": "Patente di capitano"
+      },
+      {
+        "year": "1987",
+        "text": "Prime crociere da Skala con la TARA"
+      },
+      {
+        "year": "2000",
+        "text": "NAUTILUS"
+      },
+      {
+        "year": "2012",
+        "text": "MYTHOS"
+      },
+      {
+        "year": "2017",
+        "text": "NIRIIS, costruita per queste crociere"
+      }
+    ]
+  },
+  "reviews": {
+    "kicker": "Le parole degli ospiti",
+    "title": "Che cosa scrivono gli ospiti tornati a casa",
+    "intro": "Recensioni vere di soggiorni verificati su Booking.com, accorciate ma non riscritte.",
+    "cta": "Altre recensioni su Booking.com"
+  },
+  "map": {
+    "kicker": "Nei dintorni",
+    "title": "Spiaggia, taverne e negozi, tutto a due passi",
+    "intro": "Dall'Aegealis la spiaggia è a 20 m e il centro del paese a circa 500 m. Dal Theodora il supermercato è a un minuto a piedi e la spiaggia a circa 500 m.",
+    "from": "Distanze da",
+    "filters": {
+      "all": "Tutto",
+      "beach": "Spiagge",
+      "food": "Mangiare e bere",
+      "shop": "Negozi",
+      "sight": "Da vedere",
+      "transport": "Come arrivare"
+    },
+    "open": "Aprite in Google Maps",
+    "legendWalk": "a piedi",
+    "legendDrive": "in auto"
+  },
+  "faq": {
+    "kicker": "Buono a sapersi",
+    "title": "Le domande che ci fanno gli ospiti",
+    "cta": "Tutte le domande"
+  },
+  "contact": {
+    "kicker": "Parliamone",
+    "title": "Vi risponde una persona vera, della famiglia",
+    "body": "Scriveteci su WhatsApp, chiamateci o mandateci un'e-mail: chiedeteci tutto quello che volete prima di prenotare. Parliamo greco, inglese e un po' di spagnolo, e potete scriverci anche in italiano.",
+    "kiosk": "Oppure, durante la stagione, passate al chiosco delle crociere davanti all'Aegealis, sulla spiaggia di Skala: è lo stesso punto da cui si sale a bordo."
+  }
+}

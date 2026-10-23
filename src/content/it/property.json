@@ -1,0 +1,188 @@
+{
+  "ui": {
+    "overview": "Panoramica",
+    "rooms": "Alloggi",
+    "amenities": "Servizi",
+    "location": "Posizione",
+    "reviews": "Recensioni",
+    "policies": "Regole della casa",
+    "faq": "Domande",
+    "gallery": "Foto",
+    "chooseRoom": "Scegliete il vostro alloggio",
+    "chooseRoomIntro": "Ogni tipologia è descritta con onestà, perché sappiate esattamente che cosa state prenotando.",
+    "variants": "Tipologie disponibili",
+    "sleeps": "Posti letto",
+    "beds": "Letti",
+    "view": "Vista",
+    "goodToKnow": "Buono a sapersi",
+    "inEveryRoom": "In ogni alloggio",
+    "onSite": "Nella struttura",
+    "whyGuests": "Perché gli ospiti tornano",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "children": "Bambini",
+    "extraBeds": "Letti aggiuntivi e culle",
+    "pets": "Animali",
+    "smoking": "Fumo",
+    "parties": "Feste",
+    "quietHours": "Silenzio notturno",
+    "payment": "Pagamento",
+    "nearby": "Nei dintorni",
+    "bookingCardTitle": "Prenotate direttamente con la famiglia",
+    "bookingCardNote": "Chiedeteci tutto quello che volete prima di prenotare, senza alcun impegno.",
+    "otherProperty": "L'altra struttura: {name}",
+    "compare": "Confrontate le due strutture",
+    "photoCount": "{count} foto",
+    "categoryScores": "Punteggi degli ospiti per categoria",
+    "honest": "In tutta sincerità"
+  },
+  "aegealis": {
+    "hero": {
+      "eyebrow": "Spiaggia di Skala · Cefalonia",
+      "title": "Benvenuti\nall'Aegealis",
+      "subtitle": "Monolocali e bilocali in un giardino di palme, di fronte alla spiaggia di Skala."
+    },
+    "chips": [
+      "20 m dalla spiaggia",
+      "9,9 per la posizione",
+      "Parcheggio pubblico gratuito",
+      "Piscine accanto",
+      "Pulizia quotidiana"
+    ],
+    "overview": {
+      "title": "Un giardino di palme sul lungomare di Skala",
+      "body": "L'Aegealis si trova sulla strada del lungomare, proprio di fronte alla spiaggia di Skala. Intorno c'è un giardino con prato, palme e angoli all'ombra dove sedersi. I monolocali e i bilocali, tutti con angolo cottura e aria condizionata, hanno vista mare, vista mare laterale o vista giardino.\n\nPotete usare le piscine degli hotel ai due lati, e nell'hotel accanto c'è la colazione a buffet, da pagare a parte. Il centro del paese è a 8–10 minuti di passeggiata lungo il mare. Il chiosco delle crociere del Capitano e il punto d'imbarco sono proprio davanti all'ingresso."
+    },
+    "why": [
+      {
+        "title": "Posizione da 9,9",
+        "body": "Gli ospiti danno alla posizione 9,9 su 10: la spiaggia è dall'altra parte della strada e le taverne di Skala sono a una breve passeggiata lungo il mare."
+      },
+      {
+        "title": "Pulizia quotidiana: ci pensa Maria",
+        "body": "Camere pulite e asciugamani cambiati ogni giorno: recensione dopo recensione, gli ospiti citano Maria per nome."
+      },
+      {
+        "title": "Due piscine accanto",
+        "body": "Gli ospiti possono usare le piscine dei due hotel confinanti: il mare davanti, la piscina a pochi passi."
+      },
+      {
+        "title": "20% di sconto sulle crociere in calendario",
+        "body": "Gli ospiti hanno il 20% di sconto su ogni crociera in calendario del Capitano Vangelis, e la barca parte proprio davanti all'Aegealis."
+      }
+    ],
+    "aroundTitle": "Intorno all'Aegealis",
+    "aroundIntro": "Dall'Aegealis la spiaggia è a 20 m e il centro del paese a circa 500 m, 8–10 minuti a piedi.",
+    "goodToKnow": [
+      "I nostri monolocali sono compatti e pratici. Se vi serve più spazio, scegliete un bilocale o il monolocale familiare con terrazza.",
+      "Il Wi-Fi va bene per messaggi e mappe, ma non per lunghe sessioni di streaming.",
+      "La posizione esatta è sulla mappa qui sotto. Alcune app di mappe ci collocano in un punto leggermente sbagliato."
+    ],
+    "policies": {
+      "checkIn": "14:00 – 00:00. Vi preghiamo di comunicarci l'orario di arrivo.",
+      "checkOut": "08:00 – 10:00",
+      "children": "I bambini di ogni età sono i benvenuti. Dai 6 anni pagano come gli adulti.",
+      "extraBeds": "Letto aggiuntivo gratuito da 0 a 4 anni, 5 € a notte dai 5 ai 12 anni e 10 € a notte dai 13 anni in su. Culla (0–2 anni) 5 € a notte. Tutto su richiesta, in base alla disponibilità e da pagare in loco.",
+      "pets": "Non sono ammessi animali.",
+      "smoking": "Divieto di fumo in tutta la struttura.",
+      "parties": "Non sono ammessi feste ed eventi, compresi gli addii al celibato e al nubilato.",
+      "quietHours": "23:00 – 07:00",
+      "payment": "Con carta online se prenotate direttamente oppure in contanti all'arrivo."
+    }
+  },
+  "theodora": {
+    "hero": {
+      "eyebrow": "Paese di Skala · Cefalonia",
+      "title": "Benvenuti\nal Theodora",
+      "subtitle": "Camere, monolocali e appartamenti con un giardino tranquillo, a 100 m dal centro di Skala."
+    },
+    "chips": [
+      "100 m dal centro",
+      "9,5 per la pulizia",
+      "Giardino e lettini",
+      "Piscina dell'hotel accanto (stagionale)",
+      "Alloggi fino a 5 persone"
+    ],
+    "overview": {
+      "title": "La casa color pesca in cima alla via principale",
+      "body": "Il Theodora è la casa color pesca con la buganvillea rossa, in cima alla via principale di Skala. Il centro è a 100 m, eppure la zona è tranquilla. Dietro casa c'è un giardino ombreggiato con un arancio, lettini e vista sulle vigne; da lì un cancello porta alla piscina dell'hotel accanto (secondo la stagione dell'hotel).\n\nCi sono camere doppie, monolocali, una camera tripla con terrazza e due appartamenti con due camere, che ospitano fino a cinque persone ciascuno. Ogni alloggio ha angolo cottura e aria condizionata; alle pareti, quadri dipinti in famiglia. Il supermercato è a un minuto, e la spiaggia è poco più in basso, a circa 500 m. Di solito Frosso e Vangelis vi accolgono di persona, con l'acqua fresca già in frigo."
+    },
+    "why": [
+      {
+        "title": "Frosso e Vangelis",
+        "body": "La famiglia vi aiuta per tutto il soggiorno con taxi, consigli sui ristoranti e crociere."
+      },
+      {
+        "title": "Impeccabile, voto 9,5",
+        "body": "Camere pulite ogni giorno e asciugamani cambiati anche nel fine settimana: gli ospiti danno 9,5 alla pulizia."
+      },
+      {
+        "title": "Tranquillo, ma vicino a tutto",
+        "body": "Un minuto per il supermercato, una taverna proprio accanto e circa 10 minuti a piedi per la spiaggia, lungo la via principale."
+      },
+      {
+        "title": "Giardino, piscina, crociere",
+        "body": "Godetevi il giardino ombreggiato o, oltre il cancello, la piscina dell'hotel accanto, secondo la stagione dell'hotel. Sulle crociere in calendario del Capitano Vangelis, poi, avete il 20% di sconto."
+      }
+    ],
+    "aroundTitle": "Intorno al Theodora",
+    "aroundIntro": "Dal Theodora il centro di Skala è a circa 100 m, il supermercato a un minuto a piedi e la spiaggia a circa 500 m, 5–10 minuti a piedi.",
+    "goodToKnow": [
+      "Al ritorno dalla spiaggia la strada è in leggera salita: circa 10 minuti a piedi.",
+      "Non c'è un parcheggio privato. Di solito si trova posto in strada nelle vicinanze.",
+      "Internet via cavo gratuito solo nelle aree comuni; nelle camere non c'è il Wi-Fi. Se dovete lavorare online, ditecelo prima di prenotare."
+    ],
+    "policies": {
+      "checkIn": "14:00 – 00:00. Vi preghiamo di comunicarci l'orario di arrivo.",
+      "checkOut": "08:00 – 10:00",
+      "children": "I bambini di ogni età sono i benvenuti. Dai 4 anni pagano come gli adulti.",
+      "extraBeds": "Non sono disponibili culle né letti aggiuntivi.",
+      "pets": "Non sono ammessi animali.",
+      "smoking": "Divieto di fumo in tutta la struttura.",
+      "parties": "Vi chiediamo di rispettare la tranquillità del quartiere.",
+      "quietHours": "La strada è tranquilla: vi chiediamo di non fare rumore la sera tardi.",
+      "payment": "Con carta online se prenotate direttamente oppure in contanti all'arrivo."
+    }
+  },
+  "compare": {
+    "title": "Aegealis o Theodora?",
+    "intro": "Stessa famiglia e stessa cura quotidiana, in due posti diversi: l'Aegealis davanti alla spiaggia, il Theodora su in paese.",
+    "rows": {
+      "beach": {
+        "label": "Spiaggia",
+        "aegealis": "Dall'altra parte della strada (20 m)",
+        "theodora": "5–10 min a piedi (≈500 m)"
+      },
+      "centre": {
+        "label": "Centro del paese",
+        "aegealis": "8–10 min a piedi lungo il mare",
+        "theodora": "1–2 min a piedi (≈100 m)"
+      },
+      "pool": {
+        "label": "Piscina",
+        "aegealis": "Piscine dei due hotel accanto",
+        "theodora": "Piscina dell'hotel accanto, passando dal giardino (secondo la stagione dell'hotel)"
+      },
+      "parking": {
+        "label": "Parcheggio",
+        "aegealis": "Pubblico e gratuito, all'esterno",
+        "theodora": "In strada, nelle vicinanze"
+      },
+      "maxGuests": {
+        "label": "Alloggio più grande",
+        "aegealis": "Fino a 4 ospiti",
+        "theodora": "Fino a 5 ospiti"
+      },
+      "vibe": {
+        "label": "Atmosfera",
+        "aegealis": "Lungomare, palme, il suono delle onde",
+        "theodora": "Giardino tranquillo, la vita del paese appena fuori"
+      },
+      "kids": {
+        "label": "Bambini a tariffa adulti dai",
+        "aegealis": "6 anni",
+        "theodora": "4 anni"
+      }
+    }
+  }
+}

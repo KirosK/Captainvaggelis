@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Metric-matched stand-ins, shown while the web fonts load (font-display: swap): Georgia and Arial resized so a line
+ * of text takes the same width and height, and the page does not jump when the real fonts arrive.
+ * Values from the fonts' own tables (average Latin glyph width, hhea ascent/descent), Noto at 300 and Commissioner at 400.
+ */
+@font-face {
+  font-family: 'Noto Serif Display Fallback';
+  src: local('Georgia');
+  font-weight: 100 599;
+  size-adjust: 104%;
+  ascent-override: 102.79%;
+  descent-override: 28.17%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Noto Serif Display Fallback';
+  src: local('Georgia Bold'), local('Georgia-Bold');
+  font-weight: 600 900;
+  size-adjust: 104%;
+  ascent-override: 102.79%;
+  descent-override: 28.17%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Commissioner Fallback';
+  src: local('Arial'), local('ArialMT');
+  font-weight: 100 599;
+  size-adjust: 101.58%;
+  ascent-override: 100.12%;
+  descent-override: 20.28%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Commissioner Fallback';
+  src: local('Arial Bold'), local('Arial-BoldMT');
+  font-weight: 600 900;
+  size-adjust: 101.58%;
+  ascent-override: 100.12%;
+  descent-override: 20.28%;
+  line-gap-override: 0%;
+}
+
+@layer base {
+  :root {
+    --font-display: 'Noto Serif Display Variable', 'Noto Serif Display Fallback';
+    --font-sans: 'Commissioner Variable', 'Commissioner Fallback';
+    --header-h: 76px;
+    color-scheme: light;
+  }
+  html {
+    /* framer-motion measures scroll-linked heroes against the page; it needs a positioned scroll container */
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: calc(var(--header-h) + 16px);
+  }
+  body {
+    @apply bg-sand-paper text-ink font-sans antialiased;
+    font-feature-settings: 'kern', 'liga', 'calt';
+  }
+  ::selection {
+    background: #cfe5e8;
+    color: #0f2430;
+  }
+  h1, h2, h3, .font-display {
+    font-optical-sizing: auto;
+  }
+  /* headings share their words evenly between lines, so none ends on a single orphaned word */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  /* Two-colour ring: the sea outline reads on light sections, the white halo behind it on ink sections and over video. */
+  :focus-visible {
+    outline: 2px solid #17677a;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 5px #fff;
+    border-radius: 6px;
+  }
+  img, video {
+    @apply select-none;
+  }
+}
+
+@layer components {
+  /* tailwind.config's container.screens only defines 2xl, so its md/xl padding keys never apply:
+     give tablets and laptops a 32px gutter here instead of the phone's 20px */
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  .kicker {
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-sea;
+  }
+  .kicker::before {
+    content: '';
+    @apply block h-px w-8 bg-current opacity-60;
+  }
+  .kicker-light {
+    @apply text-white;
+  }
+  .prose-warm p + p {
+    @apply mt-4;
+  }
+  .btn {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3.5 text-[0.95rem] font-semibold leading-none transition-[transform,background-color,color,box-shadow] duration-300 ease-swift active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-ink text-sand-paper shadow-soft hover:bg-sea-deep;
+  }
+  .btn-sea {
+    @apply bg-sea text-white shadow-soft hover:bg-sea-deep;
+  }
+  .btn-terra {
+    @apply bg-terra text-white shadow-soft hover:bg-terra-deep;
+  }
+  .btn-light {
+    @apply bg-white/95 text-ink shadow-soft backdrop-blur hover:bg-white;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-ink ring-1 ring-inset ring-ink/15 hover:bg-ink/5;
+  }
+  .btn-ghost-light {
+    @apply bg-white/10 text-white ring-1 ring-inset ring-white/40 backdrop-blur-sm hover:bg-white/20;
+  }
+  .card {
+    @apply rounded-xl2 bg-white shadow-soft ring-1 ring-ink/5;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-[0.8rem] font-medium text-ink ring-1 ring-ink/10;
+  }
+  .field {
+    @apply block w-full rounded-xl border-0 bg-white px-4 py-3.5 text-base text-ink shadow-inset md:text-[0.95rem] outline-none transition placeholder:text-ink-mute/70 focus:ring-2 focus:ring-sea;
+  }
+  .label {
+    @apply mb-1.5 block text-[0.8rem] font-semibold text-ink-soft;
+  }
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+  .hairline {
+    @apply h-px w-full bg-line;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.6'/></svg>");
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+  .safe-bottom { padding-bottom: max(0.75rem, env(safe-area-inset-bottom)); }
+}
+
+/* Leaflet: keep the map calm and on-brand */
+.leaflet-container {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background: #dfecee;
+}
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(251, 248, 242, 0.85) !important;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 12px 32px -12px rgba(15, 36, 48, 0.35);
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.leaflet-bar a {
+  color: #0f2430 !important;
+}
+.route-dash {
+  stroke-dasharray: 2 10;
+  animation: dash 1.6s linear infinite;
+}
+@keyframes dash {
+  to { stroke-dashoffset: -24; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* react-day-picker, on-brand */
+.cv-daypicker {
+  --rdp-cell-size: 42px;
+  margin: 0;
+  font-size: 0.92rem;
+}
+/* react-day-picker's style.css loads after this file and resets its colours on .rdp, so the brand
+   colours sit on .rdp.cv-daypicker: selected days stay ink, hover and focus stay sea, never #0000ff. */
+.rdp.cv-daypicker {
+  --rdp-accent-color: #0f2430;
+  --rdp-background-color: #e8f2f2;
+  --rdp-outline: 2px solid #17677a;
+  --rdp-outline-selected: 3px solid #17677a;
+  --rdp-selected-color: #fff;
+}
+.cv-daypicker .rdp-months { gap: 1.75rem; }
+.cv-daypicker .rdp-caption_label { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; text-transform: capitalize; }
+.cv-daypicker .rdp-head_cell { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; color: #5b6b73; text-transform: uppercase; }
+.cv-daypicker .rdp-day { border-radius: 999px; font-variant-numeric: tabular-nums; }
+.cv-daypicker .rdp-day_range_middle { background: #e8f2f2; color: #0f2430; border-radius: 0; }
+.cv-daypicker .rdp-day_range_start, .cv-daypicker .rdp-day_range_end { background: #0f2430; color: #fff; }
+.cv-daypicker .rdp-day_disabled { opacity: 0.28; text-decoration: line-through; text-decoration-thickness: 1px; }
+.cv-daypicker .day-sailing { position: relative; font-weight: 700; color: #0c4655; }
+.cv-daypicker .day-sailing::after { content: ''; position: absolute; bottom: 5px; left: 50%; width: 4px; height: 4px; margin-left: -2px; border-radius: 999px; background: #17677a; }
+.cv-daypicker .day-cancelled { color: #a9532f !important; text-decoration: line-through; opacity: 0.8; }
+.cv-daypicker .day-few::after { background: #a9532f; }
+/* a chosen sailing day keeps white text and a light dot on the ink circle */
+.cv-daypicker .day-sailing.rdp-day_selected { color: #fff; }
+.cv-daypicker .day-sailing.rdp-day_selected::after { background: rgba(255, 255, 255, 0.85); }
+@media (max-width: 640px) {
+  .cv-daypicker { --rdp-cell-size: 40px; }
+}
+
+/* Each property keeps its own colour: Aegealis = the sea, Theodora = terracotta and bougainvillea */
+.theme-terra .kicker:not(.kicker-light) { color: #9c4529; }
+.theme-terra .btn-primary:hover { background-color: #9c4529; }
+
+/* The white halo of the focus ring has to win over the ring-/shadow- utilities that buttons and pills carry
+   (they also use box-shadow), so this rule sits outside the Tailwind layers. Text fields keep their own sea ring. */
+:focus-visible:not(input, textarea, select, [class*='outline-none']) {
+  box-shadow: 0 0 0 5px #fff;
+}

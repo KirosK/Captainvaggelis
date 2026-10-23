@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "eyebrow": "Skala, Kefalonia · since 1987",
+    "title": "Welcome\nto Skala",
+    "subtitle": "Frosso and Vangelis look forward to welcoming you at Aegealis and Theodora.",
+    "primary": "Find your room",
+    "secondary": "See the cruises",
+    "scroll": "Scroll"
+  },
+  "bookingBar": {
+    "title": "Check availability",
+    "property": "Where",
+    "both": "Both properties",
+    "dates": "Dates",
+    "addDates": "Add dates",
+    "guests": "Guests",
+    "search": "Search",
+    "hint": "Direct with the family, no booking fees"
+  },
+  "intro": {
+    "kicker": "Who we are",
+    "title": "One Skala family: rooms by the sea, a captain at the helm",
+    "body": "Captain Vangelis Spathis was born in Spathi, a village 5 km from Skala, and has worked at sea since he was 18. His day cruises have sailed from Skala since 1987.\n\nWith his wife Frosso he also looks after guests on land: at Aegealis Studios, across the road from the beach, and at Theodora Studios & Apartments, at the top of the village. Many guests come back, some for the fourth time.",
+    "stats": [
+      {
+        "value": "1987",
+        "label": "first cruise from Skala"
+      },
+      {
+        "value": "9.1",
+        "label": "Booking.com score, both properties"
+      },
+      {
+        "value": "274",
+        "label": "verified guest reviews"
+      },
+      {
+        "value": "20 m",
+        "label": "from Aegealis to the beach"
+      }
+    ]
+  },
+  "properties": {
+    "kicker": "Where to stay",
+    "title": "Two places to stay, two sides of Skala",
+    "intro": "Pick the beach or the village. Either way, you get the same family, daily cleaning and 20% off every scheduled cruise.",
+    "aegealis": {
+      "tag": "On the beach",
+      "title": "Aegealis Studios",
+      "pitch": "Studios and apartments across the road from Skala beach, with a lawned garden and palms. You can use the pools of the hotels on either side, and the Captain's cruises board right in front.",
+      "bullets": [
+        "20 m to the beach",
+        "Location rated 9.9 by guests",
+        "Free public parking nearby"
+      ],
+      "best": "Best for: beach days, couples, sea views"
+    },
+    "theodora": {
+      "tag": "In the village",
+      "title": "Theodora Studios & Apartments",
+      "pitch": "Studios and apartments at the top of Skala's main street, about 100 m from the centre, with a shady garden and an orange tree at the back. The beach is a 5–10 minute walk downhill, and a gate from the garden leads to the neighbouring hotel's pool (subject to the hotel's season).",
+      "bullets": [
+        "Supermarket a minute away",
+        "Two-bedroom apartment for up to five",
+        "Cleanliness rated 9.5 by guests"
+      ],
+      "best": "Best for: families, groups, walking to tavernas"
+    }
+  },
+  "finder": {
+    "kicker": "Room finder",
+    "title": "Answer three questions and we'll suggest a room",
+    "intro": "Tell us who's coming and what matters most. We'll match you with a room at Aegealis or Theodora.",
+    "q1": {
+      "label": "Who is travelling?",
+      "options": {
+        "couple": "Couple",
+        "family": "Family with children",
+        "friends": "Group of friends",
+        "solo": "Just me"
+      }
+    },
+    "q2": {
+      "label": "What matters most?",
+      "options": {
+        "beach": "Beach right outside",
+        "view": "A sea view",
+        "quiet": "Peace and quiet",
+        "space": "Space to spread out",
+        "value": "Best value"
+      }
+    },
+    "q3": {
+      "label": "How many guests?",
+      "hint": "For pricing, children count as adults from age 4 at Theodora and from age 6 at Aegealis."
+    },
+    "resultTitle": "Our suggestion for you",
+    "alsoGood": "Also a good fit",
+    "why": "Why this room",
+    "noMatch": "For {count} guests we suggest two rooms, such as Theodora's two-bedroom apartment and a studio. Message us and we'll arrange it.",
+    "reset": "Start again",
+    "reasons": {
+      "beachfront": "The beach is across the road",
+      "seaView": "Sea view from your room",
+      "quiet": "Quiet area, garden behind the house",
+      "space": "Separate bedroom",
+      "twoBedrooms": "Two bedrooms, room for five",
+      "value": "Our best-value option",
+      "kids": "Room for the children",
+      "terrace": "A terrace for breakfast outdoors",
+      "village": "Tavernas and shops a minute away",
+      "cruise": "The cruise boat leaves from right outside",
+      "pool": "Use of the pools at the two hotels next door",
+      "poolSeasonal": "Neighbouring hotel's pool, subject to its season",
+      "budgetGroup": "Good value for a group"
+    }
+  },
+  "cruises": {
+    "kicker": "At sea with the Captain",
+    "title": "Sail from Skala beach to Ithaca, Fiscardo or Zakynthos",
+    "body": "NIRIIS, the Captain's sixth boat, was built in 2017 and has stabilisers that cut rolling by up to 70%, plus a water slide and a diving platform. Every scheduled cruise stops for a swim, and the Ithaca cruises stop twice.",
+    "departs": "Departs 09:00 from Skala beach, in front of Aegealis",
+    "discount": "Staying with us? 20% off every scheduled cruise.",
+    "week": "A typical week at sea",
+    "cta": "See all cruises",
+    "dayShort": "Every {day}"
+  },
+  "story": {
+    "kicker": "Our story",
+    "title": "His first love was the sea",
+    "body": "Vangelis Spathis was born in Spathi in 1952. He was four when he first saw the sea, and he never got over it. At 18 he finally went to sea. He joined the navy in 1974 and, in 1984, after years of sailing to ports around the world, he earned his Master's licence.\n\nA year later he fell in love with Frosso and had to choose: a captain's life far from home, or a life close to his family. He found a middle way. In 1987 he started daily cruises from Skala with TARA. Thirty years and five boats later came NIRIIS, in 2017.\n\nEvery year, about four in ten of his passengers have sailed with him before. Aegealis and Theodora run on the same welcome: a family that meets you on arrival, arranges your taxi and tells you where to eat.",
+    "quote": "Now I feel that I have three loves: my family, the sea and all of you.",
+    "signature": "Captain Vangelis Spathis",
+    "timeline": [
+      {
+        "year": "1974",
+        "text": "Joins the navy"
+      },
+      {
+        "year": "1984",
+        "text": "Master's licence"
+      },
+      {
+        "year": "1987",
+        "text": "First cruises from Skala with TARA"
+      },
+      {
+        "year": "2000",
+        "text": "NAUTILUS"
+      },
+      {
+        "year": "2012",
+        "text": "MYTHOS"
+      },
+      {
+        "year": "2017",
+        "text": "NIRIIS, built for these cruises"
+      }
+    ]
+  },
+  "reviews": {
+    "kicker": "Guests in their own words",
+    "title": "What guests write when they get home",
+    "intro": "Real reviews from verified Booking.com stays, shortened but not rewritten.",
+    "cta": "Read more reviews on Booking.com"
+  },
+  "map": {
+    "kicker": "Around you",
+    "title": "Beach, tavernas and shops, all within a short walk",
+    "intro": "From Aegealis the beach is 20 m away and the village centre about 500 m. From Theodora the supermarket is a minute's walk and the beach about 500 m.",
+    "from": "Distances from",
+    "filters": {
+      "all": "All",
+      "beach": "Beaches",
+      "food": "Eat & drink",
+      "shop": "Shops",
+      "sight": "Sights",
+      "transport": "Getting here"
+    },
+    "open": "Open in Google Maps",
+    "legendWalk": "walk",
+    "legendDrive": "drive"
+  },
+  "faq": {
+    "kicker": "Good to know",
+    "title": "Questions guests ask us",
+    "cta": "All questions"
+  },
+  "contact": {
+    "kicker": "Talk to us",
+    "title": "A real person answers: one of the family",
+    "body": "Message us on WhatsApp, call or email, and ask anything before you book. We speak English, Greek and some Spanish.",
+    "kiosk": "Or stop at the cruise kiosk in front of Aegealis during the season, the same spot where you board the boat."
+  }
+}
