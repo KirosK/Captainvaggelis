@@ -5,22 +5,22 @@ import { useEffect, useState } from 'react'
 import { m } from 'framer-motion'
 import { Anchor } from 'lucide-react'
 import { scheduledCruises, WEEK_ORDER } from '@/data/cruises'
-import { useStore } from '@/lib/cruiseStore'
+import { useSchedule } from '@/lib/cruiseStore'
 import { href, weekdayName, type Dict, type Locale } from '@/lib/i18n'
 
 /**
- * Monday→Sunday strip showing which cruise sails each day (following the admin schedule). Highlights today.
+ * Monday→Sunday strip showing which cruise sails each day (the live schedule saved in /admin, the static one until it loads). Highlights today.
  * One row per day on phones, two columns from 640 px (still in rows), then stacked cards four (768 px) and seven (1024 px) to a row:
  * a row layout in a quarter of a tablet screen leaves too little room for the name and the times.
  */
 export function WeekStrip({ locale, cruiseNames, labels, tone = 'dark' }: { locale: Locale; cruiseNames: Dict; labels: { depart: string; return: string }; tone?: 'dark' | 'light' }) {
   const [today, setToday] = useState<number | null>(null)
-  const { store } = useStore()
+  const { config } = useSchedule()
   useEffect(() => setToday(new Date().getDay()), [])
 
   const sailingOn = (wd: number) => {
     for (const c of scheduledCruises) {
-      const cfg = store.config[c.key]
+      const cfg = config[c.key]
       const days = cfg ? (cfg.active ? cfg.weekdays : []) : c.weekdays
       if (days.includes(wd)) return { cruise: c, depart: cfg?.depart ?? c.depart, back: cfg?.returnSkala ?? c.returnSkala }
     }

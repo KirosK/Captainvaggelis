@@ -3,6 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   distDir: process.env.NEXT_DIST_DIR || '.next',
   poweredByHeader: false,
+  // the cruise-booking server (src/server): PGlite loads its WebAssembly files from disk and must not be bundled;
+  // the Postgres and SMTP drivers are plain Node packages, also left to Node
+  experimental: {
+    serverComponentsExternalPackages: ['@electric-sql/pglite', 'postgres', 'nodemailer'],
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [480, 640, 828, 1080, 1280, 1600, 1920],
@@ -59,6 +64,14 @@ const nextConfig = {
         source: '/fonts/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
+      // e-tickets, the admin and the booking API are never indexed, and their URLs are not sent on as referrers
+      ...['/:lang/cruises/ticket/:path*', '/admin/:path*', '/admin', '/api/:path*'].map((source) => ({
+        source,
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+        ],
+      })),
       ...(noindex ? [{ source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }] : []),
     ]
   },

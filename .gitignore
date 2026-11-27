@@ -8,3 +8,6 @@ next-env.d.ts
 .next-*/
 .env
 .DS_Store
+
+# local database (PGlite), dev e-mail outbox and dev secret
+.data/

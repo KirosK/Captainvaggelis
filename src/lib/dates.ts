@@ -26,6 +26,37 @@ export function addDays(d: Date, n: number) {
 export const SEASON_START = new Date(2027, 4, 1)
 export const SEASON_END = new Date(2027, 9, 31)
 
+/** Minimum stay for the rooms (the owner's booking terms). */
+export const MIN_NIGHTS = 5
+
+/**
+ * The last check-out the owner's VikBooking accepts: it is closed from 16 Oct 2027 (live searches, 25 Nov 2026; facts.md,
+ * "Booking engine and payments"). Room stays end here; SEASON_END still applies to everything else. Move it when the
+ * owner opens later dates in VikBooking.
+ */
+export const ROOMS_LAST_CHECKOUT = new Date(2027, 9, 15)
+
+/** Today at 00:00, local time. */
+export function startOfToday() {
+  const d = new Date()
+  d.setHours(0, 0, 0, 0)
+  return d
+}
+
+/** The first day a room stay can start: today or the first day of the season, whichever is later. */
+export function firstBookableDay() {
+  const today = startOfToday()
+  return today > SEASON_START ? today : SEASON_START
+}
+
+/**
+ * A room stay is valid when it starts on or after the first bookable day (`first`, today by default), ends by the last
+ * check-out VikBooking accepts and lasts at least the minimum stay.
+ */
+export function validStay(from?: Date, to?: Date, minNights = MIN_NIGHTS, first: Date = firstBookableDay()): boolean {
+  return !!(from && to && from >= first && to <= ROOMS_LAST_CHECKOUT && nightsBetween(from, to) >= minNights)
+}
+
 /** Deterministic pseudo-random number in [0,1) from a string — used for demo availability. */
 export function seeded(key: string) {
   let h = 2166136261

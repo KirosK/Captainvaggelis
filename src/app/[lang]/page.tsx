@@ -8,6 +8,8 @@ import { Intro } from '@/components/home/Intro'
 import { PropertyDuo } from '@/components/home/PropertyDuo'
 import { RoomFinder } from '@/components/home/RoomFinder'
 import { CruiseTeaser } from '@/components/home/CruiseTeaser'
+import { ScheduleSeed } from '@/lib/cruiseStore'
+import { scheduleSeed } from '@/server/cruises/schedule'
 import { Story } from '@/components/home/Story'
 import { ContactBlock } from '@/components/home/ContactBlock'
 import { SectionHeading } from '@/components/ui/SectionHeading'
@@ -25,6 +27,9 @@ import { getDictionary, href, type Locale } from '@/lib/i18n'
 import { ogImage, pageMetadata } from '@/lib/seo'
 import { JsonLd } from '@/components/JsonLd'
 import { lodgingLd } from '@/lib/jsonld'
+
+// the cruise teaser shows the fares and days saved in /admin: re-rendered at most a minute after a change
+export const revalidate = 60
 
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const d = await getDictionary(params.lang)
@@ -70,7 +75,10 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
       <Intro t={t.intro} />
       <PropertyDuo locale={locale} t={t.properties} common={d.common} g={d.glance} />
       <RoomFinder locale={locale} t={t.finder} common={d.common} units={d.units} />
-      <CruiseTeaser locale={locale} t={t.cruises} cruises={d.cruises} common={d.common} />
+      {/* fares and days as saved in /admin (see the cruise pages) */}
+      <ScheduleSeed seed={await scheduleSeed()}>
+        <CruiseTeaser locale={locale} t={t.cruises} cruises={d.cruises} common={d.common} />
+      </ScheduleSeed>
 
       <section className="overflow-hidden bg-sand-paper py-24 md:py-32">
         <div className="container grid gap-12 lg:grid-cols-12">

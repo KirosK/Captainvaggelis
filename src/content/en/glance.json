@@ -38,8 +38,10 @@
     "seaMixed": "Sea view (direct, side or partial)",
     "garden": "Garden view",
     "gardenMixed": "Garden view or partial sea view",
-    "village": "Village and hills",
-    "villageMixed": "Village view; some with sea view"
+    "villageMixed": "Front, side or pool view; one top-floor studio has a sea view",
+    "seaOne": "Sea view from the double with terrace",
+    "seaFrontSide": "Front and side sea view",
+    "pool": "Pool view"
   },
   "identity": {
     "aegealis": "On the beach",

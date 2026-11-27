@@ -3,7 +3,7 @@ import type { Audience, UnitGroup } from '@/data/types'
 
 export type Priority = 'beach' | 'view' | 'quiet' | 'space' | 'value'
 export type ReasonKey =
-  | 'beachfront' | 'seaView' | 'quiet' | 'space' | 'twoBedrooms' | 'value' | 'kids' | 'terrace' | 'village' | 'cruise' | 'pool' | 'poolSeasonal' | 'budgetGroup'
+  | 'beachfront' | 'seaView' | 'someSeaView' | 'quiet' | 'space' | 'twoBedrooms' | 'value' | 'kids' | 'terrace' | 'village' | 'cruise' | 'pool' | 'poolSeasonal' | 'budgetGroup'
 
 export type Suggestion = { unit: UnitGroup; score: number; reasons: ReasonKey[] }
 
@@ -30,6 +30,7 @@ export function suggestRooms(who: Audience, priority: Priority, guests: number):
         break
       case 'view':
         if (u.seaView) score += 5
+        else if (u.someSeaView) score += 2
         if (u.features.includes('largeBalcony')) score += 1
         break
       case 'quiet':
@@ -50,6 +51,8 @@ export function suggestRooms(who: Audience, priority: Priority, guests: number):
 
     if (isAeg) reasons.push('beachfront')
     if (u.seaView) reasons.push('seaView')
+    // only one unit of the type sees the sea: say so only when the view is what matters
+    else if (u.someSeaView && priority === 'view') reasons.push('someSeaView')
     if (!isAeg) reasons.push(priority === 'quiet' ? 'quiet' : 'village')
     if (u.bedrooms === 2) reasons.push('twoBedrooms')
     else if (u.bedrooms === 1) reasons.push('space')
@@ -62,7 +65,7 @@ export function suggestRooms(who: Audience, priority: Priority, guests: number):
     reasons.push(isAeg ? 'pool' : 'poolSeasonal')
 
     // keep the most relevant reason first
-    const lead: Partial<Record<Priority, ReasonKey>> = { beach: 'beachfront', view: 'seaView', quiet: 'quiet', space: u.bedrooms === 2 ? 'twoBedrooms' : 'space', value: 'value' }
+    const lead: Partial<Record<Priority, ReasonKey>> = { beach: 'beachfront', view: u.seaView ? 'seaView' : 'someSeaView', quiet: 'quiet', space: u.bedrooms === 2 ? 'twoBedrooms' : 'space', value: 'value' }
     const first = lead[priority]
     const ordered = first && reasons.includes(first) ? [first, ...reasons.filter((r) => r !== first)] : reasons
     return { unit: u, score, reasons: Array.from(new Set(ordered)).slice(0, 4) }

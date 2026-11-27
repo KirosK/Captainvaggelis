@@ -52,7 +52,7 @@
   "th-double": {
     "name": "Double rooms",
     "short": "Simple, spotless and good value, at the top of the main street.",
-    "description": "Simple rooms for two, each with a kitchenette, air conditioning, a shower room and a balcony or terrace. Daily cleaning is included, and guests rate Theodora's value for money 9.2.",
+    "description": "Simple rooms for two, each with a kitchenette, air conditioning, a shower room and a balcony or terrace. The double room with terrace, on the first floor, has a sea view. Daily cleaning is included, and guests rate Theodora's value for money 9.2.",
     "bestFor": "Couples and solo travellers",
     "variants": {
       "th-standard-double": "Standard double room",
@@ -62,8 +62,8 @@
   },
   "th-studio": {
     "name": "Village studios",
-    "short": "A kitchenette for simple meals; some top-floor studios have a sea view.",
-    "description": "Studios on the ground floor or the top floor, each with air conditioning, a shower room and a kitchenette with a hob, fridge, kettle and coffee maker. Some top-floor studios have wooden-beamed ceilings, and some look out to the sea. If a sea view matters to you, ask us when you book.",
+    "short": "A kitchenette for simple meals; one top-floor studio has a sea view.",
+    "description": "Studios on the ground floor or the top floor, each with air conditioning, a shower room and a kitchenette with a hob, fridge, kettle and coffee maker. The ground-floor studios have a front or side view; on the top floor, one studio has a front sea view and the studio apartment overlooks the pool. Some top-floor studios have wooden-beamed ceilings.",
     "bestFor": "Couples who like to cook a little",
     "variants": {
       "th-studio": "Studio",
@@ -75,7 +75,7 @@
   "th-triple": {
     "name": "Triple room with terrace",
     "short": "Room for three, with a terrace that catches the late-afternoon sun.",
-    "description": "A room for three with a kitchenette and a terrace that gets the sun late in the afternoon. Guests describe it as spacious, and it works well for parents with a young child. Please note that Theodora has no cots or extra beds.",
+    "description": "A first-floor room for three with a kitchenette and a terrace that overlooks the pool and gets the sun late in the afternoon. Guests describe it as spacious, and it works well for parents with a young child. Please note that Theodora has no cots or extra beds.",
     "bestFor": "Parents with one child, or three friends",
     "variants": {
       "th-triple-terrace": "Triple room with terrace"
@@ -83,8 +83,8 @@
   },
   "th-two-bedroom": {
     "name": "Two-bedroom apartments",
-    "short": "Two bedrooms and space for up to five, 100 m from the centre.",
-    "description": "Two bedrooms plus a kitchen and living area, for up to five guests. The fifth bed is in the living area and is about 180 cm long, so it suits a child or a shorter adult. It is best for four adults, or four adults and a child.",
+    "short": "Two bedrooms, a sea view and space for up to five, 100 m from the centre.",
+    "description": "Two bedrooms plus a kitchen and living area, for up to five guests, on the first or second floor with a front and side sea view. The fifth bed is in the living area and is about 180 cm long, so it suits a child or a shorter adult. It is best for four adults, or four adults and a child.",
     "bestFor": "Families and groups of four or five",
     "variants": {
       "th-2br": "Two-bedroom apartment"

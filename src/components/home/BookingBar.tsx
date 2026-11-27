@@ -1,29 +1,23 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { CalendarDays, MapPin, Search, Users } from 'lucide-react'
 import { DateRangeCalendar, type Range } from '@/components/ui/DateRange'
 import { Popover, Stepper } from '@/components/ui/Popover'
-import { countLabel, formatDate, href, type Dict, type Locale } from '@/lib/i18n'
-import { SEASON_END, SEASON_START, toISO } from '@/lib/dates'
+import { countLabel, formatDate, type Dict, type Locale } from '@/lib/i18n'
+import { firstBookableDay, validStay } from '@/lib/dates'
+import { maxChildrenFor, PARTY_MAX_GUESTS, vikbookingUrl, type VikProperty } from '@/lib/vikbooking'
 
-/** The largest units sleep 5; /book handles groups of up to 6 and explains when no single unit fits. */
-const MAX_GUESTS = 6
-
-type Where = 'both' | 'aegealis' | 'theodora'
+type Where = VikProperty
 
 export function BookingBar({ locale, t, common, defaultProperty = 'both', hint = true }: { locale: Locale; t: Dict; common: Dict; defaultProperty?: Where; hint?: boolean }) {
-  const router = useRouter()
   const [where, setWhere] = useState<Where>(defaultProperty)
   const [range, setRange] = useState<Range | undefined>()
   const [adults, setAdults] = useState(2)
   const [children, setChildren] = useState(0)
   const [open, setOpen] = useState<null | 'where' | 'dates' | 'guests'>(null)
   // never offer days that have already passed, even once the season has started
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
-  const firstDay = SEASON_START > today ? SEASON_START : today
+  const firstDay = firstBookableDay()
 
   const datesLabel =
     range?.from && range?.to
@@ -34,16 +28,14 @@ export function BookingBar({ locale, t, common, defaultProperty = 'both', hint =
   const guestsLabel = countLabel(common, 'guest', adults + children)
   const whereLabel = where === 'both' ? t.both : where === 'aegealis' ? 'Aegealis' : 'Theodora'
 
+  // Search goes straight to the live availability in the family's booking engine (same tab), with the dates and guests
+  // filled in. Without a valid stay (both dates, at least the minimum stay) the dates are opened instead.
   const submit = () => {
-    const q = new URLSearchParams()
-    if (where !== 'both') q.set('property', where)
-    if (range?.from) q.set('from', toISO(range.from))
-    if (range?.to) q.set('to', toISO(range.to))
-    // with valid dates /book opens straight on the room list (it falls back to the first step if they are not valid)
-    if (range?.from && range?.to && range.to > range.from) q.set('step', 'room')
-    q.set('adults', String(adults))
-    if (children) q.set('children', String(children))
-    router.push(`${href(locale, '/book')}?${q.toString()}`)
+    if (!range?.from || !range?.to || !validStay(range.from, range.to)) {
+      setOpen('dates')
+      return
+    }
+    window.location.assign(vikbookingUrl({ locale, from: range.from, to: range.to, adults, children, property: where }))
   }
 
   const cell = 'group flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left transition-colors hover:bg-ink/[0.04] md:rounded-full'
@@ -89,10 +81,10 @@ export function BookingBar({ locale, t, common, defaultProperty = 'both', hint =
           </button>
           <Popover open={open === 'dates'} onClose={() => setOpen(null)} label={t.dates} className="bottom-full left-1/2 mb-3 -translate-x-1/2" closeLabel={common.a11y.close}>
             <div className="hidden lg:block">
-              <DateRangeCalendar locale={locale} value={range} onChange={(r) => { setRange(r); if (r?.from && r?.to) setOpen('guests') }} months={2} fromDate={firstDay} disabled={{ after: SEASON_END }} />
+              <DateRangeCalendar locale={locale} value={range} onChange={(r) => { setRange(r); if (r?.from && r?.to) setOpen('guests') }} months={2} fromDate={firstDay} />
             </div>
             <div className="flex justify-center lg:hidden">
-              <DateRangeCalendar locale={locale} value={range} onChange={(r) => { setRange(r); if (r?.from && r?.to) setOpen('guests') }} months={1} fromDate={firstDay} disabled={{ after: SEASON_END }} />
+              <DateRangeCalendar locale={locale} value={range} onChange={(r) => { setRange(r); if (r?.from && r?.to) setOpen('guests') }} months={1} fromDate={firstDay} />
             </div>
           </Popover>
         </div>
@@ -106,9 +98,21 @@ export function BookingBar({ locale, t, common, defaultProperty = 'both', hint =
             </span>
           </button>
           <Popover open={open === 'guests'} onClose={() => setOpen(null)} label={t.guests} className="bottom-full right-0 mb-3 w-80" closeLabel={common.a11y.close}>
-            <Stepper label={common.units.adults} addLabel={common.a11y.addAdult} removeLabel={common.a11y.removeAdult} value={adults} min={1} max={MAX_GUESTS - children} onChange={setAdults} />
+            {/* each VikBooking room needs an adult and takes up to 4 children, so fewer adults also lower the children allowed */}
+            <Stepper
+              label={common.units.adults}
+              addLabel={common.a11y.addAdult}
+              removeLabel={common.a11y.removeAdult}
+              value={adults}
+              min={1}
+              max={PARTY_MAX_GUESTS - children}
+              onChange={(n) => {
+                setAdults(n)
+                setChildren((c) => Math.min(c, maxChildrenFor(n)))
+              }}
+            />
             <div className="hairline" />
-            <Stepper label={common.units.children} addLabel={common.a11y.addChild} removeLabel={common.a11y.removeChild} value={children} min={0} max={Math.min(4, MAX_GUESTS - adults)} onChange={setChildren} />
+            <Stepper label={common.units.children} addLabel={common.a11y.addChild} removeLabel={common.a11y.removeChild} value={children} min={0} max={maxChildrenFor(adults)} onChange={setChildren} />
             <button type="button" className="btn btn-primary mt-4 w-full" onClick={submit}>
               {t.search}
             </button>

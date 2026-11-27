@@ -6,16 +6,24 @@
       "title": "Booking & payment",
       "items": {
         "pay": {
-          "q": "How do I pay?",
-          "a": "By card when you book online: a 30% deposit now and the rest on arrival, or the full amount in one go. If you'd prefer to pay another way, such as cash on arrival, just message us."
+          "q": "How do I book and pay?",
+          "a": "Online: choose your dates on this site and continue to the family's booking page, where you see live prices and availability. You pay a 20% deposit by card, securely through Alpha Bank, and the balance on arrival. Prices are per room per night and include VAT and local tax."
         },
         "cancel": {
           "q": "What is the cancellation policy?",
-          "a": "Free cancellation up to 14 days before arrival. After that, talk to us. As a family business, we're flexible when we can be."
+          "a": "The 20% deposit is not refundable. If you cancel 30 days or more before arrival, nothing more is due. If you cancel less than 30 days before arrival, the full amount of the stay is due."
         },
         "confirm": {
           "q": "When is my booking confirmed?",
-          "a": "Straight away. Your confirmation email arrives as soon as you book, and we'll message you on WhatsApp a few days before you arrive."
+          "a": "Once you've paid the 20% deposit, your booking is secured. The balance is paid when you arrive."
+        },
+        "minStay": {
+          "q": "Is there a minimum stay?",
+          "a": "Yes, 5 nights at both Aegealis and Theodora. Check-in is from 13:00 and check-out is by 11:00."
+        },
+        "cards": {
+          "q": "Which cards do you accept?",
+          "a": "Visa, Visa Electron, MasterCard, Maestro, American Express, Diners and Discover, through Alpha Bank's secure payment page."
         }
       }
     },
@@ -24,11 +32,11 @@
       "items": {
         "checkin": {
           "q": "What time is check-in and check-out?",
-          "a": "Check-in is from 14:00 to 00:00, and check-out is between 08:00 and 10:00. Please tell us your arrival time in advance, and if your flight home is late in the day, ask us and we'll see what we can do."
+          "a": "Check-in is from 13:00 and check-out is by 11:00. Please tell us your arrival time in advance, and if your flight home is late in the day, ask us and we'll see what we can do."
         },
         "late": {
           "q": "We land late at night. Is that OK?",
-          "a": "Check-in runs until midnight. If you land later, tell us your flight time in advance and we'll do our best to arrange it. We can also book you a taxi from the airport."
+          "a": "Tell us your flight time in advance and we'll do our best to arrange it. We can also book you a taxi from the airport."
         },
         "cleaning": {
           "q": "Are rooms cleaned every day?",
@@ -86,7 +94,7 @@
       "items": {
         "airport": {
           "q": "How far is the airport?",
-          "a": "Kefalonia Airport (EFL), near Argostoli, is 33–35 km from both properties. We can arrange a taxi to meet your flight: tick the box when you book, or message us."
+          "a": "Kefalonia Airport (EFL), near Argostoli, is 33–35 km from both properties. We can arrange a taxi to meet your flight: just message us your flight time."
         },
         "car": {
           "q": "Do we need a car?",
@@ -111,7 +119,7 @@
         },
         "book": {
           "q": "How do I book a cruise?",
-          "a": "On the cruise's page on this site, by WhatsApp, phone or email, or in person at the kiosk in front of Aegealis during the season."
+          "a": "Online, on the cruise's page: choose a date, pay by card and your e-ticket arrives by e-mail straight away. You can also book in person at the kiosk in front of Aegealis during the season."
         },
         "weather": {
           "q": "What if the weather is bad?",
@@ -119,7 +127,7 @@
         },
         "kids": {
           "q": "Are cruises suitable for children?",
-          "a": "Yes, especially the Ithaca and Fiscardo cruises. The Ithaca cruises stop twice for a swim and the Fiscardo cruise once, at Mini Myrtos, and on board there's a water slide and a diving platform. The children's fare applies from 4 to 11 years; ask us about infants. We don't recommend the Zakynthos cruise for small children, as the island's west coast faces the open sea."
+          "a": "Yes, especially the Ithaca and Fiscardo cruises. The Ithaca cruises stop twice for a swim and the Fiscardo cruise once, at Mini Myrtos, and on board there's a water slide and a diving platform. The children's fare applies from 4 to 11 years; children under 4 travel free. We don't recommend the Zakynthos cruise for small children, as the island's west coast faces the open sea."
         },
         "seasick": {
           "q": "I get seasick. Which cruise?",

@@ -34,14 +34,19 @@ export type UnitGroup = {
   audiences: Audience[]
   /** 1 = budget … 3 = top of the property */
   tier: 1 | 2 | 3
+  /** every unit of the type has a sea view */
   seaView: boolean
-  /** DEMO nightly rates in EUR */
-  demoRates: { low: number; mid: number; high: number }
+  /** at least one unit of the type has a sea view (e.g. one Theodora studio on the second floor) */
+  someSeaView?: boolean
   photos: Photo[]
   beds?: string
   layout: 'room' | 'studio' | 'oneBedroom' | 'twoBedrooms'
-  /** gardenMixed: garden view, one ground-floor unit with a partial sea view; villageMixed: village view, some top-floor units see the sea */
-  view?: 'sea' | 'seaMixed' | 'garden' | 'gardenMixed' | 'village' | 'villageMixed'
+  /**
+   * gardenMixed: garden view, one ground-floor unit with a partial sea view; villageMixed: Theodora's studios, front, side
+   * or pool view, the top-floor one with a sea view; seaOne: one unit of the type has a sea view; seaFrontSide: front and
+   * side sea view; pool: a view of the (neighbouring hotel's) pool
+   */
+  view?: 'sea' | 'seaMixed' | 'seaOne' | 'seaFrontSide' | 'garden' | 'gardenMixed' | 'villageMixed' | 'pool'
   /** number of units of this type (Booking.com room list) */
   count: number
   /** floor area in m², [min, max] across the variants */

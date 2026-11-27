@@ -239,6 +239,8 @@
 .cv-daypicker .day-sailing { position: relative; font-weight: 700; color: #0c4655; }
 .cv-daypicker .day-sailing::after { content: ''; position: absolute; bottom: 5px; left: 50%; width: 4px; height: 4px; margin-left: -2px; border-radius: 999px; background: #17677a; }
 .cv-daypicker .day-cancelled { color: #a9532f !important; text-decoration: line-through; opacity: 0.8; }
+/* the boat sails but every seat is taken: red like a cancelled day, but not struck through (legend under the calendar) */
+.cv-daypicker .rdp-day_disabled.day-soldout { color: #a9532f !important; text-decoration: none; opacity: 0.8; }
 .cv-daypicker .day-few::after { background: #a9532f; }
 /* a chosen sailing day keeps white text and a light dot on the ink circle */
 .cv-daypicker .day-sailing.rdp-day_selected { color: #fff; }

@@ -1,52 +1,38 @@
 {
   "title": "Book direct",
-  "intro": "Book directly with Frosso and Vangelis: no booking fees, and 20% off every scheduled cruise.",
-  "steps": {
-    "stay": "Your stay",
-    "room": "Room",
-    "details": "Details",
-    "payment": "Payment",
-    "done": "Confirmed"
-  },
+  "intro": "Choose your dates and who's coming, then continue to the family's secure booking page to see live prices and rooms. No booking fees, and 20% off every scheduled cruise.",
   "stay": {
     "property": "Where would you like to stay?",
     "dates": "Check-in and check-out",
-    "checkIn": "Check-in",
-    "checkOut": "Check-out",
-    "guests": "Guests",
     "adults": "Adults",
     "children": "Children",
-    "childAges": "Age of child {n}",
-    "search": "Show available rooms",
-    "minNights": "Minimum stay: {count} nights in July and August",
-    "groupHint": "Our largest apartment sleeps 5. For a bigger group we'll suggest two rooms."
+    "split": "For {count} guests we'll search for {rooms} rooms.",
+    "pickDates": "Choose your check-in and check-out dates first.",
+    "pickCheckOut": "Now choose your check-out date, at least {count} nights after check-in."
   },
-  "room": {
-    "available": "Room types available: {count}",
-    "none": "Not available on these dates. Try a day or two either side, or ask us.",
-    "select": "Select",
-    "selected": "Selected",
-    "nightsTotal": "{nights} nights · {guests}",
-    "includes": "Price includes daily cleaning; the Greek climate resilience fee is paid on arrival. Every scheduled cruise is 20% off for you.",
-    "cityTax": "The Greek climate resilience fee is paid on arrival.",
-    "tooMany": "Too many guests for this room",
-    "fitsYou": "Fits your group",
-    "maxAdults": "Up to {adults} adults and {children} children in this room",
-    "mix": "{adults} adults + {children} children"
+  "chosen": {
+    "label": "You chose",
+    "next": "On the next page, look for {names} in the list of available rooms."
   },
-  "details": {
-    "title": "Who's coming?",
-    "firstName": "First name",
-    "lastName": "Last name",
-    "email": "Email",
-    "phone": "Mobile (WhatsApp)",
-    "country": "Country",
-    "arrival": "Estimated arrival time",
-    "requests": "Special requests",
-    "requestsHint": "Late arrival, a birthday, a cot or extra bed at Aegealis…",
-    "taxi": "Please arrange a taxi from the airport",
-    "newsletter": "Send me occasional news from Skala"
+  "summary": {
+    "title": "Your stay",
+    "property": "Where",
+    "room": "Room type",
+    "dates": "Dates",
+    "nights": "Nights",
+    "guests": "Guests",
+    "rooms": "Rooms",
+    "noDates": "Choose your dates"
   },
+  "party": {
+    "adult": "1 adult",
+    "adults": "{count} adults",
+    "child": "1 child",
+    "children": "{count} children"
+  },
+  "continue": "Continue to secure booking",
+  "terms": "Secure card payment through Alpha Bank: a 20% deposit secures your booking and the balance is paid on arrival. Minimum stay 5 nights.",
+  "handoff": "The next page is the family's own booking system on cptvangelis-apartments.com, with live prices and availability.",
   "payment": {
     "title": "Secure payment",
     "card": "Card",
@@ -56,49 +42,11 @@
     "expiryPlaceholder": "MM / YY",
     "cvc": "CVC",
     "holder": "Name on card",
-    "deposit": "Pay a 30% deposit now, the rest on arrival",
-    "full": "Pay in full",
     "payNow": "Pay {amount}",
-    "cancellation": "Free cancellation up to 14 days before arrival.",
     "secure": "Encrypted payment. We never see your card details."
   },
-  "done": {
-    "title": "See you in Skala!",
-    "body": "We've sent your confirmation by email. A few days before you arrive, we'll message you on WhatsApp to confirm your arrival time.",
-    "reference": "Booking reference",
-    "next": "What happens next",
-    "nextItems": [
-      "Now: a confirmation email with all your booking details.",
-      "A few days before: a WhatsApp message from us about your arrival.",
-      "On arrival: tell us your arrival time in advance and the family will welcome you. At Theodora, there's cold water waiting in the fridge.",
-      "Scheduled cruises: 20% off. Just give your name at the kiosk in front of Aegealis."
-    ],
-    "cruiseCta": "Add a scheduled cruise at 20% off",
-    "home": "Back to the home page",
-    "taxi": "Airport taxi: we'll arrange it and confirm the pick-up time on WhatsApp."
-  },
-  "summary": {
-    "title": "Your booking",
-    "nights": "Nights",
-    "guests": "Guests",
-    "room": "Room",
-    "dates": "Dates",
-    "discount": "Discount",
-    "total": "Total",
-    "deposit": "Due now",
-    "onArrival": "Due on arrival",
-    "chooseRoom": "Choose a room to see the price",
-    "paid": "Paid now",
-    "taxi": "Airport taxi",
-    "taxiYes": "Requested"
-  },
   "group": {
-    "title": "Travelling as a group of {count}?",
-    "aegealis": "At Aegealis a room takes up to 4 guests. Each of Theodora's two two-bedroom apartments sleeps 5, or we can book two rooms side by side for you.",
-    "large": "Our largest apartment sleeps 5. For {count} guests we'll book two rooms for you, for example Theodora's two-bedroom apartment and a studio.",
-    "switch": "See Theodora's rooms",
     "whatsapp": "WhatsApp us about {count} guests",
-    "message": "Hello! We are {count} guests and would like to stay in Skala from {from} to {to}. Could you suggest two rooms for us?",
     "messageMany": "Hello! We are a group of six or more and would like to stay in Skala. Could you suggest two rooms for us?",
     "combo": "A combination that works"
   },
@@ -153,7 +101,7 @@
         "private": "private cruise",
         "wedding": "wedding cruise"
       },
-      "sent": "Thank you! We've received your request for {date} and will reply soon, usually on WhatsApp.",
+      "sent": "Thank you! We've received your request for {date}. One of the family will reply personally, as soon as we can.",
       "reference": "Request reference"
     }
   }

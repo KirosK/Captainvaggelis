@@ -92,8 +92,9 @@ export function lodgingLd(locale: Locale, p: PropertyKey, d: { common: Dict; uni
     priceRange: '€€',
     currenciesAccepted: 'EUR',
     numberOfRooms: inventory(p).total,
-    checkinTime: '14:00',
-    checkoutTime: '10:00',
+    // the room terms of the family's booking engine: check-in from 13:00, check-out by 11:00
+    checkinTime: prop.checkIn,
+    checkoutTime: prop.checkOut,
     petsAllowed: false,
     smokingAllowed: false,
     hasMap: `https://www.google.com/maps/search/?api=1&query=${prop.geo.lat},${prop.geo.lng}`,

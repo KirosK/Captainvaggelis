@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, BadgePercent, Check, Clock, Info, LogIn, LogOut, PawPrint, Baby, BedDouble, CigaretteOff, Moon, PartyPopper, Wallet } from 'lucide-react'
+import { ArrowRight, BadgePercent, Check, Clock, Info, LogIn, LogOut, PawPrint, Baby, BedDouble, CalendarRange, CalendarX, CigaretteOff, Moon, PartyPopper, Wallet } from 'lucide-react'
 import { Hero } from '@/components/ui/Hero'
 import { SubNav } from './SubNav'
 import { UnitCard } from './UnitCard'
@@ -47,6 +47,10 @@ export async function PropertyPage({ p, locale }: { p: PropertyKey; locale: Loca
   const policyRows = [
     { icon: LogIn, label: ui.checkIn, value: t.policies.checkIn },
     { icon: LogOut, label: ui.checkOut, value: t.policies.checkOut },
+    // the room terms of the family's booking engine: minimum stay, deposit and cancellation
+    { icon: CalendarRange, label: ui.minStay, value: t.policies.minStay },
+    { icon: Wallet, label: ui.payment, value: t.policies.payment },
+    { icon: CalendarX, label: ui.cancellation, value: t.policies.cancellation },
     { icon: Baby, label: ui.children, value: t.policies.children },
     { icon: BedDouble, label: ui.extraBeds, value: t.policies.extraBeds },
     { icon: PawPrint, label: ui.pets, value: t.policies.pets },
@@ -54,7 +58,6 @@ export async function PropertyPage({ p, locale }: { p: PropertyKey; locale: Loca
     { icon: PartyPopper, label: ui.parties, value: t.policies.parties },
     // only Aegealis has confirmed quiet hours; at Theodora the parties row already asks guests to keep it quiet
     ...(p === 'aegealis' ? [{ icon: Moon, label: ui.quietHours, value: t.policies.quietHours }] : []),
-    { icon: Wallet, label: ui.payment, value: t.policies.payment },
   ]
   // the last rule widens to close its row, so the grid never shows an empty grey cell
   const lastRule = [policyRows.length % 2 ? 'sm:col-span-2' : '', ['lg:col-span-1', 'lg:col-span-3', 'lg:col-span-2'][policyRows.length % 3]].join(' ')
@@ -131,7 +134,8 @@ export async function PropertyPage({ p, locale }: { p: PropertyKey; locale: Loca
                   <p className="font-display text-2xl text-balance">{ui.bookingCardTitle}</p>
                   <p className="mt-2 text-[0.92rem] text-white/70">{ui.bookingCardNote}</p>
                   <ul className="mt-6 space-y-2.5 text-[0.92rem]">
-                    {[c.trust.bestPrice, c.trust.noCommission, c.trust.guestDiscount, c.trust.reply].map((x) => (
+                    {/* booking is self-service: live engine, online deposit (facts.md, "Booking engine and payments") */}
+                    {[c.trust.noCommission, c.trust.secure, c.trust.guestDiscount].map((x) => (
                       <li key={x} className="flex gap-2.5">
                         <Check className="mt-0.5 h-4 w-4 shrink-0 text-sea-light" />
                         {x}

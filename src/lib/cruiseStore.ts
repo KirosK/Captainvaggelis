@@ -1,195 +1,209 @@
 'use client'
 
-// Demo data layer shared by the public cruise booking and the admin panel.
-// Everything lives in this browser's localStorage, so changes made in /admin
-// (cancel for weather, new prices, schedule) show up instantly on the public pages,
-// even across tabs (via the "storage" event). A real build would use a database.
+// Live data layer of the public cruise pages. The days, times, fares and seats left come from the booking API
+// (src/app/api/cruises/*), which reads the database that /admin edits. Until the first answer arrives, and whenever
+// the API cannot be reached, the components use the static schedule in src/data/cruises.ts, so the server HTML and
+// the first client render are identical and the pages never break.
 
-import { useEffect, useState } from 'react'
-import { cruises, type Cruise, type CruiseKey } from '@/data/cruises'
-import { SEASON_END, SEASON_START, seeded, toISO } from './dates'
+import { createContext, createElement, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from 'react'
+import { boat, cruises, type Cruise } from '@/data/cruises'
+import { fromISO, SEASON_END, SEASON_START, toISO } from './dates'
 
-export const CAPACITY = 200
-const KEY = 'cv-demo-store-v1'
+/** The boat's licence (NIRIIS): every passenger, infants included, takes one of these seats. */
+export const CAPACITY = boat.capacity
 
 export type CruiseConfig = { weekdays: number[]; depart: string; returnSkala: string; adult: number; child: number; active: boolean }
-export type Override = { status: 'open' | 'cancelled' | 'closed'; note?: string; capacity?: number; updatedAt: string }
-export type CruiseBooking = {
-  ref: string
-  cruise: CruiseKey
-  date: string
-  adults: number
-  children: number
-  infants: number
-  pickup: 'skala' | 'poros'
-  name: string
-  email: string
-  phone: string
-  total: number
-  paid: boolean
-  guest: boolean
-  /** where the guest is staying and free-text notes from the booking form */
-  hotel?: string
-  notes?: string
-  /** language the booking was made in */
-  lang?: string
-  createdAt: string
-}
-export type StayRequest = {
-  ref: string
-  property: string
-  unit: string
-  from: string
-  to: string
-  adults: number
-  children: number
-  name: string
-  email: string
-  phone: string
-  total: number
-  country?: string
-  /** estimated arrival time, HH:MM */
-  arrival?: string
-  requests?: string
-  taxi?: boolean
-  payPlan?: 'deposit' | 'full'
-  /** amount charged online; the rest is due on arrival */
-  paidNow?: number
-  lang?: string
-  createdAt: string
-}
-/** Request for a cruise that only runs on request (BBQ, private, wedding). */
-export type CruiseRequestEntry = {
-  ref: string
-  cruise: CruiseKey
-  date?: string
-  people: number
-  name: string
-  email: string
-  phone: string
-  message?: string
-  lang?: string
-  createdAt: string
-}
+export type Season = { start: string; end: string }
+/** Which payment page the server will use: the test page ('mock'), Alpha Bank ('alpha'), or none configured (null). */
+export type PaymentMode = 'mock' | 'alpha' | null
 
-export type Store = {
+export type Schedule = {
   config: Record<string, CruiseConfig>
-  overrides: Record<string, Override>
-  bookings: CruiseBooking[]
-  stays: StayRequest[]
-  requests: CruiseRequestEntry[]
+  season: Season
+  /** today's date in Greece, from the server (null until the API answers) */
+  today: string | null
+  /** undefined until the API answers */
+  payments: PaymentMode | undefined
+  /** 'live' once the API has answered; 'static' before that or when it fails */
+  source: 'static' | 'live'
 }
 
-export function defaultStore(): Store {
+function staticSchedule(): Schedule {
   const config: Record<string, CruiseConfig> = {}
   for (const c of cruises) {
     if (!c.scheduled) continue
     config[c.key] = { weekdays: c.weekdays, depart: c.depart!, returnSkala: c.returnSkala!, adult: c.prices!.adult, child: c.prices!.child, active: true }
   }
-  return { config, overrides: {}, bookings: [], stays: [], requests: [] }
+  return { config, season: { start: toISO(SEASON_START), end: toISO(SEASON_END) }, today: null, payments: undefined, source: 'static' }
 }
+const STATIC = staticSchedule()
 
-export function readStore(): Store {
-  if (typeof window === 'undefined') return defaultStore()
-  try {
-    const raw = localStorage.getItem(KEY)
-    if (!raw) return defaultStore()
-    const parsed = JSON.parse(raw) as Partial<Store>
-    const base = defaultStore()
-    return {
-      ...base,
-      ...parsed,
-      config: { ...base.config, ...parsed.config },
-      bookings: parsed.bookings ?? [],
-      stays: parsed.stays ?? [],
-      requests: parsed.requests ?? [],
-    }
-  } catch {
-    return defaultStore()
+const ISO = /^\d{4}-\d{2}-\d{2}$/
+const isNum = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v)
+
+/** Reads the API answer defensively: anything unexpected keeps the static value for that cruise. */
+function parseSchedule(body: unknown): Schedule | null {
+  if (!body || typeof body !== 'object') return null
+  const b = body as { season?: Partial<Season>; today?: unknown; payments?: unknown; cruises?: unknown }
+  if (!Array.isArray(b.cruises)) return null
+  const config: Record<string, CruiseConfig> = { ...STATIC.config }
+  for (const raw of b.cruises as Record<string, unknown>[]) {
+    const key = typeof raw?.key === 'string' ? raw.key : ''
+    if (!config[key]) continue
+    const prices = raw.prices as { adult?: unknown; child?: unknown } | undefined
+    const weekdays = Array.isArray(raw.weekdays) ? (raw.weekdays as unknown[]).filter((w): w is number => isNum(w) && w >= 0 && w <= 6) : null
+    if (!weekdays || !isTime(String(raw.depart)) || !isTime(String(raw.returnSkala)) || !isNum(prices?.adult) || !isNum(prices?.child)) continue
+    config[key] = { weekdays, depart: String(raw.depart), returnSkala: String(raw.returnSkala), adult: prices.adult, child: prices.child, active: raw.active !== false }
   }
+  const season = b.season && ISO.test(String(b.season.start)) && ISO.test(String(b.season.end)) ? { start: String(b.season.start), end: String(b.season.end) } : STATIC.season
+  const payments: PaymentMode | undefined = b.payments === 'mock' || b.payments === 'alpha' ? b.payments : b.payments === null ? null : undefined
+  return { config, season, today: typeof b.today === 'string' && ISO.test(b.today) ? b.today : null, payments, source: 'live' }
 }
 
-export function writeStore(s: Store) {
-  try {
-    localStorage.setItem(KEY, JSON.stringify(s))
-    window.dispatchEvent(new Event('cv-store'))
-  } catch {}
+// One request per page load, shared by every component that shows the schedule (a page can hold a dozen of them).
+let live: Schedule | null = null
+let loadedAt = 0
+let inflight: Promise<Schedule | null> | null = null
+const subscribers = new Set<(s: Schedule | null) => void>()
+
+/** Fetches the live schedule unless the copy in memory is younger than `maxAgeMs`. Resolves to null when the API fails. */
+export function refreshSchedule(maxAgeMs = 0): Promise<Schedule | null> {
+  if (inflight) return inflight
+  if (live && Date.now() - loadedAt < maxAgeMs) return Promise.resolve(live)
+  inflight = fetch('/api/cruises/schedule', { cache: 'no-store', headers: { Accept: 'application/json' } })
+    .then((res) => (res.ok ? res.json() : null))
+    .then(parseSchedule)
+    .catch(() => null)
+    .then((s) => {
+      inflight = null
+      if (s) {
+        live = s
+        loadedAt = Date.now()
+      }
+      subscribers.forEach((f) => f(s))
+      return s
+    })
+  return inflight
 }
 
-export function resetStore() {
-  try {
-    localStorage.removeItem(KEY)
-    window.dispatchEvent(new Event('cv-store'))
-  } catch {}
-}
-
-/** Subscribes to the demo store, including changes made in other tabs. */
-export function useStore() {
-  const [store, setStore] = useState<Store>(defaultStore)
-  const [ready, setReady] = useState(false)
+/** Refreshes when the guest comes back to the tab, so a change made in /admin shows up without a reload. */
+function useRefreshOnReturn(refresh: () => void) {
+  const fn = useRef(refresh)
+  fn.current = refresh
   useEffect(() => {
-    const sync = () => setStore(readStore())
-    sync()
-    setReady(true)
-    const onStorage = (e: StorageEvent) => e.key === KEY && sync()
-    window.addEventListener('storage', onStorage)
-    window.addEventListener('cv-store', sync)
+    const on = () => document.visibilityState === 'visible' && fn.current()
+    document.addEventListener('visibilitychange', on)
+    window.addEventListener('focus', on)
     return () => {
-      window.removeEventListener('storage', onStorage)
-      window.removeEventListener('cv-store', sync)
+      document.removeEventListener('visibilitychange', on)
+      window.removeEventListener('focus', on)
     }
   }, [])
-  const update = (fn: (s: Store) => Store) => {
-    const next = fn(readStore())
-    writeStore(next)
-    setStore(next)
-  }
-  return { store, update, ready }
 }
 
-export const depId = (cruise: string, date: Date | string) => `${cruise}:${typeof date === 'string' ? date : toISO(date)}`
+const SeedContext = createContext<Schedule | null>(null)
 
-/** Passengers who take a seat: adults, children and infants (infants travel free but count towards the boat's licence). */
-export const seatsOf = (b: Pick<CruiseBooking, 'adults' | 'children' | 'infants'>) => b.adults + b.children + (b.infants ?? 0)
-
-/** Seats sold for a departure: a stable demo baseline plus bookings made in this browser. */
-export function seatsSold(store: Store, cruise: string, date: Date) {
-  const id = depId(cruise, date)
-  const month = date.getMonth() + 1
-  const peak = month === 7 || month === 8 ? 0.55 : month === 6 || month === 9 ? 0.35 : 0.18
-  const baseline = Math.floor(CAPACITY * Math.min(0.97, peak + seeded(id) * 0.42))
-  const booked = store.bookings.filter((b) => b.cruise === cruise && b.date === toISO(date)).reduce((n, b) => n + seatsOf(b), 0)
-  return Math.min(capacityOf(store, cruise, date), baseline + booked)
+/**
+ * The cruise pages are rendered on the server with the schedule saved in /admin (scheduleSeed in
+ * src/server/cruises/schedule.ts) and pass it down here, so the HTML, the JSON-LD and the first client render already
+ * show the live fares, days and times. Without a seed (or when the database could not be read) the static data is used.
+ */
+export function ScheduleSeed({ seed, children }: { seed: Schedule | null; children: ReactNode }) {
+  return createElement(SeedContext.Provider, { value: seed }, children)
 }
 
-export function capacityOf(store: Store, cruise: string, date: Date) {
-  return store.overrides[depId(cruise, date)]?.capacity ?? CAPACITY
+/**
+ * The live schedule (days, times, fares, season, payment mode). Starts with the server's seed, or the static data;
+ * `ready` turns true once the API has answered or failed, and `source` says which of the two is showing.
+ */
+export function useSchedule(): Schedule & { ready: boolean } {
+  const seed = useContext(SeedContext)
+  const [state, setState] = useState<Schedule>(() => (seed ? { ...seed, config: { ...STATIC.config, ...seed.config } } : STATIC))
+  const [ready, setReady] = useState(false)
+  useEffect(() => {
+    const on = (s: Schedule | null) => {
+      if (s) setState(s)
+      setReady(true)
+    }
+    subscribers.add(on)
+    if (live) on(live)
+    refreshSchedule(30_000)
+    return () => {
+      subscribers.delete(on)
+    }
+  }, [])
+  useRefreshOnReturn(() => refreshSchedule(30_000))
+  return { ...state, ready }
 }
 
-export type DepartureState = { date: Date; status: 'open' | 'cancelled' | 'closed' | 'soldout' | 'past'; left: number; capacity: number; note?: string }
+// ----- seats per departure ----------------------------------------------------------------------------------
 
-export function departureState(store: Store, cruise: string, date: Date): DepartureState {
-  const ov = store.overrides[depId(cruise, date)]
-  const capacity = capacityOf(store, cruise, date)
-  const sold = seatsSold(store, cruise, date)
-  const left = Math.max(0, capacity - sold)
+export type DepartureStatus = 'open' | 'cancelled' | 'closed' | 'soldout' | 'past'
+/** `left` is null when the seats are unknown (the API could not be reached; the server still checks them on payment). */
+export type DepartureState = { date: Date; iso: string; status: DepartureStatus; left: number | null; capacity: number }
+
+const STATUSES: DepartureStatus[] = ['open', 'cancelled', 'closed', 'soldout', 'past']
+
+/** Sailing days from the schedule alone, when the seats cannot be loaded: every future day on the schedule, seats unknown. */
+function scheduleDates(schedule: Schedule, cruise: string): DepartureState[] {
+  const cfg = schedule.config[cruise]
+  const season = { start: fromISO(schedule.season.start) ?? SEASON_START, end: fromISO(schedule.season.end) ?? SEASON_END }
+  if (!cfg?.active) return []
   const today = new Date()
   today.setHours(0, 0, 0, 0)
-  if (date < today) return { date, status: 'past', left, capacity }
-  if (ov?.status === 'cancelled') return { date, status: 'cancelled', left, capacity, note: ov.note }
-  if (ov?.status === 'closed') return { date, status: 'closed', left: 0, capacity, note: ov.note }
-  if (left === 0) return { date, status: 'soldout', left: 0, capacity }
-  return { date, status: 'open', left, capacity }
-}
-
-/** All sailing dates of a cruise between two dates, following the (editable) weekday schedule. */
-export function sailingDates(store: Store, cruise: string, from = SEASON_START, to = SEASON_END) {
-  const cfg = store.config[cruise]
-  if (!cfg || !cfg.active) return []
-  const out: Date[] = []
-  for (let d = new Date(from); d <= to; d.setDate(d.getDate() + 1)) if (cfg.weekdays.includes(d.getDay())) out.push(new Date(d))
+  const out: DepartureState[] = []
+  for (let d = new Date(Math.max(season.start.getTime(), today.getTime())); d <= season.end; d.setDate(d.getDate() + 1)) {
+    if (cfg.weekdays.includes(d.getDay())) out.push({ date: new Date(d), iso: toISO(d), status: 'open', left: null, capacity: CAPACITY })
+  }
   return out
 }
+
+/**
+ * Departures of one cruise from today to the end of the season, with their status and seats left (live 15-minute holds
+ * of guests who are paying already count). Refreshes every two minutes while the page is visible and when the guest
+ * returns to the tab. Falls back to the schedule's sailing days, seats unknown, when the API fails.
+ */
+export function useAvailability(cruise: string, schedule: Schedule & { ready: boolean }) {
+  const [state, setState] = useState<{ deps: DepartureState[]; live: boolean; ready: boolean }>({ deps: [], live: false, ready: false })
+  const loadedRef = useRef(0)
+  const load = useCallback(async (): Promise<DepartureState[] | null> => {
+    try {
+      const res = await fetch(`/api/cruises/availability?cruise=${encodeURIComponent(cruise)}`, { cache: 'no-store', headers: { Accept: 'application/json' } })
+      if (!res.ok) throw new Error(String(res.status))
+      const body = (await res.json()) as { departures?: Record<string, unknown> }
+      const list = body?.departures?.[cruise]
+      if (!Array.isArray(list)) throw new Error('shape')
+      const deps: DepartureState[] = []
+      for (const raw of list as Record<string, unknown>[]) {
+        const date = fromISO(String(raw?.date))
+        const status = STATUSES.find((s) => s === raw?.status)
+        if (!date || !status) continue
+        deps.push({ date, iso: toISO(date), status, left: isNum(raw.left) ? raw.left : 0, capacity: isNum(raw.capacity) ? raw.capacity : CAPACITY })
+      }
+      loadedRef.current = Date.now()
+      setState({ deps, live: true, ready: true })
+      return deps
+    } catch {
+      setState((s) => ({ ...s, ready: true }))
+      return null
+    }
+  }, [cruise])
+
+  useEffect(() => {
+    load()
+    const id = setInterval(() => document.visibilityState === 'visible' && load(), 120_000)
+    return () => clearInterval(id)
+  }, [load])
+  useRefreshOnReturn(() => Date.now() - loadedRef.current > 30_000 && load())
+
+  const departures = state.live ? state.deps : state.ready ? scheduleDates(schedule, cruise) : []
+  return { departures, ready: state.ready, live: state.live, refresh: load }
+}
+
+// ----- shared helpers ---------------------------------------------------------------------------------------
+
+/** Passengers who take a seat: adults, children and infants (infants travel free but count towards the boat's licence). */
+export const seatsOf = (b: { adults: number; children: number; infants?: number }) => b.adults + b.children + (b.infants ?? 0)
 
 const toMinutes = (hhmm: string) => {
   const m = /^(\d{1,2}):(\d{2})$/.exec(hhmm ?? '')
@@ -201,14 +215,16 @@ const toHHMM = (mins: number) => {
 }
 
 /** true for a valid 24-hour time such as "09:00" */
-export const isTime = (s: string) => /^([01]\d|2[0-3]):[0-5]\d$/.test(s ?? '')
+export function isTime(s: string) {
+  return /^([01]\d|2[0-3]):[0-5]\d$/.test(s ?? '')
+}
 
 /** On the way back the boat calls at Poros about 15 minutes before it reaches Skala (Captain's timetable: 17:30 / 17:45). */
 export const POROS_RETURN_EARLIER_MIN = 15
 
 /**
  * Boarding and return times at each pick-up point, following the (editable) schedule:
- * Poros is the Skala departure plus the offset in the itinerary (09:00 → 09:20).
+ * Poros is the Skala departure plus the offset in the itinerary (09:00 → 09:20). The server uses the same rule.
  */
 export function pickupTimes(cruise: Pick<Cruise, 'stops' | 'depart' | 'returnSkala'>, cfg?: Pick<CruiseConfig, 'depart' | 'returnSkala'>) {
   const depart = cfg && isTime(cfg.depart) ? cfg.depart : cruise.depart ?? '09:00'
@@ -223,14 +239,17 @@ export function pickupTimes(cruise: Pick<Cruise, 'stops' | 'depart' | 'returnSka
   }
 }
 
-/** Form checks shared by the stay and cruise booking forms. */
+/** Form checks shared by the booking and contact forms (the server applies the same rules). */
 export const isEmail = (s: string) => /^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/.test(s.trim())
 /** International format only (+30 … or 0030 …), as the error message asks: the Captain calls guests from many countries. */
-export const isPhone = (s: string) => /^(\+|00)[\d\s()-]{8,}$/.test(s.trim()) && s.replace(/\D/g, '').length >= 8
+export const isPhone = (s: string) => /^(\+|00)[\d\s()-]{8,}$/.test(s.trim()) && s.replace(/\D/g, '').length >= 8 && s.replace(/\D/g, '').length <= 17
 
-export function makeRef(prefix: string) {
-  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-  let s = ''
-  for (let i = 0; i < 6; i++) s += alphabet[Math.floor(Math.random() * alphabet.length)]
-  return `${prefix}-${s}`
+/** Error answer of the booking API: `{ error: code, …extra }`. */
+export type ApiError = { error?: string; status?: string; left?: number; total?: number; fields?: string[]; retryAfter?: number }
+
+/** POSTs JSON to the site's own API and returns the status and the parsed body (null when it is not JSON). */
+export async function postJson<T = unknown>(url: string, body: unknown): Promise<{ ok: boolean; status: number; body: (T & ApiError) | null }> {
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body), cache: 'no-store' })
+  const data = (await res.json().catch(() => null)) as (T & ApiError) | null
+  return { ok: res.ok, status: res.status, body: data }
 }

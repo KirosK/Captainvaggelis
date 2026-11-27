@@ -1,0 +1,204 @@
+{
+  "places": {
+    "skala": "Skala beach",
+    "poros": "Poros port",
+    "skalaFull": "Skala beach, in front of Aegealis Studios, Skala, Kefalonia",
+    "porosFull": "Poros port, ferry quay, Kefalonia"
+  },
+  "count": {
+    "adult": "1 adult",
+    "adults": "{count} adults",
+    "child": "1 child",
+    "children": "{count} children",
+    "infant": "1 infant",
+    "infants": "{count} infants",
+    "person": "1 person",
+    "people": "{count} people"
+  },
+  "kinds": {
+    "bbq": "Mini Myrtos BBQ cruise",
+    "private": "private cruise",
+    "wedding": "wedding cruise"
+  },
+  "labels": {
+    "cruise": "Cruise",
+    "date": "Date",
+    "boarding": "Boarding",
+    "return": "Return",
+    "passengers": "Passengers",
+    "paid": "Paid by card",
+    "total": "Total",
+    "reference": "Booking reference",
+    "requestReference": "Request reference",
+    "returnAround": "{place}, around {time}",
+    "onRequest": "on request",
+    "discount": {
+      "guest20": "Guest discount (20%)",
+      "second15": "Second cruise discount (15%)"
+    }
+  },
+  "checkout": {
+    "acceptTerms": "I have read and accept the booking terms.",
+    "termsLink": "booking terms",
+    "pay": "Pay {amount} securely",
+    "redirecting": "Taking you to the secure payment page…",
+    "secure": "You pay on the bank's secure page: your card details never reach our website.",
+    "hold": "We hold your seats for 15 minutes while you pay.",
+    "testMode": "Test mode: no real payment is taken.",
+    "inProgress": "Your booking {ref} for {date} is saved: open it to finish the payment or to see your e-ticket.",
+    "openBooking": "Open your booking",
+    "dismiss": "Hide this message",
+    "cancelledLegend": "Dates struck through in red were cancelled by the Captain.",
+    "soldOutLegend": "Dates in red are fully booked."
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "validation": "Please check your details and try again.",
+    "termsRequired": "Please accept the booking terms.",
+    "notEnoughSeats": "Only {count} seats left on this date. Please choose fewer passengers or another day.",
+    "notEnoughSeatsOne": "Only 1 seat left on this date. Please choose fewer passengers or another day.",
+    "soldOut": "This departure is fully booked. Please choose another day.",
+    "cancelled": "The Captain has cancelled this departure for safety. Please choose another day.",
+    "closed": "Online booking has closed for this departure. Please choose another day or message us.",
+    "unavailable": "Sorry, this departure is no longer available. Please choose another date.",
+    "priceChanged": "The price has just changed: the total is now {amount}. Please check it and try again.",
+    "pickupUnavailable": "Poros pick-up isn't available on this cruise.",
+    "rateLimited": "Too many attempts. Please wait a few minutes and try again.",
+    "paymentsUnavailable": "Online payment isn't available right now. Please message us and we'll help you book.",
+    "alreadyPaid": "This booking is already paid.",
+    "notPayable": "This booking can no longer be paid online."
+  },
+  "ticket": {
+    "metaTitle": "Your e-ticket",
+    "kicker": "Captain Vangelis cruises",
+    "title": "E-ticket",
+    "qrLabel": "QR code of booking {ref}",
+    "show": "Show this e-ticket, on your phone or printed, at the kiosk in front of Aegealis at least 30 minutes before departure.",
+    "showPoros": "Poros pick-up is on request: we'll confirm it on WhatsApp before your cruise. On the day, be at the ferry quay at least 30 minutes before {time}: the boat stops there for only a few minutes.",
+    "guestCheck": "Guest discount: we'll check the name on your room booking at Aegealis or Theodora.",
+    "moved": "Originally booked for {date}.",
+    "addToCalendar": "Add to calendar",
+    "print": "Print or save as PDF",
+    "another": "Book another cruise",
+    "allCruises": "See all cruises",
+    "whatsapp": "Message us on WhatsApp",
+    "email": "E-mail us",
+    "paid": {
+      "title": "You're on board",
+      "body": "Your seats are booked and paid. We've also sent this e-ticket to your e-mail address."
+    },
+    "pending": {
+      "title": "Your payment isn't complete",
+      "failed": "The payment didn't go through.",
+      "waiting": "We haven't received a payment for this booking yet.",
+      "heldOne": "Your seats are held for 1 more minute.",
+      "heldMany": "Your seats are held for {count} more minutes.",
+      "retry": "Try the payment again"
+    },
+    "expired": {
+      "title": "Your seats are no longer held",
+      "body": "The payment wasn't completed in time, so the seats were released. If the date is still available, you can try again.",
+      "retry": "Try again",
+      "choose": "Choose another date"
+    },
+    "refundDue": {
+      "title": "This cruise has been cancelled",
+      "weather": "The Captain cancelled the cruise on {date} because of the weather.",
+      "technical": "The Captain cancelled the cruise on {date} for technical reasons.",
+      "other": "The Captain cancelled the cruise on {date}.",
+      "refund": "You'll receive a full refund of {amount} to the card you paid with, within 3 working days.",
+      "rebook": "Would you rather sail on another day? Message us and we'll move your booking to another date, subject to availability."
+    },
+    "refunded": {
+      "title": "Refunded",
+      "body": "We refunded {amount} to the card you paid with on {date}."
+    },
+    "access": {
+      "title": "Open your e-ticket",
+      "body": "Enter the e-mail address you booked with to see booking {ref}.",
+      "email": "E-mail",
+      "submit": "Show my e-ticket",
+      "wrong": "We couldn't find a booking with this reference and e-mail address.",
+      "invalid": "Please enter a valid e-mail address."
+    }
+  },
+  "mock": {
+    "title": "Test payment",
+    "banner": "TEST MODE: this page only simulates the bank. No card is needed and no money is taken.",
+    "heading": "Simulated card payment",
+    "amount": "Amount",
+    "booking": "Booking",
+    "succeed": "Simulate a successful payment",
+    "decline": "Simulate a declined card",
+    "cancel": "Cancel and go back",
+    "done": "This payment attempt has already been completed.",
+    "open": "Open the booking"
+  },
+  "redirect": {
+    "title": "Secure payment",
+    "body": "Taking you to the bank's secure payment page…",
+    "button": "Continue to payment",
+    "expired": "This payment link is no longer valid. Please go back to your booking and try again.",
+    "back": "Back to your booking"
+  },
+  "verifyFailed": {
+    "title": "We couldn't confirm your payment",
+    "body": "If your card was charged, please contact us with the reference below and we'll check it for you.",
+    "back": "Back to the cruises"
+  },
+  "email": {
+    "brand": "Captain Vangelis",
+    "place": "Skala, Kefalonia",
+    "greeting": "Dear {name},",
+    "signOff": "See you on board,",
+    "signature": "Captain Vangelis",
+    "footer": "Captain Vangelis cruises · Skala, Kefalonia 28086, Greece",
+    "viewTicket": "View your e-ticket online",
+    "whatsapp": "Message us on WhatsApp",
+    "confirmation": {
+      "subject": "Your e-ticket: {cruise}, {date}",
+      "preheader": "Booking {ref} · Boarding: {place}, {time}.",
+      "title": "You're on board",
+      "intro": "Thank you for booking with us. Your seats are booked and paid: here is your e-ticket.",
+      "movedIntro": "Your booking has been moved to {date}. Here is your new e-ticket.",
+      "calendar": "The attached calendar file adds the cruise to your calendar.",
+      "termsTitle": "If plans change",
+      "terms": "If the Captain cancels or changes the cruise for weather or technical reasons, you can choose a full refund to your card within 3 working days, or another date, subject to availability. There are no refunds after the boat has left."
+    },
+    "reminder": {
+      "subject": "Tomorrow: {cruise}",
+      "preheader": "Boarding: {place}, {time}. Please be there 30 minutes early.",
+      "title": "See you tomorrow",
+      "intro": "Your cruise is tomorrow, {date}.",
+      "skala": "Please be at the kiosk in front of Aegealis by {checkIn}, 30 minutes before the boat leaves Skala at {time}.",
+      "poros": "Poros pick-up is on request: if we haven't confirmed it on WhatsApp yet, please message us. Be at the ferry quay by {checkIn}: the boat stops there at {time} for only a few minutes.",
+      "bring": "Bring your e-ticket, on your phone or printed (booking {ref}).",
+      "weather": "The Captain may change the plan so the cruise is safe and pleasant. If he has to cancel it, we'll let you know by e-mail."
+    },
+    "cancellation": {
+      "subject": "Cancelled: your cruise on {date}",
+      "preheader": "A full refund within 3 working days, or another date.",
+      "title": "Your cruise has been cancelled",
+      "weather": "We're sorry: the Captain has cancelled the “{cruise}” cruise on {date} because of the weather. Your safety comes first.",
+      "technical": "We're sorry: the Captain has cancelled the “{cruise}” cruise on {date} for technical reasons.",
+      "refund": "We'll refund the full {amount} to the card you paid with, within 3 working days.",
+      "rebook": "Would you rather sail on another day? Reply to this e-mail or message us on WhatsApp, and we'll move your booking to another date, subject to availability."
+    },
+    "request": {
+      "subject": "We've received your request {ref}",
+      "preheader": "Request {ref} · {people}",
+      "title": "Thank you for your request",
+      "body": "We've received your request for a {kind} on {date}, for {people}.",
+      "bodyNoDate": "We've received your request for a {kind}, for {people}.",
+      "reply": "One of the family will reply personally, as soon as we can.",
+      "add": "Would you like to add something? Reply to this e-mail or message us on WhatsApp."
+    },
+    "signOffPlain": "Best wishes,"
+  },
+  "ics": {
+    "summary": "{cruise} · Captain Vangelis",
+    "checkIn": "Please be at the kiosk in front of Aegealis 30 minutes before departure.",
+    "porosNote": "Poros pick-up: be at the ferry quay on time, the boat stops for only a few minutes.",
+    "return": "Return: {place}, around {time}."
+  }
+}

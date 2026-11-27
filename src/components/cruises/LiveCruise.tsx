@@ -1,12 +1,12 @@
 'use client'
 
-// Small client pieces that show a cruise's days, times and prices as edited in /admin
-// (demo store in localStorage). Before hydration the store holds the static data, so the
-// server HTML and the first client render are identical.
+// Small client pieces that show a cruise's days, times and prices as saved in /admin, read from the booking API
+// (GET /api/cruises/schedule, one request per page). Until it answers, or if it fails, they show the static data,
+// so the server HTML and the first client render are identical.
 
 import { CalendarDays, Clock, Euro, Sailboat } from 'lucide-react'
 import { cruiseRules, sortWeekdays, type Cruise } from '@/data/cruises'
-import { pickupTimes, useStore } from '@/lib/cruiseStore'
+import { pickupTimes, useSchedule } from '@/lib/cruiseStore'
 import { formatPrice, listFormat, weekdayName, type Locale } from '@/lib/i18n'
 
 /** The fields these components need; pass scheduleOf(cruise) so the photos are not sent to the client. */
@@ -14,10 +14,10 @@ export type LiveInput = Pick<Cruise, 'key' | 'weekdays' | 'depart' | 'returnSkal
 
 type Live = { weekdays: number[]; depart?: string; returnSkala?: string; adult?: number; child?: number; active: boolean }
 
-/** The cruise's current schedule and prices: admin overrides when present, the static data otherwise. */
+/** The cruise's current schedule and prices: the live ones from the API, the static data until it answers (or if it fails). */
 export function useLiveCruise(cruise: LiveInput): Live {
-  const { store } = useStore()
-  const cfg = store.config[cruise.key]
+  const { config } = useSchedule()
+  const cfg = config[cruise.key]
   return {
     weekdays: sortWeekdays(cfg?.weekdays ?? cruise.weekdays),
     depart: cfg?.depart ?? cruise.depart,
@@ -34,9 +34,9 @@ export function useLiveCruise(cruise: LiveInput): Live {
  * `times` are the live boarding and return times at each pick-up point (pickupTimes in src/lib/cruiseStore.ts).
  */
 export function useLiveTimes(cruise: LiveInput & Pick<Cruise, 'stops'>) {
-  const { store } = useStore()
+  const { config } = useSchedule()
   const from = pickupTimes(cruise)
-  const to = pickupTimes(cruise, store.config[cruise.key])
+  const to = pickupTimes(cruise, config[cruise.key])
   const swap: Record<string, string> = {
     [from.skala.depart]: to.skala.depart,
     [from.skala.back]: to.skala.back,
@@ -56,11 +56,11 @@ export function LiveText({ cruise, text }: { cruise: LiveInput & Pick<Cruise, 's
  * each standard time is swapped for the live time most of those cruises now use (they normally all agree).
  */
 export function LiveTextMany({ cruises, text }: { cruises: (LiveInput & Pick<Cruise, 'stops'>)[]; text: string }) {
-  const { store } = useStore()
+  const { config } = useSchedule()
   const votes: Record<string, Record<string, number>> = {}
   for (const c of cruises) {
     const from = pickupTimes(c)
-    const to = pickupTimes(c, store.config[c.key])
+    const to = pickupTimes(c, config[c.key])
     const pairs: [string, string][] = [
       [from.skala.depart, to.skala.depart],
       [from.skala.back, to.skala.back],

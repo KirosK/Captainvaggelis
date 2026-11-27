@@ -4,6 +4,7 @@ import { ratings } from '@/data/reviews'
 import { site } from '@/data/site'
 import { bestLeg, pois } from '@/data/pois'
 import { getDictionary, listFormat, weekdayName, type Locale } from './i18n'
+import { MIN_NIGHTS } from './dates'
 
 /** Plain-language, fact-dense summary for AI assistants (llms.txt convention). Accommodation first. */
 export async function buildLlmsText(locale: Locale = 'en', full = false) {
@@ -22,9 +23,15 @@ export async function buildLlmsText(locale: Locale = 'en', full = false) {
   L.push('- Languages spoken: Greek, English, some Spanish. The website is in English, Greek and Italian.')
   L.push(`- Ratings: both properties score 9.1/10 on Booking.com (Aegealis ${ratings.aegealis.count} reviews, Theodora ${ratings.theodora.count} reviews), as of October 2026.`)
   L.push('')
+  L.push('## Booking a room')
+  L.push(`- Book online: choose the property, dates and guests on [Book direct](${u('/book')}), then continue to the family's booking engine on cptvangelis-apartments.com, which shows live availability and prices.`)
+  L.push('- Payment: secure card payment through Alpha Bank (Visa, Visa Electron, MasterCard, Maestro, American Express, Diners, Discover). A 20% deposit secures the booking and is not refundable; the balance is paid on arrival. Rates are per room per night and include VAT and local tax.')
+  L.push('- Cancellation: 30 days or more before arrival, no balance is due; less than 30 days before arrival, the full amount is due.')
+  L.push(`- Minimum stay ${MIN_NIGHTS} nights. Check-in from ${properties.aegealis.checkIn}, check-out by ${properties.aegealis.checkOut}.`)
+  L.push('')
   L.push('## Which one to choose')
   L.push('- Aegealis: across the road from the beach, garden with palms, use of the pools of the two hotels next door, free public parking nearby, the cruise boat leaves from in front. Studios are compact; the one-bedroom apartments sleep 4.')
-  L.push('- Theodora: quiet house at the top of the village, 100 m from the centre and a 5–10 minute walk down to the beach (uphill on the way back), shady garden with sunbeds, gate to the neighbouring hotel\'s pool (subject to the hotel\'s season), two two-bedroom apartments for up to 5. No private parking; wired internet in common areas only.')
+  L.push('- Theodora: quiet house at the top of the village, 100 m from the centre and a 5–10 minute walk down to the beach (uphill on the way back), shady garden with sunbeds, gate to the neighbouring hotel\'s pool (subject to the hotel\'s season), two two-bedroom apartments for up to 5. Some upper-floor units look out to the sea: both two-bedroom apartments (front and side sea view), the double room with terrace and a second-floor studio; the triple room and the studio apartment overlook the pool. No private parking; wired internet in common areas only.')
   L.push('')
   for (const p of ['aegealis', 'theodora'] as const) {
     const prop = properties[p]
@@ -34,7 +41,7 @@ export async function buildLlmsText(locale: Locale = 'en', full = false) {
     L.push(`- [${prop.name}](${u(`/${p}`)}): ${d.property[p].hero.subtitle}`)
     L.push(`- ${inv.total} units, ${inv.minSize}–${inv.maxSize} m², up to ${inv.maxGuests} guests per unit. Coordinates ${prop.geo.lat.toFixed(6)}, ${prop.geo.lng.toFixed(6)}. Licence (MHTE) ${prop.licence}.`)
     L.push(`- Guest scores (Booking.com, Oct 2026): ${r.score}/10 from ${r.count} reviews; location ${r.categories.location}, cleanliness ${r.categories.cleanliness}, staff ${r.categories.staff}.`)
-    L.push(`- Check-in 14:00–00:00, check-out 08:00–10:00. ${d.property[p].policies.children} ${d.property[p].policies.extraBeds} ${d.property[p].policies.pets}`)
+    L.push(`- Check-in from ${prop.checkIn}, check-out by ${prop.checkOut}, minimum stay ${MIN_NIGHTS} nights. ${d.property[p].policies.children} ${d.property[p].policies.extraBeds} ${d.property[p].policies.pets}`)
     L.push('- Room types:')
     for (const g of unitsFor(p)) L.push(`  - ${d.units[g.key].name} (${g.count} ${g.count === 1 ? 'unit' : 'units'}, ${g.size[0] === g.size[1] ? g.size[0] : `${g.size[0]}–${g.size[1]}`} m², up to ${g.maxGuests} guests): ${d.units[g.key].description}`)
     for (const x of d.property[p].goodToKnow as string[]) if (!/pin|map app/i.test(x)) L.push(`- Good to know: ${x}`)
@@ -70,8 +77,7 @@ export async function buildLlmsText(locale: Locale = 'en', full = false) {
     for (const [, x] of Object.entries(d.guide.todo.items as Record<string, { name: string; body: string }>)) L.push(`- ${x.name}: ${x.body}`)
     L.push('')
     L.push('## Frequently asked questions')
-    for (const [g, grp] of Object.entries(d.faq.groups as Record<string, { items: Record<string, { q: string; a: string }> }>)) {
-      if (g === 'booking') continue // direct-booking terms are still being finalised
+    for (const grp of Object.values(d.faq.groups as Record<string, { items: Record<string, { q: string; a: string }> }>)) {
       for (const it of Object.values(grp.items)) L.push(`- Q: ${it.q}\n  A: ${it.a}`)
     }
     L.push('')
@@ -80,7 +86,7 @@ export async function buildLlmsText(locale: Locale = 'en', full = false) {
   L.push('## Pages')
   L.push(`- [Home](${u('')})`)
   L.push(`- [Aegealis Studios](${u('/aegealis')}) · [Theodora Studios & Apartments](${u('/theodora')})`)
-  L.push(`- [Book direct](${u('/book')})`)
+  L.push(`- [Book direct](${u('/book')}): dates and guests, then the live availability in the family's booking engine`)
   L.push(`- [Skala & Kefalonia guide](${u('/guide')})`)
   L.push(`- [Questions](${u('/faq')}) · [Contact](${u('/contact')})`)
   L.push(`- Other languages: [Ελληνικά](${site.url}/el), [Italiano](${site.url}/it)`)

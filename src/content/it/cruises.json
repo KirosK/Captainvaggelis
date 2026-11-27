@@ -64,7 +64,7 @@
       "title": "Prima di salpare",
       "items": [
         "Presentatevi all'imbarco almeno 30 minuti prima della partenza.",
-        "La tariffa bambini vale dai 4 agli 11 anni. Per i più piccoli, chiedeteci.",
+        "La tariffa bambini vale dai 4 agli 11 anni. I bambini sotto i 4 anni viaggiano gratis.",
         "La seconda crociera ha il 15% di sconto.",
         "Alloggiate all'Aegealis o al Theodora? 20% di sconto su ogni crociera in calendario.",
         "Il Capitano può modificare l'itinerario per ragioni di sicurezza e di comfort.",
@@ -97,7 +97,7 @@
     "children": "Bambini",
     "childrenHint": "Da 4 a 11 anni",
     "infants": "Bambini piccoli",
-    "infantsHint": "Sotto i 4 anni · chiedeteci informazioni",
+    "infantsHint": "Sotto i 4 anni · gratis",
     "pickup": "Punto d'imbarco",
     "guest": "Sono ospite dell'Aegealis o del Theodora",
     "guestHint": "20% di sconto. Verificheremo il nome sulla vostra prenotazione.",

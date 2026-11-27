@@ -29,12 +29,16 @@
     "payment": "Pagamento",
     "nearby": "Nei dintorni",
     "bookingCardTitle": "Prenotate direttamente con la famiglia",
-    "bookingCardNote": "Chiedeteci tutto quello che volete prima di prenotare, senza alcun impegno.",
+    "bookingCardNote": "Prezzi e disponibilità aggiornati, acconto del 20% online e saldo all'arrivo.",
     "otherProperty": "L'altra struttura: {name}",
     "compare": "Confrontate le due strutture",
     "photoCount": "{count} foto",
     "categoryScores": "Punteggi degli ospiti per categoria",
-    "honest": "In tutta sincerità"
+    "honest": "In tutta sincerità",
+    "minStay": "Soggiorno minimo",
+    "cancellation": "Acconto e cancellazione",
+    "seePrices": "Scoprite prezzi e disponibilità",
+    "minStayNote": "Soggiorno minimo 5 notti"
   },
   "aegealis": {
     "hero": {
@@ -79,15 +83,17 @@
       "La posizione esatta è sulla mappa qui sotto. Alcune app di mappe ci collocano in un punto leggermente sbagliato."
     ],
     "policies": {
-      "checkIn": "14:00 – 00:00. Vi preghiamo di comunicarci l'orario di arrivo.",
-      "checkOut": "08:00 – 10:00",
+      "checkIn": "Dalle 13:00. Vi preghiamo di comunicarci l'orario di arrivo.",
+      "checkOut": "Entro le 11:00",
+      "minStay": "5 notti",
       "children": "I bambini di ogni età sono i benvenuti. Dai 6 anni pagano come gli adulti.",
       "extraBeds": "Letto aggiuntivo gratuito da 0 a 4 anni, 5 € a notte dai 5 ai 12 anni e 10 € a notte dai 13 anni in su. Culla (0–2 anni) 5 € a notte. Tutto su richiesta, in base alla disponibilità e da pagare in loco.",
       "pets": "Non sono ammessi animali.",
       "smoking": "Divieto di fumo in tutta la struttura.",
       "parties": "Non sono ammessi feste ed eventi, compresi gli addii al celibato e al nubilato.",
       "quietHours": "23:00 – 07:00",
-      "payment": "Con carta online se prenotate direttamente oppure in contanti all'arrivo."
+      "payment": "Pagamento sicuro con carta tramite Alpha Bank quando prenotate online: un acconto del 20% garantisce la prenotazione e il saldo si paga all'arrivo.",
+      "cancellation": "L'acconto del 20% non è rimborsabile. Se cancellate almeno 30 giorni prima dell'arrivo, il saldo non è dovuto; con meno di 30 giorni di preavviso è dovuto l'intero importo."
     }
   },
   "theodora": {
@@ -105,7 +111,7 @@
     ],
     "overview": {
       "title": "La casa color pesca in cima alla via principale",
-      "body": "Il Theodora è la casa color pesca con la buganvillea rossa, in cima alla via principale di Skala. Il centro è a 100 m, eppure la zona è tranquilla. Dietro casa c'è un giardino ombreggiato con un arancio, lettini e vista sulle vigne; da lì un cancello porta alla piscina dell'hotel accanto (secondo la stagione dell'hotel).\n\nCi sono camere doppie, monolocali, una camera tripla con terrazza e due appartamenti con due camere, che ospitano fino a cinque persone ciascuno. Ogni alloggio ha angolo cottura e aria condizionata; alle pareti, quadri dipinti in famiglia. Il supermercato è a un minuto, e la spiaggia è poco più in basso, a circa 500 m. Di solito Frosso e Vangelis vi accolgono di persona, con l'acqua fresca già in frigo."
+      "body": "Il Theodora è la casa color pesca con la buganvillea rossa, in cima alla via principale di Skala. Il centro è a 100 m, eppure la zona è tranquilla. Dietro casa c'è un giardino ombreggiato con un arancio, lettini e vista sulle vigne; da lì un cancello porta alla piscina dell'hotel accanto (secondo la stagione dell'hotel).\n\nCi sono camere doppie, monolocali, una camera tripla con terrazza e due appartamenti con due camere, che ospitano fino a cinque persone ciascuno. Ai piani superiori, i due appartamenti, un monolocale e la doppia con terrazza hanno vista mare. Ogni alloggio ha angolo cottura e aria condizionata; alle pareti, quadri dipinti in famiglia. Il supermercato è a un minuto, e la spiaggia è poco più in basso, a circa 500 m. Di solito Frosso e Vangelis vi accolgono di persona, con l'acqua fresca già in frigo."
     },
     "why": [
       {
@@ -133,15 +139,17 @@
       "Internet via cavo gratuito solo nelle aree comuni; nelle camere non c'è il Wi-Fi. Se dovete lavorare online, ditecelo prima di prenotare."
     ],
     "policies": {
-      "checkIn": "14:00 – 00:00. Vi preghiamo di comunicarci l'orario di arrivo.",
-      "checkOut": "08:00 – 10:00",
+      "checkIn": "Dalle 13:00. Vi preghiamo di comunicarci l'orario di arrivo.",
+      "checkOut": "Entro le 11:00",
+      "minStay": "5 notti",
       "children": "I bambini di ogni età sono i benvenuti. Dai 4 anni pagano come gli adulti.",
       "extraBeds": "Non sono disponibili culle né letti aggiuntivi.",
       "pets": "Non sono ammessi animali.",
       "smoking": "Divieto di fumo in tutta la struttura.",
       "parties": "Vi chiediamo di rispettare la tranquillità del quartiere.",
       "quietHours": "La strada è tranquilla: vi chiediamo di non fare rumore la sera tardi.",
-      "payment": "Con carta online se prenotate direttamente oppure in contanti all'arrivo."
+      "payment": "Pagamento sicuro con carta tramite Alpha Bank quando prenotate online: un acconto del 20% garantisce la prenotazione e il saldo si paga all'arrivo.",
+      "cancellation": "L'acconto del 20% non è rimborsabile. Se cancellate almeno 30 giorni prima dell'arrivo, il saldo non è dovuto; con meno di 30 giorni di preavviso è dovuto l'intero importo."
     }
   },
   "compare": {

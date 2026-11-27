@@ -2,30 +2,39 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
-import { AlertTriangle, ArrowLeft, ArrowRight, CalendarPlus, Check, CreditCard, Lock, MapPin, MessageCircle, Ship } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, ArrowRight, Check, Clock, FlaskConical, Loader2, Lock, MapPin, MessageCircle, Ship, Ticket, X } from 'lucide-react'
 import { SingleDateCalendar } from '@/components/ui/DateRange'
 import { Stepper } from '@/components/ui/Popover'
 import type { Cruise } from '@/data/cruises'
-import { cruiseRules, cruises, sortWeekdays } from '@/data/cruises'
+import { cruises, sortWeekdays } from '@/data/cruises'
 import { whatsappLink } from '@/data/site'
 import enBooking from '@/content/en/booking.json'
 import elBooking from '@/content/el/booking.json'
 import itBooking from '@/content/it/booking.json'
-import {
-  departureState, isEmail, isPhone, makeRef, pickupTimes, readStore, sailingDates, useStore,
-  type CruiseBooking as Booking, type CruiseRequestEntry,
-} from '@/lib/cruiseStore'
+import enPayments from '@/content/en/payments.json'
+import elPayments from '@/content/el/payments.json'
+import itPayments from '@/content/it/payments.json'
+import { isEmail, isPhone, pickupTimes, postJson, refreshSchedule, useAvailability, useSchedule, type ApiError } from '@/lib/cruiseStore'
 import { fromISO, SEASON_END, SEASON_START, toISO } from '@/lib/dates'
 import { fill, formatDate, formatPrice, href, listFormat, locales, tr, weekdayName, type Dict, type Locale } from '@/lib/i18n'
-import { TicketCode } from './TicketCode'
+import { quoteEuros } from '@/server/cruises/pricing'
 
-type Step = 'select' | 'details' | 'pay' | 'done'
+type Step = 'select' | 'details' | 'pay'
 type Pickup = 'skala' | 'poros'
 
 /** Cruise-booking strings that live in booking.json → "cruise" (the page passes only cruises.booking). */
 const CRUISE_UI: Record<Locale, Dict> = { en: enBooking.cruise, el: elBooking.cruise, it: itBooking.cruise }
+/** Pay-step strings and API error messages (payments.json → checkout, errors, labels). */
+const PAY_UI: Record<Locale, Dict> = {
+  en: { checkout: enPayments.checkout, errors: enPayments.errors, labels: enPayments.labels },
+  el: { checkout: elPayments.checkout, errors: elPayments.errors, labels: elPayments.labels },
+  it: { checkout: itPayments.checkout, errors: itPayments.errors, labels: itPayments.labels },
+}
+
+/** The cards Alpha Bank e-Commerce accepts (facts.md, "Booking engine and payments"). */
+const CARDS = 'Visa · Mastercard · Maestro · American Express · Diners · Discover'
 
 /**
  * The day picker's own stylesheet loads after globals.css and resets its colour variables to its default blue,
@@ -41,6 +50,30 @@ function people(ui: Dict, n: number, kind: 'adult' | 'child' | 'infant') {
 }
 export function passengerLine(ui: Dict, b: { adults: number; children: number; infants: number }) {
   return [people(ui, b.adults, 'adult'), b.children ? people(ui, b.children, 'child') : '', b.infants ? people(ui, b.infants, 'infant') : ''].filter(Boolean).join(' · ')
+}
+
+/** API error → sentence from payments.json → errors (the table in src/server/README.md). */
+export function apiErrorText(errors: Dict, body: ApiError | null) {
+  switch (body?.error) {
+    case 'not_enough_seats':
+      return body.left === 1 ? errors.notEnoughSeatsOne : fill(errors.notEnoughSeats, { count: body.left ?? 0 })
+    case 'departure_unavailable':
+      return body.status === 'soldout' ? errors.soldOut : body.status === 'cancelled' ? errors.cancelled : body.status === 'closed' ? errors.closed : errors.unavailable
+    case 'pickup_unavailable':
+      return errors.pickupUnavailable
+    case 'validation':
+      return body.fields?.includes('acceptTerms') ? errors.termsRequired : errors.validation
+    case 'rate_limited':
+      return errors.rateLimited
+    case 'payments_unavailable':
+      return errors.paymentsUnavailable
+    case 'already_paid':
+      return errors.alreadyPaid
+    case 'not_payable':
+      return errors.notPayable
+    default:
+      return errors.generic
+  }
 }
 
 // ----- Steps: focus and a draft that survives a language switch ---------------------------------
@@ -80,7 +113,7 @@ export function readDraft<T>(key: string): Partial<T> | null {
     return null
   }
 }
-/** Saves the draft, or removes it when `value` is null (after a successful booking). */
+/** Saves the draft, or removes it when `value` is null. */
 export function writeDraft(key: string, value: unknown) {
   try {
     if (value === null) sessionStorage.removeItem(key)
@@ -102,73 +135,36 @@ type CruiseDraft = {
   step: Step
 }
 
-// ----- iCalendar ------------------------------------------------------------------------------
-
-const ATHENS_TZ = [
-  'BEGIN:VTIMEZONE',
-  'TZID:Europe/Athens',
-  'BEGIN:DAYLIGHT',
-  'TZOFFSETFROM:+0200',
-  'TZOFFSETTO:+0300',
-  'TZNAME:EEST',
-  'DTSTART:19700329T030000',
-  'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU',
-  'END:DAYLIGHT',
-  'BEGIN:STANDARD',
-  'TZOFFSETFROM:+0300',
-  'TZOFFSETTO:+0200',
-  'TZNAME:EET',
-  'DTSTART:19701025T040000',
-  'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU',
-  'END:STANDARD',
-  'END:VTIMEZONE',
-]
-const icsText = (s: string) => s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n')
-/** Folds a content line at 75 octets (RFC 5545 §3.1); Greek letters take two octets each. */
-function icsFold(line: string) {
-  const enc = new TextEncoder()
-  if (enc.encode(line).length <= 75) return line
-  const out: string[] = []
-  let cur = ''
-  let len = 0
-  let limit = 75
-  for (const ch of line) {
-    const n = enc.encode(ch).length
-    if (len + n > limit) {
-      out.push(cur)
-      cur = ''
-      len = 0
-      limit = 74 // continuation lines start with a space
-    }
-    cur += ch
-    len += n
-  }
-  out.push(cur)
-  return out.join('\r\n ')
-}
-function download(filename: string, body: string, type: string) {
-  const url = URL.createObjectURL(new Blob([body], { type }))
-  const a = document.createElement('a')
-  a.href = url
-  a.download = filename
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  // revoking straight away can cancel the download in Safari and Firefox
-  setTimeout(() => URL.revokeObjectURL(url), 1500)
+/**
+ * The last booking this visitor started (this tab only): if they come back from the payment page, or open the cruise
+ * again, they can go straight to it. The ticket page shows whatever state it is in (paid, waiting for payment, expired).
+ */
+type Pending = { cruise: string; ref: string; date: string; ticketUrl: string; at: number }
+/** 201 answer of POST /api/cruises/bookings */
+type Created = { ref: string; ticketUrl: string; payment: { provider: string; redirectUrl: string } }
+const PENDING_KEY = 'cv-cruise-booking'
+function readPending(cruise: string): Pending | null {
+  const p = readDraft<Pending>(PENDING_KEY)
+  if (!p || p.cruise !== cruise || typeof p.ref !== 'string' || typeof p.ticketUrl !== 'string' || !p.ticketUrl.startsWith('/')) return null
+  if (typeof p.at !== 'number' || Date.now() - p.at > 24 * 3600 * 1000) return null
+  return p as Pending
 }
 
 // ----- Scheduled cruises ------------------------------------------------------------------------
 
-export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp }: { cruise: Cruise; locale: Locale; t: Dict; common: Dict; name: string; pay: Dict; ui?: Dict }) {
+export function CruiseBooking({ cruise, locale, t, common, name, ui: uiProp }: { cruise: Cruise; locale: Locale; t: Dict; common: Dict; name: string; ui?: Dict }) {
   const ui = uiProp ?? CRUISE_UI[locale]
-  const { store, update, ready } = useStore()
-  const cfg = store.config[cruise.key]
-  const dates = useMemo(() => (ready ? sailingDates(store, cruise.key) : []), [store, cruise.key, ready])
-  const states = useMemo(() => new Map(dates.map((d) => [toISO(d), departureState(store, cruise.key, d)])), [dates, store, cruise.key])
+  const p = PAY_UI[locale]
+  const schedule = useSchedule()
+  const { departures, ready, refresh } = useAvailability(cruise.key, schedule)
+  const cfg = schedule.config[cruise.key]
+  const byIso = useMemo(() => new Map(departures.map((d) => [d.iso, d])), [departures])
+  const dates = useMemo(() => departures.map((d) => d.date), [departures])
   const times = pickupTimes(cruise, cfg)
+  const seasonStart = fromISO(schedule.season.start) ?? SEASON_START
+  const seasonEnd = fromISO(schedule.season.end) ?? SEASON_END
 
-  const firstOpen = dates.find((d) => states.get(toISO(d))?.status === 'open')
+  const firstOpen = departures.find((d) => d.status === 'open')?.date
   const [date, setDate] = useState<Date | undefined>()
   const [adults, setAdults] = useState(2)
   const [children, setChildren] = useState(0)
@@ -178,10 +174,16 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
   const [second, setSecond] = useState(false)
   const [step, setStep] = useState<Step>('select')
   const [form, setForm] = useState({ name: '', email: '', phone: '', hotel: '', notes: '' })
-  const [payMode, setPayMode] = useState<'card' | 'kiosk'>('card')
   const [errors, setErrors] = useState<Record<string, string>>({})
-  const [done, setDone] = useState<Booking | null>(null)
-  const [stale, setStale] = useState(false)
+  const [accepted, setAccepted] = useState(false)
+  const [termsError, setTermsError] = useState(false)
+  const [busy, setBusy] = useState(false)
+  /** an answer from the server that the guest must read: { text, back: offer "choose another date" } */
+  const [notice, setNotice] = useState<{ text: string; back?: boolean } | null>(null)
+  const [pending, setPending] = useState<Pending | null>(null)
+  // the month the guest paged the calendar to (null: the month it opened on), for the legend under the calendar
+  const [viewMonth, setViewMonth] = useState<Date | null>(null)
+  useEffect(() => setViewMonth(null), [ready])
 
   // what the guest has chosen and typed survives a language switch (the page reloads in the other language)
   const pathname = usePathname()
@@ -205,13 +207,25 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
         setStep(d.step)
       }
     }
+    setPending(readPending(cruise.key))
     setRestored(true)
-  }, [key])
+  }, [key, cruise.key])
   useEffect(() => {
     if (!restored) return
-    if (step === 'done') writeDraft(key, null)
-    else writeDraft(key, { date: date ? toISO(date) : undefined, adults, children, infants, pickup, guest, second, form, step: step === 'pay' ? 'pay' : step === 'details' ? 'details' : 'select' })
+    writeDraft(key, { date: date ? toISO(date) : undefined, adults, children, infants, pickup, guest, second, form, step })
   }, [restored, key, date, adults, children, infants, pickup, guest, second, form, step])
+
+  // back from the payment page through the browser's back button: the page may come back from the cache as it was left
+  useEffect(() => {
+    const on = (e: PageTransitionEvent) => {
+      if (!e.persisted) return
+      setBusy(false)
+      setPending(readPending(cruise.key))
+      refresh()
+    }
+    window.addEventListener('pageshow', on)
+    return () => window.removeEventListener('pageshow', on)
+  }, [cruise.key, refresh])
 
   // each step change removes the button that was pressed: move focus to the new step's heading
   // (compared with the previous step rather than a "first run" flag, which React's development double run would trip)
@@ -219,35 +233,50 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
   useEffect(() => {
     if (prevStep.current === step) return
     prevStep.current = step
+    // the seats may have changed while the guest was reading: check again on every step
+    refresh()
     if (quietFocus.current) {
       quietFocus.current = false
       return
     }
     return focusStep(`cb-step-${step}`, { scroll: true })
-  }, [step])
+  }, [step, refresh])
 
-  const st = date ? states.get(toISO(date)) : undefined
-  const adultPrice = cfg?.adult ?? cruise.prices!.adult
-  const childPrice = cfg?.child ?? cruise.prices!.child
-  const subtotal = adults * adultPrice + children * childPrice
-  const rate = Math.max(guest ? cruiseRules.guestDiscount : 0, second ? cruiseRules.secondCruiseDiscount : 0)
-  const discount = Math.round(subtotal * rate)
-  const total = subtotal - discount
+  // an answer from the server appears above the summary: bring it into view, as the guest's eyes are on the pay button
+  useEffect(() => {
+    if (!notice) return
+    const id = requestAnimationFrame(() => {
+      const el = document.getElementById('cb-notice')
+      el?.focus({ preventScroll: true })
+      el?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    })
+    return () => cancelAnimationFrame(id)
+  }, [notice])
+
+  const st = date ? byIso.get(toISO(date)) : undefined
+  const prices = { adult: cfg?.adult ?? cruise.prices!.adult, child: cfg?.child ?? cruise.prices!.child }
+  // the same rounding as the server (src/server/cruises/pricing.ts): the larger discount applies, never both
+  const quote = quoteEuros(prices, { adults, children }, guest, second)
+  const discountLabel = guest ? p.labels.discount.guest20 : p.labels.discount.second15
   // infants travel free but take a place on board (the boat's licence counts every passenger)
   const seats = adults + children + infants
   const isOpen = st?.status === 'open'
-  const enough = st ? st.left >= seats : false
+  // seats are unknown (null) only when the API could not be reached: the server checks them when the guest pays
+  const enough = st ? st.left == null || st.left >= seats : false
   // also blocked when the date is no longer on the schedule (the Captain changed the sailing days meanwhile)
   const blocked = !!date && ready && (!st || !isOpen || !enough)
   const where: Pickup = times.hasPoros ? pickup : 'skala'
-  const notSailing = ready && (!cfg?.active || dates.length === 0)
+  const notSailing = ready && (!cfg?.active || departures.length === 0)
+  const paymentsOff = schedule.payments === null
 
-  const isoSet = (status: string) => dates.filter((d) => states.get(toISO(d))?.status === status)
-  const few = dates.filter((d) => {
-    const s = states.get(toISO(d))
-    return s?.status === 'open' && s.left < 25
-  })
-  const sailing = new Set(dates.map(toISO))
+  const isoSet = (status: string) => departures.filter((d) => d.status === status).map((d) => d.date)
+  const few = departures.filter((d) => d.status === 'open' && d.left != null && d.left < 25).map((d) => d.date)
+  // the calendar opens on the chosen date, else the first day with seats (it is re-created once the departures load)
+  const openingMonth = (isOpen && date) || firstOpen || seasonStart
+  const shownMonth = viewMonth ?? openingMonth
+  const inShownMonth = (d: Date) => d.getFullYear() === shownMonth.getFullYear() && d.getMonth() === shownMonth.getMonth()
+  // a legend only for what the month on screen shows: red strike-through (cancelled) and red (fully booked) days
+  const legend = [isoSet('cancelled').some(inShownMonth) && p.checkout.cancelledLegend, isoSet('soldout').some(inShownMonth) && p.checkout.soldOutLegend].filter(Boolean) as string[]
 
   // "Only 1 seat left", not "Only 1 seats left": the …One keys take the singular, the plural keys stay the fallback
   const notEnoughText = (left: number) => fill((left === 1 && ui.notEnoughOne) || ui.notEnough, { count: left })
@@ -259,7 +288,7 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
 
   const validate = () => {
     const e: Record<string, string> = {}
-    if (!form.name.trim()) e.name = common.errors.required
+    if (form.name.trim().length < 2) e.name = common.errors.required
     if (!isEmail(form.email)) e.email = common.errors.email
     if (!isPhone(form.phone)) e.phone = common.errors.phone
     setErrors(e)
@@ -268,86 +297,116 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
     return !first
   }
 
-  const confirm = () => {
-    if (!date) return
-    // the Captain may have cancelled or closed the departure, or changed the sailing days, while the guest was filling in the form
-    const latest = readStore()
-    const onSchedule = sailingDates(latest, cruise.key, date, date).length > 0
-    const fresh = departureState(latest, cruise.key, date)
-    if (!onSchedule || fresh.status !== 'open' || fresh.left < seats) {
-      setStale(true)
-      setStep('select')
-      return
-    }
-    const b: Booking = {
-      ref: makeRef('CV'),
-      cruise: cruise.key,
-      date: toISO(date),
-      adults,
-      children,
-      infants,
-      pickup: where,
-      name: form.name.trim(),
-      email: form.email.trim(),
-      phone: form.phone.trim(),
-      hotel: form.hotel.trim() || undefined,
-      notes: form.notes.trim() || undefined,
-      total,
-      paid: payMode === 'card',
-      guest,
-      lang: locale,
-      createdAt: new Date().toISOString(),
-    }
-    update((s) => ({ ...s, bookings: [b, ...s.bookings] }))
-    setDone(b)
-    setStep('done')
+  const chooseAnother = () => {
+    setNotice(null)
+    setStep('select')
   }
 
-  const ics = () => {
-    if (!done) return
-    const tm = times[done.pickup]
-    const day = done.date.replace(/-/g, '')
-    const hms = (hhmm: string) => `${hhmm.replace(':', '')}00`
-    const place = done.pickup === 'poros' ? ui.poros : ui.skala
-    const description = [
-      `${t.reference}: ${done.ref}`,
-      passengerLine(ui, done),
-      `${ui.boarding}: ${place}, ${tm.depart}`,
-      done.pickup === 'poros' ? ui.icsPorosNote : ui.icsCheckIn,
-      fill(ui.icsReturn, { place, time: tm.back }),
-    ].join('\n')
-    const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
-    const lines = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'PRODID:-//Captain Vangelis//Cruises//EN',
-      'CALSCALE:GREGORIAN',
-      'METHOD:PUBLISH',
-      ...ATHENS_TZ,
-      'BEGIN:VEVENT',
-      `UID:${done.ref}@captain-vangelis`,
-      `DTSTAMP:${stamp}`,
-      `DTSTART;TZID=Europe/Athens:${day}T${hms(tm.depart)}`,
-      `DTEND;TZID=Europe/Athens:${day}T${hms(tm.back)}`,
-      `SUMMARY:${icsText(`${name} · ${common.brand.name}`)}`,
-      `LOCATION:${icsText(done.pickup === 'poros' ? ui.icsPoros : ui.icsSkala)}`,
-      `DESCRIPTION:${icsText(description)}`,
-      'END:VEVENT',
-      'END:VCALENDAR',
-    ]
-    download(`${done.ref}.ics`, lines.map(icsFold).join('\r\n') + '\r\n', 'text/calendar;charset=utf-8')
+  /** Creates the booking (the server holds the seats for 15 minutes) and goes to the payment page. */
+  const pay = async () => {
+    if (!date || busy) return
+    if (!accepted) {
+      setTermsError(true)
+      requestAnimationFrame(() => document.getElementById('cb-terms')?.focus())
+      return
+    }
+    setBusy(true)
+    setNotice(null)
+    let res: Awaited<ReturnType<typeof postJson<Created>>>
+    try {
+      res = await postJson<Created>('/api/cruises/bookings', {
+        cruise: cruise.key,
+        date: toISO(date),
+        adults,
+        children,
+        infants,
+        pickup: where,
+        guest,
+        second,
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        hotel: form.hotel.trim() || null,
+        notes: form.notes.trim() || null,
+        lang: locale,
+        acceptTerms: true,
+        expectedTotal: quote.total,
+      })
+    } catch {
+      setNotice({ text: p.errors.generic })
+      setBusy(false)
+      return
+    }
+    const body = res.body
+    if (res.ok && body?.payment?.redirectUrl && body.ticketUrl) {
+      const entry: Pending = { cruise: cruise.key, ref: body.ref, date: toISO(date), ticketUrl: body.ticketUrl, at: Date.now() }
+      writeDraft(PENDING_KEY, entry)
+      // coming back to this page later starts from the first step, with the guest's choices and details kept
+      writeDraft(key, { date: toISO(date), adults, children, infants, pickup, guest, second, form, step: 'select' })
+      window.location.assign(body.payment.redirectUrl)
+      return
+    }
+    setBusy(false)
+    const code = body?.error
+    if (code === 'not_enough_seats' || code === 'departure_unavailable') {
+      refresh()
+      setNotice({ text: apiErrorText(p.errors, body), back: true })
+    } else if (code === 'price_changed') {
+      // load the new fares: the total on the button follows, and the guest presses pay again
+      refreshSchedule(0)
+      setNotice({ text: fill(p.errors.priceChanged, { amount: formatPrice(locale, body?.total ?? quote.total) }) })
+    } else if (code === 'pickup_unavailable') {
+      setPickup('skala')
+      setNotice({ text: p.errors.pickupUnavailable })
+    } else if (code === 'validation' && body?.fields?.some((f) => f === 'name' || f === 'email' || f === 'phone')) {
+      const e: Record<string, string> = {}
+      if (body.fields.includes('name')) e.name = common.errors.required
+      if (body.fields.includes('email')) e.email = common.errors.email
+      if (body.fields.includes('phone')) e.phone = common.errors.phone
+      setErrors(e)
+      setStep('details')
+    } else if (code === 'validation' && body?.fields?.includes('acceptTerms')) {
+      setTermsError(true)
+    } else {
+      setNotice({ text: apiErrorText(p.errors, body) })
+    }
   }
 
   const days = listFormat(locale, sortWeekdays(cfg?.weekdays ?? cruise.weekdays).map((w) => weekdayName(locale, w)))
   const pickupLabel = (pk: Pickup) => `${ui[pk]} · ${times[pk].depart}`
 
-  const blockedBanner = blocked && (
-    <div className="rounded-xl bg-terra-light p-4 text-[0.88rem] text-terra-deep" role="alert">
+  const blockedBanner = (blocked || notice) && (
+    <div id={notice ? 'cb-notice' : undefined} tabIndex={notice ? -1 : undefined} className="rounded-xl bg-terra-light p-4 text-[0.88rem] text-terra-deep outline-none" role="alert">
       <p className="flex gap-2">
-        <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" /> {isOpen ? notEnoughText(st!.left) : unavailableText(st)}
+        <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" /> {notice ? notice.text : isOpen ? notEnoughText(st!.left ?? 0) : unavailableText(st)}
       </p>
-      <button type="button" onClick={() => setStep('select')} className="btn btn-ghost mt-3 bg-white py-2.5">
-        <ArrowLeft className="h-4 w-4" /> {ui.chooseAnother}
+      {(!notice || notice.back) && (
+        <button type="button" onClick={chooseAnother} className="btn btn-ghost mt-3 bg-white py-2.5">
+          <ArrowLeft className="h-4 w-4" /> {ui.chooseAnother}
+        </button>
+      )}
+    </div>
+  )
+
+  const pendingBanner = pending && (
+    <div className="mb-4 flex items-start gap-3 rounded-xl bg-sea-mist px-4 py-3 text-[0.88rem] text-sea-deep">
+      <Ticket className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+      <div className="min-w-0 flex-1">
+        <p>{fill(p.checkout.inProgress, { ref: pending.ref, date: fromISO(pending.date) ? formatDate(locale, fromISO(pending.date)!, { weekday: 'long', day: 'numeric', month: 'long' }) : pending.date })}</p>
+        <a href={pending.ticketUrl} className="mt-1 inline-flex items-center gap-1.5 font-semibold text-ink underline decoration-ink/30 underline-offset-2 hover:decoration-ink">
+          {p.checkout.openBooking} <ArrowRight className="h-3.5 w-3.5" />
+        </a>
+      </div>
+      <button
+        type="button"
+        onClick={() => {
+          writeDraft(PENDING_KEY, null)
+          setPending(null)
+        }}
+        aria-label={p.checkout.dismiss}
+        className="grid h-8 w-8 shrink-0 place-items-center rounded-full hover:bg-white/60"
+      >
+        <X className="h-4 w-4" />
       </button>
     </div>
   )
@@ -377,9 +436,10 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
         <AnimatePresence mode="wait">
           {step === 'select' && (
             <m.div key="select" data-step initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="p-5 sm:p-6">
-              {stale && (
-                <p className="mb-4 flex gap-2 rounded-xl bg-terra-light px-4 py-3 text-[0.88rem] font-medium text-terra-deep" role="alert">
-                  <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" /> {ui.unavailable}
+              {pendingBanner}
+              {notice && (
+                <p id="cb-notice" tabIndex={-1} className="mb-4 flex gap-2 rounded-xl bg-terra-light px-4 py-3 text-[0.88rem] font-medium text-terra-deep outline-none" role="alert">
+                  <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" /> {notice.text}
                 </p>
               )}
               <p id="cb-step-select" tabIndex={-1} className="label outline-none">
@@ -387,21 +447,21 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
               </p>
               <div className={`-mx-2 flex justify-center max-[380px]:[&_.cv-daypicker]:[--rdp-cell-size:38px] ${CAL_COLOURS}`}>
                 <SingleDateCalendar
+                  // opens on the first sailing day with seats once the departures have loaded
+                  key={ready ? 'ready' : 'loading'}
                   locale={locale}
                   value={isOpen ? date : undefined}
                   onChange={(d) => {
                     setDate(d)
-                    setStale(false)
+                    setNotice(null)
                   }}
-                  fromDate={SEASON_START}
-                  toDate={SEASON_END}
-                  defaultMonth={firstOpen ?? SEASON_START}
-                  disabled={(d) => {
-                    const s = states.get(toISO(d))
-                    return !sailing.has(toISO(d)) || !s || s.status !== 'open'
-                  }}
+                  fromDate={seasonStart}
+                  toDate={seasonEnd}
+                  defaultMonth={openingMonth}
+                  onMonthChange={setViewMonth}
+                  disabled={(d) => byIso.get(toISO(d))?.status !== 'open'}
                   modifiers={{ sailing: dates, cancelled: isoSet('cancelled'), soldout: isoSet('soldout'), few }}
-                  modifiersClassNames={{ sailing: 'day-sailing', cancelled: 'day-cancelled', few: 'day-few' }}
+                  modifiersClassNames={{ sailing: 'day-sailing', cancelled: 'day-cancelled', soldout: 'day-soldout', few: 'day-few' }}
                   // the colours of few-seat, cancelled and full days are also read out
                   labels={{
                     labelDay: (day, mods) =>
@@ -413,8 +473,9 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
               </div>
               {st &&
                 (isOpen ? (
-                  <p className={`mt-1 rounded-xl px-4 py-2.5 text-[0.88rem] font-medium ${!enough || st.left < 25 ? 'bg-terra-light text-terra-deep' : 'bg-sea-mist text-sea-deep'}`}>
-                    {formatDate(locale, st.date, { weekday: 'long', day: 'numeric', month: 'long' })} · {enough ? seatsText(st.left) : notEnoughText(st.left)}
+                  <p className={`mt-1 rounded-xl px-4 py-2.5 text-[0.88rem] font-medium ${!enough || (st.left != null && st.left < 25) ? 'bg-terra-light text-terra-deep' : 'bg-sea-mist text-sea-deep'}`}>
+                    {formatDate(locale, st.date, { weekday: 'long', day: 'numeric', month: 'long' })}
+                    {st.left != null && <> · {enough ? seatsText(st.left) : notEnoughText(st.left)}</>}
                   </p>
                 ) : (
                   <p className="mt-1 flex gap-2 rounded-xl bg-terra-light px-4 py-2.5 text-[0.88rem] font-medium text-terra-deep" role="alert">
@@ -424,9 +485,10 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
                     </span>
                   </p>
                 ))}
-              {isoSet('cancelled').length > 0 && !(st && !isOpen) && (
+              {/* a selected cancelled or full day already gets its own alert above; this only explains the colours */}
+              {legend.length > 0 && (
                 <p className="mt-3 flex gap-2 text-[0.8rem] text-ink-mute">
-                  <AlertTriangle className="h-4 w-4 shrink-0 text-terra" /> {t.cancelledNote}
+                  <AlertTriangle className="h-4 w-4 shrink-0 text-terra" aria-hidden="true" /> <span>{legend.join(' ')}</span>
                 </p>
               )}
 
@@ -481,22 +543,22 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
               <dl className="mt-6 space-y-2 text-[0.92rem]">
                 <div className="flex justify-between gap-4">
                   <dt className="text-ink-mute">
-                    {adults} × {formatPrice(locale, adultPrice)}
-                    {children ? ` + ${children} × ${formatPrice(locale, childPrice)}` : ''}
+                    {adults} × {formatPrice(locale, prices.adult)}
+                    {children ? ` + ${children} × ${formatPrice(locale, prices.child)}` : ''}
                   </dt>
-                  <dd className="tabular-nums">{formatPrice(locale, subtotal)}</dd>
+                  <dd className="tabular-nums">{formatPrice(locale, quote.subtotal)}</dd>
                 </div>
-                {discount > 0 && (
+                {quote.discount > 0 && (
                   <div className="flex justify-between gap-4 text-sea">
                     <dt>
-                      {t.discount} −{Math.round(rate * 100)}%
+                      {t.discount} −{quote.percent}%
                     </dt>
-                    <dd className="tabular-nums">−{formatPrice(locale, discount)}</dd>
+                    <dd className="tabular-nums">−{formatPrice(locale, quote.discount)}</dd>
                   </div>
                 )}
                 <div className="flex items-baseline justify-between gap-4 border-t border-line pt-3">
                   <dt className="font-semibold">{t.total}</dt>
-                  <dd className="font-display text-3xl tabular-nums">{formatPrice(locale, total)}</dd>
+                  <dd className="font-display text-3xl tabular-nums">{formatPrice(locale, quote.total)}</dd>
                 </div>
               </dl>
               <button type="button" disabled={!date || !isOpen || !enough} onClick={() => setStep('details')} className="btn btn-primary mt-5 w-full py-4">
@@ -542,6 +604,7 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
                     id={`cb-${k}`}
                     type={type}
                     autoComplete={ac}
+                    maxLength={k === 'email' ? 160 : 120}
                     className={`field ${errors[k] ? 'ring-2 ring-terra' : ''}`}
                     value={form[k]}
                     onChange={(e) => {
@@ -562,7 +625,7 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
                 <label className="label" htmlFor="cb-notes">
                   {t.notes}
                 </label>
-                <textarea id="cb-notes" rows={3} className="field resize-none" value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} />
+                <textarea id="cb-notes" rows={3} maxLength={1000} className="field resize-none" value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} />
               </div>
               <button type="submit" className="btn btn-primary w-full py-4">
                 {t.next} <ArrowRight className="h-4 w-4" />
@@ -572,9 +635,10 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
 
           {step === 'pay' && date && (
             <m.div key="pay" data-step initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4 p-5 sm:p-6">
-              <button type="button" onClick={() => setStep('details')} className="inline-flex items-center gap-1.5 text-[0.85rem] font-semibold text-ink-mute hover:text-ink">
+              <button type="button" onClick={() => setStep('details')} disabled={busy} className="inline-flex items-center gap-1.5 text-[0.85rem] font-semibold text-ink-mute hover:text-ink">
                 <ArrowLeft className="h-4 w-4" /> {common.cta.back}
               </button>
+              {pendingBanner}
               {blockedBanner}
               <div className="rounded-xl bg-sand p-4 text-[0.9rem]">
                 {/* focus lands here, so the step opens with a read-back of the booking */}
@@ -585,94 +649,83 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
                   {formatDate(locale, date, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })} · {pickupLabel(where)}
                 </p>
                 <p className="mt-1 text-ink-mute">{passengerLine(ui, { adults, children, infants })}</p>
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                {(['card', 'kiosk'] as const).map((mode) => (
-                  <button key={mode} type="button" onClick={() => setPayMode(mode)} aria-pressed={payMode === mode} className={`rounded-xl px-3 py-3 text-[0.86rem] font-semibold ring-1 transition ${payMode === mode ? 'bg-ink text-white ring-ink' : 'ring-ink/10 hover:bg-sand'}`}>
-                    {mode === 'card' ? (
-                      <span className="inline-flex items-center gap-2">
-                        <CreditCard className="h-4 w-4" /> {pay.card}
-                      </span>
-                    ) : (
-                      t.payLater
-                    )}
-                  </button>
-                ))}
-              </div>
-              {payMode === 'card' && <DemoCard pay={pay} />}
-              <button type="button" onClick={confirm} disabled={blocked} className="btn btn-sea w-full py-4">
-                <Lock className="h-4 w-4" /> {payMode === 'card' ? fill(t.pay, { amount: formatPrice(locale, total) }) : t.payLater}
-              </button>
-              <p className="text-center text-[0.75rem] text-ink-mute">
-                <TermsLink locale={locale} sentence={t.terms} phrase={t.termsLink} external={common.a11y.external} />
-              </p>
-            </m.div>
-          )}
-
-          {step === 'done' && done && (
-            <m.div key="done" data-step initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} className="p-5 sm:p-6">
-              <m.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 260, damping: 18, delay: 0.1 }} className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-sea text-white">
-                <Check className="h-8 w-8" />
-              </m.div>
-              <h2 id="cb-step-done" tabIndex={-1} className="mt-5 text-center font-display text-3xl outline-none">
-                {t.confirmTitle}
-              </h2>
-              <p className="mx-auto mt-3 max-w-sm text-center text-[0.95rem] text-ink-soft">
-                {done.paid
-                  ? done.pickup === 'poros'
-                    ? fill(ui.paidBodyPoros, { time: times.poros.depart })
-                    : ui.paidBody
-                  : fill(done.pickup === 'poros' ? ui.kioskBodyPoros : ui.kioskBody, { amount: formatPrice(locale, done.total) })}
-              </p>
-              {done.paid && done.pickup === 'poros' && <p className="mx-auto mt-2 max-w-sm text-center text-[0.85rem] text-ink-mute">{ui.porosConfirm}</p>}
-              <div className="relative mt-6 overflow-hidden rounded-2xl bg-sand">
-                <div className="flex items-center gap-4 p-5">
-                  <TicketCode value={done.ref} label={`${t.ticket} ${done.ref}`} />
-                  <div className="min-w-0 text-[0.88rem]">
-                    <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-ink-mute">{t.ticket}</p>
-                    <p className="font-display text-xl leading-tight">{name}</p>
-                    <p className="text-ink-mute">
-                      {formatDate(locale, date!, { weekday: 'short', day: 'numeric', month: 'short' })} · {pickupLabel(done.pickup)}
-                    </p>
-                    <p className="mt-1 font-mono text-[0.95rem] font-semibold tracking-wider">{done.ref}</p>
+                <dl className="mt-3 space-y-1 border-t border-ink/10 pt-3">
+                  {quote.discount > 0 && (
+                    <div className="flex justify-between gap-4 text-sea">
+                      <dt>{discountLabel}</dt>
+                      <dd className="tabular-nums">−{formatPrice(locale, quote.discount)}</dd>
+                    </div>
+                  )}
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="font-semibold">{t.total}</dt>
+                    <dd className="font-display text-2xl tabular-nums">{formatPrice(locale, quote.total)}</dd>
                   </div>
-                </div>
-                <div className="relative border-t border-dashed border-ink/15 px-5 py-4">
-                  <span aria-hidden="true" className="absolute -left-3 -top-3 h-6 w-6 rounded-full bg-white" />
-                  <span aria-hidden="true" className="absolute -right-3 -top-3 h-6 w-6 rounded-full bg-white" />
-                  <dl className="space-y-1.5 text-[0.86rem]">
-                    <div className="flex justify-between gap-4">
-                      <dt className="text-ink-mute">{ui.passengers}</dt>
-                      <dd className="text-right">{passengerLine(ui, done)}</dd>
-                    </div>
-                    <div className="flex justify-between gap-4">
-                      <dt className="text-ink-mute">{ui.boarding}</dt>
-                      <dd className="text-right">
-                        {pickupLabel(done.pickup)}
-                        {done.pickup === 'poros' && <span className="text-ink-mute"> ({ui.onRequest})</span>}
-                      </dd>
-                    </div>
-                    <div className="flex justify-between gap-4">
-                      <dt className="text-ink-mute">{ui.return}</dt>
-                      <dd className="text-right tabular-nums">
-                        {ui[done.pickup]} · {times[done.pickup].back}
-                      </dd>
-                    </div>
-                    <div className="flex items-baseline justify-between gap-4 border-t border-line pt-2">
-                      <dt className="font-semibold">{done.paid ? ui.paid : ui.dueKiosk}</dt>
-                      <dd className="font-display text-xl tabular-nums">{formatPrice(locale, done.total)}</dd>
-                    </div>
-                  </dl>
-                </div>
+                </dl>
               </div>
-              <div className="mt-5 grid gap-2 sm:grid-cols-2">
-                <button type="button" onClick={ics} className="btn btn-ghost w-full">
-                  <CalendarPlus className="h-4 w-4" /> {t.addToCalendar}
-                </button>
-                <Link href={href(locale, '/cruises')} className="btn btn-primary w-full">
-                  {ui.another} <ArrowRight className="h-4 w-4" />
-                </Link>
+
+              <div className="space-y-2.5 rounded-2xl p-4 text-[0.82rem] text-ink-soft ring-1 ring-ink/10">
+                <div className="flex items-start justify-between gap-3">
+                  <span className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-ink-mute">{CARDS}</span>
+                  <Lock className="h-4 w-4 shrink-0 text-ink-mute" aria-hidden="true" />
+                </div>
+                <p>{p.checkout.secure}</p>
+                <p className="flex gap-2">
+                  <Clock className="mt-0.5 h-4 w-4 shrink-0 text-ink-mute" aria-hidden="true" /> {p.checkout.hold}
+                </p>
               </div>
+
+              {schedule.payments === 'mock' && (
+                <p className="flex items-start gap-2 rounded-xl bg-sun-light px-3.5 py-2.5 text-[0.82rem] font-medium text-ink">
+                  <FlaskConical className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /> {p.checkout.testMode}
+                </p>
+              )}
+
+              {paymentsOff ? (
+                <div className="rounded-xl bg-terra-light p-4 text-[0.88rem] text-terra-deep" role="alert">
+                  <p className="flex gap-2">
+                    <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" /> {p.errors.paymentsUnavailable}
+                  </p>
+                  <a href={whatsappLink(fill(ui.askMessage, { name }))} target="_blank" rel="noopener noreferrer" className="btn btn-ghost mt-3 bg-white py-2.5">
+                    <MessageCircle className="h-4 w-4" /> {common.cta.whatsapp}
+                  </a>
+                </div>
+              ) : (
+                <>
+                  <div>
+                    <label className={`flex cursor-pointer items-start gap-3 rounded-xl p-3 ring-1 transition ${termsError ? 'ring-2 ring-terra' : accepted ? 'bg-sea-mist/60 ring-sea/40' : 'ring-ink/10 hover:bg-sand'}`}>
+                      <input
+                        id="cb-terms"
+                        type="checkbox"
+                        checked={accepted}
+                        onChange={(e) => {
+                          setAccepted(e.target.checked)
+                          if (e.target.checked) setTermsError(false)
+                        }}
+                        aria-invalid={termsError}
+                        aria-describedby={termsError ? 'cb-terms-err' : undefined}
+                        className="mt-0.5 h-4 w-4 shrink-0 accent-[#0F2430]"
+                      />
+                      <span className="text-[0.86rem] text-ink-soft">
+                        <TermsLink locale={locale} sentence={p.checkout.acceptTerms} phrase={p.checkout.termsLink} external={common.a11y.external} />
+                      </span>
+                    </label>
+                    {termsError && (
+                      <p id="cb-terms-err" className="mt-1 text-[0.8rem] text-terra-deep">
+                        {p.errors.termsRequired}
+                      </p>
+                    )}
+                  </div>
+                  <button type="button" onClick={pay} disabled={blocked || busy} aria-busy={busy} className="btn btn-sea w-full py-4">
+                    {busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : <Lock className="h-4 w-4" aria-hidden="true" />}
+                    {busy ? p.checkout.redirecting : fill(p.checkout.pay, { amount: formatPrice(locale, quote.total) })}
+                  </button>
+                  {busy && (
+                    <p className="sr-only" role="status">
+                      {p.checkout.redirecting}
+                    </p>
+                  )}
+                </>
+              )}
             </m.div>
           )}
         </AnimatePresence>
@@ -681,47 +734,10 @@ export function CruiseBooking({ cruise, locale, t, common, name, pay, ui: uiProp
   )
 }
 
-/**
- * Card fields (nothing is sent anywhere): each field has a visible label, because a placeholder disappears as soon as you type.
- * The number placeholder is a neutral sequence, not a well-known test card; the expiry placeholder follows the language (ΜΜ / ΕΕ, MM / AA).
- */
-export function DemoCard({ pay }: { pay: Dict }) {
-  const id = useId()
-  return (
-    <div className="space-y-3 rounded-2xl p-4 ring-1 ring-ink/10">
-      <div className="flex items-center justify-between">
-        <span className="text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-ink-mute">Visa · Mastercard · Apple Pay</span>
-        <Lock className="h-4 w-4 text-ink-mute" aria-hidden="true" />
-      </div>
-      <div>
-        <label className="label" htmlFor={`${id}-number`}>
-          {pay.number}
-        </label>
-        <input id={`${id}-number`} className="field" inputMode="numeric" placeholder={pay.numberPlaceholder ?? '1234 5678 9012 3456'} autoComplete="off" />
-      </div>
-      <div className="grid grid-cols-2 gap-3">
-        <div className="min-w-0">
-          <label className="label" htmlFor={`${id}-expiry`}>
-            {pay.expiry}
-          </label>
-          <input id={`${id}-expiry`} className="field" inputMode="numeric" placeholder={pay.expiryPlaceholder ?? 'MM / YY'} autoComplete="off" />
-        </div>
-        <div className="min-w-0">
-          <label className="label" htmlFor={`${id}-cvc`}>
-            {pay.cvc}
-          </label>
-          <input id={`${id}-cvc`} className="field" inputMode="numeric" placeholder="123" autoComplete="off" />
-        </div>
-      </div>
-      <p className="text-[0.75rem] text-ink-mute">{pay.secure}</p>
-    </div>
-  )
-}
-
 /** The words of the terms sentence that link to /terms when no termsLink key gives them. */
-const TERMS_PHRASE: Record<Locale, string> = { en: 'booking terms', el: 'όρους μας', it: 'condizioni di prenotazione' }
+const TERMS_PHRASE: Record<Locale, string> = { en: 'booking terms', el: 'όρους κράτησης', it: 'condizioni di prenotazione' }
 
-/** "By booking, you accept our booking terms." with the terms words linked (or the whole sentence when they are not found). */
+/** "I have read and accept the booking terms." with the terms words linked (or the whole sentence when they are not found). */
 export function TermsLink({ locale, sentence, phrase, external }: { locale: Locale; sentence: string; phrase?: string; external: string }) {
   const words = phrase || TERMS_PHRASE[locale]
   const at = words ? sentence.indexOf(words) : -1
@@ -743,29 +759,40 @@ export function TermsLink({ locale, sentence, phrase, external }: { locale: Loca
 
 // ----- Cruises on request (BBQ, private, wedding) -----------------------------------------------
 
-/** Request form for cruises that only run on request. Requests are stored for the admin and can also go straight to WhatsApp. */
+const ON_REQUEST = ['bbq', 'private', 'wedding'] as const
+type OnRequest = (typeof ON_REQUEST)[number]
+
+/**
+ * Request form for cruises that only run on request. The request goes to the booking API (the owner sees it in /admin,
+ * the guest gets an acknowledgement e-mail in their language) and can also go straight to WhatsApp.
+ */
 export function CruiseRequest({ locale, t, common, contact, cruise: cruiseProp, ui: uiProp }: { locale: Locale; t: Dict; common: Dict; contact: Dict; cruise?: Cruise; ui?: Dict }) {
   const ui = uiProp ?? CRUISE_UI[locale]
+  const p = PAY_UI[locale]
   const pathname = usePathname()
-  const cruiseKey = cruiseProp?.key ?? cruises.find((c) => pathname?.replace(/\/$/, '').endsWith(`/${c.slug}`))?.key ?? 'private'
-  const { update } = useStore()
-  const [sent, setSent] = useState<CruiseRequestEntry | null>(null)
+  const found = cruiseProp?.key ?? cruises.find((c) => pathname?.replace(/\/$/, '').endsWith(`/${c.slug}`))?.key
+  const cruiseKey: OnRequest = (ON_REQUEST as readonly string[]).includes(found ?? '') ? (found as OnRequest) : 'private'
+  const [sent, setSent] = useState<{ ref: string } | null>(null)
   const [date, setDate] = useState<Date | undefined>()
   const [count, setCount] = useState(10)
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const [busy, setBusy] = useState(false)
+  const [failure, setFailure] = useState('')
 
   const kind: string = (ui.request.kinds as Record<string, string>)[cruiseKey] ?? ui.request.kinds.private
   const dateLong = date ? formatDate(locale, date, { day: 'numeric', month: 'long', year: 'numeric' }) : ''
   const waText = date ? fill(ui.request.message, { kind, date: dateLong, count }) : fill(ui.request.messageNoDate, { kind, count })
 
-  const submit = () => {
+  const submit = async () => {
+    if (busy) return
     const e: Record<string, string> = {}
     if (!date) e.date = ui.request.dateError
-    if (!form.name.trim()) e.name = common.errors.required
+    if (form.name.trim().length < 2) e.name = common.errors.required
     if (!isEmail(form.email)) e.email = common.errors.email
     if (!isPhone(form.phone)) e.phone = common.errors.phone
     setErrors(e)
+    setFailure('')
     const first = (['date', 'name', 'email', 'phone'] as const).find((k) => e[k])
     if (first) {
       requestAnimationFrame(() => {
@@ -775,20 +802,24 @@ export function CruiseRequest({ locale, t, common, contact, cruise: cruiseProp, 
       })
       return
     }
-    const r: CruiseRequestEntry = {
-      ref: makeRef('RQ'),
-      cruise: cruiseKey,
-      date: date ? toISO(date) : undefined,
-      people: count,
-      name: form.name.trim(),
-      email: form.email.trim(),
-      phone: form.phone.trim(),
-      message: form.message.trim() || undefined,
-      lang: locale,
-      createdAt: new Date().toISOString(),
+    setBusy(true)
+    try {
+      const res = await postJson<{ ref: string }>('/api/cruises/requests', {
+        cruise: cruiseKey,
+        date: date ? toISO(date) : null,
+        people: count,
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        message: form.message.trim() || null,
+        lang: locale,
+      })
+      if (res.ok && res.body?.ref) setSent({ ref: res.body.ref })
+      else setFailure(apiErrorText(p.errors, res.body))
+    } catch {
+      setFailure(p.errors.generic)
     }
-    update((s) => ({ ...s, requests: [r, ...(s.requests ?? [])] }))
-    setSent(r)
+    setBusy(false)
   }
 
   return (
@@ -798,7 +829,7 @@ export function CruiseRequest({ locale, t, common, contact, cruise: cruiseProp, 
         <p className="text-[0.85rem] text-white/65">{t.requestOnly}</p>
       </div>
       {sent ? (
-        <div className="p-6 text-center sm:p-8">
+        <div className="p-6 text-center sm:p-8" role="status">
           <m.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 260, damping: 18 }} className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-sea text-white">
             <Check className="h-7 w-7" />
           </m.div>
@@ -876,6 +907,7 @@ export function CruiseRequest({ locale, t, common, contact, cruise: cruiseProp, 
                 id={`cr-${k}`}
                 type={type}
                 autoComplete={ac}
+                maxLength={k === 'email' ? 160 : 120}
                 className={`field ${errors[k] ? 'ring-2 ring-terra' : ''}`}
                 value={form[k]}
                 onChange={(e) => {
@@ -896,10 +928,15 @@ export function CruiseRequest({ locale, t, common, contact, cruise: cruiseProp, 
             <label className="label" htmlFor="cr-message">
               {contact.form.message}
             </label>
-            <textarea id="cr-message" rows={3} className="field resize-none" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <textarea id="cr-message" rows={3} maxLength={2000} className="field resize-none" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
           </div>
-          <button type="submit" className="btn btn-primary w-full py-4">
-            {common.cta.sendRequest} <ArrowRight className="h-4 w-4" />
+          {failure && (
+            <p className="flex gap-2 rounded-xl bg-terra-light px-4 py-3 text-[0.88rem] font-medium text-terra-deep" role="alert">
+              <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" /> {failure}
+            </p>
+          )}
+          <button type="submit" disabled={busy} aria-busy={busy} className="btn btn-primary w-full py-4">
+            {common.cta.sendRequest} {busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : <ArrowRight className="h-4 w-4" />}
           </button>
           <a href={whatsappLink(waText)} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-[0.88rem] font-semibold text-sea-deep hover:text-ink">
             <MessageCircle className="h-4 w-4" /> {ui.request.whatsapp}

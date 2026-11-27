@@ -22,6 +22,11 @@ import { altFor, localized } from '@/data/alts'
 import { fill, getDictionary, href, locales, quote as quoted, type Locale } from '@/lib/i18n'
 import { pageMetadata } from '@/lib/seo'
 import { breadcrumbLd, cruiseLd } from '@/lib/jsonld'
+import { ScheduleSeed } from '@/lib/cruiseStore'
+import { scheduleSeed } from '@/server/cruises/schedule'
+
+// fares, days and times come from /admin: re-rendered at most a minute after a change (the admin also revalidates at once)
+export const revalidate = 60
 
 export function generateStaticParams() {
   return locales.flatMap((lang) => cruises.map((c) => ({ lang, slug: c.slug })))
@@ -89,6 +94,10 @@ export default async function CruisePage({ params }: { params: { lang: Locale; s
   const live = { ...scheduleOf(cruise), stops: cruise.stops }
   // scheduled routes get a keyword-rich h1 from det.seoHeading (shown as the kicker); the route name stays the big title
   const seoHeading = cruise.scheduled && typeof det.seoHeading === 'string' ? fill(det.seoHeading, { name: t.name }) : undefined
+  // the schedule saved in /admin: the server HTML and the JSON-LD offers show the live fares, days and times
+  const seed = await scheduleSeed()
+  const cfg = seed?.config[cruise.key]
+  const ldCruise = cfg ? { ...cruise, weekdays: cfg.weekdays, depart: cfg.depart, returnSkala: cfg.returnSkala, prices: { adult: cfg.adult, child: cfg.child } } : cruise
 
   const quote = t.quote && (
     <Reveal>
@@ -102,7 +111,7 @@ export default async function CruisePage({ params }: { params: { lang: Locale; s
   )
 
   return (
-    <>
+    <ScheduleSeed seed={seed}>
       <Hero
         eyebrow={cruise.scheduled ? det.eyebrow : t.days}
         seoHeading={seoHeading}
@@ -186,7 +195,7 @@ export default async function CruisePage({ params }: { params: { lang: Locale; s
             {/* stays in view while the timeline scrolls (bottom-aligned when the card is taller than the screen) */}
             <StickyAside>
               {cruise.scheduled ? (
-                <CruiseBooking cruise={{ ...cruise, cover: undefined, photos: [] }} locale={locale} t={d.cruises.booking} common={c} name={t.name} pay={d.booking.payment} />
+                <CruiseBooking cruise={{ ...cruise, cover: undefined, photos: [] }} locale={locale} t={d.cruises.booking} common={c} name={t.name} />
               ) : (
                 <CruiseRequest locale={locale} t={d.cruises.booking} common={c} contact={d.pages.contact} />
               )}
@@ -282,7 +291,7 @@ export default async function CruisePage({ params }: { params: { lang: Locale; s
         </div>
       </section>
 
-      <JsonLd data={cruiseLd(locale, cruise, { cruises: d.cruises, seo: d.pages.seo })} />
+      <JsonLd data={cruiseLd(locale, ldCruise, { cruises: d.cruises, seo: d.pages.seo })} />
       <JsonLd
         data={breadcrumbLd([
           { name: c.nav.home, path: `/${locale}` },
@@ -290,6 +299,6 @@ export default async function CruisePage({ params }: { params: { lang: Locale; s
           { name: t.name, path: `/${locale}/cruises/${cruise.slug}` },
         ])}
       />
-    </>
+    </ScheduleSeed>
   )
 }

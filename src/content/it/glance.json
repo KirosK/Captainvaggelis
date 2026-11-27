@@ -38,8 +38,10 @@
     "seaMixed": "Vista mare (frontale, laterale o parziale)",
     "garden": "Vista giardino",
     "gardenMixed": "Vista giardino o vista mare parziale",
-    "village": "Vista sul paese e sulle colline",
-    "villageMixed": "Vista sul paese; alcuni con vista mare"
+    "villageMixed": "Vista frontale, laterale o sulla piscina; un monolocale all'ultimo piano ha vista mare",
+    "seaOne": "Vista mare dalla doppia con terrazza",
+    "seaFrontSide": "Vista mare frontale e laterale",
+    "pool": "Vista piscina"
   },
   "identity": {
     "aegealis": "Sul mare",

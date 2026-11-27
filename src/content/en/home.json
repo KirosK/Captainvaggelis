@@ -61,7 +61,7 @@
       "pitch": "Studios and apartments at the top of Skala's main street, about 100 m from the centre, with a shady garden and an orange tree at the back. The beach is a 5–10 minute walk downhill, and a gate from the garden leads to the neighbouring hotel's pool (subject to the hotel's season).",
       "bullets": [
         "Supermarket a minute away",
-        "Two-bedroom apartment for up to five",
+        "Two-bedroom apartments with sea views, for up to five",
         "Cleanliness rated 9.5 by guests"
       ],
       "best": "Best for: families, groups, walking to tavernas"
@@ -97,11 +97,12 @@
     "resultTitle": "Our suggestion for you",
     "alsoGood": "Also a good fit",
     "why": "Why this room",
-    "noMatch": "For {count} guests we suggest two rooms, such as Theodora's two-bedroom apartment and a studio. Message us and we'll arrange it.",
+    "noMatch": "For {count} guests we suggest two rooms, such as Theodora's two-bedroom apartment and a studio. Check availability for both at once, or message us and we'll arrange it.",
     "reset": "Start again",
     "reasons": {
       "beachfront": "The beach is across the road",
       "seaView": "Sea view from your room",
+      "someSeaView": "One of these rooms has a sea view",
       "quiet": "Quiet area, garden behind the house",
       "space": "Separate bedroom",
       "twoBedrooms": "Two bedrooms, room for five",
@@ -113,7 +114,9 @@
       "pool": "Use of the pools at the two hotels next door",
       "poolSeasonal": "Neighbouring hotel's pool, subject to its season",
       "budgetGroup": "Good value for a group"
-    }
+    },
+    "seePrices": "See prices & availability",
+    "twoRooms": "Check availability for two rooms"
   },
   "cruises": {
     "kicker": "At sea with the Captain",

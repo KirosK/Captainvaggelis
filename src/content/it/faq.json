@@ -6,16 +6,24 @@
       "title": "Prenotazione e pagamento",
       "items": {
         "pay": {
-          "q": "Come posso pagare?",
-          "a": "Con carta, quando prenotate online: un acconto del 30% subito e il resto all'arrivo, oppure l'intero importo in un'unica soluzione. Se preferite pagare in un altro modo, per esempio in contanti all'arrivo, basta scriverci."
+          "q": "Come si prenota e come si paga?",
+          "a": "Online: scegliete le date su questo sito e proseguite sulla pagina di prenotazione della famiglia, dove vedete prezzi e disponibilità aggiornati. Pagate con carta un acconto del 20%, in modo sicuro tramite Alpha Bank, e il saldo all'arrivo. I prezzi sono per camera e per notte e includono IVA e tasse locali."
         },
         "cancel": {
           "q": "Quali sono le condizioni di cancellazione?",
-          "a": "Cancellazione gratuita fino a 14 giorni prima dell'arrivo. Dopo, parlatene con noi: siamo un'attività di famiglia e, quando possiamo, vi veniamo incontro."
+          "a": "L'acconto del 20% non è rimborsabile. Se cancellate 30 giorni o più prima dell'arrivo, non dovete altro. Se cancellate meno di 30 giorni prima dell'arrivo, è dovuto l'intero importo del soggiorno."
         },
         "confirm": {
           "q": "Quando viene confermata la prenotazione?",
-          "a": "Subito. L'e-mail di conferma arriva appena prenotate, e qualche giorno prima del vostro arrivo vi scriveremo su WhatsApp."
+          "a": "Appena pagato l'acconto del 20%, la prenotazione è garantita. Il saldo si paga all'arrivo."
+        },
+        "minStay": {
+          "q": "C'è un soggiorno minimo?",
+          "a": "Sì, 5 notti, sia all'Aegealis sia al Theodora. Il check-in è dalle 13:00 e il check-out entro le 11:00."
+        },
+        "cards": {
+          "q": "Quali carte accettate?",
+          "a": "Visa, Visa Electron, MasterCard, Maestro, American Express, Diners e Discover, tramite la pagina di pagamento sicura di Alpha Bank."
         }
       }
     },
@@ -24,11 +32,11 @@
       "items": {
         "checkin": {
           "q": "A che ora sono il check-in e il check-out?",
-          "a": "Il check-in è dalle 14:00 a mezzanotte e il check-out dalle 08:00 alle 10:00. Vi chiediamo di comunicarci in anticipo l'orario di arrivo; se il volo di ritorno parte in tarda giornata, chiedeteci e vedremo cosa si può fare."
+          "a": "Il check-in è dalle 13:00 e il check-out entro le 11:00. Vi chiediamo di comunicarci in anticipo l'orario di arrivo; se il volo di ritorno parte in tarda giornata, chiedeteci e vedremo cosa si può fare."
         },
         "late": {
           "q": "Atterriamo a tarda notte. È un problema?",
-          "a": "Il check-in è possibile fino a mezzanotte. Se atterrate più tardi, comunicateci prima l'orario del volo e faremo il possibile per accogliervi. Possiamo anche prenotarvi un taxi dall'aeroporto."
+          "a": "Comunicateci prima l'orario del volo e faremo il possibile per accogliervi. Possiamo anche prenotarvi un taxi dall'aeroporto."
         },
         "cleaning": {
           "q": "Le camere vengono pulite ogni giorno?",
@@ -86,7 +94,7 @@
       "items": {
         "airport": {
           "q": "Quanto dista l'aeroporto?",
-          "a": "L'aeroporto di Cefalonia (EFL), vicino ad Argostoli, è a 33–35 km da entrambe le strutture. Possiamo organizzare un taxi che vi aspetti all'arrivo del volo: spuntate la casella quando prenotate, oppure scriveteci."
+          "a": "L'aeroporto di Cefalonia (EFL), vicino ad Argostoli, è a 33–35 km da entrambe le strutture. Possiamo organizzare un taxi che vi aspetti all'arrivo del volo: basta scriverci l'orario del volo."
         },
         "car": {
           "q": "Serve l'auto?",
@@ -111,7 +119,7 @@
         },
         "book": {
           "q": "Come si prenota una crociera?",
-          "a": "Dalla pagina della crociera su questo sito, via WhatsApp, telefono o e-mail, oppure di persona al chiosco davanti all'Aegealis durante la stagione."
+          "a": "Online, dalla pagina della crociera: scegliete la data, pagate con carta e il biglietto elettronico arriva subito via e-mail. Potete prenotare anche di persona al chiosco davanti all'Aegealis durante la stagione."
         },
         "weather": {
           "q": "E se c'è brutto tempo?",
@@ -119,7 +127,7 @@
         },
         "kids": {
           "q": "Le crociere sono adatte ai bambini?",
-          "a": "Sì, soprattutto quelle per Itaca e Fiscardo. Le crociere per Itaca fanno due soste per il bagno, quella per Fiscardo una, a Mini Myrtos, e a bordo ci sono uno scivolo d'acqua e una piattaforma per i tuffi. La tariffa bambini vale dai 4 agli 11 anni; per i bambini sotto i 4 anni, chiedeteci. Sconsigliamo invece ai più piccoli la crociera per Zante, che lungo la costa occidentale dell'isola affronta il mare aperto."
+          "a": "Sì, soprattutto quelle per Itaca e Fiscardo. Le crociere per Itaca fanno due soste per il bagno, quella per Fiscardo una, a Mini Myrtos, e a bordo ci sono uno scivolo d'acqua e una piattaforma per i tuffi. La tariffa bambini vale dai 4 agli 11 anni; i bambini sotto i 4 anni viaggiano gratis. Sconsigliamo invece ai più piccoli la crociera per Zante, che lungo la costa occidentale dell'isola affronta il mare aperto."
         },
         "seasick": {
           "q": "Soffro il mal di mare. Quale crociera scelgo?",

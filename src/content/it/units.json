@@ -52,7 +52,7 @@
   "th-double": {
     "name": "Camere doppie",
     "short": "Semplici, pulitissime e convenienti, in cima alla via principale.",
-    "description": "Camere doppie semplici, con angolo cottura, aria condizionata, bagno con doccia e balcone o terrazza. Pulizia e cambio degli asciugamani ogni giorno, anche nel fine settimana. A un minuto c'è il supermercato, e gli ospiti apprezzano il rapporto qualità-prezzo.",
+    "description": "Camere doppie semplici, con angolo cottura, aria condizionata, bagno con doccia e balcone o terrazza; la doppia con terrazza, al primo piano, ha vista mare. Pulizia e cambio degli asciugamani ogni giorno, anche nel fine settimana. A un minuto c'è il supermercato, e gli ospiti apprezzano il rapporto qualità-prezzo.",
     "bestFor": "Coppie e chi viaggia da solo",
     "variants": {
       "th-standard-double": "Camera doppia standard",
@@ -62,8 +62,8 @@
   },
   "th-studio": {
     "name": "Monolocali in paese",
-    "short": "Angolo cottura per pasti semplici; alcuni all'ultimo piano hanno vista mare.",
-    "description": "Monolocali al piano terra o all'ultimo piano, tutti con aria condizionata e bagno con doccia. Alcuni all'ultimo piano hanno il soffitto con travi in legno, altri si affacciano sul mare: se la vista per voi è importante, ditecelo quando prenotate. L'angolo cottura ha fornelli, frigorifero, bollitore e macchina del caffè.",
+    "short": "Angolo cottura per pasti semplici; un monolocale all'ultimo piano ha vista mare.",
+    "description": "Monolocali al piano terra o all'ultimo piano, tutti con aria condizionata e bagno con doccia. Quelli al piano terra hanno vista frontale o laterale; all'ultimo piano, un monolocale ha vista mare frontale e l'appartamento monolocale si affaccia sulla piscina. Alcuni all'ultimo piano hanno il soffitto con travi in legno. L'angolo cottura ha fornelli, frigorifero, bollitore e macchina del caffè.",
     "bestFor": "Coppie a cui piace cucinare un po'",
     "variants": {
       "th-studio": "Monolocale",
@@ -75,7 +75,7 @@
   "th-triple": {
     "name": "Camera tripla con terrazza",
     "short": "Spazio per tre, con una terrazza che prende il sole nel tardo pomeriggio.",
-    "description": "Una camera per tre con la sua terrazza, soleggiata nel tardo pomeriggio. È spaziosa, dicono gli ospiti, e si presta bene a genitori con un bambino piccolo. Ha anche angolo cottura, aria condizionata e doccia. Tenete presente che al Theodora non ci sono culle né letti aggiuntivi.",
+    "description": "Una camera per tre al primo piano, con la sua terrazza affacciata sulla piscina e soleggiata nel tardo pomeriggio. È spaziosa, dicono gli ospiti, e si presta bene a genitori con un bambino piccolo. Ha anche angolo cottura, aria condizionata e doccia. Tenete presente che al Theodora non ci sono culle né letti aggiuntivi.",
     "bestFor": "Genitori con un bambino oppure tre amici",
     "variants": {
       "th-triple-terrace": "Camera tripla con terrazza"
@@ -83,8 +83,8 @@
   },
   "th-two-bedroom": {
     "name": "Appartamenti con due camere",
-    "short": "Due camere da letto, fino a cinque ospiti, a 100 m dal centro.",
-    "description": "Due camere da letto e una zona giorno con angolo cottura, per un massimo di cinque ospiti. Il quinto letto si trova nella zona giorno ed è lungo circa 180 cm: va bene per un bambino o per un adulto non troppo alto. Ideale per quattro adulti, oppure quattro adulti e un bambino.",
+    "short": "Due camere da letto, vista mare e fino a cinque ospiti, a 100 m dal centro.",
+    "description": "Due camere da letto e una zona giorno con angolo cottura, per un massimo di cinque ospiti, al primo o al secondo piano, con vista mare frontale e laterale. Il quinto letto si trova nella zona giorno ed è lungo circa 180 cm: va bene per un bambino o per un adulto non troppo alto. Ideale per quattro adulti, oppure quattro adulti e un bambino.",
     "bestFor": "Famiglie e gruppi di quattro o cinque",
     "variants": {
       "th-2br": "Appartamento con due camere da letto"

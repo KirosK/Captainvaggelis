@@ -29,12 +29,16 @@
     "payment": "Payment",
     "nearby": "What's nearby",
     "bookingCardTitle": "Book direct with the family",
-    "bookingCardNote": "Ask us anything before you book. There's no obligation.",
+    "bookingCardNote": "Live prices and availability, a 20% deposit online and the balance on arrival.",
     "otherProperty": "Prefer {name}?",
     "compare": "Compare both",
     "photoCount": "{count} photos",
     "categoryScores": "Guest scores by category",
-    "honest": "Honest notes"
+    "honest": "Honest notes",
+    "minStay": "Minimum stay",
+    "cancellation": "Deposit & cancellation",
+    "seePrices": "See prices & availability",
+    "minStayNote": "Minimum stay 5 nights"
   },
   "aegealis": {
     "hero": {
@@ -79,15 +83,17 @@
       "The exact map pin is below. Some map apps place us a little off."
     ],
     "policies": {
-      "checkIn": "14:00 – 00:00. Please let us know your arrival time.",
-      "checkOut": "08:00 – 10:00",
+      "checkIn": "From 13:00. Please let us know your arrival time.",
+      "checkOut": "By 11:00",
+      "minStay": "5 nights",
       "children": "Children of all ages are welcome. From 6 years, children count as adults for pricing.",
       "extraBeds": "Extra beds are free for ages 0–4, €5 per night for ages 5–12 and €10 per night from 13. Cots (ages 0–2) are €5 per night. All on request, subject to availability and paid locally.",
       "pets": "Pets are not allowed.",
       "smoking": "Non-smoking throughout.",
       "parties": "No parties or events, including stag and hen parties.",
       "quietHours": "23:00 – 07:00",
-      "payment": "Card online when you book direct or cash on arrival."
+      "payment": "Secure card payment through Alpha Bank when you book online: a 20% deposit secures your booking, and the balance is paid on arrival.",
+      "cancellation": "The 20% deposit is not refundable. Cancel 30 days or more before arrival and no balance is due; with less than 30 days' notice, the full amount is due."
     }
   },
   "theodora": {
@@ -105,7 +111,7 @@
     ],
     "overview": {
       "title": "The peach house above Skala's main street",
-      "body": "Theodora is the peach house with red bougainvillea at the top of Skala's main street. The centre is 100 m away, yet the area is quiet. Behind the house is a shady garden with an orange tree, sunbeds and a view of vines, and a gate through to the neighbouring hotel's pool (subject to the hotel's season).\n\nChoose from double rooms, studios, a triple room with terrace, and two two-bedroom apartments that each sleep up to five. Each has a kitchenette and air conditioning, and rooms are decorated with paintings made by the family. Village shops and tavernas are close by, and the beach is an easy walk downhill. Frosso and Vangelis usually welcome you themselves, with cold water already in the fridge."
+      "body": "Theodora is the peach house with red bougainvillea at the top of Skala's main street. The centre is 100 m away, yet the area is quiet. Behind the house is a shady garden with an orange tree, sunbeds and a view of vines, and a gate through to the neighbouring hotel's pool (subject to the hotel's season).\n\nChoose from double rooms, studios, a triple room with terrace, and two two-bedroom apartments that each sleep up to five. On the upper floors, the two apartments, a studio and the double room with terrace look out to the sea. Each has a kitchenette and air conditioning, and rooms are decorated with paintings made by the family. Village shops and tavernas are close by, and the beach is an easy walk downhill. Frosso and Vangelis usually welcome you themselves, with cold water already in the fridge."
     },
     "why": [
       {
@@ -133,15 +139,17 @@
       "Free wired internet in the common areas only; there is no Wi-Fi in the rooms. If you need to work online, tell us before you book."
     ],
     "policies": {
-      "checkIn": "14:00 – 00:00. Please let us know your arrival time.",
-      "checkOut": "08:00 – 10:00",
+      "checkIn": "From 13:00. Please let us know your arrival time.",
+      "checkOut": "By 11:00",
+      "minStay": "5 nights",
       "children": "Children of all ages are welcome. From 4 years, children count as adults for pricing.",
       "extraBeds": "No cots or extra beds are available.",
       "pets": "Pets are not allowed.",
       "smoking": "Non-smoking throughout.",
       "parties": "Please respect the quiet of the neighbourhood.",
       "quietHours": "It's a quiet street, so please keep noise down late in the evening.",
-      "payment": "Card online when you book direct or cash on arrival."
+      "payment": "Secure card payment through Alpha Bank when you book online: a 20% deposit secures your booking, and the balance is paid on arrival.",
+      "cancellation": "The 20% deposit is not refundable. Cancel 30 days or more before arrival and no balance is due; with less than 30 days' notice, the full amount is due."
     }
   },
   "compare": {

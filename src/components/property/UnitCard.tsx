@@ -8,7 +8,7 @@ import { ArrowRight, BedDouble, ChevronLeft, ChevronRight, Ruler, Users } from '
 import { countLabel, sizeLabel } from './PropertyGlance'
 import { featureIcon } from '@/components/ui/featureIcons'
 import type { Photo, UnitGroup } from '@/data/types'
-import { fill, formatPrice, href, tr, type Dict, type Locale } from '@/lib/i18n'
+import { fill, href, tr, type Dict, type Locale } from '@/lib/i18n'
 
 export function UnitCard({
   unit,
@@ -43,6 +43,7 @@ export function UnitCard({
   }, [embla, onSelect])
 
   const accentText = accent === 'sea' ? 'text-sea' : 'text-terra'
+  const bookHref = `${href(locale, '/book')}?property=${unit.property}&unit=${unit.key}`
 
   return (
     <article id={unit.key} className="scroll-mt-40 overflow-hidden rounded-xl3 bg-white shadow-soft ring-1 ring-ink/5 xl:grid xl:grid-cols-[1.1fr_1fr]">
@@ -150,13 +151,15 @@ export function UnitCard({
           </div>
         )}
         <div className="flex-1" />
-        <div className="mt-7 flex flex-wrap items-end justify-between gap-4 border-t border-line pt-6">
-          <div>
-            <p className="text-[0.82rem] text-ink-mute">
-              {common.units.from} <span className="font-display text-[1.9rem] text-ink">{formatPrice(locale, unit.demoRates.low)}</span> {common.units.perNight}
-            </p>
+        {/* prices are live in the family's booking engine: where a price would sit, a way to see them for your dates */}
+        <div className="mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
+          <div className="min-w-0">
+            <Link href={bookHref} className={`font-semibold underline decoration-1 underline-offset-4 hover:decoration-2 ${accent === 'sea' ? 'decoration-sea' : 'decoration-terra'}`}>
+              {ui.seePrices}
+            </Link>
+            <p className="mt-1 text-[0.8rem] text-ink-mute">{ui.minStayNote}</p>
           </div>
-          <Link href={`${href(locale, '/book')}?property=${unit.property}&unit=${unit.key}`} className={`btn ${accent === 'sea' ? 'btn-sea' : 'btn-terra'}`}>
+          <Link href={bookHref} className={`btn ${accent === 'sea' ? 'btn-sea' : 'btn-terra'}`}>
             {common.cta.chooseThis} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

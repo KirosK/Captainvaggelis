@@ -13,7 +13,7 @@ import type { Audience, UnitGroup } from '@/data/types'
 import enBooking from '@/content/en/booking.json'
 import elBooking from '@/content/el/booking.json'
 import itBooking from '@/content/it/booking.json'
-import { fill, formatPrice, href, tr, type Dict, type Locale } from '@/lib/i18n'
+import { fill, href, tr, type Dict, type Locale } from '@/lib/i18n'
 import { Reveal } from '@/components/ui/Reveal'
 
 const whoIcons: Record<Audience, typeof Heart> = { couple: Heart, family: UsersRound, friends: Users, solo: User }
@@ -36,6 +36,7 @@ export function RoomFinder({ locale, t, common, units }: { locale: Locale; t: Di
   const top = results[0]
   const alts = results.slice(1, 3)
   const party = partyFor(who, guests)
+  const bookHref = top ? `${href(locale, '/book')}?property=${top.unit.property}&unit=${top.unit.key}&adults=${party.adults}${party.children ? `&children=${party.children}` : ''}` : ''
   const group = GROUP[locale]
 
   const option = (active: boolean) =>
@@ -148,13 +149,16 @@ export function RoomFinder({ locale, t, common, units }: { locale: Locale; t: Di
                         ))}
                       </ul>
                     </div>
+                    {/* prices are live in the family's booking engine: where a price would sit, a way to see them for your dates */}
                     <div className="md:text-right">
-                      <p className="text-[0.82rem] text-ink-mute">
-                        {common.units.from} <span className="font-display text-3xl text-ink">{formatPrice(locale, top.unit.demoRates.low)}</span> {common.units.perNight}
-                      </p>
-                      <Link href={`${href(locale, '/book')}?unit=${top.unit.key}&adults=${party.adults}${party.children ? `&children=${party.children}` : ''}`} className="btn btn-primary mt-4">
-                        {common.cta.chooseThis} <ArrowRight className="h-4 w-4" />
+                      <Link href={bookHref} className="text-[0.92rem] font-semibold underline decoration-sea decoration-1 underline-offset-4 hover:decoration-2">
+                        {t.seePrices}
                       </Link>
+                      <div>
+                        <Link href={bookHref} className="btn btn-primary mt-4">
+                          {common.cta.chooseThis} <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </article>
@@ -212,8 +216,12 @@ export function RoomFinder({ locale, t, common, units }: { locale: Locale; t: Di
                   ))}
                 </div>
                 <div className="mt-7 flex flex-wrap gap-2">
+                  {/* the booking page splits a party this size over two rooms in the live search */}
+                  <Link href={`${href(locale, '/book')}?property=theodora&adults=${party.adults}${party.children ? `&children=${party.children}` : ''}`} className="btn btn-primary px-5 text-center text-[0.9rem] leading-snug text-balance">
+                    {t.twoRooms} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
                   {/* one line from 640px; on a phone the long Greek and Italian labels wrap evenly instead of overflowing */}
-                  <a href={whatsappLink(group.messageMany)} target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 text-center text-[0.9rem] leading-snug text-balance sm:whitespace-nowrap">
+                  <a href={whatsappLink(group.messageMany)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost bg-white px-5 text-center text-[0.9rem] leading-snug text-balance sm:whitespace-nowrap">
                     <MessageCircle className="h-4 w-4" aria-hidden="true" /> {fill(group.whatsapp, { count: '6+' })}
                     <span className="sr-only"> {common.a11y.external}</span>
                   </a>

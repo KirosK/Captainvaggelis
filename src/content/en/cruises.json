@@ -64,7 +64,7 @@
       "title": "Before you sail",
       "items": [
         "Be at the boat at least 30 minutes before departure.",
-        "The children's fare applies to ages 4 to 11. Ask us about infants.",
+        "The children's fare applies to ages 4 to 11. Children under 4 travel free.",
         "Your second cruise is 15% off.",
         "Staying at Aegealis or Theodora? 20% off every scheduled cruise.",
         "The Captain may adjust the schedule for safety and comfort.",
@@ -97,7 +97,7 @@
     "children": "Children",
     "childrenHint": "4–11 years",
     "infants": "Infants",
-    "infantsHint": "Under 4 · ask us about fares",
+    "infantsHint": "Under 4 · free",
     "pickup": "Boarding point",
     "guest": "I'm staying at Aegealis or Theodora",
     "guestHint": "20% off. We'll check the name on your booking.",

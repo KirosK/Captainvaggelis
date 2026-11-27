@@ -1,52 +1,38 @@
 {
   "title": "Prenotate direttamente",
-  "intro": "Prenotate con Frosso e Vangelis, senza intermediari: nessun costo di prenotazione e il 20% di sconto su ogni crociera in calendario.",
-  "steps": {
-    "stay": "Soggiorno",
-    "room": "Alloggio",
-    "details": "Dati",
-    "payment": "Pagamento",
-    "done": "Conferma"
-  },
+  "intro": "Scegliete le date e quanti siete, poi proseguite sulla pagina di prenotazione sicura della famiglia per vedere prezzi e alloggi disponibili, sempre aggiornati. Nessun costo di prenotazione e il 20% di sconto su ogni crociera in calendario.",
   "stay": {
     "property": "Dove vorreste soggiornare?",
     "dates": "Date di arrivo e partenza",
-    "checkIn": "Arrivo",
-    "checkOut": "Partenza",
-    "guests": "Ospiti",
     "adults": "Adulti",
     "children": "Bambini",
-    "childAges": "Età del bambino {n}",
-    "search": "Scoprite gli alloggi disponibili",
-    "minNights": "Soggiorno minimo: {count} notti a luglio e agosto",
-    "groupHint": "Il nostro appartamento più grande ospita fino a 5 persone. Per un gruppo più numeroso vi proporremo due alloggi."
+    "split": "Per {count} ospiti cercheremo {rooms} alloggi.",
+    "pickDates": "Scegliete prima le date di arrivo e di partenza.",
+    "pickCheckOut": "Ora scegliete la data di partenza, almeno {count} notti dopo l'arrivo."
   },
-  "room": {
-    "available": "Tipologie disponibili: {count}",
-    "none": "Non disponibile per queste date. Provate a spostarle di un giorno o due, oppure chiedeteci.",
-    "select": "Scegliete",
-    "selected": "Selezionato",
-    "nightsTotal": "{nights} notti · {guests}",
-    "includes": "Il prezzo include la pulizia quotidiana; la tassa greca per la resilienza climatica si paga all'arrivo. In più, sulle crociere in calendario avete il 20% di sconto.",
-    "cityTax": "La tassa greca per la resilienza climatica si paga all'arrivo.",
-    "tooMany": "Troppi ospiti per questo alloggio",
-    "fitsYou": "Adatto al vostro gruppo",
-    "maxAdults": "Fino a {adults} adulti e {children} bambini in questo alloggio",
-    "mix": "{adults} adulti + {children} bambini"
+  "chosen": {
+    "label": "Avete scelto",
+    "next": "Nella pagina successiva, cercate {names} nell'elenco degli alloggi disponibili."
   },
-  "details": {
-    "title": "Chi viene a Skala?",
-    "firstName": "Nome",
-    "lastName": "Cognome",
-    "email": "E-mail",
-    "phone": "Cellulare (WhatsApp)",
-    "country": "Paese",
-    "arrival": "Orario di arrivo previsto",
-    "requests": "Richieste particolari",
-    "requestsHint": "Arrivo in tarda serata, un compleanno, una culla o un letto aggiuntivo all'Aegealis…",
-    "taxi": "Organizzate un taxi dall'aeroporto, per favore",
-    "newsletter": "Mandatemi ogni tanto qualche notizia da Skala"
+  "summary": {
+    "title": "Il vostro soggiorno",
+    "property": "Dove",
+    "room": "Tipologia",
+    "dates": "Date",
+    "nights": "Notti",
+    "guests": "Ospiti",
+    "rooms": "Alloggi",
+    "noDates": "Scegliete le date"
   },
+  "party": {
+    "adult": "1 adulto",
+    "adults": "{count} adulti",
+    "child": "1 bambino",
+    "children": "{count} bambini"
+  },
+  "continue": "Proseguite con la prenotazione sicura",
+  "terms": "Pagamento sicuro con carta tramite Alpha Bank: un acconto del 20% garantisce la prenotazione e il saldo si paga all'arrivo. Soggiorno minimo 5 notti.",
+  "handoff": "La pagina successiva è il sistema di prenotazione della famiglia, su cptvangelis-apartments.com, con prezzi e disponibilità aggiornati.",
   "payment": {
     "title": "Pagamento sicuro",
     "card": "Carta",
@@ -56,49 +42,11 @@
     "expiryPlaceholder": "MM / AA",
     "cvc": "CVC",
     "holder": "Nome del titolare della carta",
-    "deposit": "Acconto del 30% ora, il resto all'arrivo",
-    "full": "Intero importo ora",
     "payNow": "Pagate {amount}",
-    "cancellation": "Cancellazione gratuita fino a 14 giorni prima dell'arrivo.",
     "secure": "Pagamento crittografato. Non vediamo mai i dati della vostra carta."
   },
-  "done": {
-    "title": "Ci vediamo a Skala!",
-    "body": "Vi abbiamo inviato la conferma via e-mail. Qualche giorno prima del soggiorno vi scriveremo su WhatsApp per verificare l'orario di arrivo.",
-    "reference": "Numero di prenotazione",
-    "next": "Cosa succede ora",
-    "nextItems": [
-      "Subito: un'e-mail di conferma con tutti i dettagli della prenotazione.",
-      "Qualche giorno prima: vi scriviamo su WhatsApp per accordarci sull'arrivo.",
-      "All'arrivo: diteci in anticipo a che ora arrivate e la famiglia vi accoglierà. Al Theodora trovate già l'acqua fresca in frigo.",
-      "Crociere in calendario: 20% di sconto. Basta dire il vostro nome al chiosco davanti all'Aegealis."
-    ],
-    "cruiseCta": "Aggiungete una crociera in calendario con il 20% di sconto",
-    "home": "Tornate alla homepage",
-    "taxi": "Taxi dall'aeroporto: lo organizziamo noi e vi confermiamo l'orario su WhatsApp."
-  },
-  "summary": {
-    "title": "La vostra prenotazione",
-    "nights": "Notti",
-    "guests": "Ospiti",
-    "room": "Alloggio",
-    "dates": "Date",
-    "discount": "Sconto",
-    "total": "Totale",
-    "deposit": "Da pagare ora",
-    "onArrival": "Da pagare all'arrivo",
-    "chooseRoom": "Scegliete un alloggio per vedere il prezzo",
-    "paid": "Pagato ora",
-    "taxi": "Taxi dall'aeroporto",
-    "taxiYes": "Richiesto"
-  },
   "group": {
-    "title": "Siete in {count}?",
-    "aegealis": "All'Aegealis ogni alloggio ospita fino a 4 persone. Al Theodora ciascuno dei due appartamenti con due camere ne ospita 5, oppure possiamo prenotarvi due alloggi vicini.",
-    "large": "Il nostro appartamento più grande ospita fino a 5 persone. Per {count} ospiti vi prenotiamo due alloggi, per esempio l'appartamento con due camere del Theodora e un monolocale.",
-    "switch": "Scoprite gli alloggi del Theodora",
     "whatsapp": "Scriveteci su WhatsApp per {count} ospiti",
-    "message": "Buongiorno! Siamo in {count} e vorremmo soggiornare a Skala (arrivo il {from}, partenza il {to}). Potete consigliarci due alloggi?",
     "messageMany": "Buongiorno! Siamo un gruppo di sei o più persone e vorremmo soggiornare a Skala. Potete consigliarci due alloggi?",
     "combo": "Una combinazione che funziona"
   },
@@ -153,7 +101,7 @@
         "private": "una crociera privata",
         "wedding": "una crociera di nozze"
       },
-      "sent": "Grazie! Abbiamo ricevuto la vostra richiesta per il giorno {date} e vi risponderemo presto, di solito su WhatsApp.",
+      "sent": "Grazie! Abbiamo ricevuto la vostra richiesta per il giorno {date}. Vi risponderà personalmente qualcuno della famiglia, il prima possibile.",
       "reference": "Codice della richiesta"
     }
   }

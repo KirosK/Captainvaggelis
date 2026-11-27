@@ -1,0 +1,204 @@
+{
+  "places": {
+    "skala": "Spiaggia di Skala",
+    "poros": "Porto di Poros",
+    "skalaFull": "Spiaggia di Skala, davanti all'Aegealis Studios, Skala, Cefalonia",
+    "porosFull": "Porto di Poros, molo dei traghetti, Cefalonia"
+  },
+  "count": {
+    "adult": "1 adulto",
+    "adults": "{count} adulti",
+    "child": "1 bambino",
+    "children": "{count} bambini",
+    "infant": "1 bambino piccolo",
+    "infants": "{count} bambini piccoli",
+    "person": "1 persona",
+    "people": "{count} persone"
+  },
+  "kinds": {
+    "bbq": "una crociera con barbecue a Mini Myrtos",
+    "private": "una crociera privata",
+    "wedding": "un matrimonio in mare"
+  },
+  "labels": {
+    "cruise": "Crociera",
+    "date": "Data",
+    "boarding": "Imbarco",
+    "return": "Rientro",
+    "passengers": "Passeggeri",
+    "paid": "Pagato con carta",
+    "total": "Totale",
+    "reference": "Codice di prenotazione",
+    "requestReference": "Codice della richiesta",
+    "returnAround": "{place}, verso le {time}",
+    "onRequest": "su richiesta",
+    "discount": {
+      "guest20": "Sconto ospiti (20%)",
+      "second15": "Sconto seconda crociera (15%)"
+    }
+  },
+  "checkout": {
+    "acceptTerms": "Ho letto e accetto le condizioni di prenotazione.",
+    "termsLink": "condizioni di prenotazione",
+    "pay": "Pagate {amount} in modo sicuro",
+    "redirecting": "Vi stiamo portando alla pagina di pagamento sicura…",
+    "secure": "Pagate sulla pagina sicura della banca: i dati della vostra carta non arrivano mai al nostro sito.",
+    "hold": "Vi teniamo i posti per 15 minuti mentre completate il pagamento.",
+    "testMode": "Modalità di prova: non viene effettuato alcun pagamento reale.",
+    "inProgress": "La vostra prenotazione {ref} per {date} è salvata: apritela per completare il pagamento o per vedere il vostro biglietto elettronico.",
+    "openBooking": "Aprite la prenotazione",
+    "dismiss": "Nascondi questo messaggio",
+    "cancelledLegend": "Le date barrate in rosso sono state annullate dal Capitano.",
+    "soldOutLegend": "Le date in rosso sono al completo."
+  },
+  "errors": {
+    "generic": "Qualcosa è andato storto. Riprovate.",
+    "validation": "Controllate i vostri dati e riprovate.",
+    "termsRequired": "Per continuare, accettate le condizioni di prenotazione.",
+    "notEnoughSeats": "Restano solo {count} posti in questa data. Riducete il numero di passeggeri o scegliete un altro giorno.",
+    "notEnoughSeatsOne": "Resta solo 1 posto in questa data. Riducete il numero di passeggeri o scegliete un altro giorno.",
+    "soldOut": "Questa partenza è al completo. Scegliete un altro giorno.",
+    "cancelled": "Il Capitano ha annullato questa partenza per motivi di sicurezza. Scegliete un altro giorno.",
+    "closed": "Le prenotazioni online per questa partenza sono chiuse. Scegliete un altro giorno o scriveteci.",
+    "unavailable": "Purtroppo questa partenza non è più disponibile. Scegliete un'altra data.",
+    "priceChanged": "Il prezzo è appena cambiato: ora il totale è di {amount}. Controllatelo e riprovate.",
+    "pickupUnavailable": "Questa crociera non prevede l'imbarco a Poros.",
+    "rateLimited": "Troppi tentativi. Aspettate qualche minuto e riprovate.",
+    "paymentsUnavailable": "Il pagamento online non è disponibile in questo momento. Scriveteci e vi aiuteremo a prenotare.",
+    "alreadyPaid": "Questa prenotazione è già stata pagata.",
+    "notPayable": "Questa prenotazione non può più essere pagata online."
+  },
+  "ticket": {
+    "metaTitle": "Il vostro biglietto elettronico",
+    "kicker": "Crociere del Capitano Vangelis",
+    "title": "Biglietto elettronico",
+    "qrLabel": "Codice QR della prenotazione {ref}",
+    "show": "Mostrate questo biglietto elettronico, sul telefono o stampato, al chiosco davanti all'Aegealis almeno 30 minuti prima della partenza.",
+    "showPoros": "L'imbarco a Poros è su richiesta: ve lo confermiamo su WhatsApp prima della crociera. Il giorno della partenza siate al molo dei traghetti almeno 30 minuti prima delle {time}: la barca si ferma solo pochi minuti.",
+    "guestCheck": "Sconto ospiti: verificheremo il nome sulla vostra prenotazione all'Aegealis o al Theodora.",
+    "moved": "Data iniziale: {date}.",
+    "addToCalendar": "Aggiungete al calendario",
+    "print": "Stampate o salvate in PDF",
+    "another": "Prenotate un'altra crociera",
+    "allCruises": "Tutte le crociere",
+    "whatsapp": "Scriveteci su WhatsApp",
+    "email": "Scriveteci un'e-mail",
+    "paid": {
+      "title": "Ci vediamo a bordo",
+      "body": "I vostri posti sono prenotati e pagati. Vi abbiamo inviato questo biglietto anche per e-mail."
+    },
+    "pending": {
+      "title": "Il pagamento non è stato completato",
+      "failed": "Il pagamento non è andato a buon fine.",
+      "waiting": "Non abbiamo ancora ricevuto un pagamento per questa prenotazione.",
+      "heldOne": "Vi teniamo i posti ancora per 1 minuto.",
+      "heldMany": "Vi teniamo i posti ancora per {count} minuti.",
+      "retry": "Riprovate il pagamento"
+    },
+    "expired": {
+      "title": "I posti non sono più riservati",
+      "body": "Il pagamento non è stato completato in tempo, quindi i posti sono stati liberati. Se la data è ancora disponibile, potete riprovare.",
+      "retry": "Riprovate",
+      "choose": "Scegliete un'altra data"
+    },
+    "refundDue": {
+      "title": "La crociera è stata annullata",
+      "weather": "Il Capitano ha annullato per maltempo la crociera del {date}.",
+      "technical": "Il Capitano ha annullato per motivi tecnici la crociera del {date}.",
+      "other": "Il Capitano ha annullato la crociera del {date}.",
+      "refund": "Riceverete il rimborso completo di {amount} sulla carta con cui avete pagato, entro 3 giorni lavorativi.",
+      "rebook": "Preferite partire un altro giorno? Scriveteci e sposteremo la vostra prenotazione a un'altra data, secondo disponibilità."
+    },
+    "refunded": {
+      "title": "Rimborso effettuato",
+      "body": "Il {date} abbiamo rimborsato {amount} sulla carta con cui avete pagato."
+    },
+    "access": {
+      "title": "Aprite il vostro biglietto elettronico",
+      "body": "Inserite l'indirizzo e-mail con cui avete fatto la prenotazione {ref}.",
+      "email": "E-mail",
+      "submit": "Aprite il biglietto",
+      "wrong": "Non abbiamo trovato una prenotazione con questo codice e questo indirizzo e-mail.",
+      "invalid": "Inserite un indirizzo e-mail valido."
+    }
+  },
+  "mock": {
+    "title": "Pagamento di prova",
+    "banner": "MODALITÀ DI PROVA: questa pagina simula soltanto la banca. Non serve alcuna carta e non viene addebitato nulla.",
+    "heading": "Pagamento con carta simulato",
+    "amount": "Importo",
+    "booking": "Prenotazione",
+    "succeed": "Simulate un pagamento riuscito",
+    "decline": "Simulate una carta rifiutata",
+    "cancel": "Annullate e tornate indietro",
+    "done": "Questo tentativo di pagamento è già stato completato.",
+    "open": "Aprite la prenotazione"
+  },
+  "redirect": {
+    "title": "Pagamento sicuro",
+    "body": "Vi stiamo portando alla pagina di pagamento sicura della banca…",
+    "button": "Continuate con il pagamento",
+    "expired": "Questo link di pagamento non è più valido. Tornate alla vostra prenotazione e riprovate.",
+    "back": "Tornate alla vostra prenotazione"
+  },
+  "verifyFailed": {
+    "title": "Non siamo riusciti a confermare il pagamento",
+    "body": "Se la carta è stata addebitata, contattateci indicando il codice qui sotto e verificheremo.",
+    "back": "Tornate alle crociere"
+  },
+  "email": {
+    "brand": "Captain Vangelis",
+    "place": "Skala, Cefalonia",
+    "greeting": "Gentile {name},",
+    "signOff": "Ci vediamo a bordo,",
+    "signOffPlain": "Cordiali saluti,",
+    "signature": "Capitano Vangelis",
+    "footer": "Crociere del Capitano Vangelis · Skala, Cefalonia 28086, Grecia",
+    "viewTicket": "Aprite il biglietto elettronico",
+    "whatsapp": "Scriveteci su WhatsApp",
+    "confirmation": {
+      "subject": "Il vostro biglietto elettronico: {cruise}, {date}",
+      "preheader": "Prenotazione {ref} · Imbarco: {place}, ore {time}.",
+      "title": "Ci vediamo a bordo",
+      "intro": "Grazie per la prenotazione. I vostri posti sono prenotati e pagati: ecco il vostro biglietto elettronico.",
+      "movedIntro": "La vostra prenotazione è stata spostata al {date}. Ecco il vostro nuovo biglietto elettronico.",
+      "calendar": "Con il file del calendario in allegato potete aggiungere la crociera al vostro calendario.",
+      "termsTitle": "Se cambiano i programmi",
+      "terms": "Se il Capitano annulla o modifica la crociera per maltempo o per motivi tecnici, potete scegliere il rimborso completo sulla vostra carta entro 3 giorni lavorativi oppure un'altra data, secondo disponibilità. Non sono previsti rimborsi dopo la partenza della barca."
+    },
+    "reminder": {
+      "subject": "Domani: {cruise}",
+      "preheader": "Imbarco: {place}, ore {time}. Siate lì 30 minuti prima.",
+      "title": "A domani",
+      "intro": "La vostra crociera è domani, {date}.",
+      "skala": "Siate al chiosco davanti all'Aegealis entro le {checkIn}, 30 minuti prima che la barca parta da Skala alle {time}.",
+      "poros": "L'imbarco a Poros è su richiesta: se non ve l'abbiamo ancora confermato su WhatsApp, scriveteci. Siate al molo dei traghetti entro le {checkIn}: la barca si ferma lì alle {time} solo per pochi minuti.",
+      "bring": "Portate il biglietto elettronico, sul telefono o stampato (prenotazione {ref}).",
+      "weather": "Il Capitano può modificare il programma perché la crociera sia sicura e piacevole. Se dovesse annullarla, vi avviseremo per e-mail."
+    },
+    "cancellation": {
+      "subject": "Annullata: la vostra crociera del {date}",
+      "preheader": "Rimborso completo entro 3 giorni lavorativi, oppure un'altra data.",
+      "title": "La vostra crociera è stata annullata",
+      "weather": "Ci dispiace: il Capitano ha annullato per maltempo la crociera «{cruise}» del {date}. La vostra sicurezza viene prima di tutto.",
+      "technical": "Ci dispiace: il Capitano ha annullato per motivi tecnici la crociera «{cruise}» del {date}.",
+      "refund": "Vi rimborseremo l'intero importo di {amount} sulla carta con cui avete pagato, entro 3 giorni lavorativi.",
+      "rebook": "Preferite partire un altro giorno? Rispondete a questa e-mail o scriveteci su WhatsApp e sposteremo la vostra prenotazione a un'altra data, secondo disponibilità."
+    },
+    "request": {
+      "subject": "Abbiamo ricevuto la vostra richiesta {ref}",
+      "preheader": "Richiesta {ref} · {people}",
+      "title": "Grazie per la vostra richiesta",
+      "body": "Abbiamo ricevuto la vostra richiesta per {kind} il giorno {date}, per {people}.",
+      "bodyNoDate": "Abbiamo ricevuto la vostra richiesta per {kind}, per {people}.",
+      "reply": "Vi risponderà personalmente qualcuno della famiglia, appena possibile.",
+      "add": "Volete aggiungere qualcosa? Rispondete a questa e-mail o scriveteci su WhatsApp."
+    }
+  },
+  "ics": {
+    "summary": "{cruise} · Capitano Vangelis",
+    "checkIn": "Siate al chiosco davanti all'Aegealis 30 minuti prima della partenza.",
+    "porosNote": "Imbarco a Poros: siate puntuali al molo dei traghetti, la barca si ferma solo pochi minuti.",
+    "return": "Rientro: {place}, verso le {time}."
+  }
+}

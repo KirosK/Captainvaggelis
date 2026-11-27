@@ -20,6 +20,11 @@ import { altFor, localized } from '@/data/alts'
 import { getDictionary, href, type Locale } from '@/lib/i18n'
 import { pageMetadata } from '@/lib/seo'
 import { breadcrumbLd } from '@/lib/jsonld'
+import { ScheduleSeed } from '@/lib/cruiseStore'
+import { scheduleSeed } from '@/server/cruises/schedule'
+
+// fares, days and times come from /admin: re-rendered at most a minute after a change (the admin also revalidates at once)
+export const revalidate = 60
 
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const d = await getDictionary(params.lang)
@@ -48,9 +53,11 @@ export default async function CruisesHub({ params }: { params: { lang: Locale } 
   const boatText = String(h.boat.body).split('\n\n')
   // times in the copy follow the schedule set in /admin
   const live = (cr: (typeof scheduledCruises)[number]) => ({ ...scheduleOf(cr), stops: cr.stops })
+  // the schedule saved in /admin, so the server HTML already shows the live fares, days and times
+  const seed = await scheduleSeed()
 
   return (
-    <>
+    <ScheduleSeed seed={seed}>
       <Hero eyebrow={h.hero.eyebrow} seoHeading={d.glance.seo.cruises} title={h.hero.title} subtitle={h.hero.subtitle} image={localized(hero, locale)} video={films.cruises} labels={{ play: c.a11y.play, pause: c.a11y.pause }}>
         <div className="flex flex-wrap gap-3">
           <a href="#timetable" className="btn btn-light">
@@ -284,6 +291,6 @@ export default async function CruisesHub({ params }: { params: { lang: Locale } 
 
       {/* no FAQPage markup here: the same questions are marked up once, on /faq */}
       <JsonLd data={breadcrumbLd([{ name: c.nav.home, path: `/${locale}` }, { name: c.nav.cruises, path: `/${locale}/cruises` }])} />
-    </>
+    </ScheduleSeed>
   )
 }

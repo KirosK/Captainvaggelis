@@ -9,7 +9,7 @@ export function isLocale(value: string | undefined): value is Locale {
   return !!value && (locales as readonly string[]).includes(value)
 }
 
-export const namespaces = ['common', 'home', 'property', 'units', 'cruises', 'booking', 'guide', 'faq', 'pages', 'reviews', 'glance'] as const
+export const namespaces = ['common', 'home', 'property', 'units', 'cruises', 'booking', 'guide', 'faq', 'pages', 'reviews', 'glance', 'payments'] as const
 export type Namespace = (typeof namespaces)[number]
 
 // Dictionaries are free-form JSON trees; components read the keys they need.

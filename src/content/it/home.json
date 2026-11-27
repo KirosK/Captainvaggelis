@@ -61,7 +61,7 @@
       "pitch": "Monolocali e appartamenti in cima alla via principale di Skala, a circa 100 m dal centro, con un giardino ombreggiato e un arancio sul retro. La spiaggia è a 5–10 minuti a piedi in discesa, e dal giardino un cancello porta alla piscina dell'hotel accanto (quando l'hotel è aperto).",
       "bullets": [
         "Supermercato a un minuto",
-        "Appartamento con due camere da letto, fino a 5 ospiti",
+        "Appartamenti con due camere e vista mare, fino a 5 ospiti",
         "Pulizia valutata 9,5 dagli ospiti"
       ],
       "best": "Ideale per: famiglie, gruppi, chi va in taverna a piedi"
@@ -97,11 +97,12 @@
     "resultTitle": "Il nostro consiglio per voi",
     "alsoGood": "Altre buone opzioni",
     "why": "Perché questo alloggio",
-    "noMatch": "Per {count} ospiti vi consigliamo due alloggi, per esempio l'appartamento con due camere del Theodora e un monolocale. Scriveteci e organizziamo tutto noi.",
-    "reset": "Ricomincia",
+    "noMatch": "Per {count} ospiti vi consigliamo due alloggi, per esempio l'appartamento con due camere del Theodora e un monolocale. Verificate la disponibilità di entrambi insieme, oppure scriveteci e organizziamo tutto noi.",
+    "reset": "Ricominciate",
     "reasons": {
       "beachfront": "La spiaggia è appena oltre la strada",
       "seaView": "Vista mare dalla camera",
+      "someSeaView": "Uno di questi alloggi ha vista mare",
       "quiet": "Zona tranquilla, giardino dietro casa",
       "space": "Camera da letto separata",
       "twoBedrooms": "Due camere da letto, posto per cinque",
@@ -113,7 +114,9 @@
       "pool": "Accesso alle piscine dei due hotel accanto",
       "poolSeasonal": "Piscina dell'hotel accanto, quando è aperta",
       "budgetGroup": "Conveniente per un gruppo"
-    }
+    },
+    "seePrices": "Scoprite prezzi e disponibilità",
+    "twoRooms": "Verificate la disponibilità per due alloggi"
   },
   "cruises": {
     "kicker": "In mare con il Capitano",
